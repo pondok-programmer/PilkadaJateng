@@ -1,0 +1,68 @@
+{
+    "anggaran_pilkada": [
+                         {
+                         "id": 1,
+                         "detil_anggaran": "Anggaran Diajukan",
+                         "jumlah_anggaran": " 299,802,120,000 ",
+                         "status_anggaran": "Anggaran Total",
+                         "created_at": null,
+                         "updated_at": null
+                         },
+                         {
+                         "id": 2,
+                         "detil_anggaran": "APBD 2016",
+                         "jumlah_anggaran": " 150,000,000,000 ",
+                         "status_anggaran": "Anggaran Disetujui",
+                         "created_at": null,
+                         "updated_at": null
+                         },
+                         {
+                         "id": 3,
+                         "detil_anggaran": "APBDP 2016",
+                         "jumlah_anggaran": null,
+                         "status_anggaran": "Anggaran Disetujui",
+                         "created_at": null,
+                         "updated_at": null
+                         },
+                         {
+                         "id": 4,
+                         "detil_anggaran": "APBD 2017",
+                         "jumlah_anggaran": null,
+                         "status_anggaran": "Anggaran Disetujui",
+                         "created_at": null,
+                         "updated_at": null
+                         },
+                         {
+                         "id": 5,
+                         "detil_anggaran": "APBD 2016",
+                         "jumlah_anggaran": null,
+                         "status_anggaran": "Anggaran Cair",
+                         "created_at": null,
+                         "updated_at": null
+                         },
+                         {
+                         "id": 6,
+                         "detil_anggaran": "APBDP 2016",
+                         "jumlah_anggaran": null,
+                         "status_anggaran": "Anggaran Cair",
+                         "created_at": null,
+                         "updated_at": null
+                         },
+                         {
+                         "id": 7,
+                         "detil_anggaran": "APBD 2017",
+                         "jumlah_anggaran": null,
+                         "status_anggaran": "Anggaran Cair",
+                         "created_at": null,
+                         "updated_at": null
+                         },
+                         {
+                         "id": 8,
+                         "detil_anggaran": "Pengunaan Anggaran",
+                         "jumlah_anggaran": null,
+                         "status_anggaran": "Anggaran Digunakan",
+                         "created_at": null,
+                         "updated_at": null
+                         }
+                         ]
+}

@@ -1,0 +1,40 @@
+{
+    "program_unggulan": [
+                         {
+                         "id": 1,
+                         "program_unggulan": "Program Unggulan",
+                         "deskripsi": "deskripsi",
+                         "detail_deskripsi": "detail_deskripsi"
+                         },
+                         {
+                         "id": 2,
+                         "program_unggulan": "INFRASTRUKTUR",
+                         "deskripsi": "Memantapkan pembangunan infrastruktur wilayah dan kawasan untuk pemenuhan layanan dasar dan peningkatan daya saing daerah.\n",
+                         "detail_deskripsi": "1. Meningkatkan kualitas jalan provinsi dengan pola pembangunan/pemeliharaan berkelanjutan, 2. Mengembangkan kawasan ekonomi pesisir terpadu sebagai sabuk maritim, 3. Membangun infrastruktur air bersih, persampaban, energi dan sistem transportasi untuk menjadikan Banten sebagai Provinsi yang cerdas (Smart Province)."
+                         },
+                         {
+                         "id": 3,
+                         "program_unggulan": "PERTUMBUHAN EKONOMI",
+                         "deskripsi": "Menciptakan ekosistem ekonomi yang sinergis antarpelaku usaha dan mendorong pertumbuhan ekonomi yang lebih berkualitas dengan iklim investasi yang kondusif serta keberpijakan pada masyarakat.",
+                         "detail_deskripsi": "1. Meningkatkan dan melindungi usaha ekonomi kerakyatan bagi Petani, Nelayan, dan UMKM. 2. Mendorong dan memfasilitasi kewirausahaan pemuda dalam menciptakan kemandirian berbasis ekonomi kreatif. 3. Memacu pertumbuhan investasi yang berkualitas dan berwawasan lingkungan. 4. Mengembangkan produk unggulan daerah yang inovatif dan kompetitif dengan melibatkan lembaga penelitian dan perguruan tinggi dengan dukungan akses permodalan dan pendampingan. "
+                         },
+                         {
+                         "id": 4,
+                         "program_unggulan": "SUMBERDAYA MANUSIA",
+                         "deskripsi": "Meningkatkan kualitas sumberdaya manusia yang sebat, cerdas, dan berdaya saing.",
+                         "detail_deskripsi": "1. Membangun Islamic Science Technopark yang terdiri dari Perpustakaan dan Museum Syekh Nawawi Al Bantani, Pusat Vokasional, Banten Islamic Center dan Pusat Pengembangan Teknologi. 2. Mengembangkan Taman Budaya Banten sebagai ruang interaksi publik untuk melestarikan dan mempertabankan nilai-nilai jati diri dan kebudayaan Banten. 3. Meningkatkan dan memperluas akses layanan SMA dan SMK yang bermutu dan relevan ditambah dengan pendidikan vokasi dan pemagangan. 4. Meningkatkan kualitas Rumah Sakit Umum Daerah Banten menjadi Rumah Sakit kelas A."
+                         },
+                         {
+                         "id": 5,
+                         "program_unggulan": "SINERGI",
+                         "deskripsi": "Memperkuat sinergitas pembangunan daerab melalui kerjasama pembangunan antar pemerintahan Pusat, Provinsi dan Kabupaten/Kota serta dunia usaha secara selaras, serasi dan seimbang.",
+                         "detail_deskripsi": "1. Membangun sistem angkutan umum masal antar kabupaten/kota untuk memperkuat konektivitas ekonomi perkotaan dan perdesaan. 2. Membangun kawasan wisata unggulan berorientasi internasional berbasis budaya dan pesona alam. 3. Merevitalisasi fungsi-fungsi koordinasi pimpinan daerah dan antar kepala daerah dalam semangat banten bangkit."
+                         },
+                         {
+                         "id": 6,
+                         "program_unggulan": "TATAKELOLA PEMERINTAHAN",
+                         "deskripsi": "Meningkatkan kinerja pemerintahan daerab yang bersih dan berintegritas menuju tata kelola pemerintahan yang berkualitas. ",
+                         "detail_deskripsi": "1. Menegakkan pencegahan korupsi dipemerintahan dengan melibatkan Komisi Pemberantasan Korupsi (KPK). 2. Mengembangkan kapasitas kelembagaan dan kompetensi aparatur pemerintahan daerah untuk menghadirkan negara dalam memenuhi hak publik."
+                         }
+                         ]
+}

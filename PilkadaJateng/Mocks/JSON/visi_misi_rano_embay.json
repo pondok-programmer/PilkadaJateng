@@ -1,0 +1,39 @@
+{
+    "visi_misi_rano_embay": [
+                             {
+                             "id": 1,
+                             "visi": "Maju berarti adanya perubahan dari kondisi semula ke arah yang lebih bak. Cara-cara lama dalam mengelola pemerintahan ditinggalkan, selanjutnya cara baru dalam mengelola pemerintahan yang sesuai dengan prinsip good govemanace dipakai. Beberapa indikator indikator pengelolaan pemerintahan yang lebih maju adalah: adanya inovasi dalam tata kelola pemerintahan (lebih efisien, efektif, transparan, akuntabel disertai perbaikan hubungan kelembagaan dengan kabupaten/kota), dan adanya perubahan mindset atau perubahan budaya lama yang tidak sesuai dengan tuntutan masyarakat.",
+                             "misi": "Menciptakan tata kelola pemerintahan yang baik (good governance)",
+                             "created_at": null,
+                             "updated_at": null
+                             },
+                             {
+                             "id": 2,
+                             "visi": "Mandiri mengacu pada kemampuan keuangan daerah untuk mendukung dan menjalankan pembangunan daerah. Suatu daerah dikatakan mandiri bila pendapatan asli daerahnya dalam APBD cukup dominan, sehingga tidak tergantung oleh bantuan atau subsidi pemerintah pusat. Mandiri disini menunjukkan kemampuan fiskal yang cukup untuk merealisasikan berbagai program pemerintah daerah.",
+                             "misi": "Membangun dan Meningkatkan kualitas infrastruktur.",
+                             "created_at": null,
+                             "updated_at": null
+                             },
+                             {
+                             "id": 3,
+                             "visi": "Berdaya Saing berarti kemampuan daerah rnengelola dan mengembangkan segenap potensi yang dimiliki serta menghilangkan berbagai hambatan sehingga berhasil menjadi tujuan investasi dibandingkan dengan daerah lainya. Beberapa parameter investasi seperti infrastruktur yang memadai, keamanan yang terjamin, pelayanan perijinan yang mudah berkepastian hukum, sumber daya manusia yang berkualitas, dan ketersediaan energi menjadi tolak ukurnya. ",
+                             "misi": "Meningkatkan akses dan pemerataan pendidikan berkualitas.",
+                             "created_at": null,
+                             "updated_at": null
+                             },
+                             {
+                             "id": 4,
+                             "visi": "Sejahtera diukur dengan angka lndeks Pembangunan Manusia (IPM) melalui tiga indikator utama yaitu kondisi pendidikan, kesehatan, dan kondisi daya beli masyarakat.",
+                             "misi": "Meningkatkan akses dan pemerataan pelayanan kesehatan berkualitas.",
+                             "created_at": null,
+                             "updated_at": null
+                             },
+                             {
+                             "id": 5,
+                             "visi": "Akhlakul Karimah menekankan pada perilaku kehidupan masyarakat dan pemerintah yang mencerminkan penerapan nilai-nilai agama. Yakni, nilai-nilai yang sesuai dengan hakikat ketuhanan, keberadaan manusia berserta alam seisinya.",
+                             "misi": "Meningkatkan kualitas pertumbuhan dan pemerataan ekonomi",
+                             "created_at": null,
+                             "updated_at": null
+                             }
+                             ]
+}

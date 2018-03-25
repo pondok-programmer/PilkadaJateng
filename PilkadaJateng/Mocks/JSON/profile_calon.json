@@ -1,0 +1,46 @@
+{
+    "result": [
+               {
+               "id": 1,
+               "wilayah": "Provinsi Banten",
+               "provinsi": "Banten",
+               "nama_kepala_daerah": "Dr. H. WAHIDIN HALIM, MSi",
+               "gender_kepala_daerah": "Laki-laki",
+               "tempat_lahir_kepala": "Tangerang",
+               "tanggal_lahir_kepala": "14/08/1954",
+               "pekerjaan_kepala": "DPR",
+               "nama_wakil_kepala_daerah": "H. ANDIKA HAZRUMY, S.Sos., M.AP",
+               "gender_wakil_kepala_daerah": "Laki-laki",
+               "tempat_lahir_wakil": "Bandung",
+               "tanggal_lahir_wakil": "16/12/1985",
+               "pekerjaan_wakilkada": "DPR",
+               "jumlah_dukungan": null,
+               "perolehan_suara": null,
+               "petahana": "Tidak",
+               "status_petahana": "Tidak",
+               "partai_pendukung": "PKB, PKS, Golkar,Gerindra, Demokrat, PAN, Hanura"
+               },
+               {
+               "id": 2,
+               "wilayah": "Provinsi Banten",
+               "provinsi": "Banten",
+               "nama_kepala_daerah": "H. RANO KARNO, S.IP",
+               "gender_kepala_daerah": "Laki-laki",
+               "tempat_lahir_kepala": "JAKARTA",
+               "tanggal_lahir_kepala": "8/10/1960",
+               "pekerjaan_kepala": "GUBERNUR",
+               "nama_wakil_kepala_daerah": "H. EMBAY MULYA SYARIEF",
+               "gender_wakil_kepala_daerah": "Laki-laki",
+               "tempat_lahir_wakil": "Pandeglang",
+               "tanggal_lahir_wakil": "4/3/1952",
+               "pekerjaan_wakilkada": "SWASTA",
+               "jumlah_dukungan": null,
+               "perolehan_suara": null,
+               "petahana": "Ya",
+               "status_petahana": "Kada",
+               "partai_pendukung": "Nasdem, PDIP, PPP"
+               }
+               ]
+}
+
+

@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF9B674E20677BAA0057215B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9B674D20677BAA0057215B /* NetworkManager.swift */; };
+		EF9B675020677DC90057215B /* InformasiPilkadaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9B674F20677DC90057215B /* InformasiPilkadaViewController.swift */; };
+		EF9B675220677F290057215B /* profile_calon.json in Resources */ = {isa = PBXBuildFile; fileRef = EF9B675120677F290057215B /* profile_calon.json */; };
+		EF9B675420677F450057215B /* APIUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9B675320677F450057215B /* APIUtils.swift */; };
+		EF9B6757206784B90057215B /* partisipasi_pilkada.json in Resources */ = {isa = PBXBuildFile; fileRef = EF9B6756206784B90057215B /* partisipasi_pilkada.json */; };
+		EF9B6759206784D20057215B /* anggaran_pilkada.json in Resources */ = {isa = PBXBuildFile; fileRef = EF9B6758206784D20057215B /* anggaran_pilkada.json */; };
+		EF9B675B206785160057215B /* visi_misi_wahidin_andika.json in Resources */ = {isa = PBXBuildFile; fileRef = EF9B675A206785160057215B /* visi_misi_wahidin_andika.json */; };
+		EF9B675D206785710057215B /* visi_misi_rano_embay.json in Resources */ = {isa = PBXBuildFile; fileRef = EF9B675C206785710057215B /* visi_misi_rano_embay.json */; };
+		EF9B67612067860A0057215B /* tahapan_pilkada.json in Resources */ = {isa = PBXBuildFile; fileRef = EF9B67602067860A0057215B /* tahapan_pilkada.json */; };
+		EF9B6763206786570057215B /* program_unggulan_rano_embay.json in Resources */ = {isa = PBXBuildFile; fileRef = EF9B6762206786570057215B /* program_unggulan_rano_embay.json */; };
+		EF9B6765206786AA0057215B /* prioritas_program_wahidin_andika.json in Resources */ = {isa = PBXBuildFile; fileRef = EF9B6764206786AA0057215B /* prioritas_program_wahidin_andika.json */; };
+		EF9B6767206786E70057215B /* lhkpn.json in Resources */ = {isa = PBXBuildFile; fileRef = EF9B6766206786E70057215B /* lhkpn.json */; };
 		EFEF12A020672103000A94CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEF129F20672103000A94CE /* AppDelegate.swift */; };
 		EFEF12A220672103000A94CE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEF12A120672103000A94CE /* LoginViewController.swift */; };
 		EFEF12A520672103000A94CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFEF12A320672103000A94CE /* Main.storyboard */; };
@@ -22,6 +34,8 @@
 		EFEF12E1206734AD000A94CE /* MockProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEF12E0206734AD000A94CE /* MockProvider.swift */; };
 		EFEF12E4206739CA000A94CE /* InformasiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEF12E3206739CA000A94CE /* InformasiViewController.swift */; };
 		EFEF12E6206739EA000A94CE /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEF12E5206739EA000A94CE /* Application.swift */; };
+		EFEF12E8206742E5000A94CE /* InformasiPilkadaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEF12E7206742E5000A94CE /* InformasiPilkadaService.swift */; };
+		EFEF12EA206742F6000A94CE /* InformasiCalonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEF12E9206742F6000A94CE /* InformasiCalonService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +56,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EF9B674D20677BAA0057215B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		EF9B674F20677DC90057215B /* InformasiPilkadaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformasiPilkadaViewController.swift; sourceTree = "<group>"; };
+		EF9B675120677F290057215B /* profile_calon.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = profile_calon.json; sourceTree = "<group>"; };
+		EF9B675320677F450057215B /* APIUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIUtils.swift; sourceTree = "<group>"; };
+		EF9B6756206784B90057215B /* partisipasi_pilkada.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = partisipasi_pilkada.json; sourceTree = "<group>"; };
+		EF9B6758206784D20057215B /* anggaran_pilkada.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = anggaran_pilkada.json; sourceTree = "<group>"; };
+		EF9B675A206785160057215B /* visi_misi_wahidin_andika.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = visi_misi_wahidin_andika.json; sourceTree = "<group>"; };
+		EF9B675C206785710057215B /* visi_misi_rano_embay.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = visi_misi_rano_embay.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.javascript; };
+		EF9B67602067860A0057215B /* tahapan_pilkada.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = tahapan_pilkada.json; sourceTree = "<group>"; };
+		EF9B6762206786570057215B /* program_unggulan_rano_embay.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = program_unggulan_rano_embay.json; sourceTree = "<group>"; };
+		EF9B6764206786AA0057215B /* prioritas_program_wahidin_andika.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = prioritas_program_wahidin_andika.json; sourceTree = "<group>"; };
+		EF9B6766206786E70057215B /* lhkpn.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = lhkpn.json; sourceTree = "<group>"; };
 		EFEF129C20672103000A94CE /* PilkadaJateng.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PilkadaJateng.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFEF129F20672103000A94CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFEF12A120672103000A94CE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +89,8 @@
 		EFEF12E0206734AD000A94CE /* MockProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProvider.swift; sourceTree = "<group>"; };
 		EFEF12E3206739CA000A94CE /* InformasiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformasiViewController.swift; sourceTree = "<group>"; };
 		EFEF12E5206739EA000A94CE /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		EFEF12E7206742E5000A94CE /* InformasiPilkadaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformasiPilkadaService.swift; sourceTree = "<group>"; };
+		EFEF12E9206742F6000A94CE /* InformasiCalonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformasiCalonService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +118,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF9B675520677F9A0057215B /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				EF9B675120677F290057215B /* profile_calon.json */,
+				EF9B6756206784B90057215B /* partisipasi_pilkada.json */,
+				EF9B6758206784D20057215B /* anggaran_pilkada.json */,
+				EF9B675A206785160057215B /* visi_misi_wahidin_andika.json */,
+				EF9B675C206785710057215B /* visi_misi_rano_embay.json */,
+				EF9B67602067860A0057215B /* tahapan_pilkada.json */,
+				EF9B6762206786570057215B /* program_unggulan_rano_embay.json */,
+				EF9B6764206786AA0057215B /* prioritas_program_wahidin_andika.json */,
+				EF9B6766206786E70057215B /* lhkpn.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
 		EFEF129320672103000A94CE = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +213,7 @@
 			children = (
 				EFEF12A120672103000A94CE /* LoginViewController.swift */,
 				EFEF12E3206739CA000A94CE /* InformasiViewController.swift */,
+				EF9B674F20677DC90057215B /* InformasiPilkadaViewController.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -177,6 +222,9 @@
 			isa = PBXGroup;
 			children = (
 				EFEF12DA206730D9000A94CE /* AuthServices.swift */,
+				EFEF12E7206742E5000A94CE /* InformasiPilkadaService.swift */,
+				EFEF12E9206742F6000A94CE /* InformasiCalonService.swift */,
+				EF9B674D20677BAA0057215B /* NetworkManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -192,7 +240,9 @@
 		EFEF12E2206734B3000A94CE /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				EF9B675320677F450057215B /* APIUtils.swift */,
 				EFEF12E0206734AD000A94CE /* MockProvider.swift */,
+				EF9B675520677F9A0057215B /* JSON */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -306,10 +356,19 @@
 			files = (
 				EFEF12AA20672103000A94CE /* LaunchScreen.storyboard in Resources */,
 				EFEF12D620672E53000A94CE /* InformasiCalon.storyboard in Resources */,
+				EF9B6759206784D20057215B /* anggaran_pilkada.json in Resources */,
+				EF9B675D206785710057215B /* visi_misi_rano_embay.json in Resources */,
 				EFEF12D320672DD2000A94CE /* InformasiPilkada.storyboard in Resources */,
 				EFEF12CE206725D8000A94CE /* GoogleService-Info.plist in Resources */,
+				EF9B67612067860A0057215B /* tahapan_pilkada.json in Resources */,
 				EFEF12A720672103000A94CE /* Assets.xcassets in Resources */,
+				EF9B6763206786570057215B /* program_unggulan_rano_embay.json in Resources */,
 				EFEF12A520672103000A94CE /* Main.storyboard in Resources */,
+				EF9B6757206784B90057215B /* partisipasi_pilkada.json in Resources */,
+				EF9B675220677F290057215B /* profile_calon.json in Resources */,
+				EF9B6767206786E70057215B /* lhkpn.json in Resources */,
+				EF9B675B206785160057215B /* visi_misi_wahidin_andika.json in Resources */,
+				EF9B6765206786AA0057215B /* prioritas_program_wahidin_andika.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,13 +393,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF9B675420677F450057215B /* APIUtils.swift in Sources */,
+				EF9B675020677DC90057215B /* InformasiPilkadaViewController.swift in Sources */,
 				EFEF12E1206734AD000A94CE /* MockProvider.swift in Sources */,
 				EFEF12E6206739EA000A94CE /* Application.swift in Sources */,
+				EF9B674E20677BAA0057215B /* NetworkManager.swift in Sources */,
 				EFEF12DE2067327C000A94CE /* User.swift in Sources */,
 				EFEF12A220672103000A94CE /* LoginViewController.swift in Sources */,
 				EFEF12A020672103000A94CE /* AppDelegate.swift in Sources */,
+				EFEF12EA206742F6000A94CE /* InformasiCalonService.swift in Sources */,
 				EFEF12DB206730D9000A94CE /* AuthServices.swift in Sources */,
 				EFEF12E4206739CA000A94CE /* InformasiViewController.swift in Sources */,
+				EFEF12E8206742E5000A94CE /* InformasiPilkadaService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

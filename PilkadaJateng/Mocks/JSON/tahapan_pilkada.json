@@ -1,0 +1,58 @@
+{
+    "tahapan_pilkada": [
+                        {
+                        "id": 1,
+                        "tahapan_pilkada": "Pendaftaran pasangan calon",
+                        "awal": "19-Sep-16",
+                        "akhir": "21-Sep-16"
+                        },
+                        {
+                        "id": 2,
+                        "tahapan_pilkada": "Penetapan pasangan calon dan Pengundian Nomor Urut",
+                        "awal": "20-Oct-16",
+                        "akhir": "20-Oct-16"
+                        },
+                        {
+                        "id": 3,
+                        "tahapan_pilkada": "Masa Kampanye",
+                        "awal": "23-Oct-16",
+                        "akhir": "11-Feb-17"
+                        },
+                        {
+                        "id": 4,
+                        "tahapan_pilkada": "Penetapan Daftar Pemilih Tetap (DPT)",
+                        "awal": "6-Dec-16",
+                        "akhir": "6-Dec-16"
+                        },
+                        {
+                        "id": 5,
+                        "tahapan_pilkada": "Pencoblosan",
+                        "awal": "15-Feb-17",
+                        "akhir": "15-Feb-17"
+                        },
+                        {
+                        "id": 6,
+                        "tahapan_pilkada": "Rekapitulasi suara tingkat Kecamatan",
+                        "awal": "16-Feb-17",
+                        "akhir": "22-Feb-17"
+                        },
+                        {
+                        "id": 7,
+                        "tahapan_pilkada": "Rekapitulasi suara tingkat Kabupaten/Kota",
+                        "awal": "22-Feb-17",
+                        "akhir": "24-Feb-17"
+                        },
+                        {
+                        "id": 8,
+                        "tahapan_pilkada": "Rekapitulasi suara tingkat Provinsi",
+                        "awal": "25-Feb-17",
+                        "akhir": "28-Feb-17"
+                        },
+                        {
+                        "id": 9,
+                        "tahapan_pilkada": "Penetapan Calon Terpilih",
+                        "awal": "6-Mar-17",
+                        "akhir": "7-Mar-17"
+                        }
+                        ]
+}

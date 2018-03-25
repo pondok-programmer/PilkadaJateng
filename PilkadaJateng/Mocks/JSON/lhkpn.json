@@ -1,0 +1,260 @@
+{
+    "lhkpn": [
+              {
+              "id": 1,
+              "jenis_harta": "HARTA TIDAK BERGERAK",
+              "keterangan": "Tanah dan Bangunan seluas 2310m persegi dan 141m persegi, di kabupaten bogor yang berasal dari HASIL SENDIRI, perolehan tahun 1989 sampai dengan 2007 (Perubahan atas data yang dilaporkan sebelumnya",
+              "nilai": " 118,785,000 ",
+              "tahun": "2011",
+              "status": "Perubahan atas Data yang dilaporkan sebelumnya"
+              },
+              {
+              "id": 2,
+              "jenis_harta": "HARTA TIDAK BERGERAK",
+              "keterangan": "Tanah dan Bangunan seluas 1483m persegi di Kota Jakarta Selatan yang berasal dari HASIL SENDIRI perolehan dari tahun 1995 sampai dengan 2007 (Perubahan atas data yang dilaporkan sebelumnya",
+              "nilai": " 4,312,004,000 ",
+              "tahun": "2011",
+              "status": "Perubahan atas Data yang dilaporkan sebelumnya"
+              },
+              {
+              "id": 3,
+              "jenis_harta": "HARTA TIDAK BERGERAK",
+              "keterangan": "Tanah dan Bangunan seluas 866m persegi dan 70m persegi di Kota Jakarta Selatan yang berasal dari WARISAN perolehan tahun 1998 sampai dengan 2007",
+              "nilai": " 2,249,000,000 ",
+              "tahun": "2011",
+              "status": "Perubahan atas Data yang dilaporkan sebelumnya"
+              },
+              {
+              "id": 4,
+              "jenis_harta": "HARTA BERGERAK",
+              "keterangan": "Mobil merk TOYOTA VELLFIRE tahun pembuatan 2008 yang berasal dari HASIL SENDIRI perolehan tahun 2008",
+              "nilai": " 650,000,000 ",
+              "tahun": "2011",
+              "status": "Perubahan atas Data yang dilaporkan sebelumnya"
+              },
+              {
+              "id": 5,
+              "jenis_harta": "HARTA BERGERAK",
+              "keterangan": "Mobil merk MITSUBISHI STRADA tahun pembuatan 2006 perolehan tahun 2007",
+              "nilai": " 178,500,000 ",
+              "tahun": "2011",
+              "status": "Perubahan atas Data yang dilaporkan sebelumnya"
+              },
+              {
+              "id": 6,
+              "jenis_harta": "HARTA BERGERAK",
+              "keterangan": "Mobil merk NISSAN JUKE tahun pembuatan 2012 yang berasal dari HASIL SENDIRI perolehan tahun 2012",
+              "nilai": " - ",
+              "tahun": "2011",
+              "status": "Penambahan Data Baru"
+              },
+              {
+              "id": 7,
+              "jenis_harta": "HARTA BERGERAK",
+              "keterangan": "Mobil merk JEEP WRANGLER tahun pembuatan 2011 yang berasal dari HASIL SENDIRI perolehan tahun 2011",
+              "nilai": " - ",
+              "tahun": "2011",
+              "status": "Penambahan Data Baru"
+              },
+              {
+              "id": 8,
+              "jenis_harta": "HARTA BERGERAK",
+              "keterangan": "Mobil merk NISSAN GRAND LIVINA tahun pembuatan 2008 yang berasal dari HASIL SENDIRI perolehan tahun 2008",
+              "nilai": " 145,000,000 ",
+              "tahun": "2011",
+              "status": "Penghapusan Data karena Dijual"
+              },
+              {
+              "id": 9,
+              "jenis_harta": "HARTA BERGERAK",
+              "keterangan": "PETERNAKAN PERIKANAN PERKEBUNAN PERTANIAN KEHUTANAN PERTAMBANGAN DAN USAHA LAINNYA",
+              "nilai": " - ",
+              "tahun": "2011",
+              "status": "Tidak ada"
+              },
+              {
+              "id": 10,
+              "jenis_harta": "HARTA BERGERAK",
+              "keterangan": "BENDA BERGERAK LAINNYA yang berasal dari HASIL SENDIRI perolehan tahun 2007",
+              "nilai": " 1,136,945,754 ",
+              "tahun": "2011",
+              "status": "Perubahan atas Data yang dilaporkan sebelumnya"
+              },
+              {
+              "id": 11,
+              "jenis_harta": "SURAT BERHARGA",
+              "keterangan": "Tahun Investasi 2007 yang berasal dari HASIL SENDIRI",
+              "nilai": " 100,000,000 ",
+              "tahun": "2011",
+              "status": "Tidak berubah"
+              },
+              {
+              "id": 12,
+              "jenis_harta": "SURAT BERHARGA",
+              "keterangan": "Tahun Investasi dari 1995 sampai dengan 2008 yang berasal dari HASIL SENDIRI",
+              "nilai": " 306,000,000 ",
+              "tahun": "2011",
+              "status": "Perubahan atas Data yang dilaporkan sebelumnya"
+              },
+              {
+              "id": 13,
+              "jenis_harta": "SURAT BERHARGA",
+              "keterangan": "Tahun Investasi dari 2002 sampai dengan 2007 yang berasal dari HASIL SENDIRI ",
+              "nilai": " 150,000,000 ",
+              "tahun": "2011",
+              "status": "Penghapusan Data karena Dijual"
+              },
+              {
+              "id": 14,
+              "jenis_harta": "GIRO DAN SETARA KAS LAINNYA",
+              "keterangan": "Yang berasal dari HASIL SENDIRI",
+              "nilai": " 235,740,732 ",
+              "tahun": "2011",
+              "status": "Penambahan Data Harta Kekayaan, Perubahan atas Data yang dilaporkan sebelumnya"
+              },
+              {
+              "id": 15,
+              "jenis_harta": "PIUTANG",
+              "keterangan": "Piutang dalam bentuk PINJAMAN UANG",
+              "nilai": " 3,432,289,515 ",
+              "tahun": "2011",
+              "status": "Perubahan atas Data yang dilaporkan sebelumnya"
+              },
+              {
+              "id": 16,
+              "jenis_harta": "HUTANG",
+              "keterangan": "Hutang dalam bentuk PINJAMAN BARANG",
+              "nilai": " - ",
+              "tahun": "2011",
+              "status": "Penambahan Hutang Baru"
+              },
+              {
+              "id": 17,
+              "jenis_harta": "HARTA TIDAK BERGERAK",
+              "keterangan": "Tanah dan Bangunan seluas 2310m persegi dan 141m persegi, di kabupaten bogor yang berasal dari HASIL SENDIRI, perolehan tahun 1989 sampai dengan 2007 (Perubahan atas data yang dilaporkan sebelumnya",
+              "nilai": " 292,035,000 ",
+              "tahun": "2012",
+              "status": "Perubahan atas Data yang dilaporkan sebelumnya"
+              },
+              {
+              "id": 18,
+              "jenis_harta": "HARTA TIDAK BERGERAK",
+              "keterangan": "Tanah dan Bangunan seluas 1483m persegi di Kota Jakarta Selatan yang berasal dari HASIL SENDIRI perolehan dari tahun 1995 sampai dengan 2007 (Perubahan atas data yang dilaporkan sebelumnya",
+              "nilai": " 4,859,484,000 ",
+              "tahun": "2012",
+              "status": "Perubahan atas Data yang dilaporkan sebelumnya"
+              },
+              {
+              "id": 19,
+              "jenis_harta": "HARTA TIDAK BERGERAK",
+              "keterangan": "Tanah dan Bangunan seluas 866m persegi dan 70m persegi di Kota Jakarta Selatan yang berasal dari WARISAN perolehan tahun 1998 sampai dengan 2007",
+              "nilai": " 1,942,026,000 ",
+              "tahun": "2012",
+              "status": "Perubahan atas Data yang dilaporkan sebelumnya"
+              },
+              {
+              "id": 20,
+              "jenis_harta": "HARTA BERGERAK",
+              "keterangan": "Mobil merk TOYOTA VELLFIRE tahun pembuatan 2008 yang berasal dari HASIL SENDIRI perolehan tahun 2008",
+              "nilai": " 600,000,000 ",
+              "tahun": "2012",
+              "status": "Perubahan atas Data yang dilaporkan sebelumnya"
+              },
+              {
+              "id": 21,
+              "jenis_harta": "HARTA BERGERAK",
+              "keterangan": "Mobil merk MITSUBISHI STRADA tahun pembuatan 2006 perolehan tahun 2007",
+              "nilai": " 150,000,000 ",
+              "tahun": "2012",
+              "status": "Perubahan atas Data yang dilaporkan sebelumnya"
+              },
+              {
+              "id": 22,
+              "jenis_harta": "HARTA BERGERAK",
+              "keterangan": "Mobil merk NISSAN JUKE tahun pembuatan 2012 yang berasal dari HASIL SENDIRI perolehan tahun 2012",
+              "nilai": " 140,000,000 ",
+              "tahun": "2012",
+              "status": "Penambahan Data Baru"
+              },
+              {
+              "id": 23,
+              "jenis_harta": "HARTA BERGERAK",
+              "keterangan": "Mobil merk JEEP WRANGLER tahun pembuatan 2011 yang berasal dari HASIL SENDIRI perolehan tahun 2011",
+              "nilai": " 800,000,000 ",
+              "tahun": "2012",
+              "status": "Penambahan Data Baru"
+              },
+              {
+              "id": 24,
+              "jenis_harta": "HARTA BERGERAK",
+              "keterangan": "Mobil merk NISSAN GRAND LIVINA tahun pembuatan 2008 yang berasal dari HASIL SENDIRI perolehan tahun 2008",
+              "nilai": " - ",
+              "tahun": "2012",
+              "status": "Penghapusan Data karena Dijual"
+              },
+              {
+              "id": 25,
+              "jenis_harta": "HARTA BERGERAK",
+              "keterangan": "PETERNAKAN PERIKANAN PERKEBUNAN PERTANIAN KEHUTANAN PERTAMBANGAN DAN USAHA LAINNYA",
+              "nilai": " - ",
+              "tahun": "2012",
+              "status": "Tidak ada"
+              },
+              {
+              "id": 26,
+              "jenis_harta": "HARTA BERGERAK",
+              "keterangan": "BENDA BERGERAK LAINNYA yang berasal dari HASIL SENDIRI perolehan tahun 2007",
+              "nilai": " 1,256,945,754 ",
+              "tahun": "2012",
+              "status": "Perubahan atas Data yang dilaporkan sebelumnya"
+              },
+              {
+              "id": 27,
+              "jenis_harta": "SURAT BERHARGA",
+              "keterangan": "Tahun Investasi 2007 yang berasal dari HASIL SENDIRI",
+              "nilai": " 100,000,000 ",
+              "tahun": "2012",
+              "status": "Tidak berubah"
+              },
+              {
+              "id": 28,
+              "jenis_harta": "SURAT BERHARGA",
+              "keterangan": "Tahun Investasi dari 1995 sampai dengan 2008 yang berasal dari HASIL SENDIRI",
+              "nilai": " 891,000,000 ",
+              "tahun": "2012",
+              "status": "Perubahan atas Data yang dilaporkan sebelumnya"
+              },
+              {
+              "id": 29,
+              "jenis_harta": "SURAT BERHARGA",
+              "keterangan": "Tahun Investasi dari 2002 sampai dengan 2007 yang berasal dari HASIL SENDIRI ",
+              "nilai": " - ",
+              "tahun": "2012",
+              "status": "Penghapusan Data karena Dijual"
+              },
+              {
+              "id": 30,
+              "jenis_harta": "GIRO DAN SETARA KAS LAINNYA",
+              "keterangan": "Yang berasal dari HASIL SENDIRI",
+              "nilai": " 1,440,793,217 ",
+              "tahun": "2012",
+              "status": "Penambahan Data Harta Kekayaan, Perubahan atas Data yang dilaporkan sebelumnya"
+              },
+              {
+              "id": 31,
+              "jenis_harta": "PIUTANG",
+              "keterangan": "Piutang dalam bentuk PINJAMAN UANG",
+              "nilai": " 1,932,289,515 ",
+              "tahun": "2012",
+              "status": "Perubahan atas Data yang dilaporkan sebelumnya"
+              },
+              {
+              "id": 32,
+              "jenis_harta": "HUTANG",
+              "keterangan": "Hutang dalam bentuk PINJAMAN BARANG",
+              "nilai": " 2,258,503,000 ",
+              "tahun": "2012",
+              "status": "Penambahan Hutang Baru"
+              }
+              ]
+}
