@@ -15,6 +15,8 @@
 		EFEF12B520672104000A94CE /* PilkadaJatengTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEF12B420672104000A94CE /* PilkadaJatengTests.swift */; };
 		EFEF12C020672104000A94CE /* PilkadaJatengUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEF12BF20672104000A94CE /* PilkadaJatengUITests.swift */; };
 		EFEF12CE206725D8000A94CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EFEF12CD206725D7000A94CE /* GoogleService-Info.plist */; };
+		EFEF12D320672DD2000A94CE /* InformasiPilkada.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFEF12D220672DD2000A94CE /* InformasiPilkada.storyboard */; };
+		EFEF12D620672E53000A94CE /* InformasiCalon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFEF12D420672E53000A94CE /* InformasiCalon.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		EFEF12BF20672104000A94CE /* PilkadaJatengUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PilkadaJatengUITests.swift; sourceTree = "<group>"; };
 		EFEF12C120672104000A94CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EFEF12CD206725D7000A94CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EFEF12D220672DD2000A94CE /* InformasiPilkada.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = InformasiPilkada.storyboard; sourceTree = "<group>"; };
+		EFEF12D520672E53000A94CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = PilkadaJateng/Base.lproj/InformasiCalon.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,9 +105,8 @@
 			children = (
 				EFEF129F20672103000A94CE /* AppDelegate.swift */,
 				EFEF12A120672103000A94CE /* ViewController.swift */,
-				EFEF12A320672103000A94CE /* Main.storyboard */,
+				EFEF12D720672EB5000A94CE /* Storyboards */,
 				EFEF12A620672103000A94CE /* Assets.xcassets */,
-				EFEF12A820672103000A94CE /* LaunchScreen.storyboard */,
 				EFEF12AB20672103000A94CE /* Info.plist */,
 				EFEF12CD206725D7000A94CE /* GoogleService-Info.plist */,
 			);
@@ -126,6 +129,17 @@
 				EFEF12C120672104000A94CE /* Info.plist */,
 			);
 			path = PilkadaJatengUITests;
+			sourceTree = "<group>";
+		};
+		EFEF12D720672EB5000A94CE /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				EFEF12A320672103000A94CE /* Main.storyboard */,
+				EFEF12D420672E53000A94CE /* InformasiCalon.storyboard */,
+				EFEF12D220672DD2000A94CE /* InformasiPilkada.storyboard */,
+				EFEF12A820672103000A94CE /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +250,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFEF12AA20672103000A94CE /* LaunchScreen.storyboard in Resources */,
+				EFEF12D620672E53000A94CE /* InformasiCalon.storyboard in Resources */,
+				EFEF12D320672DD2000A94CE /* InformasiPilkada.storyboard in Resources */,
 				EFEF12CE206725D8000A94CE /* GoogleService-Info.plist in Resources */,
 				EFEF12A720672103000A94CE /* Assets.xcassets in Resources */,
 				EFEF12A520672103000A94CE /* Main.storyboard in Resources */,
@@ -314,6 +330,14 @@
 				EFEF12A920672103000A94CE /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		EFEF12D420672E53000A94CE /* InformasiCalon.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFEF12D520672E53000A94CE /* Base */,
+			);
+			name = InformasiCalon.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

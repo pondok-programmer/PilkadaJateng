@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--LOGIN-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" userLabel="LOGIN" customClass="ViewController" customModule="PilkadaJateng" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wiP-fd-ywN">
+                                <rect key="frame" x="137" y="368" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="EuK-Je-RjP" kind="presentation" id="Otc-CG-PAJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="180" y="20"/>
+        </scene>
+        <!--INFO-->
+        <scene sceneID="oHi-cl-iR5">
+            <objects>
+                <viewController id="xZw-HS-fm8" userLabel="INFO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kqg-ij-lXR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e1w-LW-kSO">
+                                <rect key="frame" x="135" y="190" width="50" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Pilkada"/>
+                                <connections>
+                                    <segue destination="X2n-NB-XJq" kind="presentation" id="dI6-VF-JNF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qeJ-j2-snJ">
+                                <rect key="frame" x="140" y="276" width="40" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Calon"/>
+                                <connections>
+                                    <segue destination="L0X-FA-B6e" kind="presentation" id="PYr-bu-lEK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="Znh-yk-KU7"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Informasi" badgeValue="1" id="juF-6s-1du"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EkL-y6-Yej" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-173" y="865"/>
+        </scene>
+        <!--BILIKSUARA-->
+        <scene sceneID="TQa-Tg-UXh">
+            <objects>
+                <viewController id="rXv-ZP-PZT" userLabel="BILIKSUARA" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fhu-pz-yQu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="Ojk-tt-VWS"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Bilik Suara" badgeValue="2" id="Rgk-Bx-Dwp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3aS-ww-4tA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="583" y="865"/>
+        </scene>
+        <!--CHAT-->
+        <scene sceneID="huB-dF-cXY">
+            <objects>
+                <viewController id="s7Y-4r-XRe" userLabel="CHAT" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c2M-Pt-9aL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="IJl-Ge-hu8"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Diskusi" badgeValue="3" id="W0R-dc-4ld"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5wb-Tt-vNw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1493" y="865"/>
+        </scene>
+        <!--BERITA-->
+        <scene sceneID="QhN-SF-DJi">
+            <objects>
+                <viewController id="wmt-qd-Qhb" userLabel="BERITA" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i5R-IP-rfc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="UlQ-9v-09y"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Tips" badgeValue="4" id="Eat-WA-Icm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Mv-nE-poy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2304" y="865"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="O63-Bc-1N1">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="EuK-Je-RjP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ofv-vF-Ukb">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="xZw-HS-fm8" kind="relationship" relationship="viewControllers" id="EvK-y8-LER"/>
+                        <segue destination="rXv-ZP-PZT" kind="relationship" relationship="viewControllers" id="GRM-Rx-SMv"/>
+                        <segue destination="s7Y-4r-XRe" kind="relationship" relationship="viewControllers" id="pkV-eW-mPw"/>
+                        <segue destination="wmt-qd-Qhb" kind="relationship" relationship="viewControllers" id="9Mt-Ds-Qwk"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fjI-nZ-XWa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1001" y="98"/>
+        </scene>
+        <!--InformasiPilkada-->
+        <scene sceneID="hfO-BX-0gL">
+            <objects>
+                <viewControllerPlaceholder storyboardName="InformasiPilkada" id="X2n-NB-XJq" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i3C-B3-wWq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-467" y="1776"/>
+        </scene>
+        <!--InformasiCalon-->
+        <scene sceneID="pOz-Wd-YRd">
+            <objects>
+                <viewControllerPlaceholder storyboardName="InformasiCalon" id="L0X-FA-B6e" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A6k-8a-Ezw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="233" y="1773"/>
+        </scene>
+    </scenes>
+</document>
