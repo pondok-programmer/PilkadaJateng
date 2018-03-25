@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EFEF12A020672103000A94CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEF129F20672103000A94CE /* AppDelegate.swift */; };
+		EFEF12A220672103000A94CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEF12A120672103000A94CE /* ViewController.swift */; };
+		EFEF12A520672103000A94CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFEF12A320672103000A94CE /* Main.storyboard */; };
+		EFEF12A720672103000A94CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFEF12A620672103000A94CE /* Assets.xcassets */; };
+		EFEF12AA20672103000A94CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFEF12A820672103000A94CE /* LaunchScreen.storyboard */; };
+		EFEF12B520672104000A94CE /* PilkadaJatengTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEF12B420672104000A94CE /* PilkadaJatengTests.swift */; };
+		EFEF12C020672104000A94CE /* PilkadaJatengUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEF12BF20672104000A94CE /* PilkadaJatengUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EFEF12B120672104000A94CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EFEF129420672103000A94CE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EFEF129B20672103000A94CE;
+			remoteInfo = PilkadaJateng;
+		};
+		EFEF12BC20672104000A94CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EFEF129420672103000A94CE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EFEF129B20672103000A94CE;
+			remoteInfo = PilkadaJateng;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EFEF129C20672103000A94CE /* PilkadaJateng.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PilkadaJateng.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFEF129F20672103000A94CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EFEF12A120672103000A94CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EFEF12A420672103000A94CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EFEF12A620672103000A94CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EFEF12A920672103000A94CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EFEF12AB20672103000A94CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFEF12B020672104000A94CE /* PilkadaJatengTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PilkadaJatengTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFEF12B420672104000A94CE /* PilkadaJatengTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PilkadaJatengTests.swift; sourceTree = "<group>"; };
+		EFEF12B620672104000A94CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFEF12BB20672104000A94CE /* PilkadaJatengUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PilkadaJatengUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFEF12BF20672104000A94CE /* PilkadaJatengUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PilkadaJatengUITests.swift; sourceTree = "<group>"; };
+		EFEF12C120672104000A94CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EFEF129920672103000A94CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFEF12AD20672104000A94CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFEF12B820672104000A94CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EFEF129320672103000A94CE = {
+			isa = PBXGroup;
+			children = (
+				EFEF129E20672103000A94CE /* PilkadaJateng */,
+				EFEF12B320672104000A94CE /* PilkadaJatengTests */,
+				EFEF12BE20672104000A94CE /* PilkadaJatengUITests */,
+				EFEF129D20672103000A94CE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EFEF129D20672103000A94CE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EFEF129C20672103000A94CE /* PilkadaJateng.app */,
+				EFEF12B020672104000A94CE /* PilkadaJatengTests.xctest */,
+				EFEF12BB20672104000A94CE /* PilkadaJatengUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EFEF129E20672103000A94CE /* PilkadaJateng */ = {
+			isa = PBXGroup;
+			children = (
+				EFEF129F20672103000A94CE /* AppDelegate.swift */,
+				EFEF12A120672103000A94CE /* ViewController.swift */,
+				EFEF12A320672103000A94CE /* Main.storyboard */,
+				EFEF12A620672103000A94CE /* Assets.xcassets */,
+				EFEF12A820672103000A94CE /* LaunchScreen.storyboard */,
+				EFEF12AB20672103000A94CE /* Info.plist */,
+			);
+			path = PilkadaJateng;
+			sourceTree = "<group>";
+		};
+		EFEF12B320672104000A94CE /* PilkadaJatengTests */ = {
+			isa = PBXGroup;
+			children = (
+				EFEF12B420672104000A94CE /* PilkadaJatengTests.swift */,
+				EFEF12B620672104000A94CE /* Info.plist */,
+			);
+			path = PilkadaJatengTests;
+			sourceTree = "<group>";
+		};
+		EFEF12BE20672104000A94CE /* PilkadaJatengUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EFEF12BF20672104000A94CE /* PilkadaJatengUITests.swift */,
+				EFEF12C120672104000A94CE /* Info.plist */,
+			);
+			path = PilkadaJatengUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EFEF129B20672103000A94CE /* PilkadaJateng */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFEF12C420672104000A94CE /* Build configuration list for PBXNativeTarget "PilkadaJateng" */;
+			buildPhases = (
+				EFEF129820672103000A94CE /* Sources */,
+				EFEF129920672103000A94CE /* Frameworks */,
+				EFEF129A20672103000A94CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PilkadaJateng;
+			productName = PilkadaJateng;
+			productReference = EFEF129C20672103000A94CE /* PilkadaJateng.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EFEF12AF20672104000A94CE /* PilkadaJatengTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFEF12C720672104000A94CE /* Build configuration list for PBXNativeTarget "PilkadaJatengTests" */;
+			buildPhases = (
+				EFEF12AC20672104000A94CE /* Sources */,
+				EFEF12AD20672104000A94CE /* Frameworks */,
+				EFEF12AE20672104000A94CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EFEF12B220672104000A94CE /* PBXTargetDependency */,
+			);
+			name = PilkadaJatengTests;
+			productName = PilkadaJatengTests;
+			productReference = EFEF12B020672104000A94CE /* PilkadaJatengTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EFEF12BA20672104000A94CE /* PilkadaJatengUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFEF12CA20672104000A94CE /* Build configuration list for PBXNativeTarget "PilkadaJatengUITests" */;
+			buildPhases = (
+				EFEF12B720672104000A94CE /* Sources */,
+				EFEF12B820672104000A94CE /* Frameworks */,
+				EFEF12B920672104000A94CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EFEF12BD20672104000A94CE /* PBXTargetDependency */,
+			);
+			name = PilkadaJatengUITests;
+			productName = PilkadaJatengUITests;
+			productReference = EFEF12BB20672104000A94CE /* PilkadaJatengUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EFEF129420672103000A94CE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = PondokiOS;
+				TargetAttributes = {
+					EFEF129B20672103000A94CE = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					EFEF12AF20672104000A94CE = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EFEF129B20672103000A94CE;
+					};
+					EFEF12BA20672104000A94CE = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EFEF129B20672103000A94CE;
+					};
+				};
+			};
+			buildConfigurationList = EFEF129720672103000A94CE /* Build configuration list for PBXProject "PilkadaJateng" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EFEF129320672103000A94CE;
+			productRefGroup = EFEF129D20672103000A94CE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EFEF129B20672103000A94CE /* PilkadaJateng */,
+				EFEF12AF20672104000A94CE /* PilkadaJatengTests */,
+				EFEF12BA20672104000A94CE /* PilkadaJatengUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EFEF129A20672103000A94CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFEF12AA20672103000A94CE /* LaunchScreen.storyboard in Resources */,
+				EFEF12A720672103000A94CE /* Assets.xcassets in Resources */,
+				EFEF12A520672103000A94CE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFEF12AE20672104000A94CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFEF12B920672104000A94CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EFEF129820672103000A94CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFEF12A220672103000A94CE /* ViewController.swift in Sources */,
+				EFEF12A020672103000A94CE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFEF12AC20672104000A94CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFEF12B520672104000A94CE /* PilkadaJatengTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFEF12B720672104000A94CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFEF12C020672104000A94CE /* PilkadaJatengUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EFEF12B220672104000A94CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EFEF129B20672103000A94CE /* PilkadaJateng */;
+			targetProxy = EFEF12B120672104000A94CE /* PBXContainerItemProxy */;
+		};
+		EFEF12BD20672104000A94CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EFEF129B20672103000A94CE /* PilkadaJateng */;
+			targetProxy = EFEF12BC20672104000A94CE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EFEF12A320672103000A94CE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFEF12A420672103000A94CE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EFEF12A820672103000A94CE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFEF12A920672103000A94CE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EFEF12C220672104000A94CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EFEF12C320672104000A94CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EFEF12C520672104000A94CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SDSLU2QT5X;
+				INFOPLIST_FILE = PilkadaJateng/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pondokios.PilkadaJateng;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EFEF12C620672104000A94CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SDSLU2QT5X;
+				INFOPLIST_FILE = PilkadaJateng/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pondokios.PilkadaJateng;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EFEF12C820672104000A94CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SDSLU2QT5X;
+				INFOPLIST_FILE = PilkadaJatengTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pondokios.PilkadaJatengTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PilkadaJateng.app/PilkadaJateng";
+			};
+			name = Debug;
+		};
+		EFEF12C920672104000A94CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SDSLU2QT5X;
+				INFOPLIST_FILE = PilkadaJatengTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pondokios.PilkadaJatengTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PilkadaJateng.app/PilkadaJateng";
+			};
+			name = Release;
+		};
+		EFEF12CB20672104000A94CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SDSLU2QT5X;
+				INFOPLIST_FILE = PilkadaJatengUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pondokios.PilkadaJatengUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PilkadaJateng;
+			};
+			name = Debug;
+		};
+		EFEF12CC20672104000A94CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SDSLU2QT5X;
+				INFOPLIST_FILE = PilkadaJatengUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pondokios.PilkadaJatengUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PilkadaJateng;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EFEF129720672103000A94CE /* Build configuration list for PBXProject "PilkadaJateng" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFEF12C220672104000A94CE /* Debug */,
+				EFEF12C320672104000A94CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFEF12C420672104000A94CE /* Build configuration list for PBXNativeTarget "PilkadaJateng" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFEF12C520672104000A94CE /* Debug */,
+				EFEF12C620672104000A94CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFEF12C720672104000A94CE /* Build configuration list for PBXNativeTarget "PilkadaJatengTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFEF12C820672104000A94CE /* Debug */,
+				EFEF12C920672104000A94CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFEF12CA20672104000A94CE /* Build configuration list for PBXNativeTarget "PilkadaJatengUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFEF12CB20672104000A94CE /* Debug */,
+				EFEF12CC20672104000A94CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EFEF129420672103000A94CE /* Project object */;
+}
