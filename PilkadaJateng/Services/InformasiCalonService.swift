@@ -14,10 +14,10 @@ class InformasiCalonService {
         self.networkManager = networkManager
     }
     
-    func getData(completion: @escaping (String?, Error?) -> ()) {
-        let url = networkManager.url(for: APIUtils.profileCalon)!
-        networkManager.get(from: url) { (str, error) in
-            completion(str, error)
-        }
-    }
+//    func getData(completion: @escaping (String?, Error?) -> ()) {
+//        let url = networkManager.url(for: APIUtils.profileCalon)!
+//        networkManager.get(from: url) { (str, error) in
+//            completion(str, error)
+//        }
+//    }
 }

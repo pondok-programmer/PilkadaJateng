@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		057C480F4E312CC69FE26442 /* Pods_PilkadaJatengTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86F697DB3F1842B0F328077F /* Pods_PilkadaJatengTests.framework */; };
+		073AF81C62B419A96CB26B3A /* Pods_PilkadaJatengUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D918A481CFB013ED5C3E121E /* Pods_PilkadaJatengUITests.framework */; };
+		8046A59205DFA8ADD6EEF7D9 /* Pods_PilkadaJateng.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF09DA17D0668593C8BDE728 /* Pods_PilkadaJateng.framework */; };
 		EF9B674E20677BAA0057215B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9B674D20677BAA0057215B /* NetworkManager.swift */; };
 		EF9B675020677DC90057215B /* InformasiPilkadaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9B674F20677DC90057215B /* InformasiPilkadaViewController.swift */; };
 		EF9B675220677F290057215B /* profile_calon.json in Resources */ = {isa = PBXBuildFile; fileRef = EF9B675120677F290057215B /* profile_calon.json */; };
@@ -19,6 +22,14 @@
 		EF9B6763206786570057215B /* program_unggulan_rano_embay.json in Resources */ = {isa = PBXBuildFile; fileRef = EF9B6762206786570057215B /* program_unggulan_rano_embay.json */; };
 		EF9B6765206786AA0057215B /* prioritas_program_wahidin_andika.json in Resources */ = {isa = PBXBuildFile; fileRef = EF9B6764206786AA0057215B /* prioritas_program_wahidin_andika.json */; };
 		EF9B6767206786E70057215B /* lhkpn.json in Resources */ = {isa = PBXBuildFile; fileRef = EF9B6766206786E70057215B /* lhkpn.json */; };
+		EF9B676920679B2A0057215B /* PartisipasiPilkada.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9B676820679B2A0057215B /* PartisipasiPilkada.swift */; };
+		EF9B676D2067A2010057215B /* JSONConstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9B676C2067A2010057215B /* JSONConstructor.swift */; };
+		EF9B67702067A2E70057215B /* PartisipasiPilkada+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9B676F2067A2E70057215B /* PartisipasiPilkada+Ext.swift */; };
+		EF9B67752067A3860057215B /* Optional+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9B67742067A3860057215B /* Optional+Ext.swift */; };
+		EF9B67772067AAB20057215B /* Tester.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9B67762067AAB20057215B /* Tester.swift */; };
+		EF9B677A2067BE9C0057215B /* PartisipasiPilkadaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9B67792067BE9C0057215B /* PartisipasiPilkadaViewController.swift */; };
+		EF9B677D2067CF460057215B /* PartisipasiPilkadaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9B677B2067CF460057215B /* PartisipasiPilkadaCollectionViewCell.swift */; };
+		EF9B677E2067CF460057215B /* PartisipasiPilkadaCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF9B677C2067CF460057215B /* PartisipasiPilkadaCollectionViewCell.xib */; };
 		EFEF12A020672103000A94CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEF129F20672103000A94CE /* AppDelegate.swift */; };
 		EFEF12A220672103000A94CE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEF12A120672103000A94CE /* LoginViewController.swift */; };
 		EFEF12A520672103000A94CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFEF12A320672103000A94CE /* Main.storyboard */; };
@@ -56,6 +67,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D110D5CB03261809736D827 /* Pods-PilkadaJateng.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PilkadaJateng.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PilkadaJateng/Pods-PilkadaJateng.debug.xcconfig"; sourceTree = "<group>"; };
+		6597A4F7890A7B640E8857EB /* Pods-PilkadaJateng.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PilkadaJateng.release.xcconfig"; path = "Pods/Target Support Files/Pods-PilkadaJateng/Pods-PilkadaJateng.release.xcconfig"; sourceTree = "<group>"; };
+		65FCBD0DF66B08DE0F2BD05E /* Pods-PilkadaJatengUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PilkadaJatengUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PilkadaJatengUITests/Pods-PilkadaJatengUITests.release.xcconfig"; sourceTree = "<group>"; };
+		86F697DB3F1842B0F328077F /* Pods_PilkadaJatengTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PilkadaJatengTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D918A481CFB013ED5C3E121E /* Pods_PilkadaJatengUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PilkadaJatengUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF09DA17D0668593C8BDE728 /* Pods_PilkadaJateng.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PilkadaJateng.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0AC20D403F1259AECA2D926 /* Pods-PilkadaJatengTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PilkadaJatengTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PilkadaJatengTests/Pods-PilkadaJatengTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EC74C13A84C352229226CACA /* Pods-PilkadaJatengTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PilkadaJatengTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PilkadaJatengTests/Pods-PilkadaJatengTests.release.xcconfig"; sourceTree = "<group>"; };
 		EF9B674D20677BAA0057215B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		EF9B674F20677DC90057215B /* InformasiPilkadaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformasiPilkadaViewController.swift; sourceTree = "<group>"; };
 		EF9B675120677F290057215B /* profile_calon.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = profile_calon.json; sourceTree = "<group>"; };
@@ -68,6 +87,14 @@
 		EF9B6762206786570057215B /* program_unggulan_rano_embay.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = program_unggulan_rano_embay.json; sourceTree = "<group>"; };
 		EF9B6764206786AA0057215B /* prioritas_program_wahidin_andika.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = prioritas_program_wahidin_andika.json; sourceTree = "<group>"; };
 		EF9B6766206786E70057215B /* lhkpn.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = lhkpn.json; sourceTree = "<group>"; };
+		EF9B676820679B2A0057215B /* PartisipasiPilkada.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartisipasiPilkada.swift; sourceTree = "<group>"; };
+		EF9B676C2067A2010057215B /* JSONConstructor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONConstructor.swift; sourceTree = "<group>"; };
+		EF9B676F2067A2E70057215B /* PartisipasiPilkada+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PartisipasiPilkada+Ext.swift"; sourceTree = "<group>"; };
+		EF9B67742067A3860057215B /* Optional+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Ext.swift"; sourceTree = "<group>"; };
+		EF9B67762067AAB20057215B /* Tester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tester.swift; sourceTree = "<group>"; };
+		EF9B67792067BE9C0057215B /* PartisipasiPilkadaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartisipasiPilkadaViewController.swift; sourceTree = "<group>"; };
+		EF9B677B2067CF460057215B /* PartisipasiPilkadaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartisipasiPilkadaCollectionViewCell.swift; sourceTree = "<group>"; };
+		EF9B677C2067CF460057215B /* PartisipasiPilkadaCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PartisipasiPilkadaCollectionViewCell.xib; sourceTree = "<group>"; };
 		EFEF129C20672103000A94CE /* PilkadaJateng.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PilkadaJateng.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFEF129F20672103000A94CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFEF12A120672103000A94CE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +118,7 @@
 		EFEF12E5206739EA000A94CE /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		EFEF12E7206742E5000A94CE /* InformasiPilkadaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformasiPilkadaService.swift; sourceTree = "<group>"; };
 		EFEF12E9206742F6000A94CE /* InformasiCalonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformasiCalonService.swift; sourceTree = "<group>"; };
+		F5E95F40A39F52A6C8AA4C5F /* Pods-PilkadaJatengUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PilkadaJatengUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PilkadaJatengUITests/Pods-PilkadaJatengUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8046A59205DFA8ADD6EEF7D9 /* Pods_PilkadaJateng.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				057C480F4E312CC69FE26442 /* Pods_PilkadaJatengTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,12 +142,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				073AF81C62B419A96CB26B3A /* Pods_PilkadaJatengUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F4F76652966EF7AFFADACE5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DF09DA17D0668593C8BDE728 /* Pods_PilkadaJateng.framework */,
+				86F697DB3F1842B0F328077F /* Pods_PilkadaJatengTests.framework */,
+				D918A481CFB013ED5C3E121E /* Pods_PilkadaJatengUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D82F6639E0729380A998223E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1D110D5CB03261809736D827 /* Pods-PilkadaJateng.debug.xcconfig */,
+				6597A4F7890A7B640E8857EB /* Pods-PilkadaJateng.release.xcconfig */,
+				E0AC20D403F1259AECA2D926 /* Pods-PilkadaJatengTests.debug.xcconfig */,
+				EC74C13A84C352229226CACA /* Pods-PilkadaJatengTests.release.xcconfig */,
+				F5E95F40A39F52A6C8AA4C5F /* Pods-PilkadaJatengUITests.debug.xcconfig */,
+				65FCBD0DF66B08DE0F2BD05E /* Pods-PilkadaJatengUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		EF9B675520677F9A0057215B /* JSON */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +188,32 @@
 			path = JSON;
 			sourceTree = "<group>";
 		};
+		EF9B67732067A34F0057215B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EF9B676F2067A2E70057215B /* PartisipasiPilkada+Ext.swift */,
+				EF9B67742067A3860057215B /* Optional+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EF9B67782067BE3E0057215B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				EF9B676C2067A2010057215B /* JSONConstructor.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		EF9B677F2067CF520057215B /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				EF9B677B2067CF460057215B /* PartisipasiPilkadaCollectionViewCell.swift */,
+				EF9B677C2067CF460057215B /* PartisipasiPilkadaCollectionViewCell.xib */,
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
 		EFEF129320672103000A94CE = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +221,8 @@
 				EFEF12B320672104000A94CE /* PilkadaJatengTests */,
 				EFEF12BE20672104000A94CE /* PilkadaJatengUITests */,
 				EFEF129D20672103000A94CE /* Products */,
+				D82F6639E0729380A998223E /* Pods */,
+				2F4F76652966EF7AFFADACE5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -159,11 +241,13 @@
 			children = (
 				EFEF12D82067309F000A94CE /* Supporting Files */,
 				EFEF12D9206730B0000A94CE /* Scenes */,
-				EFEF12D720672EB5000A94CE /* Storyboards */,
+				EFEF12D720672EB5000A94CE /* Layouts */,
 				EFEF12DC206730E3000A94CE /* Services */,
+				EF9B67782067BE3E0057215B /* Protocols */,
 				EFEF12DF2067328A000A94CE /* Models */,
 				EFEF12A620672103000A94CE /* Assets.xcassets */,
 				EFEF12E2206734B3000A94CE /* Mocks */,
+				EF9B67732067A34F0057215B /* Extensions */,
 			);
 			path = PilkadaJateng;
 			sourceTree = "<group>";
@@ -186,15 +270,16 @@
 			path = PilkadaJatengUITests;
 			sourceTree = "<group>";
 		};
-		EFEF12D720672EB5000A94CE /* Storyboards */ = {
+		EFEF12D720672EB5000A94CE /* Layouts */ = {
 			isa = PBXGroup;
 			children = (
 				EFEF12A320672103000A94CE /* Main.storyboard */,
 				EFEF12D420672E53000A94CE /* InformasiCalon.storyboard */,
 				EFEF12D220672DD2000A94CE /* InformasiPilkada.storyboard */,
 				EFEF12A820672103000A94CE /* LaunchScreen.storyboard */,
+				EF9B677F2067CF520057215B /* CollectionViewCells */,
 			);
-			path = Storyboards;
+			path = Layouts;
 			sourceTree = "<group>";
 		};
 		EFEF12D82067309F000A94CE /* Supporting Files */ = {
@@ -214,6 +299,7 @@
 				EFEF12A120672103000A94CE /* LoginViewController.swift */,
 				EFEF12E3206739CA000A94CE /* InformasiViewController.swift */,
 				EF9B674F20677DC90057215B /* InformasiPilkadaViewController.swift */,
+				EF9B67792067BE9C0057215B /* PartisipasiPilkadaViewController.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -233,6 +319,7 @@
 			isa = PBXGroup;
 			children = (
 				EFEF12DD2067327C000A94CE /* User.swift */,
+				EF9B676820679B2A0057215B /* PartisipasiPilkada.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -240,9 +327,10 @@
 		EFEF12E2206734B3000A94CE /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				EF9B675520677F9A0057215B /* JSON */,
 				EF9B675320677F450057215B /* APIUtils.swift */,
 				EFEF12E0206734AD000A94CE /* MockProvider.swift */,
-				EF9B675520677F9A0057215B /* JSON */,
+				EF9B67762067AAB20057215B /* Tester.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -254,9 +342,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EFEF12C420672104000A94CE /* Build configuration list for PBXNativeTarget "PilkadaJateng" */;
 			buildPhases = (
+				55421876CD9F052F23CB1E92 /* [CP] Check Pods Manifest.lock */,
 				EFEF129820672103000A94CE /* Sources */,
 				EFEF129920672103000A94CE /* Frameworks */,
 				EFEF129A20672103000A94CE /* Resources */,
+				D4868491D2C632A0C26C98CD /* [CP] Embed Pods Frameworks */,
+				502EFACD0C03D405A4E237E0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -271,9 +362,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EFEF12C720672104000A94CE /* Build configuration list for PBXNativeTarget "PilkadaJatengTests" */;
 			buildPhases = (
+				5C999DF34CD9087E1C26345B /* [CP] Check Pods Manifest.lock */,
 				EFEF12AC20672104000A94CE /* Sources */,
 				EFEF12AD20672104000A94CE /* Frameworks */,
 				EFEF12AE20672104000A94CE /* Resources */,
+				2042A35F015C7373186754F2 /* [CP] Embed Pods Frameworks */,
+				5E354279BE59D734B76AEB42 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -289,9 +383,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EFEF12CA20672104000A94CE /* Build configuration list for PBXNativeTarget "PilkadaJatengUITests" */;
 			buildPhases = (
+				57CED72FB8A5DF7513096C7F /* [CP] Check Pods Manifest.lock */,
 				EFEF12B720672104000A94CE /* Sources */,
 				EFEF12B820672104000A94CE /* Frameworks */,
 				EFEF12B920672104000A94CE /* Resources */,
+				CCF8942E28E85A6393A18E5C /* [CP] Embed Pods Frameworks */,
+				ECF404DD22D55B7299334269 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -369,6 +466,7 @@
 				EF9B6767206786E70057215B /* lhkpn.json in Resources */,
 				EF9B675B206785160057215B /* visi_misi_wahidin_andika.json in Resources */,
 				EF9B6765206786AA0057215B /* prioritas_program_wahidin_andika.json in Resources */,
+				EF9B677E2067CF460057215B /* PartisipasiPilkadaCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,21 +486,178 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2042A35F015C7373186754F2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PilkadaJatengTests/Pods-PilkadaJatengTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		502EFACD0C03D405A4E237E0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PilkadaJateng/Pods-PilkadaJateng-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		55421876CD9F052F23CB1E92 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PilkadaJateng-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		57CED72FB8A5DF7513096C7F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PilkadaJatengUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C999DF34CD9087E1C26345B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PilkadaJatengTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E354279BE59D734B76AEB42 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PilkadaJatengTests/Pods-PilkadaJatengTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CCF8942E28E85A6393A18E5C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PilkadaJatengUITests/Pods-PilkadaJatengUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D4868491D2C632A0C26C98CD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PilkadaJateng/Pods-PilkadaJateng-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PilkadaJateng/Pods-PilkadaJateng-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECF404DD22D55B7299334269 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PilkadaJatengUITests/Pods-PilkadaJatengUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EFEF129820672103000A94CE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				EF9B675420677F450057215B /* APIUtils.swift in Sources */,
+				EF9B67702067A2E70057215B /* PartisipasiPilkada+Ext.swift in Sources */,
 				EF9B675020677DC90057215B /* InformasiPilkadaViewController.swift in Sources */,
+				EF9B677A2067BE9C0057215B /* PartisipasiPilkadaViewController.swift in Sources */,
 				EFEF12E1206734AD000A94CE /* MockProvider.swift in Sources */,
+				EF9B677D2067CF460057215B /* PartisipasiPilkadaCollectionViewCell.swift in Sources */,
+				EF9B67752067A3860057215B /* Optional+Ext.swift in Sources */,
+				EF9B676920679B2A0057215B /* PartisipasiPilkada.swift in Sources */,
 				EFEF12E6206739EA000A94CE /* Application.swift in Sources */,
 				EF9B674E20677BAA0057215B /* NetworkManager.swift in Sources */,
 				EFEF12DE2067327C000A94CE /* User.swift in Sources */,
 				EFEF12A220672103000A94CE /* LoginViewController.swift in Sources */,
 				EFEF12A020672103000A94CE /* AppDelegate.swift in Sources */,
 				EFEF12EA206742F6000A94CE /* InformasiCalonService.swift in Sources */,
+				EF9B67772067AAB20057215B /* Tester.swift in Sources */,
 				EFEF12DB206730D9000A94CE /* AuthServices.swift in Sources */,
+				EF9B676D2067A2010057215B /* JSONConstructor.swift in Sources */,
 				EFEF12E4206739CA000A94CE /* InformasiViewController.swift in Sources */,
 				EFEF12E8206742E5000A94CE /* InformasiPilkadaService.swift in Sources */,
 			);
@@ -576,6 +831,7 @@
 		};
 		EFEF12C520672104000A94CE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D110D5CB03261809736D827 /* Pods-PilkadaJateng.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -591,6 +847,7 @@
 		};
 		EFEF12C620672104000A94CE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6597A4F7890A7B640E8857EB /* Pods-PilkadaJateng.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -606,6 +863,7 @@
 		};
 		EFEF12C820672104000A94CE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0AC20D403F1259AECA2D926 /* Pods-PilkadaJatengTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -623,6 +881,7 @@
 		};
 		EFEF12C920672104000A94CE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC74C13A84C352229226CACA /* Pods-PilkadaJatengTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -640,6 +899,7 @@
 		};
 		EFEF12CB20672104000A94CE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5E95F40A39F52A6C8AA4C5F /* Pods-PilkadaJatengUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -656,6 +916,7 @@
 		};
 		EFEF12CC20672104000A94CE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65FCBD0DF66B08DE0F2BD05E /* Pods-PilkadaJatengUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

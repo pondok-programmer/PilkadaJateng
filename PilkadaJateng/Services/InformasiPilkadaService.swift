@@ -8,30 +8,39 @@
 
 import Foundation
 
-class InformasiPilkadaService {
+enum InformasiPilkadaType {
+    case tahapan
+    case partisipasi
+    case anggaran
+    
+    func getUrl() -> String {
+        switch self {
+        case .partisipasi: return APIUtils.partisipasiPilkada
+        case .anggaran: return APIUtils.anggaranPilkada
+        case .tahapan: return APIUtils.tahapanPilkada
+        }
+    }
+}
+
+class InformasiPilkadaService<T: JSONConstructor> {
     let networkManager: NetworkManager
-    init(networkManager: NetworkManager) {
+    init(networkManager: NetworkManager = NetworkManager()) {
         self.networkManager = networkManager
     }
     
-    enum InfoType {
-        case tahapan
-        case partisipasi
-        case anggaran
-        
-        func getUrl() -> String {
-            switch self {
-            case .partisipasi: return APIUtils.partisipasiPilkada
-            case .anggaran: return APIUtils.anggaranPilkada
-            case .tahapan: return APIUtils.tahapanPilkada
+    func getData(url: String, completion: @escaping ([T]?, Error?) -> ()) {
+        let url = networkManager.url(for: url)!
+        networkManager.get(from: url) { (json, error) in
+            if let json = json {
+                let objects = json.map({ (_, json)  -> T in
+                    return T.mapFromJSON(json: json)
+                })
+                completion(objects, nil)
             }
-        }
-    }
-    
-    func getData(completion: @escaping (String?, Error?) -> ()) {
-        let url = networkManager.url(for: APIUtils.tahapanPilkada)!
-        networkManager.get(from: url) { (str, error) in
-            completion(str, error)
+            
+            if let error = error {
+                completion(nil, error)
+            }
         }
     }
 }
