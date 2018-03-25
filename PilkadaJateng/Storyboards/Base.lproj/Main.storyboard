@@ -58,8 +58,8 @@
         <!--INFO-->
         <scene sceneID="oHi-cl-iR5">
             <objects>
-                <viewController id="xZw-HS-fm8" userLabel="INFO" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="kqg-ij-lXR">
+                <viewController id="xZw-HS-fm8" userLabel="INFO" customClass="InformasiViewController" customModule="PilkadaJateng" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kqg-ij-lXR" customClass="InformasiView" customModule="PilkadaJateng" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -67,23 +67,26 @@
                                 <rect key="frame" x="135" y="190" width="50" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Pilkada"/>
-                                <connections>
-                                    <segue destination="X2n-NB-XJq" kind="presentation" id="dI6-VF-JNF"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qeJ-j2-snJ">
                                 <rect key="frame" x="140" y="276" width="40" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Calon"/>
-                                <connections>
-                                    <segue destination="L0X-FA-B6e" kind="presentation" id="PYr-bu-lEK"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="Znh-yk-KU7"/>
+                        <connections>
+                            <outlet property="calonButton" destination="qeJ-j2-snJ" id="2fD-yY-KK2"/>
+                            <outlet property="pilkadaButton" destination="e1w-LW-kSO" id="zUM-h6-v4F"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Informasi" badgeValue="1" id="juF-6s-1du"/>
+                    <connections>
+                        <outlet property="viewOutlets" destination="kqg-ij-lXR" id="Zbx-Ee-MoZ"/>
+                        <segue destination="X2n-NB-XJq" kind="presentation" identifier="InformasiPilkadaViewController" id="jV4-Di-bu6"/>
+                        <segue destination="L0X-FA-B6e" kind="presentation" identifier="InformasiCalonViewController" id="3j9-Hi-0fk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EkL-y6-Yej" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
