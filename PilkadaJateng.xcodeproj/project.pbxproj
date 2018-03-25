@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EFEF12A020672103000A94CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEF129F20672103000A94CE /* AppDelegate.swift */; };
-		EFEF12A220672103000A94CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEF12A120672103000A94CE /* ViewController.swift */; };
+		EFEF12A220672103000A94CE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEF12A120672103000A94CE /* LoginViewController.swift */; };
 		EFEF12A520672103000A94CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFEF12A320672103000A94CE /* Main.storyboard */; };
 		EFEF12A720672103000A94CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFEF12A620672103000A94CE /* Assets.xcassets */; };
 		EFEF12AA20672103000A94CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFEF12A820672103000A94CE /* LaunchScreen.storyboard */; };
@@ -17,6 +17,11 @@
 		EFEF12CE206725D8000A94CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EFEF12CD206725D7000A94CE /* GoogleService-Info.plist */; };
 		EFEF12D320672DD2000A94CE /* InformasiPilkada.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFEF12D220672DD2000A94CE /* InformasiPilkada.storyboard */; };
 		EFEF12D620672E53000A94CE /* InformasiCalon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFEF12D420672E53000A94CE /* InformasiCalon.storyboard */; };
+		EFEF12DB206730D9000A94CE /* AuthServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEF12DA206730D9000A94CE /* AuthServices.swift */; };
+		EFEF12DE2067327C000A94CE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEF12DD2067327C000A94CE /* User.swift */; };
+		EFEF12E1206734AD000A94CE /* MockProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEF12E0206734AD000A94CE /* MockProvider.swift */; };
+		EFEF12E4206739CA000A94CE /* InformasiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEF12E3206739CA000A94CE /* InformasiViewController.swift */; };
+		EFEF12E6206739EA000A94CE /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEF12E5206739EA000A94CE /* Application.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +44,7 @@
 /* Begin PBXFileReference section */
 		EFEF129C20672103000A94CE /* PilkadaJateng.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PilkadaJateng.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFEF129F20672103000A94CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EFEF12A120672103000A94CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EFEF12A120672103000A94CE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EFEF12A420672103000A94CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EFEF12A620672103000A94CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFEF12A920672103000A94CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,6 +58,11 @@
 		EFEF12CD206725D7000A94CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EFEF12D220672DD2000A94CE /* InformasiPilkada.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = InformasiPilkada.storyboard; sourceTree = "<group>"; };
 		EFEF12D520672E53000A94CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = PilkadaJateng/Base.lproj/InformasiCalon.storyboard; sourceTree = "<group>"; };
+		EFEF12DA206730D9000A94CE /* AuthServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServices.swift; sourceTree = "<group>"; };
+		EFEF12DD2067327C000A94CE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		EFEF12E0206734AD000A94CE /* MockProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProvider.swift; sourceTree = "<group>"; };
+		EFEF12E3206739CA000A94CE /* InformasiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformasiViewController.swift; sourceTree = "<group>"; };
+		EFEF12E5206739EA000A94CE /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,12 +113,13 @@
 		EFEF129E20672103000A94CE /* PilkadaJateng */ = {
 			isa = PBXGroup;
 			children = (
-				EFEF129F20672103000A94CE /* AppDelegate.swift */,
-				EFEF12A120672103000A94CE /* ViewController.swift */,
+				EFEF12D82067309F000A94CE /* Supporting Files */,
+				EFEF12D9206730B0000A94CE /* Scenes */,
 				EFEF12D720672EB5000A94CE /* Storyboards */,
+				EFEF12DC206730E3000A94CE /* Services */,
+				EFEF12DF2067328A000A94CE /* Models */,
 				EFEF12A620672103000A94CE /* Assets.xcassets */,
-				EFEF12AB20672103000A94CE /* Info.plist */,
-				EFEF12CD206725D7000A94CE /* GoogleService-Info.plist */,
+				EFEF12E2206734B3000A94CE /* Mocks */,
 			);
 			path = PilkadaJateng;
 			sourceTree = "<group>";
@@ -140,6 +151,50 @@
 				EFEF12A820672103000A94CE /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		EFEF12D82067309F000A94CE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EFEF129F20672103000A94CE /* AppDelegate.swift */,
+				EFEF12AB20672103000A94CE /* Info.plist */,
+				EFEF12CD206725D7000A94CE /* GoogleService-Info.plist */,
+				EFEF12E5206739EA000A94CE /* Application.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EFEF12D9206730B0000A94CE /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				EFEF12A120672103000A94CE /* LoginViewController.swift */,
+				EFEF12E3206739CA000A94CE /* InformasiViewController.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		EFEF12DC206730E3000A94CE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EFEF12DA206730D9000A94CE /* AuthServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		EFEF12DF2067328A000A94CE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EFEF12DD2067327C000A94CE /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EFEF12E2206734B3000A94CE /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				EFEF12E0206734AD000A94CE /* MockProvider.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,8 +334,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFEF12A220672103000A94CE /* ViewController.swift in Sources */,
+				EFEF12E1206734AD000A94CE /* MockProvider.swift in Sources */,
+				EFEF12E6206739EA000A94CE /* Application.swift in Sources */,
+				EFEF12DE2067327C000A94CE /* User.swift in Sources */,
+				EFEF12A220672103000A94CE /* LoginViewController.swift in Sources */,
 				EFEF12A020672103000A94CE /* AppDelegate.swift in Sources */,
+				EFEF12DB206730D9000A94CE /* AuthServices.swift in Sources */,
+				EFEF12E4206739CA000A94CE /* InformasiViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,7 +516,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SDSLU2QT5X;
-				INFOPLIST_FILE = PilkadaJateng/Info.plist;
+				INFOPLIST_FILE = "PilkadaJateng/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pondokios.pilkadajateng;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -471,7 +531,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SDSLU2QT5X;
-				INFOPLIST_FILE = PilkadaJateng/Info.plist;
+				INFOPLIST_FILE = "PilkadaJateng/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pondokios.pilkadajateng;
 				PRODUCT_NAME = "$(TARGET_NAME)";
