@@ -10,6 +10,8 @@
 		057C480F4E312CC69FE26442 /* Pods_PilkadaJatengTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86F697DB3F1842B0F328077F /* Pods_PilkadaJatengTests.framework */; };
 		073AF81C62B419A96CB26B3A /* Pods_PilkadaJatengUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D918A481CFB013ED5C3E121E /* Pods_PilkadaJatengUITests.framework */; };
 		8046A59205DFA8ADD6EEF7D9 /* Pods_PilkadaJateng.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF09DA17D0668593C8BDE728 /* Pods_PilkadaJateng.framework */; };
+		EF957B232068C18D000E2098 /* InformasiCalonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF957B212068C18D000E2098 /* InformasiCalonCollectionViewCell.swift */; };
+		EF957B242068C18D000E2098 /* InformasiCalonCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF957B222068C18D000E2098 /* InformasiCalonCollectionViewCell.xib */; };
 		EF9B674E20677BAA0057215B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9B674D20677BAA0057215B /* NetworkManager.swift */; };
 		EF9B675020677DC90057215B /* InformasiPilkadaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9B674F20677DC90057215B /* InformasiPilkadaViewController.swift */; };
 		EF9B675220677F290057215B /* profile_calon.json in Resources */ = {isa = PBXBuildFile; fileRef = EF9B675120677F290057215B /* profile_calon.json */; };
@@ -40,6 +42,10 @@
 		EF9B678F20688DCA0057215B /* TahapanPilkadaCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF9B678D20688DCA0057215B /* TahapanPilkadaCollectionViewCell.xib */; };
 		EF9B679120688DF20057215B /* TahapanPilkada.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9B679020688DF20057215B /* TahapanPilkada.swift */; };
 		EF9B679320688E5E0057215B /* TahapanPilkada+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9B679220688E5E0057215B /* TahapanPilkada+Ext.swift */; };
+		EF9B67962068968C0057215B /* InformasiCalonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9B67952068968C0057215B /* InformasiCalonViewController.swift */; };
+		EF9B67992068985A0057215B /* ProfilCalon.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9B67982068985A0057215B /* ProfilCalon.swift */; };
+		EF9B679B206899BF0057215B /* ProfilCalon+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9B679A206899BF0057215B /* ProfilCalon+Ext.swift */; };
+		EF9B679D20689DF80057215B /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9B679C20689DF80057215B /* String+Ext.swift */; };
 		EFEF12A020672103000A94CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEF129F20672103000A94CE /* AppDelegate.swift */; };
 		EFEF12A220672103000A94CE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEF12A120672103000A94CE /* LoginViewController.swift */; };
 		EFEF12A520672103000A94CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFEF12A320672103000A94CE /* Main.storyboard */; };
@@ -85,6 +91,8 @@
 		DF09DA17D0668593C8BDE728 /* Pods_PilkadaJateng.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PilkadaJateng.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0AC20D403F1259AECA2D926 /* Pods-PilkadaJatengTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PilkadaJatengTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PilkadaJatengTests/Pods-PilkadaJatengTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EC74C13A84C352229226CACA /* Pods-PilkadaJatengTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PilkadaJatengTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PilkadaJatengTests/Pods-PilkadaJatengTests.release.xcconfig"; sourceTree = "<group>"; };
+		EF957B212068C18D000E2098 /* InformasiCalonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformasiCalonCollectionViewCell.swift; sourceTree = "<group>"; };
+		EF957B222068C18D000E2098 /* InformasiCalonCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformasiCalonCollectionViewCell.xib; sourceTree = "<group>"; };
 		EF9B674D20677BAA0057215B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		EF9B674F20677DC90057215B /* InformasiPilkadaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformasiPilkadaViewController.swift; sourceTree = "<group>"; };
 		EF9B675120677F290057215B /* profile_calon.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = profile_calon.json; sourceTree = "<group>"; };
@@ -115,6 +123,10 @@
 		EF9B678D20688DCA0057215B /* TahapanPilkadaCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TahapanPilkadaCollectionViewCell.xib; sourceTree = "<group>"; };
 		EF9B679020688DF20057215B /* TahapanPilkada.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TahapanPilkada.swift; sourceTree = "<group>"; };
 		EF9B679220688E5E0057215B /* TahapanPilkada+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TahapanPilkada+Ext.swift"; sourceTree = "<group>"; };
+		EF9B67952068968C0057215B /* InformasiCalonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformasiCalonViewController.swift; sourceTree = "<group>"; };
+		EF9B67982068985A0057215B /* ProfilCalon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilCalon.swift; sourceTree = "<group>"; };
+		EF9B679A206899BF0057215B /* ProfilCalon+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfilCalon+Ext.swift"; sourceTree = "<group>"; };
+		EF9B679C20689DF80057215B /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		EFEF129C20672103000A94CE /* PilkadaJateng.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PilkadaJateng.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFEF129F20672103000A94CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFEF12A120672103000A94CE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -211,10 +223,11 @@
 		EF9B67732067A34F0057215B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				EF9B679E20689E090057215B /* Primitive */,
 				EF9B676F2067A2E70057215B /* PartisipasiPilkada+Ext.swift */,
-				EF9B67742067A3860057215B /* Optional+Ext.swift */,
 				EF9B6784206870500057215B /* AnggaranPilkada+Ext.swift */,
 				EF9B679220688E5E0057215B /* TahapanPilkada+Ext.swift */,
+				EF9B679A206899BF0057215B /* ProfilCalon+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -236,8 +249,38 @@
 				EF9B6787206871BC0057215B /* AnggaranPilkadaCollectionViewCell.xib */,
 				EF9B678C20688DCA0057215B /* TahapanPilkadaCollectionViewCell.swift */,
 				EF9B678D20688DCA0057215B /* TahapanPilkadaCollectionViewCell.xib */,
+				EF957B212068C18D000E2098 /* InformasiCalonCollectionViewCell.swift */,
+				EF957B222068C18D000E2098 /* InformasiCalonCollectionViewCell.xib */,
 			);
 			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		EF9B67942068966A0057215B /* InformasiPilkada */ = {
+			isa = PBXGroup;
+			children = (
+				EF9B674F20677DC90057215B /* InformasiPilkadaViewController.swift */,
+				EF9B67792067BE9C0057215B /* PartisipasiPilkadaViewController.swift */,
+				EF9B678020686F470057215B /* AnggaranPilkadaViewController.swift */,
+				EF9B678A20688D7B0057215B /* TahapanPilkadaViewController.swift */,
+			);
+			path = InformasiPilkada;
+			sourceTree = "<group>";
+		};
+		EF9B6797206896AC0057215B /* InformasiCalon */ = {
+			isa = PBXGroup;
+			children = (
+				EF9B67952068968C0057215B /* InformasiCalonViewController.swift */,
+			);
+			path = InformasiCalon;
+			sourceTree = "<group>";
+		};
+		EF9B679E20689E090057215B /* Primitive */ = {
+			isa = PBXGroup;
+			children = (
+				EF9B67742067A3860057215B /* Optional+Ext.swift */,
+				EF9B679C20689DF80057215B /* String+Ext.swift */,
+			);
+			path = Primitive;
 			sourceTree = "<group>";
 		};
 		EFEF129320672103000A94CE = {
@@ -324,10 +367,8 @@
 			children = (
 				EFEF12A120672103000A94CE /* LoginViewController.swift */,
 				EFEF12E3206739CA000A94CE /* InformasiViewController.swift */,
-				EF9B674F20677DC90057215B /* InformasiPilkadaViewController.swift */,
-				EF9B67792067BE9C0057215B /* PartisipasiPilkadaViewController.swift */,
-				EF9B678020686F470057215B /* AnggaranPilkadaViewController.swift */,
-				EF9B678A20688D7B0057215B /* TahapanPilkadaViewController.swift */,
+				EF9B67942068966A0057215B /* InformasiPilkada */,
+				EF9B6797206896AC0057215B /* InformasiCalon */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -350,6 +391,7 @@
 				EF9B676820679B2A0057215B /* PartisipasiPilkada.swift */,
 				EF9B678220686FD70057215B /* AnggaranPilkada.swift */,
 				EF9B679020688DF20057215B /* TahapanPilkada.swift */,
+				EF9B67982068985A0057215B /* ProfilCalon.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -484,6 +526,7 @@
 				EFEF12AA20672103000A94CE /* LaunchScreen.storyboard in Resources */,
 				EFEF12D620672E53000A94CE /* InformasiCalon.storyboard in Resources */,
 				EF9B6759206784D20057215B /* anggaran_pilkada.json in Resources */,
+				EF957B242068C18D000E2098 /* InformasiCalonCollectionViewCell.xib in Resources */,
 				EF9B675D206785710057215B /* visi_misi_rano_embay.json in Resources */,
 				EFEF12D320672DD2000A94CE /* InformasiPilkada.storyboard in Resources */,
 				EFEF12CE206725D8000A94CE /* GoogleService-Info.plist in Resources */,
@@ -674,11 +717,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF9B675420677F450057215B /* APIUtils.swift in Sources */,
+				EF9B679B206899BF0057215B /* ProfilCalon+Ext.swift in Sources */,
 				EF9B67702067A2E70057215B /* PartisipasiPilkada+Ext.swift in Sources */,
 				EF9B675020677DC90057215B /* InformasiPilkadaViewController.swift in Sources */,
 				EF9B677A2067BE9C0057215B /* PartisipasiPilkadaViewController.swift in Sources */,
 				EFEF12E1206734AD000A94CE /* MockProvider.swift in Sources */,
 				EF9B677D2067CF460057215B /* PartisipasiPilkadaCollectionViewCell.swift in Sources */,
+				EF9B67992068985A0057215B /* ProfilCalon.swift in Sources */,
+				EF9B679D20689DF80057215B /* String+Ext.swift in Sources */,
 				EF9B678120686F470057215B /* AnggaranPilkadaViewController.swift in Sources */,
 				EF9B67752067A3860057215B /* Optional+Ext.swift in Sources */,
 				EF9B676920679B2A0057215B /* PartisipasiPilkada.swift in Sources */,
@@ -694,10 +740,12 @@
 				EFEF12EA206742F6000A94CE /* InformasiCalonService.swift in Sources */,
 				EF9B67772067AAB20057215B /* Tester.swift in Sources */,
 				EF9B678320686FD70057215B /* AnggaranPilkada.swift in Sources */,
+				EF9B67962068968C0057215B /* InformasiCalonViewController.swift in Sources */,
 				EF9B6788206871BC0057215B /* AnggaranPilkadaCollectionViewCell.swift in Sources */,
 				EFEF12DB206730D9000A94CE /* AuthServices.swift in Sources */,
 				EF9B676D2067A2010057215B /* JSONConstructor.swift in Sources */,
 				EF9B6785206870500057215B /* AnggaranPilkada+Ext.swift in Sources */,
+				EF957B232068C18D000E2098 /* InformasiCalonCollectionViewCell.swift in Sources */,
 				EFEF12E4206739CA000A94CE /* InformasiViewController.swift in Sources */,
 				EFEF12E8206742E5000A94CE /* InformasiPilkadaService.swift in Sources */,
 			);

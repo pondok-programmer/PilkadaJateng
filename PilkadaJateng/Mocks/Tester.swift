@@ -13,10 +13,13 @@ class Tester {
     private init() {}
     
     func run() {
-        let a = InformasiPilkadaService<TahapanPilkada>(networkManager: MockProvider.shared.makeTahapanNetworkMock())
-        a.getData(url: InformasiPilkadaType.partisipasi.getUrl()) { (data, e) in
+        let n = MockProvider.shared.makeProfilCalonNetworkMock()
+        let i = InformasiCalonService<ProfilCalon>(networkManager: n)
+        let u = InformasiCalonType.profilCalon.getUrl()
+        i.getData(url: u ) { (data, error) in
             data?.forEach({ (p) in
                 print(p)
+                print("\n\n")
             })
         }
     }

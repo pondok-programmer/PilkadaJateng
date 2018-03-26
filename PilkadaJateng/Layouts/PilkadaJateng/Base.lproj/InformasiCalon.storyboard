@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fIy-R0-ZcD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QnE-gn-63W">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,41 +10,103 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--INFOMASI CALON-->
+        <!--INFORMASI CALON-->
         <scene sceneID="Onj-OA-F6y">
             <objects>
-                <viewController id="fIy-R0-ZcD" userLabel="INFOMASI CALON" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Vaf-7u-sLt">
+                <viewController id="fIy-R0-ZcD" userLabel="INFORMASI CALON" customClass="InformasiCalonViewController" customModule="PilkadaJateng" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vaf-7u-sLt" customClass="InformasiCalonView" customModule="PilkadaJateng" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Beo-VN-mw5">
-                                <rect key="frame" x="135" y="153" width="50" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Calon 1"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l08-AT-lz9">
-                                <rect key="frame" x="134" y="225" width="53" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Calon 2"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZGj-Bg-OOp">
-                                <rect key="frame" x="137" y="400" width="54" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Dismiss"/>
-                                <connections>
-                                    <segue destination="T8n-1N-Knd" kind="unwind" unwindAction="unwindInformasiViewController:" id="aEE-LA-EJl"/>
-                                </connections>
-                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1yO-BN-ANX">
+                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="X4O-q8-F5a">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="orQ-MU-yb2" firstAttribute="bottom" secondItem="1yO-BN-ANX" secondAttribute="bottom" id="A0l-r6-uHS"/>
+                            <constraint firstItem="1yO-BN-ANX" firstAttribute="top" secondItem="orQ-MU-yb2" secondAttribute="top" id="Mzr-up-3s7"/>
+                            <constraint firstItem="orQ-MU-yb2" firstAttribute="trailing" secondItem="1yO-BN-ANX" secondAttribute="trailing" id="w2K-uO-cvB"/>
+                            <constraint firstItem="1yO-BN-ANX" firstAttribute="leading" secondItem="orQ-MU-yb2" secondAttribute="leading" id="zbD-z4-1vR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="orQ-MU-yb2"/>
+                        <connections>
+                            <outlet property="collectionView" destination="1yO-BN-ANX" id="K7P-Ee-ic5"/>
+                        </connections>
                     </view>
+                    <navigationItem key="navigationItem" id="imL-ug-E7m">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="VKC-24-fuJ">
+                            <connections>
+                                <segue destination="T8n-1N-Knd" kind="unwind" unwindAction="unwindInformasiViewController:" id="IRn-2M-4m1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="viewOutlets" destination="Vaf-7u-sLt" id="fCl-uq-Uhq"/>
+                        <segue destination="ukJ-Q9-HBr" kind="show" identifier="DetailCalonViewController" id="Mdn-aX-nFH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qNy-cM-NfK" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="T8n-1N-Knd" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="233" y="1773"/>
+            <point key="canvasLocation" x="919" y="1773"/>
+        </scene>
+        <!--DETAIL INFORMASI CALON-->
+        <scene sceneID="AkH-3Y-Fm0">
+            <objects>
+                <viewController id="ukJ-Q9-HBr" userLabel="DETAIL INFORMASI CALON" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kHG-pS-BtV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="VISI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7D-PM-JMz">
+                                <rect key="frame" x="41" y="120" width="30" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="kljlskadfjkljflskadjf kjsadf kjlasd fsdaj sadfjklasjdf" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B7k-2g-dQ7">
+                                <rect key="frame" x="41" y="149" width="219" height="131"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="Bbt-6C-ZXb"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oVu-ra-055" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1704.375" y="1778.75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="IoA-i3-dO8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QnE-gn-63W" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cQ4-sf-um8">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fIy-R0-ZcD" kind="relationship" relationship="rootViewController" id="Hga-fQ-oyf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5x5-wk-fky" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="232.5" y="1772.5"/>
         </scene>
     </scenes>
 </document>

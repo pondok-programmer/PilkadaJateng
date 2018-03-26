@@ -18,14 +18,6 @@ import SwiftyJSON
  }
  */
 
-fileprivate extension String {
-    func toDate() -> Date? {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "dd-MMM-yy"
-        return formatter.date(from: self)
-    }
-}
-
 extension TahapanPilkada: JSONConstructor {
     static var jsonArrayKey: String? {
         return "tahapan_pilkada"
@@ -33,8 +25,8 @@ extension TahapanPilkada: JSONConstructor {
     
     static func mapFromJSON(json: JSON) -> TahapanPilkada {
         let tahapan_pilkada = json["tahapan_pilkada"].string.or("")
-        let awal = json["awal"].string.or("").toDate().or(Date())
-        let akhir = json["akhir"].string.or("").toDate().or(Date())
+        let awal = json["awal"].string.or("").toDate(format: "dd-MMM-yy" ).or(Date())
+        let akhir = json["akhir"].string.or("").toDate(format: "dd-MMM-yy" ).or(Date())
         return TahapanPilkada(tahapanPilkada: tahapan_pilkada,
                               awal: awal,
                               akhir: akhir)
