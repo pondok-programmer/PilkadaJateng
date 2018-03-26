@@ -24,6 +24,10 @@ class MockProvider {
     func makeAnggaranNetworkMock() -> NetworkManager {
         return MOCKAnggaranNetworkManager()
     }
+    
+    func makeTahapanNetworkMock() -> NetworkManager {
+        return MOCKTahapanNetworkManager()
+    }
 }
 
 fileprivate func resource(name: String, ofType type: String) -> Data? {
@@ -55,6 +59,17 @@ class MOCKPartisipasiNetworkManager: NetworkManager {
 class MOCKAnggaranNetworkManager: NetworkManager {
     override func get(from url: URL, completion: @escaping (JSON?, Error?) -> ()) {
         if let data = resource(name: "anggaran_pilkada", ofType: "json") {
+            let json = JSON(data)
+            completion(json, nil)
+        } else {
+            completion(nil, nil)
+        }
+    }
+}
+
+class MOCKTahapanNetworkManager: NetworkManager {
+    override func get(from url: URL, completion: @escaping (JSON?, Error?) -> ()) {
+        if let data = resource(name: "tahapan_pilkada", ofType: "json") {
             let json = JSON(data)
             completion(json, nil)
         } else {
