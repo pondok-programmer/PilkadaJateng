@@ -10,5 +10,7 @@ import Foundation
 import SwiftyJSON
 
 protocol JSONConstructor {
+    static var jsonArrayKey: String? { get }
+    
     static func mapFromJSON(json: JSON) -> Self
 }

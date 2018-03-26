@@ -31,8 +31,8 @@ class InformasiPilkadaService<T: JSONConstructor> {
     func getData(url: String, completion: @escaping ([T]?, Error?) -> ()) {
         let url = networkManager.url(for: url)!
         networkManager.get(from: url) { (json, error) in
-            if let json = json {
-                let objects = json.map({ (_, json)  -> T in
+            if let json = json, let arrayObjectKey = T.jsonArrayKey {
+                let objects = json[arrayObjectKey].map({ (_, json)  -> T in
                     return T.mapFromJSON(json: json)
                 })
                 completion(objects, nil)

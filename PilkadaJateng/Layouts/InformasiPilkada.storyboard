@@ -59,7 +59,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r71-jv-3J7" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="0Jr-Y5-Spo" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="124" y="2460"/>
+            <point key="canvasLocation" x="140" y="2639"/>
         </scene>
         <!--PARTISIPASI-->
         <scene sceneID="amJ-Dj-ZOz">
@@ -78,17 +78,7 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PartisipasiPilkadaCell" id="OP3-6K-Iyx">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="82"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="82"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </view>
-                                        <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    </collectionViewCell>
-                                </cells>
+                                <cells/>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -109,22 +99,47 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w2c-JL-uQe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1127" y="1548"/>
+            <point key="canvasLocation" x="1127" y="1967"/>
         </scene>
         <!--ANGGARAN-->
         <scene sceneID="8Sd-nX-IIf">
             <objects>
-                <viewController id="fKx-wG-ScQ" userLabel="ANGGARAN" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="HiT-g2-gLq">
+                <viewController id="fKx-wG-ScQ" userLabel="ANGGARAN" customClass="AnggaranPilkadaViewController" customModule="PilkadaJateng" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HiT-g2-gLq" customClass="AnggaranPilkadaView" customModule="PilkadaJateng" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="H1w-EO-yCz">
+                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                                <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ppo-XJ-0eZ">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" red="0.25098040700000002" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Too-gd-niF" firstAttribute="trailing" secondItem="H1w-EO-yCz" secondAttribute="trailing" id="cKH-Lu-umI"/>
+                            <constraint firstItem="Too-gd-niF" firstAttribute="bottom" secondItem="H1w-EO-yCz" secondAttribute="bottom" id="ilf-nq-X0e"/>
+                            <constraint firstItem="H1w-EO-yCz" firstAttribute="leading" secondItem="Too-gd-niF" secondAttribute="leading" id="pxB-6a-sfu"/>
+                            <constraint firstItem="H1w-EO-yCz" firstAttribute="top" secondItem="Too-gd-niF" secondAttribute="top" id="vo3-GY-2ry"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Too-gd-niF"/>
+                        <connections>
+                            <outlet property="collectionView" destination="H1w-EO-yCz" id="uYj-VG-z4Y"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="viewOutlets" destination="HiT-g2-gLq" id="g0G-57-TVY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xnQ-Yt-xEY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1127" y="2301"/>
+            <point key="canvasLocation" x="1127" y="2498"/>
         </scene>
         <!--TAHAPAN-->
         <scene sceneID="ujd-jl-X3M">
@@ -139,7 +154,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uZU-eJ-bNz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1127" y="3019"/>
+            <point key="canvasLocation" x="1127" y="3020"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="b3d-vr-CcU">

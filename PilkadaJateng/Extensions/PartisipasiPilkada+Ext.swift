@@ -33,6 +33,10 @@ import SwiftyJSON
  */
 
 extension PartisipasiPilkada: JSONConstructor {
+    static var jsonArrayKey: String? {
+        return "partisipasi_pilkada"
+    }
+    
     static func mapFromJSON(json: JSON) -> PartisipasiPilkada {
         let tipeAdministrasiDaerah = json["administrasi_daerah"].string.or(""),
         dataPemilihLakiLaki = json["data_pemilihan_lakilaki"].int.or(0),

@@ -13,7 +13,7 @@ class Tester {
     private init() {}
     
     func run() {
-        let a = InformasiPilkadaService<PartisipasiPilkada>(networkManager: MOCKNetworkManager())
+        let a = InformasiPilkadaService<AnggaranPilkada>(networkManager: MockProvider.shared.makeAnggaranNetworkMock())
         a.getData(url: InformasiPilkadaType.partisipasi.getUrl()) { (data, e) in
             data?.forEach({ (p) in
                 print(p)

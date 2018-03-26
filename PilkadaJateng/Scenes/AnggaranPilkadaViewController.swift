@@ -1,15 +1,15 @@
 //
-//  PartisipasiPilkadaViewController.swift
+//  AnggaranPilkadaViewController.swift
 //  PilkadaJateng
 //
-//  Created by PondokiOS on 3/25/18.
+//  Created by PondokiOS on 3/26/18.
 //  Copyright © 2018 PondokiOS. All rights reserved.
 //
 
 import UIKit
 
-class PartisipasiPilkadaViewController: UIViewController {
-    @IBOutlet weak var viewOutlets: PartisipasiPilkadaView!
+class AnggaranPilkadaViewController: UIViewController {
+    @IBOutlet weak var viewOutlets: AnggaranPilkadaView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,8 +19,8 @@ class PartisipasiPilkadaViewController: UIViewController {
     
     private func _setupCollectionView() {
         let cv = viewOutlets.collectionView
-        let nib = UINib(nibName: "PartisipasiPilkadaCollectionViewCell", bundle: nil)
-        cv?.register(nib, forCellWithReuseIdentifier: "PartisipasiPilkadaCell")
+        let nib = UINib(nibName: "AnggaranPilkadaCollectionViewCell", bundle: nil)
+        cv?.register(nib, forCellWithReuseIdentifier: "AnggaranPilkadaCell")
         cv?.dataSource = self
         
         let layout = UICollectionViewFlowLayout()
@@ -28,11 +28,11 @@ class PartisipasiPilkadaViewController: UIViewController {
         cv?.collectionViewLayout = layout
     }
     
-    private var _data: [PartisipasiPilkada] = []
-    private let service = InformasiPilkadaService<PartisipasiPilkada>(networkManager: MockProvider.shared.makePartisipasiNetworkMock())
+    private var _data: [AnggaranPilkada] = []
+    private let service = InformasiPilkadaService<AnggaranPilkada>(networkManager: MockProvider.shared.makeAnggaranNetworkMock())
     
     private func _fetchData() {
-        service.getData(url: InformasiPilkadaType.partisipasi.getUrl()) { [unowned self] (data, error) in
+        service.getData(url: InformasiPilkadaType.anggaran.getUrl()) { [unowned self] (data, error) in
             if let error = error {
                 fatalError()
             }
@@ -47,18 +47,19 @@ class PartisipasiPilkadaViewController: UIViewController {
     }
 }
 
-class PartisipasiPilkadaView: UIView {
+class AnggaranPilkadaView: UIView {
     @IBOutlet weak var collectionView: UICollectionView!
 }
 
-extension PartisipasiPilkadaViewController: UICollectionViewDataSource {
+extension AnggaranPilkadaViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return _data.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PartisipasiPilkadaCell", for: indexPath) as? PartisipasiPilkadaCollectionViewCell
-        cell?.textLabel.text = _data[indexPath.row].namaKabupatenKota
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AnggaranPilkadaCell", for: indexPath) as? AnggaranPilkadaCollectionViewCell
+        cell?.textLabel.text = "\(_data[indexPath.row].jumlahAnggaran)"
         return cell!
     }
 }
+
