@@ -32,6 +32,35 @@ class MockProvider {
     func makeProfilCalonNetworkMock() -> NetworkManager {
         return MOCKProfilCalonNetworkManager()
     }
+    
+    func makeVisiMisi() -> [VisiMisiCalon] {
+        return [VisiMisiCalon(visi: "Sehat", misi: "Bahagia"),
+                VisiMisiCalon(visi: "Tampan", misi: "Tampan")]
+    }
+    
+    func makeProgramUnggulan() -> [ProgramUnggulanCalon] {
+        return [ProgramUnggulanCalon(programUnggulan: "PUC1",
+                                     deskripsi: "d1",
+                                     detailDeskripsi: "dd1"),
+                ProgramUnggulanCalon(programUnggulan: "PUC2",
+                                     deskripsi: "d2",
+                                     detailDeskripsi: "dd2")]
+    }
+    
+    func makePrioritasProgram() -> [PrioritasProgramCalon] {
+        return [PrioritasProgramCalon(prioritasProgram: "PP1", deskripsi: "d1"),
+                PrioritasProgramCalon(prioritasProgram: "PP2", deskripsi: "d2")]
+    }
+    
+    func makeLHKPN() -> [LHKPN] {
+        return [1,2,3,4].map({ (i) -> LHKPN in
+            return LHKPN(jenisHarta: "H\(i)",
+                keterangan: "k\(i)",
+                nilai: 0.0 + Double(i),
+                tahun: 2000 + i,
+                status: "s\(i)")
+        })
+    }
 }
 
 fileprivate func resource(name: String, ofType type: String) -> Data? {

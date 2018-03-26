@@ -14,8 +14,8 @@ class Tester {
     
     func run() {
         let n = MockProvider.shared.makeProfilCalonNetworkMock()
-        let i = InformasiCalonService<ProfilCalon>(networkManager: n)
-        let u = InformasiCalonType.profilCalon.getUrl()
+        let i = InformasiService<ProfilCalon>(networkManager: n)
+        let u = InformasiType.profilCalon.getUrl()
         i.getData(url: u ) { (data, error) in
             data?.forEach({ (p) in
                 print(p)

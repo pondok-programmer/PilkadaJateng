@@ -1,5 +1,5 @@
 //
-//  InformasiCalonService.swift
+//  InformasiPilkadaService.swift
 //  PilkadaJateng
 //
 //  Created by PondokiOS on 3/25/18.
@@ -8,17 +8,24 @@
 
 import Foundation
 
-enum InformasiCalonType {
+enum InformasiType {
+    case tahapan
+    case partisipasi
+    case anggaran
+    
     case profilCalon
     
     func getUrl() -> String {
         switch self {
+        case .partisipasi: return APIUtils.partisipasiPilkada
+        case .anggaran: return APIUtils.anggaranPilkada
+        case .tahapan: return APIUtils.tahapanPilkada
         case .profilCalon: return APIUtils.profileCalon
         }
     }
 }
 
-class InformasiCalonService<T: JSONConstructor> {
+class InformasiService<T: JSONConstructor> {
     let networkManager: NetworkManager
     init(networkManager: NetworkManager = NetworkManager()) {
         self.networkManager = networkManager
@@ -40,4 +47,3 @@ class InformasiCalonService<T: JSONConstructor> {
         }
     }
 }
-

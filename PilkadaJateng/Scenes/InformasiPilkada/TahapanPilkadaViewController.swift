@@ -29,10 +29,10 @@ class TahapanPilkadaViewController: UIViewController {
     }
     
     private var _data: [TahapanPilkada] = []
-    private let service = InformasiPilkadaService<TahapanPilkada>(networkManager: MockProvider.shared.makeTahapanNetworkMock())
+    private let service = InformasiService<TahapanPilkada>(networkManager: MockProvider.shared.makeTahapanNetworkMock())
     
     private func _fetchData() {
-        service.getData(url: InformasiPilkadaType.tahapan.getUrl()) { [unowned self] (data, error) in
+        service.getData(url: InformasiType.tahapan.getUrl()) { [unowned self] (data, error) in
             if let error = error {
                 fatalError()
             }

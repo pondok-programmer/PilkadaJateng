@@ -29,10 +29,10 @@ class PartisipasiPilkadaViewController: UIViewController {
     }
     
     private var _data: [PartisipasiPilkada] = []
-    private let service = InformasiPilkadaService<PartisipasiPilkada>(networkManager: MockProvider.shared.makePartisipasiNetworkMock())
+    private let service = InformasiService<PartisipasiPilkada>(networkManager: MockProvider.shared.makePartisipasiNetworkMock())
     
     private func _fetchData() {
-        service.getData(url: InformasiPilkadaType.partisipasi.getUrl()) { [unowned self] (data, error) in
+        service.getData(url: InformasiType.partisipasi.getUrl()) { [unowned self] (data, error) in
             if let error = error {
                 fatalError()
             }

@@ -30,10 +30,10 @@ class InformasiCalonViewController: UIViewController {
     }
     
     private var _data: [ProfilCalon] = []
-    private let service = InformasiCalonService<ProfilCalon>(networkManager: MockProvider.shared.makeProfilCalonNetworkMock())
+    private let service = InformasiService<ProfilCalon>(networkManager: MockProvider.shared.makeProfilCalonNetworkMock())
     
     private func _fetchData() {
-        service.getData(url: InformasiPilkadaType.tahapan.getUrl()) { [unowned self] (data, error) in
+        service.getData(url: InformasiType.profilCalon.getUrl()) { [unowned self] (data, error) in
             if let error = error {
                 fatalError()
             }
@@ -45,6 +45,15 @@ class InformasiCalonViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    private var _isSelectedStatusPetahana = false
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? DetailCalonViewController {
+            destination.isPetahana = _isSelectedStatusPetahana
+        }
+        
     }
 }
 
@@ -66,6 +75,7 @@ extension InformasiCalonViewController: UICollectionViewDataSource {
 
 extension InformasiCalonViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        _isSelectedStatusPetahana = _data[indexPath.row].isPetahana
         performSegue(withIdentifier: "DetailCalonViewController", sender: nil)
     }
 }
