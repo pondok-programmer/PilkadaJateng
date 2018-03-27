@@ -1,0 +1,98 @@
+{
+    "status": "ok",
+    "count": 2,
+    "count_total": 75,
+    "pages": 38,
+    "posts": [
+              {
+              "id": 168,
+              "type": "post",
+              "slug": "25-ribu-warga-jateng-jadi-relawan-pengawas-pemilu",
+              "url": "http:\\/\\/103.23.20.184\\/25-ribu-warga-jateng-jadi-relawan-pengawas-pemilu\\/",
+              "status": "publish",
+              "title": "25 Ribu Warga Jateng Jadi Relawan Pengawas Pemilu",
+              "title_plain": "25 Ribu Warga Jateng Jadi Relawan Pengawas Pemilu",
+              "content": "Gerakan sejuta relawan yang dicanangkan Badan Pengawas Pemilu (Bawaslu) disambut ribuan warga Jawa Tengah.",
+              "excerpt": "Gerakan sejuta relawan yang dicanangkan Badan Pengawas Pemilu[&hellip;]",
+              "date": "2014-03-07 09:15:48",
+              "modified": "2014-03-07 09:15:48",
+              "categories": [],
+              "tags": [
+                       {
+                       "id": 2,
+                       "slug": "bawaslu",
+                       "title": "Bawaslu",
+                       "description": "",
+                       "post_count": 12
+                       },
+                       {
+                       "id": 15,
+                       "slug": "kabupatenkota",
+                       "title": "Kabupaten\\/Kota",
+                       "description": "",
+                       "post_count": 2
+                       }
+                       ],
+              "author": {
+              "id": 2,
+              "slug": "apipemilu",
+              "name": "API Pemilu",
+              "first_name": "API",
+              "last_name": "Pemilu",
+              "nickname": "apipemilu",
+              "url": "http:\\/\\/pemiluapi.org",
+              "description": ""
+              },
+              "comments": [],
+              "attachments": [],
+              "comment_count": 0,
+              "comment_status": "closed",
+              "custom_fields": {}
+              },
+              {
+              "id": 166,
+              "type": "post",
+              "slug": "kpu-maluku-tak-dilibatkan-dalam-distribusi-surat-suara",
+              "url": "http:\\/\\/103.23.20.184\\/kpu-maluku-tak-dilibatkan-dalam-distribusi-surat-suara\\/",
+              "status": "publish",
+              "title": "KPU Maluku Tak Dilibatkan dalam Distribusi Surat Suara",
+              "title_plain": "KPU Maluku Tak Dilibatkan dalam Distribusi Surat Suara",
+              "content": "Komisi Pemilihan Umum Provinsi Maluku merasa kecewa tak dilibatkan dalam pendistribusian surat suara ke KPU kabupaten\\/kota.",
+              "excerpt": "Komisi Pemilihan Umum Provinsi Maluku merasa kecewa tak dilibatkan[&hellip;]",
+              "date": "2014-03-07 08:49:49",
+              "modified": "2014-03-07 08:49:49",
+              "categories": [],
+              "tags": [
+                       {
+                       "id": 117,
+                       "slug": "distribusi",
+                       "title": "Distribusi",
+                       "description": "",
+                       "post_count": 3
+                       },
+                       {
+                       "id": 95,
+                       "slug": "kpu-maluku",
+                       "title": "KPU Maluku",
+                       "description": "",
+                       "post_count": 2
+                       }
+                       ],
+              "author": {
+              "id": 2,
+              "slug": "apipemilu",
+              "name": "API Pemilu",
+              "first_name": "API",
+              "last_name": "Pemilu",
+              "nickname": "apipemilu",
+              "url": "http:\\/\\/pemiluapi.org",
+              "description": ""
+              },
+              "comments": [],
+              "attachments": [],
+              "comment_count": 0,
+              "comment_status": "closed",
+              "custom_fields": {}
+              }
+              ]
+}

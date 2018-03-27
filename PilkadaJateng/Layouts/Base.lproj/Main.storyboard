@@ -92,17 +92,35 @@
             </objects>
             <point key="canvasLocation" x="-173" y="865"/>
         </scene>
-        <!--BILIKSUARA-->
+        <!--BERITA-->
         <scene sceneID="TQa-Tg-UXh">
             <objects>
-                <viewController id="rXv-ZP-PZT" userLabel="BILIKSUARA" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="fhu-pz-yQu">
+                <viewController id="rXv-ZP-PZT" userLabel="BERITA" customClass="BeritaPilkadaViewController" customModule="PilkadaJateng" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fhu-pz-yQu" customClass="BeritaPilkadaView" customModule="PilkadaJateng" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wJC-ZT-EWk">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
+                                <color key="backgroundColor" red="1" green="0.71896552338168074" blue="0.50342366385314341" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.64264322853053124" blue="0.99947825394796708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wJC-ZT-EWk" firstAttribute="top" secondItem="fhu-pz-yQu" secondAttribute="top" id="6vX-k3-wMm"/>
+                            <constraint firstItem="Ojk-tt-VWS" firstAttribute="bottom" secondItem="wJC-ZT-EWk" secondAttribute="bottom" id="Xq0-U7-ymT"/>
+                            <constraint firstItem="wJC-ZT-EWk" firstAttribute="leading" secondItem="Ojk-tt-VWS" secondAttribute="leading" id="enU-AY-hsZ"/>
+                            <constraint firstItem="Ojk-tt-VWS" firstAttribute="trailing" secondItem="wJC-ZT-EWk" secondAttribute="trailing" id="soB-Yb-VHG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Ojk-tt-VWS"/>
+                        <connections>
+                            <outlet property="tableView" destination="wJC-ZT-EWk" id="nsU-MP-qF7"/>
+                        </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Bilik Suara" badgeValue="2" id="Rgk-Bx-Dwp"/>
+                    <tabBarItem key="tabBarItem" title="Berita" badgeValue="2" id="Rgk-Bx-Dwp"/>
+                    <connections>
+                        <outlet property="viewOutlets" destination="fhu-pz-yQu" id="JiI-mY-4ac"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3aS-ww-4tA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

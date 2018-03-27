@@ -61,6 +61,10 @@ class MockProvider {
                 status: "s\(i)")
         })
     }
+    
+    func getAPIKey() -> String {
+        return APIKEY()
+    }
 }
 
 fileprivate func resource(name: String, ofType type: String) -> Data? {
@@ -114,6 +118,17 @@ class MOCKTahapanNetworkManager: NetworkManager {
 class MOCKProfilCalonNetworkManager: NetworkManager {
     override func get(from url: URL, completion: @escaping (JSON?, Error?) -> ()) {
         if let data = resource(name: "profile_calon", ofType: "json") {
+            let json = JSON(data)
+            completion(json, nil)
+        } else {
+            completion(nil, nil)
+        }
+    }
+}
+
+class MOCKBeritaPilkadaNetworkManager: NetworkManager {
+    override func get(from url: URL, completion: @escaping (JSON?, Error?) -> ()) {
+        if let data = resource(name: "berita_pilkada", ofType: "json") {
             let json = JSON(data)
             completion(json, nil)
         } else {

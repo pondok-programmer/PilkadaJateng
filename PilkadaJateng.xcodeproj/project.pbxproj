@@ -25,6 +25,14 @@
 		EF957B3A2068D8D3000E2098 /* PrioritasProgramCalonCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF957B382068D8D3000E2098 /* PrioritasProgramCalonCollectionViewCell.xib */; };
 		EF957B3D2068D8EB000E2098 /* LHKPNCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF957B3B2068D8EB000E2098 /* LHKPNCollectionViewCell.swift */; };
 		EF957B3E2068D8EB000E2098 /* LHKPNCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF957B3C2068D8EB000E2098 /* LHKPNCollectionViewCell.xib */; };
+		EF9899772069D93C007E7DA9 /* BeritaPilkadaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9899762069D93C007E7DA9 /* BeritaPilkadaViewController.swift */; };
+		EF98997A2069DA00007E7DA9 /* BeritaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9899782069DA00007E7DA9 /* BeritaTableViewCell.swift */; };
+		EF98997B2069DA00007E7DA9 /* BeritaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF9899792069DA00007E7DA9 /* BeritaTableViewCell.xib */; };
+		EF98997E2069DF01007E7DA9 /* PEMILU_KEY.json in Resources */ = {isa = PBXBuildFile; fileRef = EF98997D2069DF01007E7DA9 /* PEMILU_KEY.json */; };
+		EF9899802069E212007E7DA9 /* PEMILU_KEY.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF98997F2069E211007E7DA9 /* PEMILU_KEY.swift */; };
+		EF9899822069E7B7007E7DA9 /* berita_pilkada.json in Resources */ = {isa = PBXBuildFile; fileRef = EF9899812069E7B7007E7DA9 /* berita_pilkada.json */; };
+		EF9899842069E839007E7DA9 /* BeritaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9899832069E839007E7DA9 /* BeritaItem.swift */; };
+		EF9899862069F1C1007E7DA9 /* BeritaPilkadaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9899852069F1C1007E7DA9 /* BeritaPilkadaService.swift */; };
 		EF9B674E20677BAA0057215B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9B674D20677BAA0057215B /* NetworkManager.swift */; };
 		EF9B675020677DC90057215B /* InformasiPilkadaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9B674F20677DC90057215B /* InformasiPilkadaViewController.swift */; };
 		EF9B675220677F290057215B /* profile_calon.json in Resources */ = {isa = PBXBuildFile; fileRef = EF9B675120677F290057215B /* profile_calon.json */; };
@@ -118,6 +126,14 @@
 		EF957B382068D8D3000E2098 /* PrioritasProgramCalonCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrioritasProgramCalonCollectionViewCell.xib; sourceTree = "<group>"; };
 		EF957B3B2068D8EB000E2098 /* LHKPNCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LHKPNCollectionViewCell.swift; sourceTree = "<group>"; };
 		EF957B3C2068D8EB000E2098 /* LHKPNCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LHKPNCollectionViewCell.xib; sourceTree = "<group>"; };
+		EF9899762069D93C007E7DA9 /* BeritaPilkadaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeritaPilkadaViewController.swift; sourceTree = "<group>"; };
+		EF9899782069DA00007E7DA9 /* BeritaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeritaTableViewCell.swift; sourceTree = "<group>"; };
+		EF9899792069DA00007E7DA9 /* BeritaTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeritaTableViewCell.xib; sourceTree = "<group>"; };
+		EF98997D2069DF01007E7DA9 /* PEMILU_KEY.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PEMILU_KEY.json; sourceTree = "<group>"; };
+		EF98997F2069E211007E7DA9 /* PEMILU_KEY.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PEMILU_KEY.swift; sourceTree = "<group>"; };
+		EF9899812069E7B7007E7DA9 /* berita_pilkada.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = berita_pilkada.json; sourceTree = "<group>"; };
+		EF9899832069E839007E7DA9 /* BeritaItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeritaItem.swift; sourceTree = "<group>"; };
+		EF9899852069F1C1007E7DA9 /* BeritaPilkadaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeritaPilkadaService.swift; sourceTree = "<group>"; };
 		EF9B674D20677BAA0057215B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		EF9B674F20677DC90057215B /* InformasiPilkadaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformasiPilkadaViewController.swift; sourceTree = "<group>"; };
 		EF9B675120677F290057215B /* profile_calon.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = profile_calon.json; sourceTree = "<group>"; };
@@ -228,6 +244,33 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		EF957B43206904D7000E2098 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				EF9B675320677F450057215B /* APIUtils.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		EF9899752069D90C007E7DA9 /* InformasiTab */ = {
+			isa = PBXGroup;
+			children = (
+				EFEF12E3206739CA000A94CE /* InformasiViewController.swift */,
+				EF9B67942068966A0057215B /* InformasiPilkada */,
+				EF9B6797206896AC0057215B /* InformasiCalon */,
+			);
+			path = InformasiTab;
+			sourceTree = "<group>";
+		};
+		EF98997C2069DA0A007E7DA9 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				EF9899782069DA00007E7DA9 /* BeritaTableViewCell.swift */,
+				EF9899792069DA00007E7DA9 /* BeritaTableViewCell.xib */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
 		EF9B675520677F9A0057215B /* JSON */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,6 +283,8 @@
 				EF9B6762206786570057215B /* program_unggulan_rano_embay.json */,
 				EF9B6764206786AA0057215B /* prioritas_program_wahidin_andika.json */,
 				EF9B6766206786E70057215B /* lhkpn.json */,
+				EF98997D2069DF01007E7DA9 /* PEMILU_KEY.json */,
+				EF9899812069E7B7007E7DA9 /* berita_pilkada.json */,
 			);
 			path = JSON;
 			sourceTree = "<group>";
@@ -345,6 +390,7 @@
 				EFEF12D9206730B0000A94CE /* Scenes */,
 				EFEF12D720672EB5000A94CE /* Layouts */,
 				EFEF12DC206730E3000A94CE /* Services */,
+				EF957B43206904D7000E2098 /* Utilities */,
 				EF9B67782067BE3E0057215B /* Protocols */,
 				EFEF12DF2067328A000A94CE /* Models */,
 				EFEF12A620672103000A94CE /* Assets.xcassets */,
@@ -380,6 +426,7 @@
 				EFEF12D220672DD2000A94CE /* InformasiPilkada.storyboard */,
 				EFEF12A820672103000A94CE /* LaunchScreen.storyboard */,
 				EF9B677F2067CF520057215B /* CollectionViewCells */,
+				EF98997C2069DA0A007E7DA9 /* TableViewCells */,
 			);
 			path = Layouts;
 			sourceTree = "<group>";
@@ -399,9 +446,8 @@
 			isa = PBXGroup;
 			children = (
 				EFEF12A120672103000A94CE /* LoginViewController.swift */,
-				EFEF12E3206739CA000A94CE /* InformasiViewController.swift */,
-				EF9B67942068966A0057215B /* InformasiPilkada */,
-				EF9B6797206896AC0057215B /* InformasiCalon */,
+				EF9899752069D90C007E7DA9 /* InformasiTab */,
+				EF9899762069D93C007E7DA9 /* BeritaPilkadaViewController.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -412,6 +458,7 @@
 				EFEF12DA206730D9000A94CE /* AuthServices.swift */,
 				EFEF12E7206742E5000A94CE /* InformasiService.swift */,
 				EF9B674D20677BAA0057215B /* NetworkManager.swift */,
+				EF9899852069F1C1007E7DA9 /* BeritaPilkadaService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -428,6 +475,7 @@
 				EF957B292068D63E000E2098 /* ProgramUnggulanCalon.swift */,
 				EF957B2B2068D666000E2098 /* PrioritasProgramCalon.swift */,
 				EF957B2D2068D676000E2098 /* LHKPN.swift */,
+				EF9899832069E839007E7DA9 /* BeritaItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -436,8 +484,8 @@
 			isa = PBXGroup;
 			children = (
 				EF9B675520677F9A0057215B /* JSON */,
-				EF9B675320677F450057215B /* APIUtils.swift */,
 				EFEF12E0206734AD000A94CE /* MockProvider.swift */,
+				EF98997F2069E211007E7DA9 /* PEMILU_KEY.swift */,
 				EF9B67762067AAB20057215B /* Tester.swift */,
 			);
 			path = Mocks;
@@ -561,6 +609,7 @@
 			files = (
 				EF957B3E2068D8EB000E2098 /* LHKPNCollectionViewCell.xib in Resources */,
 				EFEF12AA20672103000A94CE /* LaunchScreen.storyboard in Resources */,
+				EF98997B2069DA00007E7DA9 /* BeritaTableViewCell.xib in Resources */,
 				EFEF12D620672E53000A94CE /* InformasiCalon.storyboard in Resources */,
 				EF9B6759206784D20057215B /* anggaran_pilkada.json in Resources */,
 				EF957B242068C18D000E2098 /* InformasiCalonCollectionViewCell.xib in Resources */,
@@ -573,10 +622,12 @@
 				EF9B6763206786570057215B /* program_unggulan_rano_embay.json in Resources */,
 				EF9B678F20688DCA0057215B /* TahapanPilkadaCollectionViewCell.xib in Resources */,
 				EFEF12A520672103000A94CE /* Main.storyboard in Resources */,
+				EF9899822069E7B7007E7DA9 /* berita_pilkada.json in Resources */,
 				EF9B6789206871BC0057215B /* AnggaranPilkadaCollectionViewCell.xib in Resources */,
 				EF9B6757206784B90057215B /* partisipasi_pilkada.json in Resources */,
 				EF9B675220677F290057215B /* profile_calon.json in Resources */,
 				EF9B6767206786E70057215B /* lhkpn.json in Resources */,
+				EF98997E2069DF01007E7DA9 /* PEMILU_KEY.json in Resources */,
 				EF9B675B206785160057215B /* visi_misi_wahidin_andika.json in Resources */,
 				EF957B322068D87D000E2098 /* VisiMisiCalonCollectionViewCell.xib in Resources */,
 				EF957B362068D8AD000E2098 /* ProgramUnggulanCalonCollectionViewCell.xib in Resources */,
@@ -774,6 +825,7 @@
 				EF9B674E20677BAA0057215B /* NetworkManager.swift in Sources */,
 				EF957B392068D8D3000E2098 /* PrioritasProgramCalonCollectionViewCell.swift in Sources */,
 				EF9B678B20688D7B0057215B /* TahapanPilkadaViewController.swift in Sources */,
+				EF9899772069D93C007E7DA9 /* BeritaPilkadaViewController.swift in Sources */,
 				EFEF12DE2067327C000A94CE /* User.swift in Sources */,
 				EFEF12A220672103000A94CE /* LoginViewController.swift in Sources */,
 				EF957B312068D87D000E2098 /* VisiMisiCalonCollectionViewCell.swift in Sources */,
@@ -781,12 +833,16 @@
 				EF957B2C2068D666000E2098 /* PrioritasProgramCalon.swift in Sources */,
 				EF957B2A2068D63E000E2098 /* ProgramUnggulanCalon.swift in Sources */,
 				EF9B679120688DF20057215B /* TahapanPilkada.swift in Sources */,
+				EF98997A2069DA00007E7DA9 /* BeritaTableViewCell.swift in Sources */,
 				EFEF12A020672103000A94CE /* AppDelegate.swift in Sources */,
 				EF9B678E20688DCA0057215B /* TahapanPilkadaCollectionViewCell.swift in Sources */,
+				EF9899842069E839007E7DA9 /* BeritaItem.swift in Sources */,
 				EF9B67772067AAB20057215B /* Tester.swift in Sources */,
 				EF9B678320686FD70057215B /* AnggaranPilkada.swift in Sources */,
 				EF9B67962068968C0057215B /* InformasiCalonViewController.swift in Sources */,
+				EF9899862069F1C1007E7DA9 /* BeritaPilkadaService.swift in Sources */,
 				EF9B6788206871BC0057215B /* AnggaranPilkadaCollectionViewCell.swift in Sources */,
+				EF9899802069E212007E7DA9 /* PEMILU_KEY.swift in Sources */,
 				EFEF12DB206730D9000A94CE /* AuthServices.swift in Sources */,
 				EF9B676D2067A2010057215B /* JSONConstructor.swift in Sources */,
 				EF957B352068D8AD000E2098 /* ProgramUnggulanCalonCollectionViewCell.swift in Sources */,
