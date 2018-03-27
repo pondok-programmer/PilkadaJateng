@@ -33,6 +33,7 @@
 		EF9899822069E7B7007E7DA9 /* berita_pilkada.json in Resources */ = {isa = PBXBuildFile; fileRef = EF9899812069E7B7007E7DA9 /* berita_pilkada.json */; };
 		EF9899842069E839007E7DA9 /* BeritaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9899832069E839007E7DA9 /* BeritaItem.swift */; };
 		EF9899862069F1C1007E7DA9 /* BeritaPilkadaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9899852069F1C1007E7DA9 /* BeritaPilkadaService.swift */; };
+		EF989988206A1486007E7DA9 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF989987206A1486007E7DA9 /* WebViewController.swift */; };
 		EF9B674E20677BAA0057215B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9B674D20677BAA0057215B /* NetworkManager.swift */; };
 		EF9B675020677DC90057215B /* InformasiPilkadaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9B674F20677DC90057215B /* InformasiPilkadaViewController.swift */; };
 		EF9B675220677F290057215B /* profile_calon.json in Resources */ = {isa = PBXBuildFile; fileRef = EF9B675120677F290057215B /* profile_calon.json */; };
@@ -134,6 +135,7 @@
 		EF9899812069E7B7007E7DA9 /* berita_pilkada.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = berita_pilkada.json; sourceTree = "<group>"; };
 		EF9899832069E839007E7DA9 /* BeritaItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeritaItem.swift; sourceTree = "<group>"; };
 		EF9899852069F1C1007E7DA9 /* BeritaPilkadaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeritaPilkadaService.swift; sourceTree = "<group>"; };
+		EF989987206A1486007E7DA9 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		EF9B674D20677BAA0057215B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		EF9B674F20677DC90057215B /* InformasiPilkadaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformasiPilkadaViewController.swift; sourceTree = "<group>"; };
 		EF9B675120677F290057215B /* profile_calon.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = profile_calon.json; sourceTree = "<group>"; };
@@ -269,6 +271,15 @@
 				EF9899792069DA00007E7DA9 /* BeritaTableViewCell.xib */,
 			);
 			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		EF989989206A1A93007E7DA9 /* BeritaTab */ = {
+			isa = PBXGroup;
+			children = (
+				EF9899762069D93C007E7DA9 /* BeritaPilkadaViewController.swift */,
+				EF989987206A1486007E7DA9 /* WebViewController.swift */,
+			);
+			path = BeritaTab;
 			sourceTree = "<group>";
 		};
 		EF9B675520677F9A0057215B /* JSON */ = {
@@ -447,7 +458,7 @@
 			children = (
 				EFEF12A120672103000A94CE /* LoginViewController.swift */,
 				EF9899752069D90C007E7DA9 /* InformasiTab */,
-				EF9899762069D93C007E7DA9 /* BeritaPilkadaViewController.swift */,
+				EF989989206A1A93007E7DA9 /* BeritaTab */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -844,6 +855,7 @@
 				EF9B6788206871BC0057215B /* AnggaranPilkadaCollectionViewCell.swift in Sources */,
 				EF9899802069E212007E7DA9 /* PEMILU_KEY.swift in Sources */,
 				EFEF12DB206730D9000A94CE /* AuthServices.swift in Sources */,
+				EF989988206A1486007E7DA9 /* WebViewController.swift in Sources */,
 				EF9B676D2067A2010057215B /* JSONConstructor.swift in Sources */,
 				EF957B352068D8AD000E2098 /* ProgramUnggulanCalonCollectionViewCell.swift in Sources */,
 				EF9B6785206870500057215B /* AnggaranPilkada+Ext.swift in Sources */,

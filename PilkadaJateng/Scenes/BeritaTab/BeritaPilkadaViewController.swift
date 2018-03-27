@@ -71,5 +71,17 @@ extension BeritaPilkadaViewController: UITableViewDataSource {
 }
 
 extension BeritaPilkadaViewController: UITableViewDelegate {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? UINavigationController,
+            let webViewController = destination.viewControllers.first as? WebViewController,
+            let beritaItem = sender as? BeritaItem {
+            webViewController.title = beritaItem.title
+            webViewController.urlString = beritaItem.url
+        }
+    }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let item = _beritaItems[indexPath.row]
+        performSegue(withIdentifier: "WebViewController", sender: item)
+    }
 }

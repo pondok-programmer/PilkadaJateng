@@ -17,6 +17,7 @@ struct BeritaItem {
     var title: String
     var content: String
     var date: Date
+    var url: String
 }
 
 struct BeritaItemList {
@@ -30,6 +31,7 @@ extension BeritaItem: JSONInitializable {
         date = json["date"].string.or("")
             .toDate(format: "yyyy-MM-dd hh:mm:ss") // 2014-03-07 09:15:48
             .or(Date())
+        url = json["url"].string.or("")
     }
 }
 
