@@ -34,6 +34,14 @@
 		EF9899842069E839007E7DA9 /* BeritaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9899832069E839007E7DA9 /* BeritaItem.swift */; };
 		EF9899862069F1C1007E7DA9 /* BeritaPilkadaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9899852069F1C1007E7DA9 /* BeritaPilkadaService.swift */; };
 		EF989988206A1486007E7DA9 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF989987206A1486007E7DA9 /* WebViewController.swift */; };
+		EF98998E206A27CE007E7DA9 /* TipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF98998D206A27CE007E7DA9 /* TipsViewController.swift */; };
+		EF989992206A28C2007E7DA9 /* TipsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF989990206A28C2007E7DA9 /* TipsCollectionViewCell.swift */; };
+		EF989993206A28C2007E7DA9 /* TipsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF989991206A28C2007E7DA9 /* TipsCollectionViewCell.xib */; };
+		EF989995206A4203007E7DA9 /* MediaRakyatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF989994206A4203007E7DA9 /* MediaRakyatViewController.swift */; };
+		EF989997206A4853007E7DA9 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF989996206A4853007E7DA9 /* ChatViewController.swift */; };
+		EF989999206A488F007E7DA9 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF989998206A488F007E7DA9 /* TimelineViewController.swift */; };
+		EF98999F206A4A07007E7DA9 /* ChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF98999D206A4A07007E7DA9 /* ChatViewController.xib */; };
+		EF9899A1206A4A3E007E7DA9 /* TimelineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF9899A0206A4A3E007E7DA9 /* TimelineViewController.xib */; };
 		EF9B674E20677BAA0057215B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9B674D20677BAA0057215B /* NetworkManager.swift */; };
 		EF9B675020677DC90057215B /* InformasiPilkadaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9B674F20677DC90057215B /* InformasiPilkadaViewController.swift */; };
 		EF9B675220677F290057215B /* profile_calon.json in Resources */ = {isa = PBXBuildFile; fileRef = EF9B675120677F290057215B /* profile_calon.json */; };
@@ -136,6 +144,14 @@
 		EF9899832069E839007E7DA9 /* BeritaItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeritaItem.swift; sourceTree = "<group>"; };
 		EF9899852069F1C1007E7DA9 /* BeritaPilkadaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeritaPilkadaService.swift; sourceTree = "<group>"; };
 		EF989987206A1486007E7DA9 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		EF98998D206A27CE007E7DA9 /* TipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsViewController.swift; sourceTree = "<group>"; };
+		EF989990206A28C2007E7DA9 /* TipsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsCollectionViewCell.swift; sourceTree = "<group>"; };
+		EF989991206A28C2007E7DA9 /* TipsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TipsCollectionViewCell.xib; sourceTree = "<group>"; };
+		EF989994206A4203007E7DA9 /* MediaRakyatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaRakyatViewController.swift; sourceTree = "<group>"; };
+		EF989996206A4853007E7DA9 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		EF989998206A488F007E7DA9 /* TimelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
+		EF98999D206A4A07007E7DA9 /* ChatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatViewController.xib; sourceTree = "<group>"; };
+		EF9899A0206A4A3E007E7DA9 /* TimelineViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimelineViewController.xib; sourceTree = "<group>"; };
 		EF9B674D20677BAA0057215B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		EF9B674F20677DC90057215B /* InformasiPilkadaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformasiPilkadaViewController.swift; sourceTree = "<group>"; };
 		EF9B675120677F290057215B /* profile_calon.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = profile_calon.json; sourceTree = "<group>"; };
@@ -282,6 +298,44 @@
 			path = BeritaTab;
 			sourceTree = "<group>";
 		};
+		EF98998C206A2561007E7DA9 /* MediaRakyatTab */ = {
+			isa = PBXGroup;
+			children = (
+				EF989994206A4203007E7DA9 /* MediaRakyatViewController.swift */,
+				EF989996206A4853007E7DA9 /* ChatViewController.swift */,
+				EF989998206A488F007E7DA9 /* TimelineViewController.swift */,
+			);
+			path = MediaRakyatTab;
+			sourceTree = "<group>";
+		};
+		EF98998F206A27E1007E7DA9 /* TipsTab */ = {
+			isa = PBXGroup;
+			children = (
+				EF98998D206A27CE007E7DA9 /* TipsViewController.swift */,
+			);
+			path = TipsTab;
+			sourceTree = "<group>";
+		};
+		EF9899A2206A4A5B007E7DA9 /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				EF98999D206A4A07007E7DA9 /* ChatViewController.xib */,
+				EF9899A0206A4A3E007E7DA9 /* TimelineViewController.xib */,
+			);
+			path = XIBs;
+			sourceTree = "<group>";
+		};
+		EF9899A3206A4A6B007E7DA9 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				EFEF12A320672103000A94CE /* Main.storyboard */,
+				EFEF12D420672E53000A94CE /* InformasiCalon.storyboard */,
+				EFEF12D220672DD2000A94CE /* InformasiPilkada.storyboard */,
+				EFEF12A820672103000A94CE /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		EF9B675520677F9A0057215B /* JSON */ = {
 			isa = PBXGroup;
 			children = (
@@ -339,6 +393,8 @@
 				EF957B382068D8D3000E2098 /* PrioritasProgramCalonCollectionViewCell.xib */,
 				EF957B3B2068D8EB000E2098 /* LHKPNCollectionViewCell.swift */,
 				EF957B3C2068D8EB000E2098 /* LHKPNCollectionViewCell.xib */,
+				EF989990206A28C2007E7DA9 /* TipsCollectionViewCell.swift */,
+				EF989991206A28C2007E7DA9 /* TipsCollectionViewCell.xib */,
 			);
 			path = CollectionViewCells;
 			sourceTree = "<group>";
@@ -432,12 +488,10 @@
 		EFEF12D720672EB5000A94CE /* Layouts */ = {
 			isa = PBXGroup;
 			children = (
-				EFEF12A320672103000A94CE /* Main.storyboard */,
-				EFEF12D420672E53000A94CE /* InformasiCalon.storyboard */,
-				EFEF12D220672DD2000A94CE /* InformasiPilkada.storyboard */,
-				EFEF12A820672103000A94CE /* LaunchScreen.storyboard */,
+				EF9899A3206A4A6B007E7DA9 /* Storyboards */,
 				EF9B677F2067CF520057215B /* CollectionViewCells */,
 				EF98997C2069DA0A007E7DA9 /* TableViewCells */,
+				EF9899A2206A4A5B007E7DA9 /* XIBs */,
 			);
 			path = Layouts;
 			sourceTree = "<group>";
@@ -459,6 +513,8 @@
 				EFEF12A120672103000A94CE /* LoginViewController.swift */,
 				EF9899752069D90C007E7DA9 /* InformasiTab */,
 				EF989989206A1A93007E7DA9 /* BeritaTab */,
+				EF98998C206A2561007E7DA9 /* MediaRakyatTab */,
+				EF98998F206A27E1007E7DA9 /* TipsTab */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -620,6 +676,7 @@
 			files = (
 				EF957B3E2068D8EB000E2098 /* LHKPNCollectionViewCell.xib in Resources */,
 				EFEF12AA20672103000A94CE /* LaunchScreen.storyboard in Resources */,
+				EF98999F206A4A07007E7DA9 /* ChatViewController.xib in Resources */,
 				EF98997B2069DA00007E7DA9 /* BeritaTableViewCell.xib in Resources */,
 				EFEF12D620672E53000A94CE /* InformasiCalon.storyboard in Resources */,
 				EF9B6759206784D20057215B /* anggaran_pilkada.json in Resources */,
@@ -628,6 +685,8 @@
 				EF957B3A2068D8D3000E2098 /* PrioritasProgramCalonCollectionViewCell.xib in Resources */,
 				EFEF12D320672DD2000A94CE /* InformasiPilkada.storyboard in Resources */,
 				EFEF12CE206725D8000A94CE /* GoogleService-Info.plist in Resources */,
+				EF9899A1206A4A3E007E7DA9 /* TimelineViewController.xib in Resources */,
+				EF989993206A28C2007E7DA9 /* TipsCollectionViewCell.xib in Resources */,
 				EF9B67612067860A0057215B /* tahapan_pilkada.json in Resources */,
 				EFEF12A720672103000A94CE /* Assets.xcassets in Resources */,
 				EF9B6763206786570057215B /* program_unggulan_rano_embay.json in Resources */,
@@ -785,11 +844,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-PilkadaJateng/Pods-PilkadaJateng-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MessageKit/MessageKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MessageKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -820,6 +883,7 @@
 			files = (
 				EF9B675420677F450057215B /* APIUtils.swift in Sources */,
 				EF9B679B206899BF0057215B /* ProfilCalon+Ext.swift in Sources */,
+				EF98998E206A27CE007E7DA9 /* TipsViewController.swift in Sources */,
 				EF9B67702067A2E70057215B /* PartisipasiPilkada+Ext.swift in Sources */,
 				EF9B675020677DC90057215B /* InformasiPilkadaViewController.swift in Sources */,
 				EF9B677A2067BE9C0057215B /* PartisipasiPilkadaViewController.swift in Sources */,
@@ -828,6 +892,7 @@
 				EF9B67992068985A0057215B /* ProfilCalon.swift in Sources */,
 				EF957B262068CEFB000E2098 /* DetailCalonViewController.swift in Sources */,
 				EF9B679D20689DF80057215B /* String+Ext.swift in Sources */,
+				EF989999206A488F007E7DA9 /* TimelineViewController.swift in Sources */,
 				EF9B678120686F470057215B /* AnggaranPilkadaViewController.swift in Sources */,
 				EF9B67752067A3860057215B /* Optional+Ext.swift in Sources */,
 				EF9B676920679B2A0057215B /* PartisipasiPilkada.swift in Sources */,
@@ -835,6 +900,7 @@
 				EF9B679320688E5E0057215B /* TahapanPilkada+Ext.swift in Sources */,
 				EF9B674E20677BAA0057215B /* NetworkManager.swift in Sources */,
 				EF957B392068D8D3000E2098 /* PrioritasProgramCalonCollectionViewCell.swift in Sources */,
+				EF989997206A4853007E7DA9 /* ChatViewController.swift in Sources */,
 				EF9B678B20688D7B0057215B /* TahapanPilkadaViewController.swift in Sources */,
 				EF9899772069D93C007E7DA9 /* BeritaPilkadaViewController.swift in Sources */,
 				EFEF12DE2067327C000A94CE /* User.swift in Sources */,
@@ -848,6 +914,7 @@
 				EFEF12A020672103000A94CE /* AppDelegate.swift in Sources */,
 				EF9B678E20688DCA0057215B /* TahapanPilkadaCollectionViewCell.swift in Sources */,
 				EF9899842069E839007E7DA9 /* BeritaItem.swift in Sources */,
+				EF989992206A28C2007E7DA9 /* TipsCollectionViewCell.swift in Sources */,
 				EF9B67772067AAB20057215B /* Tester.swift in Sources */,
 				EF9B678320686FD70057215B /* AnggaranPilkada.swift in Sources */,
 				EF9B67962068968C0057215B /* InformasiCalonViewController.swift in Sources */,
@@ -856,6 +923,7 @@
 				EF9899802069E212007E7DA9 /* PEMILU_KEY.swift in Sources */,
 				EFEF12DB206730D9000A94CE /* AuthServices.swift in Sources */,
 				EF989988206A1486007E7DA9 /* WebViewController.swift in Sources */,
+				EF989995206A4203007E7DA9 /* MediaRakyatViewController.swift in Sources */,
 				EF9B676D2067A2010057215B /* JSONConstructor.swift in Sources */,
 				EF957B352068D8AD000E2098 /* ProgramUnggulanCalonCollectionViewCell.swift in Sources */,
 				EF9B6785206870500057215B /* AnggaranPilkada+Ext.swift in Sources */,

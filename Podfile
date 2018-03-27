@@ -7,6 +7,8 @@ target 'PilkadaJateng' do
 
   # Pods for PilkadaJateng
     pod 'SwiftyJSON', '~> 4.0'
+    pod 'MessageKit'
+    pod 'XLPagerTabStrip', '~> 8.0'
 
   target 'PilkadaJatengTests' do
     inherit! :search_paths

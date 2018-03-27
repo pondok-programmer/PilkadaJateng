@@ -1,12 +1,18 @@
 PODS:
+  - MessageKit (0.13.1)
   - SwiftyJSON (4.0.0)
+  - XLPagerTabStrip (8.0.0)
 
 DEPENDENCIES:
+  - MessageKit
   - SwiftyJSON (~> 4.0)
+  - XLPagerTabStrip (~> 8.0)
 
 SPEC CHECKSUMS:
+  MessageKit: fc74d71d9b05385138d47b3a4b7beef5c687daf1
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
+  XLPagerTabStrip: d1ab378af0923320ec0b5eab11d7b2f803d31261
 
-PODFILE CHECKSUM: a8b9eb25e62848a8fb4124b22b7197dc501b81d0
+PODFILE CHECKSUM: 07341c914f80ded315e7ee21dd79fc7b6f796279
 
 COCOAPODS: 1.4.0
