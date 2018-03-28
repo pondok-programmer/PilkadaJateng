@@ -10,6 +10,14 @@
 		057C480F4E312CC69FE26442 /* Pods_PilkadaJatengTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86F697DB3F1842B0F328077F /* Pods_PilkadaJatengTests.framework */; };
 		073AF81C62B419A96CB26B3A /* Pods_PilkadaJatengUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D918A481CFB013ED5C3E121E /* Pods_PilkadaJatengUITests.framework */; };
 		8046A59205DFA8ADD6EEF7D9 /* Pods_PilkadaJateng.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF09DA17D0668593C8BDE728 /* Pods_PilkadaJateng.framework */; };
+		EF584435206B2A5500BDBB4C /* DiskusiMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF584434206B2A5500BDBB4C /* DiskusiMessage.swift */; };
+		EF584438206B306700BDBB4C /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF584437206B306700BDBB4C /* ChannelViewController.swift */; };
+		EF58443A206B318F00BDBB4C /* ChannelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF584439206B318F00BDBB4C /* ChannelViewController.xib */; };
+		EF58443D206B341300BDBB4C /* Chat+MessageInputBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF58443C206B341300BDBB4C /* Chat+MessageInputBarDelegate.swift */; };
+		EF58443F206B34F200BDBB4C /* Chat+MessagesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF58443E206B34F200BDBB4C /* Chat+MessagesDataSource.swift */; };
+		EF584441206B3B6B00BDBB4C /* Chat+MessagesLayoutDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF584440206B3B6B00BDBB4C /* Chat+MessagesLayoutDelegate.swift */; };
+		EF584443206B3BD600BDBB4C /* Chat+MessagesDisplayDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF584442206B3BD600BDBB4C /* Chat+MessagesDisplayDelegate.swift */; };
+		EF584445206B3C0600BDBB4C /* Chat+MessagesCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF584444206B3C0600BDBB4C /* Chat+MessagesCellDelegate.swift */; };
 		EF957B232068C18D000E2098 /* InformasiCalonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF957B212068C18D000E2098 /* InformasiCalonCollectionViewCell.swift */; };
 		EF957B242068C18D000E2098 /* InformasiCalonCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF957B222068C18D000E2098 /* InformasiCalonCollectionViewCell.xib */; };
 		EF957B262068CEFB000E2098 /* DetailCalonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF957B252068CEFB000E2098 /* DetailCalonViewController.swift */; };
@@ -120,6 +128,14 @@
 		DF09DA17D0668593C8BDE728 /* Pods_PilkadaJateng.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PilkadaJateng.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0AC20D403F1259AECA2D926 /* Pods-PilkadaJatengTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PilkadaJatengTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PilkadaJatengTests/Pods-PilkadaJatengTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EC74C13A84C352229226CACA /* Pods-PilkadaJatengTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PilkadaJatengTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PilkadaJatengTests/Pods-PilkadaJatengTests.release.xcconfig"; sourceTree = "<group>"; };
+		EF584434206B2A5500BDBB4C /* DiskusiMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskusiMessage.swift; sourceTree = "<group>"; };
+		EF584437206B306700BDBB4C /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
+		EF584439206B318F00BDBB4C /* ChannelViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChannelViewController.xib; sourceTree = "<group>"; };
+		EF58443C206B341300BDBB4C /* Chat+MessageInputBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chat+MessageInputBarDelegate.swift"; sourceTree = "<group>"; };
+		EF58443E206B34F200BDBB4C /* Chat+MessagesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chat+MessagesDataSource.swift"; sourceTree = "<group>"; };
+		EF584440206B3B6B00BDBB4C /* Chat+MessagesLayoutDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chat+MessagesLayoutDelegate.swift"; sourceTree = "<group>"; };
+		EF584442206B3BD600BDBB4C /* Chat+MessagesDisplayDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chat+MessagesDisplayDelegate.swift"; sourceTree = "<group>"; };
+		EF584444206B3C0600BDBB4C /* Chat+MessagesCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chat+MessagesCellDelegate.swift"; sourceTree = "<group>"; };
 		EF957B212068C18D000E2098 /* InformasiCalonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformasiCalonCollectionViewCell.swift; sourceTree = "<group>"; };
 		EF957B222068C18D000E2098 /* InformasiCalonCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformasiCalonCollectionViewCell.xib; sourceTree = "<group>"; };
 		EF957B252068CEFB000E2098 /* DetailCalonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCalonViewController.swift; sourceTree = "<group>"; };
@@ -262,6 +278,57 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		EF584431206B29A100BDBB4C /* InformasiPilkada */ = {
+			isa = PBXGroup;
+			children = (
+				EF9B676820679B2A0057215B /* PartisipasiPilkada.swift */,
+				EF9B678220686FD70057215B /* AnggaranPilkada.swift */,
+				EF9B679020688DF20057215B /* TahapanPilkada.swift */,
+			);
+			path = InformasiPilkada;
+			sourceTree = "<group>";
+		};
+		EF584432206B29BC00BDBB4C /* InformasiCalon */ = {
+			isa = PBXGroup;
+			children = (
+				EF9B67982068985A0057215B /* ProfilCalon.swift */,
+				EF957B272068D584000E2098 /* VisiMisiCalon.swift */,
+				EF957B292068D63E000E2098 /* ProgramUnggulanCalon.swift */,
+				EF957B2B2068D666000E2098 /* PrioritasProgramCalon.swift */,
+				EF957B2D2068D676000E2098 /* LHKPN.swift */,
+			);
+			path = InformasiCalon;
+			sourceTree = "<group>";
+		};
+		EF584433206B29D400BDBB4C /* Berita */ = {
+			isa = PBXGroup;
+			children = (
+				EF9899832069E839007E7DA9 /* BeritaItem.swift */,
+			);
+			path = Berita;
+			sourceTree = "<group>";
+		};
+		EF584436206B2C6800BDBB4C /* MediaWarga */ = {
+			isa = PBXGroup;
+			children = (
+				EF584434206B2A5500BDBB4C /* DiskusiMessage.swift */,
+			);
+			path = MediaWarga;
+			sourceTree = "<group>";
+		};
+		EF58443B206B33F400BDBB4C /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				EF989996206A4853007E7DA9 /* ChatViewController.swift */,
+				EF58443C206B341300BDBB4C /* Chat+MessageInputBarDelegate.swift */,
+				EF58443E206B34F200BDBB4C /* Chat+MessagesDataSource.swift */,
+				EF584440206B3B6B00BDBB4C /* Chat+MessagesLayoutDelegate.swift */,
+				EF584442206B3BD600BDBB4C /* Chat+MessagesDisplayDelegate.swift */,
+				EF584444206B3C0600BDBB4C /* Chat+MessagesCellDelegate.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
 		EF957B43206904D7000E2098 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -302,7 +369,8 @@
 			isa = PBXGroup;
 			children = (
 				EF989994206A4203007E7DA9 /* MediaRakyatViewController.swift */,
-				EF989996206A4853007E7DA9 /* ChatViewController.swift */,
+				EF584437206B306700BDBB4C /* ChannelViewController.swift */,
+				EF58443B206B33F400BDBB4C /* Chat */,
 				EF989998206A488F007E7DA9 /* TimelineViewController.swift */,
 			);
 			path = MediaRakyatTab;
@@ -321,6 +389,7 @@
 			children = (
 				EF98999D206A4A07007E7DA9 /* ChatViewController.xib */,
 				EF9899A0206A4A3E007E7DA9 /* TimelineViewController.xib */,
+				EF584439206B318F00BDBB4C /* ChannelViewController.xib */,
 			);
 			path = XIBs;
 			sourceTree = "<group>";
@@ -534,15 +603,10 @@
 			isa = PBXGroup;
 			children = (
 				EFEF12DD2067327C000A94CE /* User.swift */,
-				EF9B676820679B2A0057215B /* PartisipasiPilkada.swift */,
-				EF9B678220686FD70057215B /* AnggaranPilkada.swift */,
-				EF9B679020688DF20057215B /* TahapanPilkada.swift */,
-				EF9B67982068985A0057215B /* ProfilCalon.swift */,
-				EF957B272068D584000E2098 /* VisiMisiCalon.swift */,
-				EF957B292068D63E000E2098 /* ProgramUnggulanCalon.swift */,
-				EF957B2B2068D666000E2098 /* PrioritasProgramCalon.swift */,
-				EF957B2D2068D676000E2098 /* LHKPN.swift */,
-				EF9899832069E839007E7DA9 /* BeritaItem.swift */,
+				EF584431206B29A100BDBB4C /* InformasiPilkada */,
+				EF584432206B29BC00BDBB4C /* InformasiCalon */,
+				EF584433206B29D400BDBB4C /* Berita */,
+				EF584436206B2C6800BDBB4C /* MediaWarga */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -700,6 +764,7 @@
 				EF98997E2069DF01007E7DA9 /* PEMILU_KEY.json in Resources */,
 				EF9B675B206785160057215B /* visi_misi_wahidin_andika.json in Resources */,
 				EF957B322068D87D000E2098 /* VisiMisiCalonCollectionViewCell.xib in Resources */,
+				EF58443A206B318F00BDBB4C /* ChannelViewController.xib in Resources */,
 				EF957B362068D8AD000E2098 /* ProgramUnggulanCalonCollectionViewCell.xib in Resources */,
 				EF9B6765206786AA0057215B /* prioritas_program_wahidin_andika.json in Resources */,
 				EF9B677E2067CF460057215B /* PartisipasiPilkadaCollectionViewCell.xib in Resources */,
@@ -883,6 +948,7 @@
 			files = (
 				EF9B675420677F450057215B /* APIUtils.swift in Sources */,
 				EF9B679B206899BF0057215B /* ProfilCalon+Ext.swift in Sources */,
+				EF584445206B3C0600BDBB4C /* Chat+MessagesCellDelegate.swift in Sources */,
 				EF98998E206A27CE007E7DA9 /* TipsViewController.swift in Sources */,
 				EF9B67702067A2E70057215B /* PartisipasiPilkada+Ext.swift in Sources */,
 				EF9B675020677DC90057215B /* InformasiPilkadaViewController.swift in Sources */,
@@ -905,6 +971,7 @@
 				EF9899772069D93C007E7DA9 /* BeritaPilkadaViewController.swift in Sources */,
 				EFEF12DE2067327C000A94CE /* User.swift in Sources */,
 				EFEF12A220672103000A94CE /* LoginViewController.swift in Sources */,
+				EF58443F206B34F200BDBB4C /* Chat+MessagesDataSource.swift in Sources */,
 				EF957B312068D87D000E2098 /* VisiMisiCalonCollectionViewCell.swift in Sources */,
 				EF957B2E2068D676000E2098 /* LHKPN.swift in Sources */,
 				EF957B2C2068D666000E2098 /* PrioritasProgramCalon.swift in Sources */,
@@ -917,8 +984,11 @@
 				EF989992206A28C2007E7DA9 /* TipsCollectionViewCell.swift in Sources */,
 				EF9B67772067AAB20057215B /* Tester.swift in Sources */,
 				EF9B678320686FD70057215B /* AnggaranPilkada.swift in Sources */,
+				EF584443206B3BD600BDBB4C /* Chat+MessagesDisplayDelegate.swift in Sources */,
+				EF584435206B2A5500BDBB4C /* DiskusiMessage.swift in Sources */,
 				EF9B67962068968C0057215B /* InformasiCalonViewController.swift in Sources */,
 				EF9899862069F1C1007E7DA9 /* BeritaPilkadaService.swift in Sources */,
+				EF58443D206B341300BDBB4C /* Chat+MessageInputBarDelegate.swift in Sources */,
 				EF9B6788206871BC0057215B /* AnggaranPilkadaCollectionViewCell.swift in Sources */,
 				EF9899802069E212007E7DA9 /* PEMILU_KEY.swift in Sources */,
 				EFEF12DB206730D9000A94CE /* AuthServices.swift in Sources */,
@@ -926,6 +996,8 @@
 				EF989995206A4203007E7DA9 /* MediaRakyatViewController.swift in Sources */,
 				EF9B676D2067A2010057215B /* JSONConstructor.swift in Sources */,
 				EF957B352068D8AD000E2098 /* ProgramUnggulanCalonCollectionViewCell.swift in Sources */,
+				EF584438206B306700BDBB4C /* ChannelViewController.swift in Sources */,
+				EF584441206B3B6B00BDBB4C /* Chat+MessagesLayoutDelegate.swift in Sources */,
 				EF9B6785206870500057215B /* AnggaranPilkada+Ext.swift in Sources */,
 				EF957B282068D584000E2098 /* VisiMisiCalon.swift in Sources */,
 				EF957B3D2068D8EB000E2098 /* LHKPNCollectionViewCell.swift in Sources */,
