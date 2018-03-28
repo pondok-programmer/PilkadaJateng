@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 import XLPagerTabStrip
 
 class ChannelListViewController: UIViewController {
@@ -45,13 +46,7 @@ class ChannelListViewController: UIViewController {
     }
     
     @objc func createChannel() {
-        _channelService.createNew { (ref) in
-            let newChannel = ref.childByAutoId()
-            let channelItem = [
-                "name":"Channel - \(arc4random() % 15)"
-            ]
-            newChannel.setValue(channelItem)
-        }
+        _channelService.createNew(name: "Channel - \(arc4random() % 15)")
     }
 }
 
@@ -67,7 +62,15 @@ extension ChannelListViewController: IndicatorInfoProvider {
 }
 
 extension ChannelListViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let data = _channelService.openChannel(at: indexPath.row)
+        let cVC = ChatViewController(nibName: "ChatViewController", bundle: nil)
+        cVC.chatService = ChatService(channelRef: data.channelRef)
+        cVC.channel = data.selectedChannel
+        
+        let navController = UINavigationController(rootViewController: cVC)
+        present(navController, animated: true, completion: nil)
+    }
 }
 
 extension ChannelListViewController: UITableViewDataSource {

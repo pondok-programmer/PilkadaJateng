@@ -37,3 +37,13 @@ struct DiskusiMessage: MessageType {
         self.init(data: .photo(image), sender: sender, messageId: messageId, date: date)
     }
 }
+
+extension DiskusiMessage: Hashable {
+    var hashValue: Int {
+        return messageId.hashValue
+    }
+    
+    static func ==(lhs: DiskusiMessage, rhs: DiskusiMessage) -> Bool {
+        return lhs.messageId == rhs.messageId
+    }
+}

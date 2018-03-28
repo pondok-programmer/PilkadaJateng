@@ -19,16 +19,18 @@ extension ChatViewController: MessageInputBarDelegate {
             if let image = component as? UIImage {
                 
                 let imageMessage = DiskusiMessage(image: image, sender: currentSender(), messageId: UUID().uuidString, date: Date())
-                messageList.append(imageMessage)
-                messagesCollectionView.insertSections([messageList.count - 1])
+                newMessage(imageMessage)
                 
             } else if let text = component as? String {
                 
                 let attributedText = NSAttributedString(string: text, attributes: [.font: UIFont.systemFont(ofSize: 15), .foregroundColor: UIColor.blue])
                 
-                let message = DiskusiMessage(attributedText: attributedText, sender: currentSender(), messageId: UUID().uuidString, date: Date())
-                messageList.append(message)
-                messagesCollectionView.insertSections([messageList.count - 1])
+                let message = DiskusiMessage(attributedText: attributedText,
+                                             sender: currentSender(),
+                                             messageId: UUID().uuidString,
+                                             date: Date())
+                
+                newMessage(message)
             }
             
         }

@@ -40,7 +40,15 @@ class ChannelService {
         }
     }
     
-    func createNew(closure: @escaping (DatabaseReference) -> ()) {
-        closure(_channelRef)
+    func createNew(name: String) {
+        let newChannel = _channelRef.childByAutoId()
+        let channelItem = [
+            "name": name
+        ]
+        newChannel.setValue(channelItem)
+    }
+    
+    func openChannel(at index: Int) -> (selectedChannel: Channel, channelRef: DatabaseReference){
+        return (channels[index], _channelRef.child(channels[index].id))
     }
 }
