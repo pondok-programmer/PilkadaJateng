@@ -30,7 +30,7 @@ class MediaRakyatPagerTabStrip: ButtonBarPagerTabStripViewController {
     }
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
-        return [ChannelViewController(nibName: "ChannelViewController", bundle: nil),
+        return [ChannelListViewController(nibName: "ChannelListViewController", bundle: nil),
                 TimelineViewController(nibName: "TimelineViewController", bundle: nil)]
     }
 }

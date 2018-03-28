@@ -9,6 +9,8 @@ target 'PilkadaJateng' do
     pod 'SwiftyJSON', '~> 4.0'
     pod 'MessageKit'
     pod 'XLPagerTabStrip', '~> 8.0'
+    pod 'Firebase', '~> 4.11'
+    pod 'Firebase/Database'
 
   target 'PilkadaJatengTests' do
     inherit! :search_paths
