@@ -44,7 +44,7 @@ class ChatViewController: MessagesViewController {
     }
     
     private lazy var _sender: Sender = {
-        return Sender(id: UUID().uuidString, displayName: "MName \(arc4random() % 16)")
+        return Sender(id: UIDevice.current.name, displayName: "MName \(arc4random() % 16)")
     }()
     
     func currentSender() -> Sender {

@@ -14,5 +14,11 @@ extension ChatViewController: MessagesLayoutDelegate {
         return 200
     }
     
-    
+    func messagePadding(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> UIEdgeInsets {
+        if isFromCurrentSender(message: message) {
+            return UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 4)
+        } else {
+            return UIEdgeInsets(top: 0, left: 4, bottom: 0, right: 30)
+        }
+    }
 }
