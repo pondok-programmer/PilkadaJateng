@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         application.statusBarStyle = .lightContent
         
+        
         FirebaseApp.configure()
         
         Tester.shared.run()

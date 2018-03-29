@@ -17,11 +17,7 @@ class ChatService {
     private lazy var _messagesRef = self._channelRef.child("messages")
     private var refHandle: DatabaseHandle?
     
-    var messages: [DiskusiMessage] = [] {
-        didSet {
-            print(messages.map({ $0.messageId }))
-        }
-    }
+    var messages: [DiskusiMessage] = []
     
     init(channelRef: DatabaseReference) {
         _channelRef = channelRef
@@ -29,7 +25,8 @@ class ChatService {
     
     /// Begin listening should be called in viewWillAppear
     func beginListening(completion: @escaping () -> ()) {
-        refHandle = _messagesRef.observe(.childAdded, with: { (snapshot) in
+        let messageQuery = _messagesRef.queryLimited(toLast: 25)
+        refHandle = messageQuery.observe(.childAdded, with: { (snapshot) in
             if let messageData = snapshot.value as? [String: AnyObject] {
                 let id = snapshot.key
                 if let text = messageData["text"] as? String,
@@ -71,7 +68,7 @@ class ChatService {
         switch message.data {
         case let .text(text):
             let messageItem = [
-                "text":text,
+                "text": text,
                 "senderName": sender.displayName,
                 "senderId": sender.id,
                 "date": date.toString(format: dateFormat)
@@ -80,7 +77,7 @@ class ChatService {
             newMessage.setValue(messageItem)
         case let .attributedText(value):
             let messageItem = [
-                "text":value.string,
+                "text": value.string,
                 "senderName": sender.displayName,
                 "senderId": sender.id,
                 "date": date.toString(format: dateFormat)

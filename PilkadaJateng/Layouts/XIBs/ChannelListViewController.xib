@@ -22,28 +22,31 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ML9-N9-KiX">
-                    <rect key="frame" x="0.0" y="58" width="320" height="422"/>
+                    <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qzV-qk-3qK">
-                    <rect key="frame" x="137" y="20" width="46" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IqY-E9-ac9">
+                    <rect key="frame" x="232" y="415" width="46" height="30"/>
+                    <color key="backgroundColor" red="1" green="0.17885536503170363" blue="0.21496323663875461" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="46" id="2bd-3q-xyn"/>
+                        <constraint firstAttribute="height" constant="30" id="qQR-PD-3zu"/>
+                    </constraints>
                     <state key="normal" title="New"/>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="ML9-N9-KiX" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="LmJ-Y2-fvz"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="qzV-qk-3qK" secondAttribute="trailing" constant="137" id="Roa-OO-7yT"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="ML9-N9-KiX" secondAttribute="bottom" id="Srq-Dw-Vyo"/>
-                <constraint firstItem="ML9-N9-KiX" firstAttribute="top" secondItem="qzV-qk-3qK" secondAttribute="bottom" constant="8" id="aUp-Ac-8KB"/>
-                <constraint firstItem="ML9-N9-KiX" firstAttribute="top" secondItem="qzV-qk-3qK" secondAttribute="bottom" constant="8" id="f6R-bj-3uV"/>
-                <constraint firstItem="qzV-qk-3qK" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="137" id="qGJ-UA-nby"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="IqY-E9-ac9" secondAttribute="trailing" constant="42" id="Nza-0A-lJL"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="IqY-E9-ac9" secondAttribute="bottom" constant="35" id="afy-WD-5vd"/>
+                <constraint firstItem="ML9-N9-KiX" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="xlg-PM-ekt"/>
                 <constraint firstItem="ML9-N9-KiX" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="yWG-cR-woi"/>
-                <constraint firstItem="qzV-qk-3qK" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="yjw-wL-hub"/>
+                <constraint firstItem="ML9-N9-KiX" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="zDP-ek-NNa"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
-                <outlet property="createChannelButton" destination="qzV-qk-3qK" id="Tpg-jX-j3j"/>
+                <outlet property="createChannelButton" destination="IqY-E9-ac9" id="TGY-Dz-znW"/>
                 <outlet property="tableView" destination="ML9-N9-KiX" id="5lt-tu-w8Y"/>
             </connections>
         </view>
