@@ -13,23 +13,48 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TimelineViewController" customModule="PilkadaJateng" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="iN0-l3-epB" id="qig-AL-tgp"/>
+                <outlet property="viewOutlets" destination="iN0-l3-epB" id="cnh-UF-mUz"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TimelineView" customModule="PilkadaJateng" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Timeline" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OiD-Qj-Rzb">
-                    <rect key="frame" x="139" y="230" width="65" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="JgW-Rq-nCN">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="52j-J8-TZb">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HZl-a2-hYZ">
+                    <rect key="frame" x="236" y="410" width="42" height="35"/>
+                    <color key="backgroundColor" red="0.13129157164985225" green="0.90161008883248728" blue="0.1892937554247392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="Jhh-44-wFa"/>
+                        <constraint firstAttribute="width" constant="42" id="uhP-X9-gu9"/>
+                    </constraints>
+                    <state key="normal" title="New"/>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="0.87939605991769021" blue="0.57469326771387941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="JgW-Rq-nCN" secondAttribute="trailing" id="C57-zE-VnU"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="HZl-a2-hYZ" secondAttribute="bottom" constant="35" id="OcB-KY-C7R"/>
+                <constraint firstItem="JgW-Rq-nCN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Qjh-BJ-oPw"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="HZl-a2-hYZ" secondAttribute="trailing" constant="42" id="uvp-ji-Mew"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="JgW-Rq-nCN" secondAttribute="bottom" id="vJ8-bg-vcF"/>
+                <constraint firstItem="JgW-Rq-nCN" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="wmR-l1-s8Z"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="collectionView" destination="JgW-Rq-nCN" id="hCw-OV-r3a"/>
+                <outlet property="newPostButton" destination="HZl-a2-hYZ" id="5i9-tS-3fY"/>
+            </connections>
         </view>
     </objects>
 </document>

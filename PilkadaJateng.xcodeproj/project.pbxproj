@@ -93,6 +93,12 @@
 		EF9B67992068985A0057215B /* ProfilCalon.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9B67982068985A0057215B /* ProfilCalon.swift */; };
 		EF9B679B206899BF0057215B /* ProfilCalon+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9B679A206899BF0057215B /* ProfilCalon+Ext.swift */; };
 		EF9B679D20689DF80057215B /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9B679C20689DF80057215B /* String+Ext.swift */; };
+		EFA7CFE9206C7CD60090DCF5 /* TimelineService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA7CFE8206C7CD60090DCF5 /* TimelineService.swift */; };
+		EFA7CFEC206C82B20090DCF5 /* TimelineCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA7CFEA206C82B20090DCF5 /* TimelineCollectionViewCell.swift */; };
+		EFA7CFED206C82B20090DCF5 /* TimelineCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFA7CFEB206C82B20090DCF5 /* TimelineCollectionViewCell.xib */; };
+		EFA7CFF0206C8CC00090DCF5 /* PostEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA7CFEE206C8CC00090DCF5 /* PostEditorViewController.swift */; };
+		EFA7CFF1206C8CC00090DCF5 /* PostEditorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFA7CFEF206C8CC00090DCF5 /* PostEditorViewController.xib */; };
+		EFA7CFF3206C92400090DCF5 /* TimelinePost.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA7CFF2206C92400090DCF5 /* TimelinePost.swift */; };
 		EFEF12A020672103000A94CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEF129F20672103000A94CE /* AppDelegate.swift */; };
 		EFEF12A220672103000A94CE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEF12A120672103000A94CE /* LoginViewController.swift */; };
 		EFEF12A520672103000A94CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFEF12A320672103000A94CE /* Main.storyboard */; };
@@ -220,6 +226,12 @@
 		EF9B67982068985A0057215B /* ProfilCalon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilCalon.swift; sourceTree = "<group>"; };
 		EF9B679A206899BF0057215B /* ProfilCalon+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfilCalon+Ext.swift"; sourceTree = "<group>"; };
 		EF9B679C20689DF80057215B /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		EFA7CFE8206C7CD60090DCF5 /* TimelineService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineService.swift; sourceTree = "<group>"; };
+		EFA7CFEA206C82B20090DCF5 /* TimelineCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineCollectionViewCell.swift; sourceTree = "<group>"; };
+		EFA7CFEB206C82B20090DCF5 /* TimelineCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimelineCollectionViewCell.xib; sourceTree = "<group>"; };
+		EFA7CFEE206C8CC00090DCF5 /* PostEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostEditorViewController.swift; sourceTree = "<group>"; };
+		EFA7CFEF206C8CC00090DCF5 /* PostEditorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostEditorViewController.xib; sourceTree = "<group>"; };
+		EFA7CFF2206C92400090DCF5 /* TimelinePost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelinePost.swift; sourceTree = "<group>"; };
 		EFEF129C20672103000A94CE /* PilkadaJateng.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PilkadaJateng.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFEF129F20672103000A94CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFEF12A120672103000A94CE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -331,6 +343,7 @@
 			children = (
 				EF584434206B2A5500BDBB4C /* DiskusiMessage.swift */,
 				EF584446206B42CE00BDBB4C /* Channel.swift */,
+				EFA7CFF2206C92400090DCF5 /* TimelinePost.swift */,
 			);
 			path = MediaWarga;
 			sourceTree = "<group>";
@@ -394,6 +407,7 @@
 				EF584437206B306700BDBB4C /* ChannelViewController.swift */,
 				EF58443B206B33F400BDBB4C /* Chat */,
 				EF989998206A488F007E7DA9 /* TimelineViewController.swift */,
+				EFA7CFEE206C8CC00090DCF5 /* PostEditorViewController.swift */,
 			);
 			path = MediaRakyatTab;
 			sourceTree = "<group>";
@@ -412,6 +426,7 @@
 				EF98999D206A4A07007E7DA9 /* ChatViewController.xib */,
 				EF9899A0206A4A3E007E7DA9 /* TimelineViewController.xib */,
 				EF584439206B318F00BDBB4C /* ChannelListViewController.xib */,
+				EFA7CFEF206C8CC00090DCF5 /* PostEditorViewController.xib */,
 			);
 			path = XIBs;
 			sourceTree = "<group>";
@@ -486,6 +501,8 @@
 				EF957B3C2068D8EB000E2098 /* LHKPNCollectionViewCell.xib */,
 				EF989990206A28C2007E7DA9 /* TipsCollectionViewCell.swift */,
 				EF989991206A28C2007E7DA9 /* TipsCollectionViewCell.xib */,
+				EFA7CFEA206C82B20090DCF5 /* TimelineCollectionViewCell.swift */,
+				EFA7CFEB206C82B20090DCF5 /* TimelineCollectionViewCell.xib */,
 			);
 			path = CollectionViewCells;
 			sourceTree = "<group>";
@@ -622,6 +639,7 @@
 				EF9899852069F1C1007E7DA9 /* BeritaPilkadaService.swift */,
 				EF584448206B5D8200BDBB4C /* ChatService.swift */,
 				EF58444A206B5E5C00BDBB4C /* ChannelService.swift */,
+				EFA7CFE8206C7CD60090DCF5 /* TimelineService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -778,11 +796,13 @@
 				EFEF12CE206725D8000A94CE /* GoogleService-Info.plist in Resources */,
 				EF9899A1206A4A3E007E7DA9 /* TimelineViewController.xib in Resources */,
 				EF989993206A28C2007E7DA9 /* TipsCollectionViewCell.xib in Resources */,
+				EFA7CFED206C82B20090DCF5 /* TimelineCollectionViewCell.xib in Resources */,
 				EF9B67612067860A0057215B /* tahapan_pilkada.json in Resources */,
 				EFEF12A720672103000A94CE /* Assets.xcassets in Resources */,
 				EF9B6763206786570057215B /* program_unggulan_rano_embay.json in Resources */,
 				EF9B678F20688DCA0057215B /* TahapanPilkadaCollectionViewCell.xib in Resources */,
 				EFEF12A520672103000A94CE /* Main.storyboard in Resources */,
+				EFA7CFF1206C8CC00090DCF5 /* PostEditorViewController.xib in Resources */,
 				EF9899822069E7B7007E7DA9 /* berita_pilkada.json in Resources */,
 				EF9B6789206871BC0057215B /* AnggaranPilkadaCollectionViewCell.xib in Resources */,
 				EF9B6757206784B90057215B /* partisipasi_pilkada.json in Resources */,
@@ -1008,6 +1028,7 @@
 				EF9B678B20688D7B0057215B /* TahapanPilkadaViewController.swift in Sources */,
 				EF9899772069D93C007E7DA9 /* BeritaPilkadaViewController.swift in Sources */,
 				EFEF12DE2067327C000A94CE /* User.swift in Sources */,
+				EFA7CFF3206C92400090DCF5 /* TimelinePost.swift in Sources */,
 				EFEF12A220672103000A94CE /* LoginViewController.swift in Sources */,
 				EF58443F206B34F200BDBB4C /* Chat+MessagesDataSource.swift in Sources */,
 				EF957B312068D87D000E2098 /* VisiMisiCalonCollectionViewCell.swift in Sources */,
@@ -1027,6 +1048,7 @@
 				EF9B67962068968C0057215B /* InformasiCalonViewController.swift in Sources */,
 				EF584447206B42CE00BDBB4C /* Channel.swift in Sources */,
 				EF9899862069F1C1007E7DA9 /* BeritaPilkadaService.swift in Sources */,
+				EFA7CFF0206C8CC00090DCF5 /* PostEditorViewController.swift in Sources */,
 				EF58443D206B341300BDBB4C /* Chat+MessageInputBarDelegate.swift in Sources */,
 				EF9B6788206871BC0057215B /* AnggaranPilkadaCollectionViewCell.swift in Sources */,
 				EF9899802069E212007E7DA9 /* PEMILU_KEY.swift in Sources */,
@@ -1034,6 +1056,7 @@
 				EF989988206A1486007E7DA9 /* WebViewController.swift in Sources */,
 				EF989995206A4203007E7DA9 /* MediaRakyatViewController.swift in Sources */,
 				EF9B676D2067A2010057215B /* JSONConstructor.swift in Sources */,
+				EFA7CFE9206C7CD60090DCF5 /* TimelineService.swift in Sources */,
 				EF584455206B77EB00BDBB4C /* Date+Ext.swift in Sources */,
 				EF957B352068D8AD000E2098 /* ProgramUnggulanCalonCollectionViewCell.swift in Sources */,
 				EF584438206B306700BDBB4C /* ChannelViewController.swift in Sources */,
@@ -1045,6 +1068,7 @@
 				EF584457206B79D000BDBB4C /* Chat+MessageViewController.swift in Sources */,
 				EF957B232068C18D000E2098 /* InformasiCalonCollectionViewCell.swift in Sources */,
 				EFEF12E4206739CA000A94CE /* InformasiViewController.swift in Sources */,
+				EFA7CFEC206C82B20090DCF5 /* TimelineCollectionViewCell.swift in Sources */,
 				EFEF12E8206742E5000A94CE /* InformasiService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

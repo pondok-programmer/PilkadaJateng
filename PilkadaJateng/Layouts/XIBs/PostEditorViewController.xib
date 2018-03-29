@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PostEditorViewController" customModule="PilkadaJateng" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewOutlets" destination="i5M-Pr-FkT" id="5a2-dp-kRf"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="PostEditorView" customModule="PilkadaJateng" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="iXZ-57-p78">
+                    <rect key="frame" x="20" y="40" width="280" height="420"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jTV-eu-n8G">
+                            <rect key="frame" x="0.0" y="0.0" width="280" height="243"/>
+                        </imageView>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="hjhjkhkjhkjhkjhkjhkjhkj" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="USP-3G-5CO">
+                            <rect key="frame" x="0.0" y="268" width="280" height="102"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ACe-jp-80B">
+                            <rect key="frame" x="0.0" y="395" width="280" height="25"/>
+                            <color key="backgroundColor" red="0.90161008883248728" green="0.48075086959652413" blue="0.4360971837489806" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="94K-6e-pvT"/>
+                            </constraints>
+                            <state key="normal" title="POST"/>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="iXZ-57-p78" secondAttribute="trailing" constant="20" id="HEB-eH-dCm"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="iXZ-57-p78" secondAttribute="bottom" constant="20" id="OFF-wR-RIR"/>
+                <constraint firstItem="iXZ-57-p78" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="fPy-i4-MhP"/>
+                <constraint firstItem="iXZ-57-p78" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="uci-nX-k0P"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <connections>
+                <outlet property="finishButton" destination="ACe-jp-80B" id="LWV-pa-TWq"/>
+                <outlet property="imageView" destination="jTV-eu-n8G" id="qvX-Tu-BdF"/>
+                <outlet property="textField" destination="USP-3G-5CO" id="Ihq-Qg-L79"/>
+            </connections>
+            <point key="canvasLocation" x="39.5" y="53.5"/>
+        </view>
+    </objects>
+</document>
