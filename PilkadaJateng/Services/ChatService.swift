@@ -89,3 +89,17 @@ class ChatService {
         }
     }
 }
+
+
+extension Application {
+    var sender: Sender? {
+        guard let user = user else {
+            #if DEBUG
+            fatalError()
+            #else
+            return nil
+            #endif
+        }
+        return Sender(id: user.id, displayName: user.name)
+    }
+}

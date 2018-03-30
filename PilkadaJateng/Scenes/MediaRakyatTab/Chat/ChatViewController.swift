@@ -43,12 +43,8 @@ class ChatViewController: MessagesViewController {
         return chatService.messages
     }
     
-    private lazy var _sender: Sender = {
-        return Sender(id: UIDevice.current.name, displayName: "MName \(arc4random() % 16)")
-    }()
-    
     func currentSender() -> Sender {
-        return _sender
+        return Application.shared.sender!
     }
     
     func newMessage(_ message: DiskusiMessage) {

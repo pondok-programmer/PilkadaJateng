@@ -14,7 +14,7 @@ class MockProvider {
     private init() {}
     
     func makeUser() -> User {
-        return User(name: "Muiz", token: "abc")
+        return User(id: "klaus", name: "Muiz", token: "abc")
     }
     
     func makePartisipasiNetworkMock() -> NetworkManager {

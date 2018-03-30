@@ -19,6 +19,25 @@ class TimelineViewController: UIViewController {
         _setupCreateNewPostButton()
     }
     
+    private let _timelineService = TimelineService()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        _timelineService.beginListening { (error) in
+            if let error = error {
+                print(error)
+            }
+            
+            self.viewOutlets.collectionView.reloadData()
+        }
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        _timelineService.endListening()
+    }
+    
+    
     private func _setupCollectionView() {
         let cv = viewOutlets.collectionView
         cv?.dataSource = self
@@ -48,8 +67,7 @@ class TimelineViewController: UIViewController {
     }
     
     private func _sendPost() -> String? {
-        // return post's Firebase key
-        return "NO_KEY"
+        return _timelineService.sendTimelinePost(senderId: Application.shared.sender!.id)
     }
     
     private func _setImageURL(_ url: String, forPhotoMessageWithKey key: String) {
@@ -81,11 +99,14 @@ extension TimelineViewController: IndicatorInfoProvider {
 
 extension TimelineViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return _timelineService.timelinePosts.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TimelineCell", for: indexPath) as! TimelineCollectionViewCell
+        let post = _timelineService.timelinePosts[indexPath.row]
+        cell.titleLabel.text = post.title
+        cell.thumbnailImageView.image = post.image
         return cell
     }
 }
@@ -102,15 +123,39 @@ extension TimelineViewController: UIImagePickerControllerDelegate, UINavigationC
             let asset = assets.firstObject
             
             if let key = _sendPost() {
-                asset?.requestContentEditingInput(with: nil, completionHandler: { (input, info) in
+                asset?.requestContentEditingInput(with: nil) { [unowned self](input, info) in
                     let imageFileURL = input?.fullSizeImageURL
                     let path = "\(UIDevice.current.name)/\(Int(Date.timeIntervalSinceReferenceDate * 1000))/\(refUrl.lastPathComponent))"
                     print("PATH  - \(path), imageFileURL - \(imageFileURL?.absoluteString)")
-                })
+                    self._timelineService
+                        .uploadPhoto(url: imageFileURL!) { (path, error) in
+                            if let error = error {
+                                print(error)
+                            }
+                            
+                            if let path = path {
+                                self._timelineService.setPhotoUrl(path, forPostWithKey: key)
+                            }
+                    }
+                }
             }
         } else {
             let image = info[UIImagePickerControllerOriginalImage] as! UIImage
-            _editPost(image)
+            if let key = _sendPost() {
+                let imageData = UIImageJPEGRepresentation(image, 1.0)
+                let path = "\(UIDevice.current.name)/\(Date()).jpg"
+                
+                self._timelineService
+                    .uploadPhoto(with: imageData!, path: path) { (path, error) in
+                        if let error = error {
+                            print(error)
+                        }
+                        
+                        if let path = path {
+                            self._timelineService.setPhotoUrl(path, forPostWithKey: key)
+                        }
+                }
+            }
         }
     }
     

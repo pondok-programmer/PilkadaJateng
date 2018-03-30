@@ -10,6 +10,7 @@ import UIKit
 
 class TimelineCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var thumbnailImageView: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

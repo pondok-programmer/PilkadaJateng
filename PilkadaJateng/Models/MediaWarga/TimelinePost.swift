@@ -13,4 +13,5 @@ struct TimelinePost {
     let image: UIImage
     let title: String
     let caption: String
+    let senderId: String
 }
