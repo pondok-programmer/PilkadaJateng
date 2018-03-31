@@ -43,6 +43,11 @@ class TimelineViewController: UIViewController {
         cv?.dataSource = self
         cv?.delegate = self
         
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: cv!.contentSize.width, height: 200)
+        cv?.collectionViewLayout = layout
+        
+        
         let nib = UINib(nibName: "TimelineCollectionViewCell", bundle: nil)
         cv?.register(nib, forCellWithReuseIdentifier: "TimelineCell")
     }
@@ -70,8 +75,8 @@ class TimelineViewController: UIViewController {
         return _timelineService.sendTimelinePost(senderId: Application.shared.sender!.id)
     }
     
-    private func _setImageURL(_ url: String, forPhotoMessageWithKey key: String) {
-        // Send to firebase
+    private func _setPostUrl(_ url: String, forPostWithKey key: String) {
+        _timelineService.setPhotoUrl(url, forPostWithKey: key)
     }
     
     private func _editPost(_ image: UIImage) {
@@ -104,7 +109,7 @@ extension TimelineViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TimelineCell", for: indexPath) as! TimelineCollectionViewCell
-        let post = _timelineService.timelinePosts[indexPath.row]
+        let post = _timelineService.timelinePosts.reversed()[indexPath.row]
         cell.titleLabel.text = post.title
         cell.thumbnailImageView.image = post.image
         return cell
@@ -113,6 +118,12 @@ extension TimelineViewController: UICollectionViewDataSource {
 
 extension TimelineViewController: UICollectionViewDelegate {
     
+}
+
+extension TimelineViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 10.0
+    }
 }
 
 extension TimelineViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -125,10 +136,9 @@ extension TimelineViewController: UIImagePickerControllerDelegate, UINavigationC
             if let key = _sendPost() {
                 asset?.requestContentEditingInput(with: nil) { [unowned self](input, info) in
                     let imageFileURL = input?.fullSizeImageURL
-                    let path = "\(UIDevice.current.name)/\(Int(Date.timeIntervalSinceReferenceDate * 1000))/\(refUrl.lastPathComponent))"
-                    print("PATH  - \(path), imageFileURL - \(imageFileURL?.absoluteString)")
+                    let path = "\(UIDevice.current.name)/\(Date())/\(refUrl.lastPathComponent))"
                     self._timelineService
-                        .uploadPhoto(url: imageFileURL!) { (path, error) in
+                        .uploadPhoto(url: imageFileURL!, path: path) { (path, error) in
                             if let error = error {
                                 print(error)
                             }

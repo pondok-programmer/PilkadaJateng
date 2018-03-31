@@ -76,8 +76,11 @@ class TimelineService {
     }
     
     func uploadPhoto(url: URL,
+                     path: String,
                      completion: @escaping (String? ,Error?) -> ()) {
-        _storageRef.putFile(from: url, metadata: nil) { (metadata, error) in
+        _storageRef
+            .child(path)
+            .putFile(from: url, metadata: nil) { (metadata, error) in
             let path = self._storageRef.child((metadata?.path)!).description
             completion(path, error)
         }
@@ -102,6 +105,10 @@ class TimelineService {
     }
     
     func fetchPhoto(url: String, completion: @escaping (UIImage?, Error?)->()) {
+        guard url.hasPrefix("gs://") ||
+            url.hasPrefix("https://") ||
+            url.hasPrefix("http://") else { return }
+        
         let storageRef = Storage.storage().reference(forURL: url)
         storageRef.getData(maxSize: Int64.max) { (data, error) in
             if let error = error {
