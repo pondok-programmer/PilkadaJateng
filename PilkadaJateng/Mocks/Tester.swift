@@ -14,13 +14,9 @@ class Tester {
     private init() {}
     
     func run() {
-        let m = MOCKBeritaPilkadaNetworkManager()
-        m.get(from: m.url(for: "http://g.com")!) { (json, _) in
-            if let json = json {
-                let l = BeritaItemList(json)
-                let i1 = l.items[0]
-                print(i1)
-            }
-        }   
+        let m = MOCKMateriWancanaNetworkManager()
+        WacanaService(networkManager: m).getData(url: "http://g.com") { (data, error) in
+            print(data![0].judul)
+        }
     }
 }

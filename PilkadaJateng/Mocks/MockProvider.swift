@@ -62,6 +62,10 @@ class MockProvider {
         })
     }
     
+    
+    /// Visit pemilu.org to get your API KEY
+    ///
+    /// - Returns: API Key
     func getAPIKey() -> String {
         return APIKEY()
     }
@@ -129,6 +133,17 @@ class MOCKProfilCalonNetworkManager: NetworkManager {
 class MOCKBeritaPilkadaNetworkManager: NetworkManager {
     override func get(from url: URL, completion: @escaping (JSON?, Error?) -> ()) {
         if let data = resource(name: "berita_pilkada", ofType: "json") {
+            let json = JSON(data)
+            completion(json, nil)
+        } else {
+            completion(nil, nil)
+        }
+    }
+}
+
+class MOCKMateriWancanaNetworkManager: NetworkManager {
+    override func get(from url: URL, completion: @escaping (JSON?, Error?) -> ()) {
+        if let data = resource(name: "materi_wacana", ofType: "json") {
             let json = JSON(data)
             completion(json, nil)
         } else {

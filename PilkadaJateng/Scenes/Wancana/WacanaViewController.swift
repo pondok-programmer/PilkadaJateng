@@ -1,5 +1,5 @@
 //
-//  TipsViewController.swift
+//  WacanaViewController.swift
 //  PilkadaJateng
 //
 //  Created by PondokiOS on 3/27/18.
@@ -8,8 +8,8 @@
 
 import UIKit
 
-class TipsViewController: UIViewController {
-    @IBOutlet weak var viewOutlets: TipsView!
+class WacanaViewController: UIViewController {
+    @IBOutlet weak var viewOutlets: WacanaView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,8 +19,8 @@ class TipsViewController: UIViewController {
     
     private func _setupCollectionView() {
         let cv = viewOutlets.collectionView
-        let nib = UINib(nibName: "TipsCollectionViewCell", bundle: nil)
-        cv?.register(nib, forCellWithReuseIdentifier: "TipsCell")
+        let nib = UINib(nibName: "WacanaCollectionViewCell", bundle: nil)
+        cv?.register(nib, forCellWithReuseIdentifier: "WacanaCell")
         cv?.dataSource = self
         
         let layout = UICollectionViewFlowLayout()
@@ -34,17 +34,17 @@ class TipsViewController: UIViewController {
     }
 }
 
-class TipsView: UIView {
+class WacanaView: UIView {
     @IBOutlet weak var collectionView: UICollectionView!
 }
 
-extension TipsViewController: UICollectionViewDataSource {
+extension WacanaViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return _data.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TipsCell", for: indexPath) as? TipsCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "WacanaCell", for: indexPath) as? WacanaCollectionViewCell
         return cell!
     }
 }
