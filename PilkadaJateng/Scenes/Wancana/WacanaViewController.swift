@@ -28,9 +28,22 @@ class WacanaViewController: UIViewController {
         cv?.collectionViewLayout = layout
     }
     
-    private var _data: [String] = []
+    private var _data: [MateriWacana] = []
+    
+    private let _networkManager = MOCKMateriWancanaNetworkManager()
+    private lazy var _wacanaService = WacanaService(networkManager: self._networkManager)
+    
     private func _fetchData() {
-        
+        _wacanaService.getData(url: "http://g.com/") { (data, error) in
+            if let error = error {
+                print(error)
+            }
+            
+            if let data = data {
+                self._data = data
+                self.viewOutlets.collectionView.reloadData()
+            }
+        }
     }
 }
 
@@ -44,7 +57,11 @@ extension WacanaViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let data = _data[indexPath.row]
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "WacanaCell", for: indexPath) as? WacanaCollectionViewCell
+        cell?.titleLabel.text = data.judul
+        cell?.contentLabel.text = data.alasan
         return cell!
     }
 }

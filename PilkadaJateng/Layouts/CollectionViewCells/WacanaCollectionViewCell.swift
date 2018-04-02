@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TipsCollectionViewCell: UICollectionViewCell {
+class WacanaCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!

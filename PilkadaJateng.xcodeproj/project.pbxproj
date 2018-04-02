@@ -57,8 +57,8 @@
 		EF9899862069F1C1007E7DA9 /* BeritaPilkadaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9899852069F1C1007E7DA9 /* BeritaPilkadaService.swift */; };
 		EF989988206A1486007E7DA9 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF989987206A1486007E7DA9 /* WebViewController.swift */; };
 		EF98998E206A27CE007E7DA9 /* WacanaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF98998D206A27CE007E7DA9 /* WacanaViewController.swift */; };
-		EF989992206A28C2007E7DA9 /* TipsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF989990206A28C2007E7DA9 /* TipsCollectionViewCell.swift */; };
-		EF989993206A28C2007E7DA9 /* TipsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF989991206A28C2007E7DA9 /* TipsCollectionViewCell.xib */; };
+		EF989992206A28C2007E7DA9 /* WacanaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF989990206A28C2007E7DA9 /* WacanaCollectionViewCell.swift */; };
+		EF989993206A28C2007E7DA9 /* WacanaCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF989991206A28C2007E7DA9 /* WacanaCollectionViewCell.xib */; };
 		EF989995206A4203007E7DA9 /* MediaRakyatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF989994206A4203007E7DA9 /* MediaRakyatViewController.swift */; };
 		EF989997206A4853007E7DA9 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF989996206A4853007E7DA9 /* ChatViewController.swift */; };
 		EF989999206A488F007E7DA9 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF989998206A488F007E7DA9 /* TimelineViewController.swift */; };
@@ -195,8 +195,8 @@
 		EF9899852069F1C1007E7DA9 /* BeritaPilkadaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeritaPilkadaService.swift; sourceTree = "<group>"; };
 		EF989987206A1486007E7DA9 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		EF98998D206A27CE007E7DA9 /* WacanaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WacanaViewController.swift; sourceTree = "<group>"; };
-		EF989990206A28C2007E7DA9 /* TipsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsCollectionViewCell.swift; sourceTree = "<group>"; };
-		EF989991206A28C2007E7DA9 /* TipsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TipsCollectionViewCell.xib; sourceTree = "<group>"; };
+		EF989990206A28C2007E7DA9 /* WacanaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WacanaCollectionViewCell.swift; sourceTree = "<group>"; };
+		EF989991206A28C2007E7DA9 /* WacanaCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WacanaCollectionViewCell.xib; sourceTree = "<group>"; };
 		EF989994206A4203007E7DA9 /* MediaRakyatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaRakyatViewController.swift; sourceTree = "<group>"; };
 		EF989996206A4853007E7DA9 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		EF989998206A488F007E7DA9 /* TimelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
@@ -520,8 +520,8 @@
 				EF957B382068D8D3000E2098 /* PrioritasProgramCalonCollectionViewCell.xib */,
 				EF957B3B2068D8EB000E2098 /* LHKPNCollectionViewCell.swift */,
 				EF957B3C2068D8EB000E2098 /* LHKPNCollectionViewCell.xib */,
-				EF989990206A28C2007E7DA9 /* TipsCollectionViewCell.swift */,
-				EF989991206A28C2007E7DA9 /* TipsCollectionViewCell.xib */,
+				EF989990206A28C2007E7DA9 /* WacanaCollectionViewCell.swift */,
+				EF989991206A28C2007E7DA9 /* WacanaCollectionViewCell.xib */,
 				EFA7CFEA206C82B20090DCF5 /* TimelineCollectionViewCell.swift */,
 				EFA7CFEB206C82B20090DCF5 /* TimelineCollectionViewCell.xib */,
 			);
@@ -818,7 +818,7 @@
 				EFEF12D320672DD2000A94CE /* InformasiPilkada.storyboard in Resources */,
 				EFEF12CE206725D8000A94CE /* GoogleService-Info.plist in Resources */,
 				EF9899A1206A4A3E007E7DA9 /* TimelineViewController.xib in Resources */,
-				EF989993206A28C2007E7DA9 /* TipsCollectionViewCell.xib in Resources */,
+				EF989993206A28C2007E7DA9 /* WacanaCollectionViewCell.xib in Resources */,
 				EFA7CFED206C82B20090DCF5 /* TimelineCollectionViewCell.xib in Resources */,
 				EF9B67612067860A0057215B /* tahapan_pilkada.json in Resources */,
 				EFEF12A720672103000A94CE /* Assets.xcassets in Resources */,
@@ -1068,7 +1068,7 @@
 				EFEF12A020672103000A94CE /* AppDelegate.swift in Sources */,
 				EF9B678E20688DCA0057215B /* TahapanPilkadaCollectionViewCell.swift in Sources */,
 				EF9899842069E839007E7DA9 /* BeritaItem.swift in Sources */,
-				EF989992206A28C2007E7DA9 /* TipsCollectionViewCell.swift in Sources */,
+				EF989992206A28C2007E7DA9 /* WacanaCollectionViewCell.swift in Sources */,
 				EF9B67772067AAB20057215B /* Tester.swift in Sources */,
 				EF9B678320686FD70057215B /* AnggaranPilkada.swift in Sources */,
 				EF584443206B3BD600BDBB4C /* Chat+MessagesDisplayDelegate.swift in Sources */,

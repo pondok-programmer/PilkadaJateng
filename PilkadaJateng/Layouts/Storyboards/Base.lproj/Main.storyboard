@@ -130,8 +130,8 @@
         <!--TIPS-->
         <scene sceneID="QhN-SF-DJi">
             <objects>
-                <viewController id="wmt-qd-Qhb" userLabel="TIPS" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="i5R-IP-rfc">
+                <viewController id="wmt-qd-Qhb" userLabel="TIPS" customClass="WacanaViewController" customModule="PilkadaJateng" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i5R-IP-rfc" customClass="WacanaView" customModule="PilkadaJateng" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -155,8 +155,14 @@
                             <constraint firstItem="Dsk-ja-tzJ" firstAttribute="leading" secondItem="UlQ-9v-09y" secondAttribute="leading" id="sUo-h1-VnI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UlQ-9v-09y"/>
+                        <connections>
+                            <outlet property="collectionView" destination="Dsk-ja-tzJ" id="fmT-Hb-JL9"/>
+                        </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Tips" badgeValue="4" id="Eat-WA-Icm"/>
+                    <tabBarItem key="tabBarItem" title="Wacana" badgeValue="4" id="Eat-WA-Icm"/>
+                    <connections>
+                        <outlet property="viewOutlets" destination="i5R-IP-rfc" id="JAc-x5-pdA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Mv-nE-poy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
