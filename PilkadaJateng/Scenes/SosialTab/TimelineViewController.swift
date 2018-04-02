@@ -44,7 +44,7 @@ class TimelineViewController: UIViewController {
         cv?.delegate = self
         
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: cv!.contentSize.width, height: 200)
+        layout.itemSize = CGSize(width: cv!.contentSize.width, height: 300)
         cv?.collectionViewLayout = layout
         
         

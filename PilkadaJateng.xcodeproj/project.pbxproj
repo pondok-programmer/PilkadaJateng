@@ -429,7 +429,7 @@
 			path = BeritaTab;
 			sourceTree = "<group>";
 		};
-		EF98998C206A2561007E7DA9 /* MediaRakyatTab */ = {
+		EF98998C206A2561007E7DA9 /* SosialTab */ = {
 			isa = PBXGroup;
 			children = (
 				EF989994206A4203007E7DA9 /* MediaRakyatViewController.swift */,
@@ -438,7 +438,7 @@
 				EF989998206A488F007E7DA9 /* TimelineViewController.swift */,
 				EFA7CFEE206C8CC00090DCF5 /* PostEditorViewController.swift */,
 			);
-			path = MediaRakyatTab;
+			path = SosialTab;
 			sourceTree = "<group>";
 		};
 		EF98998F206A27E1007E7DA9 /* Wancana */ = {
@@ -656,7 +656,7 @@
 				EFEF12A120672103000A94CE /* LoginViewController.swift */,
 				EF9899752069D90C007E7DA9 /* InformasiTab */,
 				EF989989206A1A93007E7DA9 /* BeritaTab */,
-				EF98998C206A2561007E7DA9 /* MediaRakyatTab */,
+				EF98998C206A2561007E7DA9 /* SosialTab */,
 				EF98998F206A27E1007E7DA9 /* Wancana */,
 			);
 			path = Scenes;
