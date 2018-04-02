@@ -13,6 +13,7 @@
 		EF5803812071C85000C8E5E5 /* MateriWacana.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5803802071C85000C8E5E5 /* MateriWacana.swift */; };
 		EF5803842071C8FA00C8E5E5 /* DaftarMateri.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5803832071C8FA00C8E5E5 /* DaftarMateri.swift */; };
 		EF5803882071CA4200C8E5E5 /* MateriWacana+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5803872071CA4200C8E5E5 /* MateriWacana+Ext.swift */; };
+		EF58038A2071E15F00C8E5E5 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5803892071E15F00C8E5E5 /* CardView.swift */; };
 		EF584435206B2A5500BDBB4C /* DiskusiMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF584434206B2A5500BDBB4C /* DiskusiMessage.swift */; };
 		EF584438206B306700BDBB4C /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF584437206B306700BDBB4C /* ChannelViewController.swift */; };
 		EF58443A206B318F00BDBB4C /* ChannelListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF584439206B318F00BDBB4C /* ChannelListViewController.xib */; };
@@ -151,6 +152,7 @@
 		EF5803802071C85000C8E5E5 /* MateriWacana.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MateriWacana.swift; sourceTree = "<group>"; };
 		EF5803832071C8FA00C8E5E5 /* DaftarMateri.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaftarMateri.swift; sourceTree = "<group>"; };
 		EF5803872071CA4200C8E5E5 /* MateriWacana+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MateriWacana+Ext.swift"; sourceTree = "<group>"; };
+		EF5803892071E15F00C8E5E5 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		EF584434206B2A5500BDBB4C /* DiskusiMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskusiMessage.swift; sourceTree = "<group>"; };
 		EF584437206B306700BDBB4C /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
 		EF584439206B318F00BDBB4C /* ChannelListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChannelListViewController.xib; sourceTree = "<group>"; };
@@ -325,6 +327,14 @@
 				EF5803832071C8FA00C8E5E5 /* DaftarMateri.swift */,
 			);
 			path = Wacana;
+			sourceTree = "<group>";
+		};
+		EF58038B2071E16600C8E5E5 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				EF5803892071E15F00C8E5E5 /* CardView.swift */,
+			);
+			path = Swift;
 			sourceTree = "<group>";
 		};
 		EF584431206B29A100BDBB4C /* InformasiPilkada */ = {
@@ -624,6 +634,7 @@
 				EF9B677F2067CF520057215B /* CollectionViewCells */,
 				EF98997C2069DA0A007E7DA9 /* TableViewCells */,
 				EF9899A2206A4A5B007E7DA9 /* XIBs */,
+				EF58038B2071E16600C8E5E5 /* Swift */,
 			);
 			path = Layouts;
 			sourceTree = "<group>";
@@ -1090,6 +1101,7 @@
 				EF584438206B306700BDBB4C /* ChannelViewController.swift in Sources */,
 				EF584441206B3B6B00BDBB4C /* Chat+MessagesLayoutDelegate.swift in Sources */,
 				EF7F6E82206F74FE002B2641 /* WacanaService.swift in Sources */,
+				EF58038A2071E15F00C8E5E5 /* CardView.swift in Sources */,
 				EF584449206B5D8200BDBB4C /* ChatService.swift in Sources */,
 				EF9B6785206870500057215B /* AnggaranPilkada+Ext.swift in Sources */,
 				EF957B282068D584000E2098 /* VisiMisiCalon.swift in Sources */,
