@@ -81,7 +81,7 @@
                             <outlet property="pilkadaButton" destination="e1w-LW-kSO" id="zUM-h6-v4F"/>
                         </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Informasi" badgeValue="1" id="juF-6s-1du"/>
+                    <tabBarItem key="tabBarItem" title="Informasi" image="info_50" badgeValue="1" selectedImage="info_filled_50" id="juF-6s-1du"/>
                     <connections>
                         <outlet property="viewOutlets" destination="kqg-ij-lXR" id="Zbx-Ee-MoZ"/>
                         <segue destination="X2n-NB-XJq" kind="presentation" identifier="InformasiPilkadaViewController" id="jV4-Di-bu6"/>
@@ -117,7 +117,7 @@
                             <outlet property="tableView" destination="wJC-ZT-EWk" id="nsU-MP-qF7"/>
                         </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Berita" badgeValue="2" id="Rgk-Bx-Dwp"/>
+                    <tabBarItem key="tabBarItem" title="Berita" image="news_50" badgeValue="2" selectedImage="news_filled_50" id="Rgk-Bx-Dwp"/>
                     <connections>
                         <outlet property="viewOutlets" destination="fhu-pz-yQu" id="JiI-mY-4ac"/>
                         <segue destination="VwX-dG-gyk" kind="show" identifier="WebViewController" id="362-m5-s3z"/>
@@ -159,7 +159,7 @@
                             <outlet property="collectionView" destination="Dsk-ja-tzJ" id="fmT-Hb-JL9"/>
                         </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Wacana" badgeValue="4" id="Eat-WA-Icm"/>
+                    <tabBarItem key="tabBarItem" title="Wacana" image="issue_50" badgeValue="4" selectedImage="issue_filled_50" id="Eat-WA-Icm"/>
                     <connections>
                         <outlet property="viewOutlets" destination="i5R-IP-rfc" id="JAc-x5-pdA"/>
                     </connections>
@@ -245,17 +245,17 @@
             </objects>
             <point key="canvasLocation" x="581" y="1575"/>
         </scene>
-        <!--MEDIA RAKYAT-->
+        <!--SOSIAL-->
         <scene sceneID="XBh-VE-V6S">
             <objects>
-                <viewController id="nuB-pz-Y63" userLabel="MEDIA RAKYAT" customClass="MediaRakyatPagerTabStrip" customModule="PilkadaJateng" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="nuB-pz-Y63" userLabel="SOSIAL" customClass="MediaRakyatPagerTabStrip" customModule="PilkadaJateng" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UkT-dx-ssF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="N4u-m2-sew"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Media Rakyat" badgeValue="3" id="kW4-CX-ul8"/>
+                    <tabBarItem key="tabBarItem" title="Sosial" image="chat_50" badgeValue="3" selectedImage="chat_filled_50" id="kW4-CX-ul8"/>
                     <navigationItem key="navigationItem" id="UMA-ka-ENc"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sWy-w9-A45" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -263,4 +263,14 @@
             <point key="canvasLocation" x="1436" y="865"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="chat_50" width="25" height="25"/>
+        <image name="chat_filled_50" width="25" height="25"/>
+        <image name="info_50" width="25" height="25"/>
+        <image name="info_filled_50" width="25" height="25"/>
+        <image name="issue_50" width="25" height="25"/>
+        <image name="issue_filled_50" width="25" height="25"/>
+        <image name="news_50" width="25" height="25"/>
+        <image name="news_filled_50" width="25" height="25"/>
+    </resources>
 </document>
