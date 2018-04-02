@@ -34,14 +34,16 @@ class WacanaViewController: UIViewController {
     private lazy var _wacanaService = WacanaService(networkManager: self._networkManager)
     
     private func _fetchData() {
-        _wacanaService.getData(url: "http://g.com/") { (data, error) in
+        _wacanaService.getData(url: "http://g.com/") { [unowned self] (data, error) in
             if let error = error {
                 print(error)
             }
             
             if let data = data {
-                self._data = data
-                self.viewOutlets.collectionView.reloadData()
+                DispatchQueue.main.async {
+                    self._data = data
+                    self.viewOutlets.collectionView.reloadData()
+                }
             }
         }
     }

@@ -8,6 +8,8 @@
 
 import UIKit
 
+fileprivate let dateStringFormat = "eeee, dd MMM yyyy hh:mm a"
+
 class BeritaPilkadaViewController: UIViewController {
     @IBOutlet weak var viewOutlets: BeritaPilkadaView!
     
@@ -44,6 +46,7 @@ class BeritaPilkadaViewController: UIViewController {
         let tv = viewOutlets.tableView
         tv?.dataSource = self
         tv?.delegate = self
+        tv?.rowHeight = 100
         
         let nib = UINib(nibName: "BeritaTableViewCell", bundle: nil)
         tv?.register(nib, forCellReuseIdentifier: "BeritaPilkadaCell")
@@ -65,7 +68,10 @@ extension BeritaPilkadaViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BeritaPilkadaCell", for: indexPath) as! BeritaTableViewCell
-        cell.titleLabel.text = _beritaItems[indexPath.row].title
+        let berita = _beritaItems[indexPath.row]
+        cell.titleLabel.text = berita.title
+        cell.dateLabel.text = berita.date.toString(format: dateStringFormat)
+        cell.descriptionLabel.text = berita.content
         return cell
     }
 }
