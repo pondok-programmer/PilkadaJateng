@@ -15,3 +15,13 @@ struct TimelinePost {
     let caption: String
     let senderId: String
 }
+
+extension TimelinePost: Hashable {
+    var hashValue: Int {
+        return id.hashValue
+    }
+    
+    static func ==(lhs: TimelinePost, rhs: TimelinePost) -> Bool {
+        return lhs.id == rhs.id
+    }
+}

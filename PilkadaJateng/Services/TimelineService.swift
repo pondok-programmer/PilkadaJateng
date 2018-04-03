@@ -14,10 +14,16 @@ import MessageKit
 fileprivate let URL_NOT_SET = "URL_NOT_SET"
 fileprivate let STORAGE_URL = "gs://pilkada-jateng-ios.appspot.com/"
 
+protocol TimelinePostDelegateViewController: class {
+    func timelinePostsUpdated()
+}
+
 class TimelineService {
     private lazy var _timelineRef = Database.database().reference().child("timelines")
     private lazy var _storageRef = Storage.storage().reference(forURL: STORAGE_URL)
     private var updateHandle: DatabaseHandle?
+    
+    weak var delegate: TimelinePostDelegateViewController?
     
     init() {}
     
@@ -34,13 +40,11 @@ class TimelineService {
                     let caption = timelineData["caption"] as? String {
                     self.fetchPhoto(url: photoUrl, completion: { (image, error) in
                         if let image = image {
-                            let timelinePost = TimelinePost(id: id,
-                                                            image: image,
-                                                            title: title,
-                                                            caption: caption,
-                                                            senderId: senderId)
-                            
-                            self.timelinePosts.append(timelinePost)
+                            self.updateTimelinePost(id: id,
+                                                    image: image,
+                                                    title: title,
+                                                    caption: caption,
+                                                    senderId: senderId)
                         }
                         completion(error)
                     })
@@ -53,6 +57,20 @@ class TimelineService {
         if let handle = updateHandle {
             _timelineRef.removeObserver(withHandle: handle)
         }
+    }
+    
+    func updateTimelinePost(id: String,
+                            image: UIImage,
+                            title: String,
+                            caption: String,
+                            senderId: String) {
+        let post = TimelinePost(id: id,
+                                image: image,
+                                title: title,
+                                caption: caption,
+                                senderId: senderId)
+        timelinePosts.update(post)
+        delegate?.timelinePostsUpdated()
     }
     
     func sendTimelinePost(senderId: String) -> String? {

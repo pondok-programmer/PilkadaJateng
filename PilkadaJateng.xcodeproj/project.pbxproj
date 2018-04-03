@@ -367,14 +367,14 @@
 			path = Berita;
 			sourceTree = "<group>";
 		};
-		EF584436206B2C6800BDBB4C /* MediaWarga */ = {
+		EF584436206B2C6800BDBB4C /* Sosial */ = {
 			isa = PBXGroup;
 			children = (
 				EF584434206B2A5500BDBB4C /* DiskusiMessage.swift */,
 				EF584446206B42CE00BDBB4C /* Channel.swift */,
 				EFA7CFF2206C92400090DCF5 /* TimelinePost.swift */,
 			);
-			path = MediaWarga;
+			path = Sosial;
 			sourceTree = "<group>";
 		};
 		EF58443B206B33F400BDBB4C /* Chat */ = {
@@ -684,7 +684,7 @@
 				EF584431206B29A100BDBB4C /* InformasiPilkada */,
 				EF584432206B29BC00BDBB4C /* InformasiCalon */,
 				EF584433206B29D400BDBB4C /* Berita */,
-				EF584436206B2C6800BDBB4C /* MediaWarga */,
+				EF584436206B2C6800BDBB4C /* Sosial */,
 				EF5803822071C85700C8E5E5 /* Wacana */,
 			);
 			path = Models;

@@ -15,6 +15,7 @@ class TimelineViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        _timelineService.delegate = self
         _setupCollectionView()
         _setupCreateNewPostButton()
     }
@@ -137,6 +138,7 @@ extension TimelineViewController: UIImagePickerControllerDelegate, UINavigationC
                 asset?.requestContentEditingInput(with: nil) { [unowned self](input, info) in
                     let imageFileURL = input?.fullSizeImageURL
                     let path = "\(UIDevice.current.name)/\(Date())/\(refUrl.lastPathComponent))"
+                    
                     self._timelineService
                         .uploadPhoto(url: imageFileURL!, path: path) { (path, error) in
                             if let error = error {
@@ -154,6 +156,13 @@ extension TimelineViewController: UIImagePickerControllerDelegate, UINavigationC
             if let key = _sendPost() {
                 let imageData = UIImageJPEGRepresentation(image, 1.0)
                 let path = "\(UIDevice.current.name)/\(Date()).jpg"
+                
+                
+                self._timelineService.updateTimelinePost(id: key,
+                                                         image: UIImage(data: imageData!)!,
+                                                         title: "Some",
+                                                         caption: "Cap",
+                                                         senderId: Application.shared.sender!.id)
                 
                 self._timelineService
                     .uploadPhoto(with: imageData!, path: path) { (path, error) in
@@ -177,5 +186,11 @@ extension TimelineViewController: UIImagePickerControllerDelegate, UINavigationC
 extension TimelineViewController: PostEditorDelegate {
     func finishEditing(_ timelinePost: (image: UIImage, caption: String)) {
         print(timelinePost)
+    }
+}
+
+extension TimelineViewController: TimelinePostDelegateViewController {
+    func timelinePostsUpdated() {
+        viewOutlets.collectionView.reloadData()
     }
 }
