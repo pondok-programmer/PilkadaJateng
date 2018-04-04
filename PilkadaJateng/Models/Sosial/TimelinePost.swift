@@ -11,9 +11,15 @@ import UIKit
 struct TimelinePost {
     let id: String
     let image: UIImage
-    let title: String
     let caption: String
-    let senderId: String
+    let userId: String
+    let userName: String
+    let likes: [String: String]
+    
+    private(set) var isLikedByCurrentUser: Bool
+    mutating func resolveLike(user: User) {
+        isLikedByCurrentUser = likes.contains(where: { $0.key == user.id })
+    }
 }
 
 extension TimelinePost: Hashable {

@@ -95,8 +95,11 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="381" height="572"/>
             <connections>
+                <outlet property="captionLabel" destination="HhG-81-55d" id="cFD-QF-j0T"/>
+                <outlet property="commentButton" destination="LBK-WE-Sjg" id="RzV-05-QKc"/>
+                <outlet property="likeButton" destination="ccV-vi-RQW" id="FyL-Ys-ROV"/>
                 <outlet property="thumbnailImageView" destination="ADD-Tl-8YO" id="Nei-2y-aA9"/>
-                <outlet property="titleLabel" destination="HhG-81-55d" id="g5E-Tf-gl0"/>
+                <outlet property="usernameLabel" destination="DLi-8v-lP7" id="6F7-JJ-25D"/>
             </connections>
             <point key="canvasLocation" x="148.5" y="314"/>
         </collectionViewCell>

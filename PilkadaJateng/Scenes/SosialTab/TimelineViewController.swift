@@ -73,7 +73,9 @@ class TimelineViewController: UIViewController {
     }
     
     private func _sendPost() -> String? {
-        return _timelineService.sendTimelinePost(senderId: Application.shared.sender!.id)
+        return _timelineService.sendTimelinePost(userId: Application.shared.user!.id,
+                                                 userName: Application.shared.user!.name,
+                                                 caption: "Cap")
     }
     
     private func _setPostUrl(_ url: String, forPostWithKey key: String) {
@@ -110,10 +112,24 @@ extension TimelineViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TimelineCell", for: indexPath) as! TimelineCollectionViewCell
-        let post = _timelineService.timelinePosts.reversed()[indexPath.row]
-        cell.titleLabel.text = post.title
-        cell.thumbnailImageView.image = post.image
+        
+        var post = _timelineService.timelinePosts.reversed()[indexPath.row]
+        post.resolveLike(user: Application.shared.user!)
+        
+        cell.setPost(post)
+        cell.likeButton.tag = indexPath.row
+        cell.likeButton.addTarget(self, action: #selector(likeButton), for: .touchUpInside)
         return cell
+    }
+    
+    // MARK: Like
+    @objc func likeButton(_ sender: UIButton) {
+        let key = _timelineService.timelinePosts[sender.tag].id
+        _timelineService.toggleLike(forPostWithKey: key, from: Application.shared.user!)
+    }
+    
+    func unlikeButton() {
+        
     }
 }
 
@@ -140,7 +156,7 @@ extension TimelineViewController: UIImagePickerControllerDelegate, UINavigationC
                     let path = "\(UIDevice.current.name)/\(Date())/\(refUrl.lastPathComponent))"
                     
                     self._timelineService
-                        .uploadPhoto(url: imageFileURL!, path: path) { (path, error) in
+                        .uploadPhoto(url: imageFileURL!, path: path) { [unowned self] (path, error) in
                             if let error = error {
                                 print(error)
                             }
@@ -160,12 +176,12 @@ extension TimelineViewController: UIImagePickerControllerDelegate, UINavigationC
                 
                 self._timelineService.updateTimelinePost(id: key,
                                                          image: UIImage(data: imageData!)!,
-                                                         title: "Some",
                                                          caption: "Cap",
-                                                         senderId: Application.shared.sender!.id)
+                                                         userId: Application.shared.user!.id,
+                                                         userName: Application.shared.user!.name)
                 
                 self._timelineService
-                    .uploadPhoto(with: imageData!, path: path) { (path, error) in
+                    .uploadPhoto(with: imageData!, path: path) { [unowned self] (path, error) in
                         if let error = error {
                             print(error)
                         }
@@ -183,7 +199,7 @@ extension TimelineViewController: UIImagePickerControllerDelegate, UINavigationC
     }
 }
 
-extension TimelineViewController: PostEditorDelegate {
+extension TimelineViewController: PostEditorDelegateViewController {
     func finishEditing(_ timelinePost: (image: UIImage, caption: String)) {
         print(timelinePost)
     }

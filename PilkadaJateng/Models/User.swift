@@ -7,9 +7,15 @@
 //
 
 import Foundation
+import UIKit
 
  struct User {
     var id: String
     var name: String
-    var token: String
+    var photo: UIImage?
+    init(id: String, name: String, photo: UIImage? = nil) {
+        self.id = id
+        self.name = name
+        self.photo = photo
+    }
  }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol PostEditorDelegate: class {
+protocol PostEditorDelegateViewController: class {
     func finishEditing(_ timelinePost: (image: UIImage, caption: String) )
 }
 
@@ -16,7 +16,7 @@ class PostEditorViewController: UIViewController {
     
     @IBOutlet weak var viewOutlets: PostEditorView!
     
-    weak var delegate: PostEditorDelegate?
+    weak var delegate: PostEditorDelegateViewController?
     
     var image: UIImage?
     

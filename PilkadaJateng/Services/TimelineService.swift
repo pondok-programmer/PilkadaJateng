@@ -35,16 +35,19 @@ class TimelineService {
             if let timelineData = snapshot.value as? [String: AnyObject] {
                 let id = snapshot.key
                 if let photoUrl = timelineData["photoUrl"] as? String,
-                    let senderId = timelineData["senderId"] as? String,
-                    let title = timelineData["title"] as? String,
-                    let caption = timelineData["caption"] as? String {
+                    let caption = timelineData["caption"] as? String,
+                    let user = timelineData["user"] as? [String: Any],
+                    let userId = user["id"] as? String,
+                    let userName = user["name"] as? String {
                     self.fetchPhoto(url: photoUrl, completion: { (image, error) in
                         if let image = image {
+                            let likes = timelineData["likes"] as? [String: String] ?? [:]
                             self.updateTimelinePost(id: id,
                                                     image: image,
-                                                    title: title,
                                                     caption: caption,
-                                                    senderId: senderId)
+                                                    userId: userId,
+                                                    userName: userName,
+                                                    likes: likes)
                         }
                         completion(error)
                     })
@@ -61,26 +64,32 @@ class TimelineService {
     
     func updateTimelinePost(id: String,
                             image: UIImage,
-                            title: String,
                             caption: String,
-                            senderId: String) {
+                            userId: String,
+                            userName: String,
+                            likes: [String: String] = [:]) {
         let post = TimelinePost(id: id,
                                 image: image,
-                                title: title,
                                 caption: caption,
-                                senderId: senderId)
+                                userId: userId,
+                                userName: userName,
+                                likes: likes,
+                                isLikedByCurrentUser: false)
         timelinePosts.update(post)
         delegate?.timelinePostsUpdated()
     }
     
-    func sendTimelinePost(senderId: String) -> String? {
+    func sendTimelinePost(userId: String, userName: String, caption: String) -> String? {
         let newPostRef = _timelineRef.childByAutoId()
         
-        let item = [
+        let item: [String: Any] = [
             "photoUrl": URL_NOT_SET,
-            "senderId": senderId,
-            "title": "MyTytile",
-            "caption": "MyCaption"
+            "user": [
+                "id": userId,
+                "name": userName
+            ],
+            "caption": caption,
+            "likes": [:]
         ]
         
         newPostRef.setValue(item)
@@ -93,14 +102,46 @@ class TimelineService {
         postRef.updateChildValues(["photoUrl": url])
     }
     
+    
+    /// Menambah jumlah like dengan memasukkan ID user ke dalam array like
+    ///
+    /// - Parameters:
+    ///   - key: Post yang disukai
+    ///   - user: User yang menyukai
+    func toggleLike(forPostWithKey key: String, from user: User) {
+        _timelineRef.child(key).observeSingleEvent(of: .value) { [unowned self](snapshot) in
+            if let post = snapshot.value as? [String: AnyObject] {
+                if var likes = post["likes"] as? [String: String] {
+                    if likes.contains(where: {$0.key == user.id }) {
+                        likes.removeValue(forKey: user.id)
+                    } else {
+                        likes[user.id] = user.name
+                    }
+                    self._timelineRef.child(key).updateChildValues(["likes": likes])
+                } else {
+                    let firstLike = [
+                        user.id:user.name
+                    ]
+                    self._timelineRef.child("\(key)/likes").setValue(firstLike)
+                }
+            }
+        }
+    }
+    
+    func updatePost(_ url: String, caption: String, forPostWithKey key: String) {
+        let postRef = _timelineRef.child(key)
+        postRef.updateChildValues(["photoUrl": url,
+                                   "caption": caption])
+    }
+    
     func uploadPhoto(url: URL,
                      path: String,
                      completion: @escaping (String? ,Error?) -> ()) {
         _storageRef
             .child(path)
             .putFile(from: url, metadata: nil) { (metadata, error) in
-            let path = self._storageRef.child((metadata?.path)!).description
-            completion(path, error)
+                let path = self._storageRef.child((metadata?.path)!).description
+                completion(path, error)
         }
     }
     
