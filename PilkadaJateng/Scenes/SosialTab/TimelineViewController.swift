@@ -135,7 +135,8 @@ extension TimelineViewController: UICollectionViewDataSource {
         let vc = CommentViewController(nibName: nil, bundle: nil)
         let key = _timelineService.timelinePosts[sender.tag].id
         vc.setService(CommentService(postRef: _timelineService.getRef(key: key)))
-        present(vc, animated: true, completion: nil)
+        let nav = UINavigationController(rootViewController: vc)
+        present(nav, animated: true, completion: nil)
     }
 }
 

@@ -14,8 +14,12 @@ class CommentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "Komentar"
+        navigationController?.navigationBar.isTranslucent = false
+        
         _setupTableView()
         _setupSendButton()
+        _setupDoneButton()
     }
     
     private var _commentService: CommentService! = nil
@@ -28,13 +32,19 @@ class CommentViewController: UIViewController {
         let tv = viewOutlets.tableView
         tv?.dataSource = self
         
-        let nib = UINib(nibName: "ChannelTableViewCell", bundle: nil)
+        let nib = UINib(nibName: "CommentTableViewCell", bundle: nil)
         tv?.register(nib, forCellReuseIdentifier: "CommentCell")
     }
     
     private func _setupSendButton() {
         let sendBtn = viewOutlets.sendButton
         sendBtn?.addTarget(self, action: #selector(sendComment), for: .touchUpInside)
+    }
+    
+    private func _setupDoneButton() {
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Selesai",
+                                                           style: .done, target: self,
+                                                           action: #selector(doneComment))
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -55,6 +65,10 @@ class CommentViewController: UIViewController {
             _commentService.sendComment(content: content, username: Application.shared.user!.name)
         }
     }
+    
+    @objc func doneComment() {
+        dismiss(animated: true, completion: nil)
+    }
 }
 
 class CommentView: UIView {
@@ -73,10 +87,10 @@ extension CommentViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CommentCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CommentCell", for: indexPath) as! CommentTableViewCell
         let comment = _commentService.comments[indexPath.row]
-        cell.textLabel?.text = comment.username
-        cell.detailTextLabel?.text = comment.content
+        cell.usernameLabel.text = comment.username
+        cell.commentLabel.text = comment.content
         return cell
     }
 }

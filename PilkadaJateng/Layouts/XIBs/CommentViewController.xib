@@ -21,41 +21,45 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gXH-mj-Zcc">
-                    <rect key="frame" x="0.0" y="61" width="320" height="30"/>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hwP-mz-pyX">
+                    <rect key="frame" x="5" y="445" width="310" height="30"/>
                     <subviews>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h7Z-va-kNh">
-                            <rect key="frame" x="0.0" y="0.0" width="274" height="30"/>
-                            <nil key="textColor"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tambahkan komentar..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hfE-GO-74u">
+                            <rect key="frame" x="0.0" y="0.0" width="262" height="30"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e1T-ts-XWv">
-                            <rect key="frame" x="274" y="0.0" width="46" height="30"/>
-                            <state key="normal" title="Button"/>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EtS-u9-i48">
+                            <rect key="frame" x="272" y="0.0" width="38" height="30"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                            <state key="normal" title="Kirim"/>
                         </button>
                     </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="XwM-gV-ass"/>
+                    </constraints>
                 </stackView>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qby-sp-SzQ">
-                    <rect key="frame" x="0.0" y="99" width="320" height="381"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aJf-4I-Xym">
+                    <rect key="frame" x="0.0" y="20" width="320" height="420"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="gXH-mj-Zcc" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="41" id="3iz-qe-gBR"/>
-                <constraint firstItem="gXH-mj-Zcc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="UaD-RO-f30"/>
-                <constraint firstItem="Qby-sp-SzQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Znp-hh-E5j"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="gXH-mj-Zcc" secondAttribute="trailing" id="eaN-Cn-nD9"/>
-                <constraint firstItem="Qby-sp-SzQ" firstAttribute="top" secondItem="gXH-mj-Zcc" secondAttribute="bottom" constant="8" id="fKw-8q-rAr"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Qby-sp-SzQ" secondAttribute="bottom" id="gfg-4m-Oj5"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Qby-sp-SzQ" secondAttribute="trailing" id="n9A-Kk-U4Z"/>
+                <constraint firstItem="hwP-mz-pyX" firstAttribute="top" secondItem="aJf-4I-Xym" secondAttribute="bottom" constant="5" id="3pT-9Y-QFs"/>
+                <constraint firstItem="aJf-4I-Xym" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="BzW-nR-PnB"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="hwP-mz-pyX" secondAttribute="trailing" constant="5" id="R5n-Tg-hNA"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="hwP-mz-pyX" secondAttribute="bottom" constant="5" id="gRn-SW-DiW"/>
+                <constraint firstItem="aJf-4I-Xym" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="igp-sP-GvS"/>
+                <constraint firstItem="hwP-mz-pyX" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="5" id="wBc-CU-IuK"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="aJf-4I-Xym" secondAttribute="trailing" id="wio-J3-O1h"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
-                <outlet property="sendButton" destination="e1T-ts-XWv" id="Qxe-Iy-gBW"/>
-                <outlet property="tableView" destination="Qby-sp-SzQ" id="Wp5-ut-uWd"/>
-                <outlet property="textField" destination="h7Z-va-kNh" id="fhF-AU-Axv"/>
+                <outlet property="sendButton" destination="EtS-u9-i48" id="ahv-OT-0qO"/>
+                <outlet property="tableView" destination="aJf-4I-Xym" id="MQj-YQ-1JK"/>
+                <outlet property="textField" destination="hfE-GO-74u" id="VvR-8w-nsd"/>
             </connections>
         </view>
     </objects>

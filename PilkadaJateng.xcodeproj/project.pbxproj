@@ -31,6 +31,8 @@
 		EF584453206B6E9A00BDBB4C /* Array+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF584452206B6E9A00BDBB4C /* Array+Ext.swift */; };
 		EF584455206B77EB00BDBB4C /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF584454206B77EB00BDBB4C /* Date+Ext.swift */; };
 		EF584457206B79D000BDBB4C /* Chat+MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF584456206B79D000BDBB4C /* Chat+MessageViewController.swift */; };
+		EF5C92262075C0C300DE876C /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5C92242075C0C200DE876C /* CommentTableViewCell.swift */; };
+		EF5C92272075C0C300DE876C /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF5C92252075C0C200DE876C /* CommentTableViewCell.xib */; };
 		EF65D5AD2074AFFF00C52D21 /* CommentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF65D5AC2074AFFF00C52D21 /* CommentService.swift */; };
 		EF65D5AF2074B1ED00C52D21 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF65D5AE2074B1ED00C52D21 /* Comment.swift */; };
 		EF65D5B12074B39E00C52D21 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF65D5B02074B39E00C52D21 /* CommentViewController.swift */; };
@@ -174,6 +176,8 @@
 		EF584452206B6E9A00BDBB4C /* Array+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Ext.swift"; sourceTree = "<group>"; };
 		EF584454206B77EB00BDBB4C /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
 		EF584456206B79D000BDBB4C /* Chat+MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chat+MessageViewController.swift"; sourceTree = "<group>"; };
+		EF5C92242075C0C200DE876C /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		EF5C92252075C0C200DE876C /* CommentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
 		EF65D5AC2074AFFF00C52D21 /* CommentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentService.swift; sourceTree = "<group>"; };
 		EF65D5AE2074B1ED00C52D21 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		EF65D5B02074B39E00C52D21 /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
@@ -425,6 +429,8 @@
 				EF9899792069DA00007E7DA9 /* BeritaTableViewCell.xib */,
 				EF58444C206B645700BDBB4C /* ChannelTableViewCell.swift */,
 				EF58444D206B645700BDBB4C /* ChannelTableViewCell.xib */,
+				EF5C92242075C0C200DE876C /* CommentTableViewCell.swift */,
+				EF5C92252075C0C200DE876C /* CommentTableViewCell.xib */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -836,6 +842,7 @@
 				EFEF12D620672E53000A94CE /* InformasiCalon.storyboard in Resources */,
 				EF9B6759206784D20057215B /* anggaran_pilkada.json in Resources */,
 				EF957B242068C18D000E2098 /* InformasiCalonCollectionViewCell.xib in Resources */,
+				EF5C92272075C0C300DE876C /* CommentTableViewCell.xib in Resources */,
 				EF9B675D206785710057215B /* visi_misi_rano_embay.json in Resources */,
 				EF957B3A2068D8D3000E2098 /* PrioritasProgramCalonCollectionViewCell.xib in Resources */,
 				EFEF12D320672DD2000A94CE /* InformasiPilkada.storyboard in Resources */,
@@ -1007,6 +1014,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-PilkadaJateng/Pods-PilkadaJateng-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/MessageKit/MessageKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
@@ -1017,6 +1025,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MessageKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
@@ -1058,6 +1067,7 @@
 				EF584453206B6E9A00BDBB4C /* Array+Ext.swift in Sources */,
 				EF9B67702067A2E70057215B /* PartisipasiPilkada+Ext.swift in Sources */,
 				EF9B675020677DC90057215B /* InformasiPilkadaViewController.swift in Sources */,
+				EF5C92262075C0C300DE876C /* CommentTableViewCell.swift in Sources */,
 				EF58444E206B645700BDBB4C /* ChannelTableViewCell.swift in Sources */,
 				EF9B677A2067BE9C0057215B /* PartisipasiPilkadaViewController.swift in Sources */,
 				EFEF12E1206734AD000A94CE /* MockProvider.swift in Sources */,

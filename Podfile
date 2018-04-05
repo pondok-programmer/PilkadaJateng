@@ -6,6 +6,7 @@ target 'PilkadaJateng' do
   use_frameworks!
 
   # Pods for PilkadaJateng
+    pod 'IQKeyboardManagerSwift', '5.0.0'
     pod 'SwiftyJSON', '~> 4.0'
     pod 'MessageKit'
     pod 'XLPagerTabStrip', '~> 8.0'
