@@ -27,7 +27,15 @@ class TimelineService {
     
     init() {}
     
-    var timelinePosts: [TimelinePost] = []
+    var timelinePosts: [TimelinePost] = [
+        TimelinePost(id: "abc",
+                     image: #imageLiteral(resourceName: "like_50"),
+                     caption: "caption",
+                     userId: "userId",
+                     userName: "userName",
+                     likes: [:],
+                     isLikedByCurrentUser: false)
+    ]
     
     func beginListening(completion: @escaping (Error?) -> ()) {
         let timelineQuery = _timelineRef.queryLimited(toLast: 20)
@@ -187,6 +195,10 @@ class TimelineService {
                 }
             })
         }
+    }
+    
+    func getRef(key: String) -> DatabaseReference {
+        return _timelineRef.child(key)
     }
 }
 

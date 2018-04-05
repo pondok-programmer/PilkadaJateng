@@ -119,6 +119,8 @@ extension TimelineViewController: UICollectionViewDataSource {
         cell.setPost(post)
         cell.likeButton.tag = indexPath.row
         cell.likeButton.addTarget(self, action: #selector(likeButton), for: .touchUpInside)
+        cell.commentButton.tag = indexPath.row
+        cell.commentButton.addTarget(self, action: #selector(commentButton), for: .touchUpInside)
         return cell
     }
     
@@ -128,8 +130,12 @@ extension TimelineViewController: UICollectionViewDataSource {
         _timelineService.toggleLike(forPostWithKey: key, from: Application.shared.user!)
     }
     
-    func unlikeButton() {
-        
+    // MARK: Comment
+    @objc func commentButton(_ sender: UIButton) {
+        let vc = CommentViewController(nibName: nil, bundle: nil)
+        let key = _timelineService.timelinePosts[sender.tag].id
+        vc.setService(CommentService(postRef: _timelineService.getRef(key: key)))
+        present(vc, animated: true, completion: nil)
     }
 }
 

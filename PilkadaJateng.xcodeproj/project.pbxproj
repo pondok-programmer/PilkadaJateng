@@ -31,6 +31,10 @@
 		EF584453206B6E9A00BDBB4C /* Array+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF584452206B6E9A00BDBB4C /* Array+Ext.swift */; };
 		EF584455206B77EB00BDBB4C /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF584454206B77EB00BDBB4C /* Date+Ext.swift */; };
 		EF584457206B79D000BDBB4C /* Chat+MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF584456206B79D000BDBB4C /* Chat+MessageViewController.swift */; };
+		EF65D5AD2074AFFF00C52D21 /* CommentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF65D5AC2074AFFF00C52D21 /* CommentService.swift */; };
+		EF65D5AF2074B1ED00C52D21 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF65D5AE2074B1ED00C52D21 /* Comment.swift */; };
+		EF65D5B12074B39E00C52D21 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF65D5B02074B39E00C52D21 /* CommentViewController.swift */; };
+		EF65D5B32074CDC100C52D21 /* CommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF65D5B22074CDC100C52D21 /* CommentViewController.xib */; };
 		EF7F6E80206F74C2002B2641 /* materi_wacana.json in Resources */ = {isa = PBXBuildFile; fileRef = EF7F6E7F206F74C2002B2641 /* materi_wacana.json */; };
 		EF7F6E82206F74FE002B2641 /* WacanaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F6E81206F74FE002B2641 /* WacanaService.swift */; };
 		EF957B232068C18D000E2098 /* InformasiCalonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF957B212068C18D000E2098 /* InformasiCalonCollectionViewCell.swift */; };
@@ -170,6 +174,10 @@
 		EF584452206B6E9A00BDBB4C /* Array+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Ext.swift"; sourceTree = "<group>"; };
 		EF584454206B77EB00BDBB4C /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
 		EF584456206B79D000BDBB4C /* Chat+MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chat+MessageViewController.swift"; sourceTree = "<group>"; };
+		EF65D5AC2074AFFF00C52D21 /* CommentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentService.swift; sourceTree = "<group>"; };
+		EF65D5AE2074B1ED00C52D21 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		EF65D5B02074B39E00C52D21 /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
+		EF65D5B22074CDC100C52D21 /* CommentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentViewController.xib; sourceTree = "<group>"; };
 		EF7F6E7F206F74C2002B2641 /* materi_wacana.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = materi_wacana.json; sourceTree = "<group>"; };
 		EF7F6E81206F74FE002B2641 /* WacanaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WacanaService.swift; sourceTree = "<group>"; };
 		EF957B212068C18D000E2098 /* InformasiCalonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformasiCalonCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -373,6 +381,7 @@
 				EF584434206B2A5500BDBB4C /* DiskusiMessage.swift */,
 				EF584446206B42CE00BDBB4C /* Channel.swift */,
 				EFA7CFF2206C92400090DCF5 /* TimelinePost.swift */,
+				EF65D5AE2074B1ED00C52D21 /* Comment.swift */,
 			);
 			path = Sosial;
 			sourceTree = "<group>";
@@ -437,6 +446,7 @@
 				EF58443B206B33F400BDBB4C /* Chat */,
 				EF989998206A488F007E7DA9 /* TimelineViewController.swift */,
 				EFA7CFEE206C8CC00090DCF5 /* PostEditorViewController.swift */,
+				EF65D5B02074B39E00C52D21 /* CommentViewController.swift */,
 			);
 			path = SosialTab;
 			sourceTree = "<group>";
@@ -456,6 +466,7 @@
 				EF9899A0206A4A3E007E7DA9 /* TimelineViewController.xib */,
 				EF584439206B318F00BDBB4C /* ChannelListViewController.xib */,
 				EFA7CFEF206C8CC00090DCF5 /* PostEditorViewController.xib */,
+				EF65D5B22074CDC100C52D21 /* CommentViewController.xib */,
 			);
 			path = XIBs;
 			sourceTree = "<group>";
@@ -673,6 +684,7 @@
 				EF58444A206B5E5C00BDBB4C /* ChannelService.swift */,
 				EFA7CFE8206C7CD60090DCF5 /* TimelineService.swift */,
 				EF7F6E81206F74FE002B2641 /* WacanaService.swift */,
+				EF65D5AC2074AFFF00C52D21 /* CommentService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -844,6 +856,7 @@
 				EF58444F206B645700BDBB4C /* ChannelTableViewCell.xib in Resources */,
 				EF9B6767206786E70057215B /* lhkpn.json in Resources */,
 				EF98997E2069DF01007E7DA9 /* PEMILU_KEY.json in Resources */,
+				EF65D5B32074CDC100C52D21 /* CommentViewController.xib in Resources */,
 				EF9B675B206785160057215B /* visi_misi_wahidin_andika.json in Resources */,
 				EF957B322068D87D000E2098 /* VisiMisiCalonCollectionViewCell.xib in Resources */,
 				EF58443A206B318F00BDBB4C /* ChannelListViewController.xib in Resources */,
@@ -1063,11 +1076,13 @@
 				EF9B679320688E5E0057215B /* TahapanPilkada+Ext.swift in Sources */,
 				EF9B674E20677BAA0057215B /* NetworkManager.swift in Sources */,
 				EF957B392068D8D3000E2098 /* PrioritasProgramCalonCollectionViewCell.swift in Sources */,
+				EF65D5B12074B39E00C52D21 /* CommentViewController.swift in Sources */,
 				EF989997206A4853007E7DA9 /* ChatViewController.swift in Sources */,
 				EF9B678B20688D7B0057215B /* TahapanPilkadaViewController.swift in Sources */,
 				EF9899772069D93C007E7DA9 /* BeritaPilkadaViewController.swift in Sources */,
 				EFEF12DE2067327C000A94CE /* User.swift in Sources */,
 				EFA7CFF3206C92400090DCF5 /* TimelinePost.swift in Sources */,
+				EF65D5AF2074B1ED00C52D21 /* Comment.swift in Sources */,
 				EFEF12A220672103000A94CE /* LoginViewController.swift in Sources */,
 				EF58443F206B34F200BDBB4C /* Chat+MessagesDataSource.swift in Sources */,
 				EF957B312068D87D000E2098 /* VisiMisiCalonCollectionViewCell.swift in Sources */,
@@ -1092,6 +1107,7 @@
 				EF9B6788206871BC0057215B /* AnggaranPilkadaCollectionViewCell.swift in Sources */,
 				EF9899802069E212007E7DA9 /* PEMILU_KEY.swift in Sources */,
 				EFEF12DB206730D9000A94CE /* AuthServices.swift in Sources */,
+				EF65D5AD2074AFFF00C52D21 /* CommentService.swift in Sources */,
 				EF989988206A1486007E7DA9 /* WebViewController.swift in Sources */,
 				EF989995206A4203007E7DA9 /* MediaRakyatViewController.swift in Sources */,
 				EF9B676D2067A2010057215B /* JSONConstructor.swift in Sources */,
