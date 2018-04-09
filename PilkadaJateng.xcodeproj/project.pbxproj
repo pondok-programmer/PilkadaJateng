@@ -10,6 +10,7 @@
 		057C480F4E312CC69FE26442 /* Pods_PilkadaJatengTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86F697DB3F1842B0F328077F /* Pods_PilkadaJatengTests.framework */; };
 		073AF81C62B419A96CB26B3A /* Pods_PilkadaJatengUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D918A481CFB013ED5C3E121E /* Pods_PilkadaJatengUITests.framework */; };
 		8046A59205DFA8ADD6EEF7D9 /* Pods_PilkadaJateng.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF09DA17D0668593C8BDE728 /* Pods_PilkadaJateng.framework */; };
+		EF508C9A207B164900726589 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508C99207B164900726589 /* MainTabBarController.swift */; };
 		EF5803812071C85000C8E5E5 /* MateriWacana.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5803802071C85000C8E5E5 /* MateriWacana.swift */; };
 		EF5803842071C8FA00C8E5E5 /* DaftarMateri.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5803832071C8FA00C8E5E5 /* DaftarMateri.swift */; };
 		EF5803882071CA4200C8E5E5 /* MateriWacana+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5803872071CA4200C8E5E5 /* MateriWacana+Ext.swift */; };
@@ -156,6 +157,7 @@
 		DF09DA17D0668593C8BDE728 /* Pods_PilkadaJateng.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PilkadaJateng.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0AC20D403F1259AECA2D926 /* Pods-PilkadaJatengTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PilkadaJatengTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PilkadaJatengTests/Pods-PilkadaJatengTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EC74C13A84C352229226CACA /* Pods-PilkadaJatengTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PilkadaJatengTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PilkadaJatengTests/Pods-PilkadaJatengTests.release.xcconfig"; sourceTree = "<group>"; };
+		EF508C99207B164900726589 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		EF5803802071C85000C8E5E5 /* MateriWacana.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MateriWacana.swift; sourceTree = "<group>"; };
 		EF5803832071C8FA00C8E5E5 /* DaftarMateri.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaftarMateri.swift; sourceTree = "<group>"; };
 		EF5803872071CA4200C8E5E5 /* MateriWacana+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MateriWacana+Ext.swift"; sourceTree = "<group>"; };
@@ -698,6 +700,7 @@
 			isa = PBXGroup;
 			children = (
 				EFEF12A120672103000A94CE /* LoginViewController.swift */,
+				EF508C99207B164900726589 /* MainTabBarController.swift */,
 				EF9899752069D90C007E7DA9 /* InformasiTab */,
 				EF989989206A1A93007E7DA9 /* BeritaTab */,
 				EF98998C206A2561007E7DA9 /* SosialTab */,
@@ -1135,6 +1138,7 @@
 				EF957B2A2068D63E000E2098 /* ProgramUnggulanCalon.swift in Sources */,
 				EF9B679120688DF20057215B /* TahapanPilkada.swift in Sources */,
 				EF98997A2069DA00007E7DA9 /* BeritaTableViewCell.swift in Sources */,
+				EF508C9A207B164900726589 /* MainTabBarController.swift in Sources */,
 				EFEF12A020672103000A94CE /* AppDelegate.swift in Sources */,
 				EF9B678E20688DCA0057215B /* TahapanPilkadaCollectionViewCell.swift in Sources */,
 				EF9899842069E839007E7DA9 /* BeritaItem.swift in Sources */,

@@ -15,8 +15,6 @@ class CommentViewController: UIViewController {
         super.viewDidLoad()
         
         title = "Komentar"
-        navigationController?.navigationBar.isTranslucent = false
-        tabBarController?.tabBar.isHidden = true
         
         _setupTableView()
         _setupSendButton()

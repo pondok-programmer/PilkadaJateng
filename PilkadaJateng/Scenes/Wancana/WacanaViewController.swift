@@ -13,9 +13,8 @@ class WacanaViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.isTranslucent = false
         
-        title = "Wacana"
+        setTitle("Wacana")
         
         _setupCollectionView()
         _fetchData()

@@ -14,7 +14,6 @@ class ChatViewController: MessagesViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupMessageViewControllerOnDidLoad()
-//        tabBarController?.tabBar.isHidden = true
     }
     
     var chatService: ChatService!

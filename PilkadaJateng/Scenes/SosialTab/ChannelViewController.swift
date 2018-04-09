@@ -16,7 +16,7 @@ class ChannelListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Channel"
+        setTitle("Channel")
         
         _setupTableView()
     }
@@ -28,7 +28,6 @@ class ChannelListViewController: UIViewController {
         _channelService.beginListening { [unowned self] in
             self.viewOutlets.tableView.reloadData()
         }
-        tabBarController?.tabBar.isHidden = false
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -67,7 +66,7 @@ extension ChannelListViewController: UITableViewDelegate {
         cVC.chatService = ChatService(channelRef: data.channelRef)
         cVC.channel = data.selectedChannel
         
-        tabBarController?.show(cVC, sender: nil)
+        showFromTabBarController(cVC)
     }
 }
 

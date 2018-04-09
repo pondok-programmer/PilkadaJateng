@@ -13,8 +13,8 @@ class InformasiViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.isTranslucent = false
-        title = "Informasi"
+        
+        setTitle("Informasi")
         
         _setupPilkadaButton()
         _setupCalonButton()
