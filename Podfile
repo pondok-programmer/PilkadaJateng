@@ -14,6 +14,9 @@ target 'PilkadaJateng' do
     pod 'Firebase/Database'
     pod 'Firebase/Core'
     pod 'Firebase/Storage'
+    pod 'lottie-ios'
+    pod 'PKHUD', '~> 5.0'
+    pod 'TimelineTableViewCell'
 
   target 'PilkadaJatengTests' do
     inherit! :search_paths

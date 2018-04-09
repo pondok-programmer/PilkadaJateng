@@ -16,10 +16,10 @@ class CommentViewController: UIViewController {
         
         title = "Komentar"
         navigationController?.navigationBar.isTranslucent = false
+        tabBarController?.tabBar.isHidden = true
         
         _setupTableView()
         _setupSendButton()
-        _setupDoneButton()
     }
     
     private var _commentService: CommentService! = nil
@@ -39,12 +39,6 @@ class CommentViewController: UIViewController {
     private func _setupSendButton() {
         let sendBtn = viewOutlets.sendButton
         sendBtn?.addTarget(self, action: #selector(sendComment), for: .touchUpInside)
-    }
-    
-    private func _setupDoneButton() {
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Selesai",
-                                                           style: .done, target: self,
-                                                           action: #selector(doneComment))
     }
     
     override func viewWillAppear(_ animated: Bool) {

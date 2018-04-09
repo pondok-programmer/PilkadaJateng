@@ -15,6 +15,9 @@ class BeritaPilkadaViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.isTranslucent = false
+        title = "Berita"
+        
         _setupTableView()
     }
     

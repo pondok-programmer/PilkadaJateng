@@ -33,13 +33,16 @@ PODS:
   - GTMSessionFetcher/Core (1.1.14)
   - IQKeyboardManagerSwift (5.0.0)
   - leveldb-library (1.20)
+  - lottie-ios (2.5.0)
   - MessageKit (0.13.2)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
+  - PKHUD (5.0.0)
   - SwiftyJSON (4.0.0)
+  - TimelineTableViewCell (1.2)
   - XLPagerTabStrip (8.0.1)
 
 DEPENDENCIES:
@@ -48,8 +51,11 @@ DEPENDENCIES:
   - Firebase/Database
   - Firebase/Storage
   - IQKeyboardManagerSwift (= 5.0.0)
+  - lottie-ios
   - MessageKit
+  - PKHUD (~> 5.0)
   - SwiftyJSON (~> 4.0)
+  - TimelineTableViewCell
   - XLPagerTabStrip (~> 8.0)
 
 SPEC CHECKSUMS:
@@ -63,11 +69,14 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 390ea358e5a0d0133153806f744662dad933d06b
   IQKeyboardManagerSwift: 3f340202ebe1a7076279b9b9b3c817243ddb3aab
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
+  lottie-ios: d699fdee68d7b63e721d949388b015fef1aaa4ac
   MessageKit: 274efb4454ddc9b3408b031b3396498dd4ed2462
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  PKHUD: 3c001512c6e002091184197a8de7a20420786e3b
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
+  TimelineTableViewCell: 71a4bc787bfeb5a85083171d18b113a5f5db2be8
   XLPagerTabStrip: c908b17cbf42fcd2598ee1adfc49bae25444d88a
 
-PODFILE CHECKSUM: 0b4f543909f60e6b2c1b6037633d7086dc69b3cb
+PODFILE CHECKSUM: fb6643376830d6f85773fd4144f68bb7fc29bbc5
 
 COCOAPODS: 1.4.0

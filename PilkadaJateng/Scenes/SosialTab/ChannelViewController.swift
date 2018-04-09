@@ -15,11 +15,10 @@ class ChannelListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = "Channel"
+        
         _setupTableView()
-        viewOutlets.createChannelButton
-            .addTarget(self,
-                       action: #selector(ChannelListViewController.createChannel),
-                       for: .touchUpInside)
     }
     
     private let _channelService = ChannelService()
@@ -29,6 +28,7 @@ class ChannelListViewController: UIViewController {
         _channelService.beginListening { [unowned self] in
             self.viewOutlets.tableView.reloadData()
         }
+        tabBarController?.tabBar.isHidden = false
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -52,7 +52,6 @@ class ChannelListViewController: UIViewController {
 
 class ChannelListView: UIView {
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var createChannelButton: UIButton!
 }
 
 extension ChannelListViewController: IndicatorInfoProvider {
@@ -68,8 +67,7 @@ extension ChannelListViewController: UITableViewDelegate {
         cVC.chatService = ChatService(channelRef: data.channelRef)
         cVC.channel = data.selectedChannel
         
-        let navController = UINavigationController(rootViewController: cVC)
-        present(navController, animated: true, completion: nil)
+        tabBarController?.show(cVC, sender: nil)
     }
 }
 

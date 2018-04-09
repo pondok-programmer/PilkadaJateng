@@ -14,7 +14,7 @@ class ChatViewController: MessagesViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupMessageViewControllerOnDidLoad()
-        _setupNavigationItem()
+//        tabBarController?.tabBar.isHidden = true
     }
     
     var chatService: ChatService!
@@ -26,6 +26,10 @@ class ChatViewController: MessagesViewController {
             self.messagesCollectionView.reloadDataAndKeepOffset()
             self.messagesCollectionView.scrollToBottom()
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -50,18 +54,5 @@ class ChatViewController: MessagesViewController {
     func newMessage(_ message: DiskusiMessage) {
         chatService.newMessage(message)
     }
-    
-    private func _setupNavigationItem() {
-        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel,
-                                                           target: self,
-                                                           action: .dismiss)
-    }
-    
-    @objc func dismissViewController() {
-        dismiss(animated: true, completion: nil)
-    }
 }
 
-fileprivate extension Selector {
-    static let dismiss = #selector(ChatViewController.dismissViewController)
-}

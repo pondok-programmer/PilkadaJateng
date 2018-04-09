@@ -15,6 +15,9 @@ class TimelineViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tabBarController?.title = "Timeline"
+        
         _timelineService.delegate = self
         _setupCollectionView()
         _setupCreateNewPostButton()
@@ -31,6 +34,7 @@ class TimelineViewController: UIViewController {
             
             self.viewOutlets.collectionView.reloadData()
         }
+        tabBarController?.tabBar.isHidden = false
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -54,10 +58,10 @@ class TimelineViewController: UIViewController {
     }
     
     private func _setupCreateNewPostButton() {
-        viewOutlets.newPostButton
-            .addTarget(self,
-                       action: .pickImage,
-                       for: .touchUpInside)
+        let btn = viewOutlets.newPostButton
+        btn?.target = self
+        btn?.action  = .pickImage
+        
     }
     
     @objc func pickImage() {
@@ -96,7 +100,7 @@ fileprivate extension Selector {
 
 class TimelineView: UIView {
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var newPostButton: UIButton!
+    @IBOutlet weak var newPostButton: UIBarButtonItem!
 }
 
 extension TimelineViewController: IndicatorInfoProvider {
@@ -135,8 +139,7 @@ extension TimelineViewController: UICollectionViewDataSource {
         let vc = CommentViewController(nibName: nil, bundle: nil)
         let key = _timelineService.timelinePosts[sender.tag].id
         vc.setService(CommentService(postRef: _timelineService.getRef(key: key)))
-        let nav = UINavigationController(rootViewController: vc)
-        present(nav, animated: true, completion: nil)
+        show(vc, sender: nil)
     }
 }
 

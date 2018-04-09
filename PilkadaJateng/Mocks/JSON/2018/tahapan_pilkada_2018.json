@@ -1,0 +1,102 @@
+{
+    "persiapan": [
+                  {
+                  "tgl_akhir": "27-Sep-2017",
+                  "tgl_awal": "27-Sep-2017",
+                  "detail": "Perencanaan Program dan Anggaran",
+                  "tahapan": "Persiapan"
+                  },
+                  {
+                  "tgl_akhir": "27-Sep-2017",
+                  "tgl_awal": "27-Sep-2017",
+                  "detail": "Penyusunan dan Penandatanganan Naskah Perjanjian Hibah Daerah (NPHD)",
+                  "tahapan": "Persiapan"
+                  },
+                  {
+                  "tgl_akhir": "31-May-2018",
+                  "tgl_awal": "31-May-2018",
+                  "detail": "Penyusunan dan Pengesahan Peraturan Penyelenggaraan Pemilihan",
+                  "tahapan": "Persiapan"
+                  },
+                  {
+                  "tgl_akhir": "23-Jun-2018",
+                  "tgl_awal": "14-Jun-2017",
+                  "detail": "Sosialisasi kepada Masyarakat",
+                  "tahapan": "Persiapan"
+                  },
+                  {
+                  "tgl_akhir": "26-Jun-2018",
+                  "tgl_awal": "14-Jun-2017",
+                  "detail": "Penyuluhan/Bimbingan Teknis Kepada KPU Provinsi/KIP Aceh, KPU/KIP Kabupaten/Kota, PPK, PPS dan KPPS",
+                  "tahapan": "Persiapan"
+                  },
+                  {
+                  "tgl_akhir": "3-Jun-2018",
+                  "tgl_awal": "12-Oct-2017",
+                  "detail": "Pembentukan PPK, PPS, dan KPPS",
+                  "tahapan": "Persiapan"
+                  },
+                  {
+                  "tgl_akhir": "11-Jun-2018",
+                  "tgl_awal": "12-Oct-2017",
+                  "detail": "Pemantauan Pemiliham",
+                  "tahapan": "Persiapan"
+                  },
+                  {
+                  "tgl_akhir": "30-Dec-2017",
+                  "tgl_awal": "24-Nov-2017",
+                  "detail": "Pengolahan Daftar Penduduk Potensial Pemilih Pemilihan (DP4)",
+                  "tahapan": "Persiapan"
+                  },
+                  {
+                  "tgl_akhir": "27-Jun-2018",
+                  "tgl_awal": "30-Dec-2017",
+                  "detail": "Pemutakhiran Data dan Daftar Pemilih",
+                  "tahapan": "Persiapan"
+                  }
+                  ],
+    "penyelenggaraan": [
+                        {
+                        "tgl_akhir": "3-Jan-18",
+                        "tgl_awal": "31-Jul-17",
+                        "detail": "Syarat Dukungan Pasangan Calon Perseorangan",
+                        "tahapan": "Penyelenggaraan"
+                        },
+                        {
+                        "tgl_akhir": "10-Jan-18",
+                        "tgl_awal": "8-Jan-18",
+                        "detail": "Pendaftaran Pasangan Calon",
+                        "tahapan": "Penyelenggaraan"
+                        },
+                        {
+                        "tgl_akhir": "23-Jul-18",
+                        "tgl_awal": "15-Feb-18",
+                        "detail": "Masa Kampanye",
+                        "tahapan": "Penyelenggaraan"
+                        },
+                        {
+                        "tgl_akhir": "13-Jul-18",
+                        "tgl_awal": "14-Feb-18",
+                        "detail": "Laporan Audit dan Dana Kampanye",
+                        "tahapan": "Penyelenggaraan"
+                        },
+                        {
+                        "tgl_akhir": "26-Jun-18",
+                        "tgl_awal": "17-Mar-18",
+                        "detail": "Pengadaan dan Pendistribusian Perlengkapan Pemungutan dan Penghitungan Suara",
+                        "tahapan": "Penyelenggaraan"
+                        },
+                        {
+                        "tgl_akhir": "27-Jun-18",
+                        "tgl_awal": "27-Jun-18",
+                        "detail": "Pemungutan dan Penghitungan suara di TPS",
+                        "tahapan": "Penyelenggaraan"
+                        },
+                        {
+                        "tgl_akhir": "9-Jul-18",
+                        "tgl_awal": "27-Jun-18",
+                        "detail": "Rekapitulasi Hasil Penghitungan Suara",
+                        "tahapan": "Penyelenggaraan"
+                        }
+                        ]
+}
