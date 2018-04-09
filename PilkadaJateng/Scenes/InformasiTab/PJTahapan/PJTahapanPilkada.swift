@@ -35,6 +35,7 @@ class PJTahapanPilkadaViewController: UIViewController {
     
     private func _setupTableView() {
         tableView.dataSource = self
+        
         let bundle = Bundle(for: TimelineTableViewCell.self)
         let nibUrl = bundle.url(forResource: "TimelineTableViewCell", withExtension: "bundle")
         let timelineTableViewCellNib = UINib(nibName: "TimelineTableViewCell",

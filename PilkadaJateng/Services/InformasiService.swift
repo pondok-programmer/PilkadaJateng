@@ -76,3 +76,53 @@ class InformasiTahapanService {
         }
     }
 }
+
+class InformasiAnggaranService {
+    let networkManager: NetworkManager
+    init(networkManager: NetworkManager = NetworkManager()) {
+        self.networkManager = networkManager
+    }
+    
+    func getData(completion: @escaping ([PJAnggaran]?, Error?) -> ()) {
+        let url = URL(string: "http://g.com")!
+        networkManager.get(from: url) { (json, error) in
+            if let json = json  {
+                let data = json.map({ (_, json) -> PJAnggaran in
+                    return PJAnggaran(json)
+                    
+                })
+                completion(data, error)
+            }
+            
+            if let error = error {
+                completion(nil, error)
+            }
+        }
+    }
+}
+
+
+class InformasiProfilService {
+    let networkManager: NetworkManager
+    init(networkManager: NetworkManager = NetworkManager()) {
+        self.networkManager = networkManager
+    }
+    
+    func getData(completion: @escaping ([PJProfil]?, Error?) -> ()) {
+        let url = URL(string: "http://g.com")!
+        networkManager.get(from: url) { (json, error) in
+            if let json = json  {
+                let data = json.map({ (_, json) -> PJProfil in
+                    return PJProfil(json)
+                    
+                })
+                completion(data, error)
+            }
+            
+            if let error = error {
+                completion(nil, error)
+            }
+        }
+    }
+}
+

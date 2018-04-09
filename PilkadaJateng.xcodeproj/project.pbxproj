@@ -35,6 +35,8 @@
 		EF5C92262075C0C300DE876C /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5C92242075C0C200DE876C /* CommentTableViewCell.swift */; };
 		EF5C92272075C0C300DE876C /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF5C92252075C0C200DE876C /* CommentTableViewCell.xib */; };
 		EF5C922A2075FA6B00DE876C /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5C92292075FA6B00DE876C /* UIViewController+Ext.swift */; };
+		EF5F8F7F207B6192009FDB7E /* PJAnggaran.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F8F7E207B6192009FDB7E /* PJAnggaran.swift */; };
+		EF5F8F81207B61A3009FDB7E /* PJProfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F8F80207B61A3009FDB7E /* PJProfil.swift */; };
 		EF65D5AD2074AFFF00C52D21 /* CommentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF65D5AC2074AFFF00C52D21 /* CommentService.swift */; };
 		EF65D5AF2074B1ED00C52D21 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF65D5AE2074B1ED00C52D21 /* Comment.swift */; };
 		EF65D5B12074B39E00C52D21 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF65D5B02074B39E00C52D21 /* CommentViewController.swift */; };
@@ -183,6 +185,8 @@
 		EF5C92242075C0C200DE876C /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		EF5C92252075C0C200DE876C /* CommentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
 		EF5C92292075FA6B00DE876C /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		EF5F8F7E207B6192009FDB7E /* PJAnggaran.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PJAnggaran.swift; sourceTree = "<group>"; };
+		EF5F8F80207B61A3009FDB7E /* PJProfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PJProfil.swift; sourceTree = "<group>"; };
 		EF65D5AC2074AFFF00C52D21 /* CommentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentService.swift; sourceTree = "<group>"; };
 		EF65D5AE2074B1ED00C52D21 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		EF65D5B02074B39E00C52D21 /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
@@ -453,6 +457,8 @@
 				EF9B67942068966A0057215B /* InformasiPilkada */,
 				EF9B6797206896AC0057215B /* InformasiCalon */,
 				EF508C9D207B393900726589 /* PJTahapan */,
+				EF5F8F7E207B6192009FDB7E /* PJAnggaran.swift */,
+				EF5F8F80207B61A3009FDB7E /* PJProfil.swift */,
 			);
 			path = InformasiTab;
 			sourceTree = "<group>";
@@ -1167,10 +1173,12 @@
 				EF9B6788206871BC0057215B /* AnggaranPilkadaCollectionViewCell.swift in Sources */,
 				EF9899802069E212007E7DA9 /* PEMILU_KEY.swift in Sources */,
 				EFEF12DB206730D9000A94CE /* AuthServices.swift in Sources */,
+				EF5F8F81207B61A3009FDB7E /* PJProfil.swift in Sources */,
 				EF65D5AD2074AFFF00C52D21 /* CommentService.swift in Sources */,
 				EF989988206A1486007E7DA9 /* WebViewController.swift in Sources */,
 				EF9B676D2067A2010057215B /* JSONConstructor.swift in Sources */,
 				EF5C922A2075FA6B00DE876C /* UIViewController+Ext.swift in Sources */,
+				EF5F8F7F207B6192009FDB7E /* PJAnggaran.swift in Sources */,
 				EFA7CFE9206C7CD60090DCF5 /* TimelineService.swift in Sources */,
 				EF584455206B77EB00BDBB4C /* Date+Ext.swift in Sources */,
 				EF957B352068D8AD000E2098 /* ProgramUnggulanCalonCollectionViewCell.swift in Sources */,

@@ -164,3 +164,26 @@ class MOCKTahapan: NetworkManager {
 }
 
 
+class MOCKAnggaran: NetworkManager {
+    override func get(from url: URL, completion: @escaping (JSON?, Error?) -> ()) {
+        if let data = resource(name: "dana_paslon_2018", ofType: "json") {
+            let json = JSON(data)
+            completion(json, nil)
+        } else {
+            completion(nil, nil)
+        }
+    }
+}
+
+class MOCKProfil: NetworkManager {
+    override func get(from url: URL, completion: @escaping (JSON?, Error?) -> ()) {
+        if let data = resource(name: "profil_calon_2018", ofType: "json") {
+            let json = JSON(data)
+            completion(json, nil)
+        } else {
+            completion(nil, nil)
+        }
+    }
+}
+
+

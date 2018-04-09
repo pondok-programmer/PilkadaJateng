@@ -13,3 +13,12 @@ struct AnggaranPilkada {
     let jumlahAnggaran: Double
     let statusAnggaran: String
 }
+
+struct PJAnggaran {
+    let kepalaDaerah: String
+    let wakilKepalaDaerah: String
+    let tanggalPenyerahan: Date
+    let waktuPenyerahan: Date
+    let laporanAwalDana: Double
+    let noUrut: Int
+}

@@ -16,12 +16,12 @@ class Tester {
     private init() {}
     
     func run() {
-        let m = MOCKTahapan()
+        let m = MOCKProfil()
         m.get(from: url) { (json, error) in
-            print(json?.dictionaryObject)
+            print(json)
         }
         
-        let pjS = InformasiTahapanService(networkManager: m)
+        let pjS = InformasiProfilService(networkManager: m)
         pjS.getData { (data, error) in
             print(data)
         }

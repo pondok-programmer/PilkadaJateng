@@ -36,3 +36,29 @@ extension AnggaranPilkada: JSONConstructor {
                                statusAnggaran: status_anggaran)
     }
 }
+
+/*
+ {
+ "nama_wakil_kepala_daerah": "Dra. IDA FAUZIAH",
+ "no urut": 2,
+ "tanggal_penyerahan": "14-Feb-2018",
+ "laporan_awal_dana_kampanye": " 550,000,000 ",
+ "waktu_penyerahan": "pukul 17.26 wib",
+ "nama_kepala_daerah": "SUDIRMMAN SAID"
+ }
+ */
+
+extension PJAnggaran: JSONInitializable {
+    init(_ json: JSON) {
+        kepalaDaerah = json["nama_kepala_daerah"].string.or("")
+        wakilKepalaDaerah = json["nama_wakil_kepala_daerah"].string.or("")
+        tanggalPenyerahan = json["tanggal_penyerahan"].string.or("")
+            .toDate(format: "dd-MMM-yyyy").or(Date())
+        waktuPenyerahan = json["waktu_penyerahan"].string.or("")
+            .toDate(format: "'pukul' HH.mm 'wib'").or(Date())
+        laporanAwalDana = json["laporan_awal_dana_kampanye"].string.or("")
+            .removeChar([",", " "])
+            .toDouble().or(0.0)
+        noUrut = json["no urut"].int.or(0)
+    }
+}
