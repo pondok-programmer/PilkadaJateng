@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class TimelineCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var usernameLabel: UILabel!
@@ -22,7 +23,11 @@ class TimelineCollectionViewCell: UICollectionViewCell {
     
     func setPost(_ post: TimelinePost) {
         usernameLabel.text = post.userName
-        thumbnailImageView.image = post.image
+        if let image = post.image {
+            thumbnailImageView.image = image
+        } else if let url = URL(string: post.imageUrl) {
+            thumbnailImageView.kf.setImage(with: url)
+        }
         captionLabel.text = post.caption
         let likeImage = post.isLikedByCurrentUser ? #imageLiteral(resourceName: "like_filled_50") : #imageLiteral(resourceName: "like_50") // #imageLiteral
         likeButton.setImage(likeImage, for: .normal)

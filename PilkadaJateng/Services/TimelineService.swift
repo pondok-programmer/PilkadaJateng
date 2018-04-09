@@ -29,15 +29,15 @@ class TimelineService {
     
     var timelinePosts: [TimelinePost] = [
         TimelinePost(id: "abc",
-                     image: #imageLiteral(resourceName: "like_50"),
+                     image: #imageLiteral(resourceName: "chat_50"),
                      caption: "caption",
                      userId: "userId",
-                     userName: "userName",
-                     likes: [:],
-                     isLikedByCurrentUser: false)
+                     userName: "userName")
     ]
     
     func beginListening(completion: @escaping (Error?) -> ()) {
+        print(("Muhammad's iPhone/2018-04-02 07:06:23 +0000.jpg" as NSString).lastPathComponent)
+        
         let timelineQuery = _timelineRef.queryLimited(toLast: 20)
         updateHandle = timelineQuery.observe(.childChanged, with: { [unowned self](snapshot) in
             if let timelineData = snapshot.value as? [String: AnyObject] {
@@ -47,17 +47,18 @@ class TimelineService {
                     let user = timelineData["user"] as? [String: Any],
                     let userId = user["id"] as? String,
                     let userName = user["name"] as? String {
-                    self.fetchPhoto(url: photoUrl, completion: { (image, error) in
-                        if let image = image {
+                    
+                    self._storageRef.child("\(UIDevice.current.name)/\((photoUrl as NSString).lastPathComponent)").downloadURL(completion: { (url, error) in
+                        if let url = url?.absoluteString {
                             let likes = timelineData["likes"] as? [String: String] ?? [:]
                             self.updateTimelinePost(id: id,
-                                                    image: image,
+                                                    imageUrl: url,
                                                     caption: caption,
                                                     userId: userId,
                                                     userName: userName,
                                                     likes: likes)
+                            completion(error)
                         }
-                        completion(error)
                     })
                 }
             }
@@ -71,17 +72,18 @@ class TimelineService {
     }
     
     func updateTimelinePost(id: String,
-                            image: UIImage,
+                            imageUrl: String = "",
+                            image: UIImage? = nil,
                             caption: String,
                             userId: String,
                             userName: String,
                             likes: [String: String] = [:]) {
         let post = TimelinePost(id: id,
+                                imageUrl: imageUrl,
                                 image: image,
                                 caption: caption,
                                 userId: userId,
                                 userName: userName,
-                                likes: likes,
                                 isLikedByCurrentUser: false)
         timelinePosts.update(post)
         delegate?.timelinePostsUpdated()

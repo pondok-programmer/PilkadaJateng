@@ -10,11 +10,23 @@ import UIKit
 
 struct TimelinePost {
     let id: String
-    let image: UIImage
+    let imageUrl: String
+    let image: UIImage?
     let caption: String
     let userId: String
     let userName: String
-    let likes: [String: String]
+    let likes: [String: String] 
+    
+    init(id: String, imageUrl: String = "", image: UIImage? = nil, caption: String, userId: String, userName: String, likes: [String:String] = [:], isLikedByCurrentUser: Bool = false) {
+        self.id = id
+        self.imageUrl = imageUrl
+        self.image = image
+        self.caption = caption
+        self.userId = userId
+        self.userName = userName
+        self.likes = likes
+        self.isLikedByCurrentUser = isLikedByCurrentUser
+    }
     
     private(set) var isLikedByCurrentUser: Bool
     mutating func resolveLike(user: User) {

@@ -32,6 +32,7 @@ PODS:
     - GoogleToolboxForMac/Defines (= 2.1.3)
   - GTMSessionFetcher/Core (1.1.14)
   - IQKeyboardManagerSwift (5.0.0)
+  - Kingfisher (4.6.4)
   - leveldb-library (1.20)
   - lottie-ios (2.5.0)
   - MessageKit (0.13.2)
@@ -51,6 +52,7 @@ DEPENDENCIES:
   - Firebase/Database
   - Firebase/Storage
   - IQKeyboardManagerSwift (= 5.0.0)
+  - Kingfisher (~> 4.0)
   - lottie-ios
   - MessageKit
   - PKHUD (~> 5.0)
@@ -68,6 +70,7 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
   GTMSessionFetcher: 390ea358e5a0d0133153806f744662dad933d06b
   IQKeyboardManagerSwift: 3f340202ebe1a7076279b9b9b3c817243ddb3aab
+  Kingfisher: 68498a706e46c2a050b0c9572f100e5db407f6e0
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   lottie-ios: d699fdee68d7b63e721d949388b015fef1aaa4ac
   MessageKit: 274efb4454ddc9b3408b031b3396498dd4ed2462
@@ -77,6 +80,6 @@ SPEC CHECKSUMS:
   TimelineTableViewCell: 71a4bc787bfeb5a85083171d18b113a5f5db2be8
   XLPagerTabStrip: c908b17cbf42fcd2598ee1adfc49bae25444d88a
 
-PODFILE CHECKSUM: fb6643376830d6f85773fd4144f68bb7fc29bbc5
+PODFILE CHECKSUM: bf66abb403b12c588ab26ec990d5fc8b745b400b
 
 COCOAPODS: 1.4.0

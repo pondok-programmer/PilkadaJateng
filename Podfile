@@ -17,6 +17,8 @@ target 'PilkadaJateng' do
     pod 'lottie-ios'
     pod 'PKHUD', '~> 5.0'
     pod 'TimelineTableViewCell'
+    pod 'Kingfisher', '~> 4.0'
+    
 
   target 'PilkadaJatengTests' do
     inherit! :search_paths
