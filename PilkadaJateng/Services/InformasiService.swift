@@ -47,3 +47,32 @@ class InformasiService<T: JSONConstructor> {
         }
     }
 }
+
+class InformasiTahapanService {
+    let networkManager: NetworkManager
+    init(networkManager: NetworkManager = NetworkManager()) {
+        self.networkManager = networkManager
+    }
+    
+    func getData(completion: @escaping ([[TahapanPilkada]]?, Error?) -> ()) {
+        let url = URL(string: "http://g.com")!
+        networkManager.get(from: url) { (json, error) in
+            if let json = json {
+                let persiapan = json["persiapan"].map({ (_, json) -> TahapanPilkada in
+                    return TahapanPilkada(json)
+                })
+                let penyelenggaraan = json["penyelenggaraan"].map({ (_, json) -> TahapanPilkada in
+                    return TahapanPilkada(json)
+                })
+                
+                let data = [persiapan, penyelenggaraan]
+                completion(data, error)
+            }
+            
+            if let error = error {
+                completion(nil, error)
+            }
+            
+        }
+    }
+}

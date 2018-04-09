@@ -34,6 +34,12 @@ class TimelineViewController: UIViewController {
             
             self.viewOutlets.collectionView.reloadData()
         }
+        
+        setupTabBarControllerNavigationItem { [unowned self](navItem) in
+            navItem?.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add,
+                                                          target: self,
+                                                          action: #selector(self.pickImage))
+        }
     }
     
     override func viewDidDisappear(_ animated: Bool) {

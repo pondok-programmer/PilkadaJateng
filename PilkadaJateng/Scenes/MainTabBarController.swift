@@ -12,5 +12,6 @@ class MainTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.isTranslucent = false
+        tabBar.isTranslucent = false
     }
 }

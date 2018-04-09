@@ -9,7 +9,8 @@
 import Foundation
 
 struct TahapanPilkada {
-    let tahapanPilkada: String
+    let tahapan: String
+    let detail: String
     let awal: Date
     let akhir: Date
 }

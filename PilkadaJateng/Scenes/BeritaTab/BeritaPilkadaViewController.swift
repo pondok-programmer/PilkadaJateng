@@ -23,6 +23,9 @@ class BeritaPilkadaViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        setupTabBarControllerNavigationItem { (navItem) in
+            navItem?.rightBarButtonItem = nil
+        }
         _fetchData()
     }
     

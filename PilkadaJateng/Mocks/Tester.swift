@@ -9,14 +9,21 @@
 import Foundation
 import SwiftyJSON
 
+fileprivate let url = URL(string: "http://g.com")!
+
 class Tester {
     static let shared = Tester()
     private init() {}
     
     func run() {
-        let m = MOCKMateriWancanaNetworkManager()
-        WacanaService(networkManager: m).getData(url: "http://g.com") { (data, error) in
-            print(data![0].judul)
+        let m = MOCKTahapan()
+        m.get(from: url) { (json, error) in
+            print(json?.dictionaryObject)
+        }
+        
+        let pjS = InformasiTahapanService(networkManager: m)
+        pjS.getData { (data, error) in
+            print(data)
         }
     }
 }

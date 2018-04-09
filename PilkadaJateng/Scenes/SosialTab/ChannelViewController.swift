@@ -28,6 +28,12 @@ class ChannelListViewController: UIViewController {
         _channelService.beginListening { [unowned self] in
             self.viewOutlets.tableView.reloadData()
         }
+        
+        setupTabBarControllerNavigationItem { [unowned self](navItem) in
+            navItem?.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add,
+                                                          target: self,
+                                                          action: #selector(self.createChannel))
+        }
     }
     
     override func viewDidDisappear(_ animated: Bool) {

@@ -20,15 +20,27 @@ import SwiftyJSON
 
 extension TahapanPilkada: JSONConstructor {
     static var jsonArrayKey: String? {
-        return "tahapan_pilkada"
+        return "tahapan"
     }
     
     static func mapFromJSON(json: JSON) -> TahapanPilkada {
-        let tahapan_pilkada = json["tahapan_pilkada"].string.or("")
+        let tahapan = json["tahapan"].string.or("")
+        let detail = json["detail"].string.or("")
         let awal = json["awal"].string.or("").toDate(format: "dd-MMM-yy" ).or(Date())
         let akhir = json["akhir"].string.or("").toDate(format: "dd-MMM-yy" ).or(Date())
-        return TahapanPilkada(tahapanPilkada: tahapan_pilkada,
+        return TahapanPilkada(tahapan: tahapan,
+                              detail: detail,
                               awal: awal,
                               akhir: akhir)
     }
 }
+
+extension TahapanPilkada: JSONInitializable {
+    init(_ json: JSON) {
+        tahapan = json["tahapan"].string.or("")
+        detail = json["detail"].string.or("")
+        awal = json["tgl_awal"].string.or("").toDate(format: "dd-MMM-yy" ).or(Date())
+        akhir = json["tgl_akhir"].string.or("").toDate(format: "dd-MMM-yy" ).or(Date())
+    }
+}
+

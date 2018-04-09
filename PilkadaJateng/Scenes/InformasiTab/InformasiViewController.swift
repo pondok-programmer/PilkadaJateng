@@ -20,6 +20,13 @@ class InformasiViewController: UIViewController {
         _setupCalonButton()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupTabBarControllerNavigationItem { (navItem) in
+            navItem?.rightBarButtonItem = nil
+        }
+    }
+    
     private func _setupPilkadaButton() {
         let pilkadaButton = viewOutlets.pilkadaButton
         pilkadaButton?.addTarget(self, action: .informasiPilkadaAction, for: .touchUpInside)

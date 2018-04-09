@@ -152,4 +152,15 @@ class MOCKMateriWancanaNetworkManager: NetworkManager {
     }
 }
 
+class MOCKTahapan: NetworkManager {
+    override func get(from url: URL, completion: @escaping (JSON?, Error?) -> ()) {
+        if let data = resource(name: "tahapan_pilkada_2018", ofType: "json") {
+            let json = JSON(data)
+            completion(json, nil)
+        } else {
+            completion(nil, nil)
+        }
+    }
+}
+
 

@@ -18,4 +18,10 @@ extension UIViewController {
     func showFromTabBarController(_ vc: UIViewController) {
         tabBarController?.show(vc, sender: nil)
     }
+    
+    /// Since VC is loaded once, then call this method inside viewWillAppear
+    func setupTabBarControllerNavigationItem(completion: @escaping (UINavigationItem?) -> ()) {
+        let navItem = tabBarController?.navigationItem
+        completion(navItem)
+    }
 }

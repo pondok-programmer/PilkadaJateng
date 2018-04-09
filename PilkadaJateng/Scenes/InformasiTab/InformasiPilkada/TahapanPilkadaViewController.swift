@@ -58,7 +58,7 @@ extension TahapanPilkadaViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TahapanPilkadaCell", for: indexPath) as? TahapanPilkadaCollectionViewCell
-        cell?.textLabel.text = "\(_data[indexPath.row].tahapanPilkada)"
+        cell?.textLabel.text = "\(_data[indexPath.row].tahapan)"
         return cell!
     }
 }

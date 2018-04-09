@@ -11,6 +11,7 @@
 		073AF81C62B419A96CB26B3A /* Pods_PilkadaJatengUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D918A481CFB013ED5C3E121E /* Pods_PilkadaJatengUITests.framework */; };
 		8046A59205DFA8ADD6EEF7D9 /* Pods_PilkadaJateng.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF09DA17D0668593C8BDE728 /* Pods_PilkadaJateng.framework */; };
 		EF508C9A207B164900726589 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508C99207B164900726589 /* MainTabBarController.swift */; };
+		EF508C9C207B32BB00726589 /* PJTahapanPilkada.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508C9B207B32BB00726589 /* PJTahapanPilkada.swift */; };
 		EF5803812071C85000C8E5E5 /* MateriWacana.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5803802071C85000C8E5E5 /* MateriWacana.swift */; };
 		EF5803842071C8FA00C8E5E5 /* DaftarMateri.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5803832071C8FA00C8E5E5 /* DaftarMateri.swift */; };
 		EF5803882071CA4200C8E5E5 /* MateriWacana+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5803872071CA4200C8E5E5 /* MateriWacana+Ext.swift */; };
@@ -158,6 +159,7 @@
 		E0AC20D403F1259AECA2D926 /* Pods-PilkadaJatengTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PilkadaJatengTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PilkadaJatengTests/Pods-PilkadaJatengTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EC74C13A84C352229226CACA /* Pods-PilkadaJatengTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PilkadaJatengTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PilkadaJatengTests/Pods-PilkadaJatengTests.release.xcconfig"; sourceTree = "<group>"; };
 		EF508C99207B164900726589 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		EF508C9B207B32BB00726589 /* PJTahapanPilkada.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PJTahapanPilkada.swift; sourceTree = "<group>"; };
 		EF5803802071C85000C8E5E5 /* MateriWacana.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MateriWacana.swift; sourceTree = "<group>"; };
 		EF5803832071C8FA00C8E5E5 /* DaftarMateri.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaftarMateri.swift; sourceTree = "<group>"; };
 		EF5803872071CA4200C8E5E5 /* MateriWacana+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MateriWacana+Ext.swift"; sourceTree = "<group>"; };
@@ -336,6 +338,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		EF508C9D207B393900726589 /* PJTahapan */ = {
+			isa = PBXGroup;
+			children = (
+				EF508C9B207B32BB00726589 /* PJTahapanPilkada.swift */,
+			);
+			path = PJTahapan;
+			sourceTree = "<group>";
+		};
 		EF5803822071C85700C8E5E5 /* Wacana */ = {
 			isa = PBXGroup;
 			children = (
@@ -442,6 +452,7 @@
 				EFEF12E3206739CA000A94CE /* InformasiViewController.swift */,
 				EF9B67942068966A0057215B /* InformasiPilkada */,
 				EF9B6797206896AC0057215B /* InformasiCalon */,
+				EF508C9D207B393900726589 /* PJTahapan */,
 			);
 			path = InformasiTab;
 			sourceTree = "<group>";
@@ -1133,6 +1144,7 @@
 				EFEF12A220672103000A94CE /* LoginViewController.swift in Sources */,
 				EF58443F206B34F200BDBB4C /* Chat+MessagesDataSource.swift in Sources */,
 				EF957B312068D87D000E2098 /* VisiMisiCalonCollectionViewCell.swift in Sources */,
+				EF508C9C207B32BB00726589 /* PJTahapanPilkada.swift in Sources */,
 				EF957B2E2068D676000E2098 /* LHKPN.swift in Sources */,
 				EF957B2C2068D666000E2098 /* PrioritasProgramCalon.swift in Sources */,
 				EF957B2A2068D63E000E2098 /* ProgramUnggulanCalon.swift in Sources */,

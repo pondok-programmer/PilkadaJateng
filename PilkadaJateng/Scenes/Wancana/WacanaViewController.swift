@@ -20,6 +20,13 @@ class WacanaViewController: UIViewController {
         _fetchData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupTabBarControllerNavigationItem { (navItem) in
+            navItem?.rightBarButtonItem = nil
+        }
+    }
+    
     private func _setupCollectionView() {
         let cv = viewOutlets.collectionView
         let nib = UINib(nibName: "WacanaCollectionViewCell", bundle: nil)
