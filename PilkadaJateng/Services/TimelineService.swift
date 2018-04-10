@@ -51,10 +51,9 @@ class TimelineService {
                     let user = timelineData["user"] as? [String: Any],
                     let userId = user["id"] as? String,
                     let userName = user["name"] as? String {
-                    
+                    let likes = timelineData["likes"] as? [String: String] ?? [:]
                     self._storageRef.child("\(UIDevice.current.name)/\((photoUrl as NSString).lastPathComponent)").downloadURL(completion: { (url, error) in
                         if let url = url?.absoluteString {
-                            let likes = timelineData["likes"] as? [String: String] ?? [:]
                             self.updateTimelinePost(id: id,
                                                     imageUrl: url,
                                                     caption: caption,
@@ -88,6 +87,7 @@ class TimelineService {
                                 caption: caption,
                                 userId: userId,
                                 userName: userName,
+                                likes: likes,
                                 isLikedByCurrentUser: false)
         _timelinePosts.update(post)
         delegate?.timelinePostsUpdated()
