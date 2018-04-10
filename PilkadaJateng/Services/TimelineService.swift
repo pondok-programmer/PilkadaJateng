@@ -40,8 +40,6 @@ class TimelineService {
     ]
     
     func beginListening(completion: @escaping (Error?) -> ()) {
-        print(("Muhammad's iPhone/2018-04-02 07:06:23 +0000.jpg" as NSString).lastPathComponent)
-        
         let timelineQuery = _timelineRef.queryLimited(toLast: 20)
         updateHandle = timelineQuery.observe(.childChanged, with: { [unowned self](snapshot) in
             if let timelineData = snapshot.value as? [String: AnyObject] {
@@ -52,7 +50,8 @@ class TimelineService {
                     let userId = user["id"] as? String,
                     let userName = user["name"] as? String {
                     let likes = timelineData["likes"] as? [String: String] ?? [:]
-                    self._storageRef.child("\(UIDevice.current.name)/\((photoUrl as NSString).lastPathComponent)").downloadURL(completion: { (url, error) in
+                    let path = photoUrl.replacingOccurrences(of: STORAGE_URL, with: "", options: NSString.CompareOptions.literal, range:nil)
+                    self._storageRef.child(path).downloadURL(completion: { (url, error) in
                         if let url = url?.absoluteString {
                             self.updateTimelinePost(id: id,
                                                     imageUrl: url,
