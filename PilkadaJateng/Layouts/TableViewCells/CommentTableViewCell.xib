@@ -20,36 +20,23 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="91.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hWj-dQ-Vyh">
-                        <rect key="frame" x="16" y="11" width="288" height="20"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="20" id="CcP-iu-5FB"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sPS-IH-kEl">
-                        <rect key="frame" x="16" y="31" width="288" height="50"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="kjsadf jsdalkfjlska fasdjfas fsaklfjasd fkasdflkasjdf asdfasdjf asdlfslakdfjasdf lsadfjlkasdfjsd fasldfjsdlakfj" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="14i-ph-HO6">
+                        <rect key="frame" x="16" y="11" width="288" height="70"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailingMargin" secondItem="sPS-IH-kEl" secondAttribute="trailing" id="2Se-uN-Hob"/>
-                    <constraint firstItem="sPS-IH-kEl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="LLq-xM-4Li"/>
-                    <constraint firstItem="hWj-dQ-Vyh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="MOS-xn-kvI"/>
-                    <constraint firstItem="sPS-IH-kEl" firstAttribute="top" secondItem="hWj-dQ-Vyh" secondAttribute="bottom" id="ZWw-l2-bbf"/>
-                    <constraint firstItem="hWj-dQ-Vyh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="bbl-cX-I7c"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="hWj-dQ-Vyh" secondAttribute="trailing" id="kDh-Lq-eaX"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="sPS-IH-kEl" secondAttribute="bottom" id="se2-fk-KkJ"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="14i-ph-HO6" secondAttribute="trailing" id="OgI-Yk-tMz"/>
+                    <constraint firstItem="14i-ph-HO6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Pfy-FX-5CA"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="14i-ph-HO6" secondAttribute="bottom" id="caW-pR-gop"/>
+                    <constraint firstItem="14i-ph-HO6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="zDt-yf-ldl"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="commentLabel" destination="sPS-IH-kEl" id="iK9-6N-u8b"/>
-                <outlet property="usernameLabel" destination="hWj-dQ-Vyh" id="4cB-Y5-e1b"/>
+                <outlet property="label" destination="14i-ph-HO6" id="ocJ-U5-2Vb"/>
             </connections>
             <point key="canvasLocation" x="40" y="78"/>
         </tableViewCell>

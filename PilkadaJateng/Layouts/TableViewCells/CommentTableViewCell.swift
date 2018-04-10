@@ -10,8 +10,11 @@ import UIKit
 
 class CommentTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var usernameLabel: UILabel!
-    @IBOutlet weak var commentLabel: UILabel!
+    
+    /// Assign to UILabel attributedText
+    /// bold : username
+    /// normal : comment
+    @IBOutlet weak var label: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

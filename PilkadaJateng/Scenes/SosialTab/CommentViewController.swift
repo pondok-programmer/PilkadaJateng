@@ -29,6 +29,7 @@ class CommentViewController: UIViewController {
     private func _setupTableView() {
         let tv = viewOutlets.tableView
         tv?.dataSource = self
+        tv?.separatorStyle = .none
         
         let nib = UINib(nibName: "CommentTableViewCell", bundle: nil)
         tv?.register(nib, forCellReuseIdentifier: "CommentCell")
@@ -42,7 +43,15 @@ class CommentViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         _commentService.beginListening { [unowned self] in
-            self.viewOutlets.tableView.reloadData()
+            DispatchQueue.main.async {
+                self.viewOutlets.tableView.reloadData()
+                let indexPath = IndexPath(row: self._commentService.comments.count - 1,
+                                          section: 0)
+                
+                UIView.animate(withDuration: 0.1, animations: {
+                    self.viewOutlets.tableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
+                })
+            }
         }
     }
     
@@ -81,8 +90,30 @@ extension CommentViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CommentCell", for: indexPath) as! CommentTableViewCell
         let comment = _commentService.comments[indexPath.row]
-        cell.usernameLabel.text = comment.username
-        cell.commentLabel.text = comment.content
+        let formattedText = NSMutableAttributedString()
+        formattedText
+            .bold(comment.username)
+            .normal(" ")
+            .normal(comment.content)
+        
+        cell.label.attributedText = formattedText
         return cell
+    }
+}
+
+extension NSMutableAttributedString {
+    @discardableResult func bold(_ text: String, size: CGFloat = 17) -> NSMutableAttributedString {
+        let attrs: [NSAttributedStringKey: Any] = [.font: UIFont(name: "Arial-BoldMT", size: size)!]
+        let boldString = NSMutableAttributedString(string:text, attributes: attrs)
+        append(boldString)
+        
+        return self
+    }
+    
+    @discardableResult func normal(_ text: String) -> NSMutableAttributedString {
+        let normal = NSAttributedString(string: text)
+        append(normal)
+        
+        return self
     }
 }
