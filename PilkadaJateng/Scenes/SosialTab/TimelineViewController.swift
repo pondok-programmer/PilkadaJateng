@@ -118,7 +118,7 @@ extension TimelineViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TimelineCell", for: indexPath) as! TimelineCollectionViewCell
         
-        var post = _timelineService.timelinePosts.reversed()[indexPath.row]
+        var post = _timelineService.timelinePosts[indexPath.row]
         post.resolveLike(user: Application.shared.user!)
         
         cell.setPost(post)

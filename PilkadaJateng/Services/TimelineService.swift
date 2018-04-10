@@ -27,7 +27,11 @@ class TimelineService {
     
     init() {}
     
-    var timelinePosts: [TimelinePost] = [
+    var timelinePosts: [TimelinePost] {
+        return _timelinePosts.reversed()
+    }
+    
+    private var _timelinePosts: [TimelinePost] = [
         TimelinePost(id: "abc",
                      image: #imageLiteral(resourceName: "chat_50"),
                      caption: "caption",
@@ -85,7 +89,7 @@ class TimelineService {
                                 userId: userId,
                                 userName: userName,
                                 isLikedByCurrentUser: false)
-        timelinePosts.update(post)
+        _timelinePosts.update(post)
         delegate?.timelinePostsUpdated()
     }
     
