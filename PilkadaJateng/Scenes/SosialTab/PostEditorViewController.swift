@@ -39,7 +39,7 @@ class PostEditorViewController: UIViewController {
     
     @objc func finishEdit() {
         let image = viewOutlets.imageView.image
-        let caption = viewOutlets.textField.text
+        let caption = viewOutlets.textView.text
         delegate?.finishEditing((image!, caption!))
         dismiss(animated: true, completion: nil)
     }
@@ -51,6 +51,6 @@ extension Selector {
 
 class PostEditorView: UIView {
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var finishButton: UIButton!
 }

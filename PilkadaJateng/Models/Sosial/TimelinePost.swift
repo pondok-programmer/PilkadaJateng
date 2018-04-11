@@ -11,7 +11,7 @@ import UIKit
 struct TimelinePost {
     let id: String
     let imageUrl: String
-    let image: UIImage?
+    private(set) var image: UIImage?
     let caption: String
     let userId: String
     let userName: String
@@ -26,6 +26,17 @@ struct TimelinePost {
         self.userName = userName
         self.likes = likes
         self.isLikedByCurrentUser = isLikedByCurrentUser
+    }
+    
+    func getImage() -> UIImage? {
+        guard let image = image else {
+            return UIImage(named: "downloading")
+        }
+        return image
+    }
+    
+    mutating func setImage(_ image: UIImage) {
+        self.image = image
     }
     
     private(set) var isLikedByCurrentUser: Bool

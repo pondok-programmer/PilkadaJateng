@@ -10,6 +10,7 @@ import Foundation
 import FirebaseDatabase
 import FirebaseStorage
 import MessageKit
+import Kingfisher
 
 fileprivate let URL_NOT_SET = "URL_NOT_SET"
 fileprivate let STORAGE_URL = "gs://pilkada-jateng-ios.appspot.com/"
@@ -34,7 +35,7 @@ class TimelineService {
     private var _timelinePosts: [TimelinePost] = [
         TimelinePost(id: "abc",
                      image: #imageLiteral(resourceName: "chat_50"),
-                     caption: "caption",
+                     caption: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed lectus a nulla bibendum viverra a in mauris. Nam porta placerat maximus. Sed porttitor tortor in consequat pellentesque. Nam ultricies sodales pharetra. Ut vestibulum massa lorem, vitae rutrum nulla venenatis ut. Donec sed aliquam quam. Aenean accumsan, neque sed finibus gravida, purus tortor pharetra mauris, at varius orci arcu eget leo. Sed ornare, nunc sed ultrices rutrum, mi neque mollis mi, faucibus eleifend lacus ligula eu risus. Fusce consequat elementum eros eu tempor. Quisque porttitor, dolor ac egestas posuere, nulla purus consectetur lorem, a sodales nisl nisi ac lorem. Cras ac feugiat eros, hendrerit interdum dui. Sed vitae libero ac felis consequat aliquam.",
                      userId: "userId",
                      userName: "userName")
     ]
@@ -53,12 +54,25 @@ class TimelineService {
                     let path = photoUrl.replacingOccurrences(of: STORAGE_URL, with: "", options: NSString.CompareOptions.literal, range:nil)
                     self._storageRef.child(path).downloadURL(completion: { (url, error) in
                         if let url = url?.absoluteString {
-                            self.updateTimelinePost(id: id,
-                                                    imageUrl: url,
-                                                    caption: caption,
-                                                    userId: userId,
-                                                    userName: userName,
-                                                    likes: likes)
+                            ImageCache.default.retrieveImage(forKey: id, options: nil) {
+                                image, cacheType in
+                                if let image = image {
+                                    self.updateTimelinePost(id: id,
+                                                            imageUrl: url,
+                                                            image: image,
+                                                            caption: caption,
+                                                            userId: userId,
+                                                            userName: userName,
+                                                            likes: likes)
+                                } else {
+                                    self.updateTimelinePost(id: id,
+                                                            imageUrl: url,
+                                                            caption: caption,
+                                                            userId: userId,
+                                                            userName: userName,
+                                                            likes: likes)
+                                }
+                            }
                             completion(error)
                         }
                     })
@@ -88,6 +102,7 @@ class TimelineService {
                                 userName: userName,
                                 likes: likes,
                                 isLikedByCurrentUser: false)
+        updatePost(caption: caption, forPostWithKey: id)
         _timelinePosts.update(post)
         delegate?.timelinePostsUpdated()
     }
@@ -141,10 +156,9 @@ class TimelineService {
         }
     }
     
-    func updatePost(_ url: String, caption: String, forPostWithKey key: String) {
+    func updatePost(caption: String, forPostWithKey key: String) {
         let postRef = _timelineRef.child(key)
-        postRef.updateChildValues(["photoUrl": url,
-                                   "caption": caption])
+        postRef.updateChildValues(["caption": caption])
     }
     
     func uploadPhoto(url: URL,

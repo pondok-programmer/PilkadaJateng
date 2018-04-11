@@ -378,9 +378,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hGe-Hx-b18">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hGe-Hx-b18">
                                 <rect key="frame" x="0.0" y="64" width="320" height="323"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.92405615482233505" green="0.92405615482233505" blue="0.92405615482233505" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uRe-k5-lkj">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -402,7 +402,7 @@
                             <outlet property="collectionView" destination="hGe-Hx-b18" id="6OI-RJ-Emb"/>
                         </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Post" id="Ovr-VQ-XEy"/>
+                    <tabBarItem key="tabBarItem" title="Post" image="timeline_50" selectedImage="timeline_filled_50" id="Ovr-VQ-XEy"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="6WZ-RU-FQK"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -420,6 +420,8 @@
         <image name="chat_filled_50" width="25" height="25"/>
         <image name="info_50" width="25" height="25"/>
         <image name="info_filled_50" width="25" height="25"/>
+        <image name="timeline_50" width="25" height="25"/>
+        <image name="timeline_filled_50" width="25" height="25"/>
         <image name="wacana_50" width="25" height="25"/>
         <image name="wacana_filled_50" width="25" height="25"/>
     </resources>

@@ -9,6 +9,7 @@
 import UIKit
 import Kingfisher
 
+@IBDesignable
 class TimelineCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var thumbnailImageView: UIImageView!
@@ -18,15 +19,32 @@ class TimelineCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+    }
+    
+    
+    /// If index is odd : Gray
+    /// else index is even : White
+    /// - Parameter index: Index of tableviewcell
+    func setColor(for index: Int) {
+        if index % 2 == 0 {
+            backgroundColor = .white
+        } else {
+            backgroundColor = UIColor(red: 222, green: 222, blue: 222, alpha: 1) // Almost gray -> white
+        }
     }
     
     func setPost(_ post: TimelinePost) {
         usernameLabel.text = post.userName
-        if let image = post.image {
+        if let url = URL(string: post.imageUrl) {
+            ImageDownloader.default.downloadImage(with: url, options: [], progressBlock: nil) {
+                [unowned self] (image, error, url, data) in
+                if let image = image {
+                    self.thumbnailImageView.image = image
+                    ImageCache.default.store(image, forKey: post.id)
+                }
+            }
+        } else if let image = post.getImage() {
             thumbnailImageView.image = image
-        } else if let url = URL(string: post.imageUrl) {
-            thumbnailImageView.kf.setImage(with: url, placeholder: thumbnailImageView.image)
         }
         captionLabel.text = post.caption
         let likeImage = post.isLikedByCurrentUser ? #imageLiteral(resourceName: "like_filled_50") : #imageLiteral(resourceName: "like_50") // #imageLiteral

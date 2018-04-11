@@ -20,7 +20,6 @@ class TimelineViewController: UIViewController {
         
         _timelineService.delegate = self
         _setupCollectionView()
-        _setupCreateNewPostButton()
     }
     
     private let _timelineService = TimelineService()
@@ -36,7 +35,8 @@ class TimelineViewController: UIViewController {
         }
         
         setupTabBarControllerNavigationItem { [unowned self](navItem) in
-            navItem?.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add,
+            navItem?.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "add_50"),
+                                                          style: .plain,
                                                           target: self,
                                                           action: #selector(self.pickImage))
         }
@@ -54,16 +54,11 @@ class TimelineViewController: UIViewController {
         cv?.delegate = self
         
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: cv!.contentSize.width, height: 300)
         cv?.collectionViewLayout = layout
         
         
         let nib = UINib(nibName: "TimelineCollectionViewCell", bundle: nil)
         cv?.register(nib, forCellWithReuseIdentifier: "TimelineCell")
-    }
-    
-    private func _setupCreateNewPostButton() {
-        
     }
     
     @objc func pickImage() {
@@ -78,17 +73,17 @@ class TimelineViewController: UIViewController {
         present(imagePicker, animated: true, completion: nil)
     }
     
-    private func _sendPost() -> String? {
+    private func _sendPost(with caption: String) -> String? {
         return _timelineService.sendTimelinePost(userId: Application.shared.user!.id,
                                                  userName: Application.shared.user!.name,
-                                                 caption: "Cap")
+                                                 caption: caption)
     }
     
     private func _setPostUrl(_ url: String, forPostWithKey key: String) {
         _timelineService.setPhotoUrl(url, forPostWithKey: key)
     }
     
-    private func _editPost(_ image: UIImage) {
+    private func _editPost(image: UIImage) {
         let vc = PostEditorViewController(nibName: "PostEditorViewController", bundle: nil)
         vc.image = image
         vc.delegate = self
@@ -104,12 +99,6 @@ class TimelineView: UIView {
     @IBOutlet weak var collectionView: UICollectionView!
 }
 
-extension TimelineViewController: IndicatorInfoProvider {
-    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return IndicatorInfo(title: "Timeline")
-    }
-}
-
 extension TimelineViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return _timelineService.timelinePosts.count
@@ -117,6 +106,7 @@ extension TimelineViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TimelineCell", for: indexPath) as! TimelineCollectionViewCell
+        cell.setColor(for: indexPath.row)
         
         var post = _timelineService.timelinePosts[indexPath.row]
         post.resolveLike(user: Application.shared.user!)
@@ -153,6 +143,24 @@ extension TimelineViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 10.0
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let text = _timelineService.timelinePosts[indexPath.row].caption
+        let width = collectionView.frame.size.width
+        let height = heightForLabel(text: text, width: width)
+        return CGSize(width: width, height: height + 500)
+    }
+    
+    func heightForLabel(text: String, width: CGFloat) -> CGFloat {
+        let frame = CGRect(x: 0, y: 0, width: width, height: CGFloat.greatestFiniteMagnitude)
+        let label = UILabel(frame: frame)
+        label.numberOfLines = 0
+        label.lineBreakMode = NSLineBreakMode.byWordWrapping
+        label.font = UIFont.systemFont(ofSize: 17)
+        label.text = text
+        label.sizeToFit()
+        return label.frame.height
+    }
 }
 
 extension TimelineViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -162,10 +170,10 @@ extension TimelineViewController: UIImagePickerControllerDelegate, UINavigationC
             let assets = PHAsset.fetchAssets(withALAssetURLs: [refUrl], options: nil)
             let asset = assets.firstObject
             
-            if let key = _sendPost() {
+            if let key = _sendPost(with: "Caption") {
                 asset?.requestContentEditingInput(with: nil) { [unowned self](input, info) in
                     let imageFileURL = input?.fullSizeImageURL
-                    let path = "\(UIDevice.current.name)/\(Date())/\(refUrl.lastPathComponent))"
+                    let path = "\(Application.shared.user!.id)/\(Date())/\(refUrl.lastPathComponent))"
                     
                     self._timelineService
                         .uploadPhoto(url: imageFileURL!, path: path) { [unowned self] (path, error) in
@@ -181,28 +189,7 @@ extension TimelineViewController: UIImagePickerControllerDelegate, UINavigationC
             }
         } else {
             let image = info[UIImagePickerControllerOriginalImage] as! UIImage
-            if let key = _sendPost() {
-                let imageData = UIImageJPEGRepresentation(image, 1.0)
-                let path = "\(UIDevice.current.name)/\(Date()).jpg"
-                
-                
-                self._timelineService.updateTimelinePost(id: key,
-                                                         image: UIImage(data: imageData!)!,
-                                                         caption: "Cap",
-                                                         userId: Application.shared.user!.id,
-                                                         userName: Application.shared.user!.name)
-                
-                self._timelineService
-                    .uploadPhoto(with: imageData!, path: path) { [unowned self] (path, error) in
-                        if let error = error {
-                            print(error)
-                        }
-                        
-                        if let path = path {
-                            self._timelineService.setPhotoUrl(path, forPostWithKey: key)
-                        }
-                }
-            }
+            self._editPost(image: image)
         }
     }
     
@@ -213,7 +200,26 @@ extension TimelineViewController: UIImagePickerControllerDelegate, UINavigationC
 
 extension TimelineViewController: PostEditorDelegateViewController {
     func finishEditing(_ timelinePost: (image: UIImage, caption: String)) {
-        print(timelinePost)
+        if let key = _sendPost(with: timelinePost.caption) {
+            self._timelineService.updateTimelinePost(id: key,
+                                                     image: timelinePost.image,
+                                                     caption: timelinePost.caption,
+                                                     userId: Application.shared.user!.id,
+                                                     userName: Application.shared.user!.name)
+            
+            let path = "\(Application.shared.user!.id)/\(Date()).jpg"
+            let imageData = UIImageJPEGRepresentation(timelinePost.image, 1)!
+            self._timelineService
+                .uploadPhoto(with: imageData, path: path) { [unowned self] (path, error) in
+                    if let error = error {
+                        print(error)
+                    }
+                    
+                    if let path = path {
+                        self._timelineService.setPhotoUrl(path, forPostWithKey: key)
+                    }
+            }
+        }
     }
 }
 
