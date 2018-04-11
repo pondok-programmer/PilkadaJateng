@@ -48,10 +48,16 @@ class TimelineViewController: UIViewController {
     }
     
     
+    let refreshControl = UIRefreshControl()
     private func _setupCollectionView() {
         let cv = viewOutlets.collectionView
         cv?.dataSource = self
         cv?.delegate = self
+        
+        refreshControl.addTarget(self,
+                                 action: #selector(fetchPosts),
+                                 for: .valueChanged)
+        cv?.addSubview(refreshControl)
         
         let layout = UICollectionViewFlowLayout()
         cv?.collectionViewLayout = layout
@@ -73,6 +79,15 @@ class TimelineViewController: UIViewController {
         present(imagePicker, animated: true, completion: nil)
     }
     
+    @objc func fetchPosts() {
+        _timelineService.fetchPosts { [unowned self](error) in
+            if let error = error {
+                self.showError(title: error.localizedDescription)
+            }
+            self.refreshControl.endRefreshing()
+        }
+    }
+    
     private func _sendPost(with caption: String) -> String? {
         return _timelineService.sendTimelinePost(userId: Application.shared.user!.id,
                                                  userName: Application.shared.user!.name,
@@ -88,6 +103,13 @@ class TimelineViewController: UIViewController {
         vc.image = image
         vc.delegate = self
         present(vc, animated: true, completion: nil)
+    }
+    
+    func showError(title: String?, message: String? = nil) {
+        let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let cancel = UIAlertAction(title: "Batal", style: .cancel, handler: nil)
+        alertVC.addAction(cancel)
+        present(alertVC, animated: true, completion: nil)
     }
 }
 

@@ -43,6 +43,7 @@
 		EF65D5B32074CDC100C52D21 /* CommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF65D5B22074CDC100C52D21 /* CommentViewController.xib */; };
 		EF7F6E80206F74C2002B2641 /* materi_wacana.json in Resources */ = {isa = PBXBuildFile; fileRef = EF7F6E7F206F74C2002B2641 /* materi_wacana.json */; };
 		EF7F6E82206F74FE002B2641 /* WacanaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F6E81206F74FE002B2641 /* WacanaService.swift */; };
+		EF866427207DAA7C00886A61 /* WacanaSubjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF866426207DAA7C00886A61 /* WacanaSubjectsViewController.swift */; };
 		EF957B232068C18D000E2098 /* InformasiCalonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF957B212068C18D000E2098 /* InformasiCalonCollectionViewCell.swift */; };
 		EF957B242068C18D000E2098 /* InformasiCalonCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF957B222068C18D000E2098 /* InformasiCalonCollectionViewCell.xib */; };
 		EF957B262068CEFB000E2098 /* DetailCalonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF957B252068CEFB000E2098 /* DetailCalonViewController.swift */; };
@@ -193,6 +194,7 @@
 		EF65D5B22074CDC100C52D21 /* CommentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentViewController.xib; sourceTree = "<group>"; };
 		EF7F6E7F206F74C2002B2641 /* materi_wacana.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = materi_wacana.json; sourceTree = "<group>"; };
 		EF7F6E81206F74FE002B2641 /* WacanaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WacanaService.swift; sourceTree = "<group>"; };
+		EF866426207DAA7C00886A61 /* WacanaSubjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WacanaSubjectsViewController.swift; sourceTree = "<group>"; };
 		EF957B212068C18D000E2098 /* InformasiCalonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformasiCalonCollectionViewCell.swift; sourceTree = "<group>"; };
 		EF957B222068C18D000E2098 /* InformasiCalonCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformasiCalonCollectionViewCell.xib; sourceTree = "<group>"; };
 		EF957B252068CEFB000E2098 /* DetailCalonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCalonViewController.swift; sourceTree = "<group>"; };
@@ -501,6 +503,7 @@
 			isa = PBXGroup;
 			children = (
 				EF98998D206A27CE007E7DA9 /* WacanaViewController.swift */,
+				EF866426207DAA7C00886A61 /* WacanaSubjectsViewController.swift */,
 			);
 			path = Wancana;
 			sourceTree = "<group>";
@@ -1185,6 +1188,7 @@
 				EF584455206B77EB00BDBB4C /* Date+Ext.swift in Sources */,
 				EF957B352068D8AD000E2098 /* ProgramUnggulanCalonCollectionViewCell.swift in Sources */,
 				EF584438206B306700BDBB4C /* ChannelViewController.swift in Sources */,
+				EF866427207DAA7C00886A61 /* WacanaSubjectsViewController.swift in Sources */,
 				EF584441206B3B6B00BDBB4C /* Chat+MessagesLayoutDelegate.swift in Sources */,
 				EF7F6E82206F74FE002B2641 /* WacanaService.swift in Sources */,
 				EF58038A2071E15F00C8E5E5 /* CardView.swift in Sources */,

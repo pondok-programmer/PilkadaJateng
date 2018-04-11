@@ -34,55 +34,72 @@ class TimelineService {
     
     private var _timelinePosts: [TimelinePost] = [
         TimelinePost(id: "abc",
-                     image: #imageLiteral(resourceName: "chat_50"),
+                     image: #imageLiteral(resourceName: "downloading"),
                      caption: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed lectus a nulla bibendum viverra a in mauris. Nam porta placerat maximus. Sed porttitor tortor in consequat pellentesque. Nam ultricies sodales pharetra. Ut vestibulum massa lorem, vitae rutrum nulla venenatis ut. Donec sed aliquam quam. Aenean accumsan, neque sed finibus gravida, purus tortor pharetra mauris, at varius orci arcu eget leo. Sed ornare, nunc sed ultrices rutrum, mi neque mollis mi, faucibus eleifend lacus ligula eu risus. Fusce consequat elementum eros eu tempor. Quisque porttitor, dolor ac egestas posuere, nulla purus consectetur lorem, a sodales nisl nisi ac lorem. Cras ac feugiat eros, hendrerit interdum dui. Sed vitae libero ac felis consequat aliquam.",
                      userId: "userId",
                      userName: "userName")
     ]
     
+    func parseSnapshot(key: String, value: Any?, completion: @escaping (Error?) -> ()) {
+        if let timelineData = value as? [String: AnyObject] {
+            let id = key
+            if let photoUrl = timelineData["photoUrl"] as? String,
+                let caption = timelineData["caption"] as? String,
+                let user = timelineData["user"] as? [String: Any],
+                let userId = user["id"] as? String,
+                let userName = user["name"] as? String {
+                let likes = timelineData["likes"] as? [String: String] ?? [:]
+                let path = photoUrl.replacingOccurrences(of: STORAGE_URL, with: "", options: NSString.CompareOptions.literal, range:nil)
+                _storageRef.child(path).downloadURL(completion: { [unowned self](url, error) in
+                    if let url = url?.absoluteString {
+                        ImageCache.default.retrieveImage(forKey: id, options: nil) {
+                            image, cacheType in
+                            if let image = image {
+                                self.updateTimelinePost(id: id,
+                                                        imageUrl: url,
+                                                        image: image,
+                                                        caption: caption,
+                                                        userId: userId,
+                                                        userName: userName,
+                                                        likes: likes)
+                            } else {
+                                self.updateTimelinePost(id: id,
+                                                        imageUrl: url,
+                                                        caption: caption,
+                                                        userId: userId,
+                                                        userName: userName,
+                                                        likes: likes)
+                            }
+                            completion(nil)
+                        }
+                    } else {
+                        completion(error)
+                    }
+                })
+            }
+        }
+    }
+    
+    private var postFetching: DatabaseHandle?
+    func fetchPosts(completion: @escaping (Error?) -> ()) {
+        let timelineQuery = _timelineRef.queryLimited(toLast: 20)
+        postFetching = timelineQuery.observe(.childAdded) { [unowned self](snapshot) in
+            self.parseSnapshot(key: snapshot.key, value: snapshot.value, completion: completion)
+        }
+    }
+    
     func beginListening(completion: @escaping (Error?) -> ()) {
         let timelineQuery = _timelineRef.queryLimited(toLast: 20)
         updateHandle = timelineQuery.observe(.childChanged, with: { [unowned self](snapshot) in
-            if let timelineData = snapshot.value as? [String: AnyObject] {
-                let id = snapshot.key
-                if let photoUrl = timelineData["photoUrl"] as? String,
-                    let caption = timelineData["caption"] as? String,
-                    let user = timelineData["user"] as? [String: Any],
-                    let userId = user["id"] as? String,
-                    let userName = user["name"] as? String {
-                    let likes = timelineData["likes"] as? [String: String] ?? [:]
-                    let path = photoUrl.replacingOccurrences(of: STORAGE_URL, with: "", options: NSString.CompareOptions.literal, range:nil)
-                    self._storageRef.child(path).downloadURL(completion: { (url, error) in
-                        if let url = url?.absoluteString {
-                            ImageCache.default.retrieveImage(forKey: id, options: nil) {
-                                image, cacheType in
-                                if let image = image {
-                                    self.updateTimelinePost(id: id,
-                                                            imageUrl: url,
-                                                            image: image,
-                                                            caption: caption,
-                                                            userId: userId,
-                                                            userName: userName,
-                                                            likes: likes)
-                                } else {
-                                    self.updateTimelinePost(id: id,
-                                                            imageUrl: url,
-                                                            caption: caption,
-                                                            userId: userId,
-                                                            userName: userName,
-                                                            likes: likes)
-                                }
-                            }
-                            completion(error)
-                        }
-                    })
-                }
-            }
+            self.parseSnapshot(key: snapshot.key, value: snapshot.value, completion: completion)
         })
     }
     
     func endListening() {
         if let handle = updateHandle {
+            _timelineRef.removeObserver(withHandle: handle)
+        }
+        if let handle = postFetching {
             _timelineRef.removeObserver(withHandle: handle)
         }
     }
