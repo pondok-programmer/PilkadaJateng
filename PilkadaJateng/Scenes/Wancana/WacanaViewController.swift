@@ -32,6 +32,7 @@ class WacanaViewController: UIViewController {
         let nib = UINib(nibName: "WacanaCollectionViewCell", bundle: nil)
         cv?.register(nib, forCellWithReuseIdentifier: "WacanaCell")
         cv?.dataSource = self
+        cv?.delegate = self
         
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: view.frame.width, height: 50)
@@ -75,5 +76,14 @@ extension WacanaViewController: UICollectionViewDataSource {
         cell?.titleLabel.text = data.judul
         cell?.contentLabel.text = data.alasan
         return cell!
+    }
+}
+
+extension WacanaViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let daftarMateri = _data[indexPath.row].daftarMateri
+        let vc = DaftarMateriViewController(nibName: "DaftarMateriViewController", bundle: nil)
+        vc.daftarMateri = daftarMateri
+        show(vc, sender: nil)
     }
 }
