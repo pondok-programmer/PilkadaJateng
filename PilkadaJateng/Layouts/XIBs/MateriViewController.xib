@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="VerdanaBold.ttf">
+            <string>Verdana-Bold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MateriViewController" customModule="PilkadaJateng" customModuleProvider="target">
             <connections>
@@ -22,22 +27,32 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nmv-q6-Yhb">
-                    <rect key="frame" x="16" y="66" width="42" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nmv-q6-Yhb">
+                    <rect key="frame" x="20" y="70" width="335" height="62"/>
+                    <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cA1-GF-CbB">
-                    <rect key="frame" x="16" y="104" width="42" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cA1-GF-CbB">
+                    <rect key="frame" x="20" y="152" width="335" height="467"/>
+                    <mutableString key="text">Maecenas non mauris non lectus bibendum volutpat non ut eros. Vivamus vehicula erat volutpat facilisis varius. Curabitur sagittis sodales est, et euismod tortor ultricies vel. Nullam in massa erat. Maecenas diam massa, sollicitudin ut finibus in, suscipit sed urna. Proin nunc ligula, tempor vel magna vel, tincidunt porttitor quam. Curabitur euismod consectetur facilisis. Donec at maximus urna. Donec lacinia bibendum lobortis. Praesent non sapien porttitor, semper urna in, faucibus erat. Phasellus justo dolor, bibendum eget mollis vel, scelerisque sed velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus ac tortor efficitur ex gravida malesuada sit amet nec sapien. Cras tincidunt eleifend nunc, id faucibus velit volutpat non. Donec eu sem eros. Maecenas dictum et sem ac auctor.
+
+</mutableString>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="1" green="0.46677984219719415" blue="0.55064907469444169" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="nmv-q6-Yhb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="4E5-3p-Num"/>
+                <constraint firstItem="cA1-GF-CbB" firstAttribute="top" secondItem="nmv-q6-Yhb" secondAttribute="bottom" constant="20" id="9bl-0a-ust"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="nmv-q6-Yhb" secondAttribute="trailing" constant="20" id="EFV-9Y-y5Y"/>
+                <constraint firstItem="cA1-GF-CbB" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="Hw7-vN-Ye8"/>
+                <constraint firstItem="nmv-q6-Yhb" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="50" id="LVu-oG-j4F"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="cA1-GF-CbB" secondAttribute="trailing" constant="20" id="Xxy-FD-vpj"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="cA1-GF-CbB" secondAttribute="bottom" constant="20" id="ra5-1n-1R8"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
         </view>
     </objects>
