@@ -84,6 +84,7 @@ class TimelineViewController: UIViewController {
             if let error = error {
                 self.showError(title: error.localizedDescription)
             }
+            self._timelineService.endPostFetching()
             self.refreshControl.endRefreshing()
         }
     }
@@ -102,7 +103,8 @@ class TimelineViewController: UIViewController {
         let vc = PostEditorViewController(nibName: "PostEditorViewController", bundle: nil)
         vc.image = image
         vc.delegate = self
-        present(vc, animated: true, completion: nil)
+        let nav = UINavigationController(rootViewController: vc)
+        present(nav, animated: true, completion: nil)
     }
     
     func showError(title: String?, message: String? = nil) {

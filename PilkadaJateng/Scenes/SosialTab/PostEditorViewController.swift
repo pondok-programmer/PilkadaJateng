@@ -8,6 +8,8 @@
 
 import UIKit
 
+let textViewPlaceholder = "Deskripsikan foto kamu..."
+
 protocol PostEditorDelegateViewController: class {
     func finishEditing(_ timelinePost: (image: UIImage, caption: String) )
 }
@@ -22,7 +24,8 @@ class PostEditorViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        _setupFinishButton()
+        setupBarButtonItem()
+        setupTextView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -30,11 +33,23 @@ class PostEditorViewController: UIViewController {
         viewOutlets.imageView.image = image
     }
     
-    private func _setupFinishButton() {
-        viewOutlets.finishButton
-            .addTarget(self,
-                       action: .finishEdit,
-                       for: .touchUpInside)
+    func setupBarButtonItem() {
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Batal",
+                                                           style: .plain,
+                                                           target: self,
+                                                           action: .cancel)
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Kirim",
+                                                            style: .done,
+                                                            target: self,
+                                                            action: .finishEdit)
+    }
+    
+    func setupTextView() {
+        let textView = viewOutlets.textView
+        textView?.delegate = self
+        textView?.text = textViewPlaceholder
+        textView?.textColor = .lightGray
     }
     
     @objc func finishEdit() {
@@ -43,14 +58,40 @@ class PostEditorViewController: UIViewController {
         delegate?.finishEditing((image!, caption!))
         dismiss(animated: true, completion: nil)
     }
+    
+    @objc func cancel() {
+        dismiss(animated: true, completion: nil)
+    }
 }
 
 extension Selector {
     static let finishEdit = #selector(PostEditorViewController.finishEdit)
+    static let cancel = #selector(PostEditorViewController.cancel)
 }
 
 class PostEditorView: UIView {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var textView: UITextView!
-    @IBOutlet weak var finishButton: UIButton!
+}
+
+extension PostEditorViewController: UITextViewDelegate {
+    func textViewDidBeginEditing(_ textView: UITextView)
+    {
+        if (textView.text == textViewPlaceholder)
+        {
+            textView.text = ""
+            textView.textColor = .black
+        }
+        textView.becomeFirstResponder() //Optional
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView)
+    {
+        if (textView.text == "")
+        {
+            textView.text = textViewPlaceholder
+            textView.textColor = .lightGray
+        }
+        textView.resignFirstResponder()
+    }
 }

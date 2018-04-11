@@ -23,42 +23,32 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="iXZ-57-p78">
-                    <rect key="frame" x="20" y="40" width="280" height="440"/>
+                    <rect key="frame" x="20" y="40" width="280" height="420"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jTV-eu-n8G">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jTV-eu-n8G">
                             <rect key="frame" x="0.0" y="0.0" width="280" height="280"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="jTV-eu-n8G" secondAttribute="height" multiplier="1:1" id="TkQ-1h-Nwe"/>
                             </constraints>
                         </imageView>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Deskripsi foto..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rmM-vZ-ABn">
-                            <rect key="frame" x="0.0" y="305" width="280" height="85"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rmM-vZ-ABn">
+                            <rect key="frame" x="0.0" y="305" width="280" height="115"/>
+                            <color key="backgroundColor" red="0.949238578680203" green="0.949238578680203" blue="0.949238578680203" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         </textView>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ACe-jp-80B">
-                            <rect key="frame" x="0.0" y="415" width="280" height="25"/>
-                            <color key="backgroundColor" red="0.90161008883248728" green="0.48075086959652413" blue="0.4360971837489806" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="25" id="94K-6e-pvT"/>
-                            </constraints>
-                            <state key="normal" title="POST"/>
-                        </button>
                     </subviews>
                 </stackView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="iXZ-57-p78" secondAttribute="trailing" constant="20" id="HEB-eH-dCm"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="iXZ-57-p78" secondAttribute="bottom" constant="20" id="OFF-wR-RIR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="iXZ-57-p78" secondAttribute="bottom" constant="20" id="OFF-wR-RIR"/>
                 <constraint firstItem="iXZ-57-p78" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="fPy-i4-MhP"/>
-                <constraint firstAttribute="bottom" secondItem="iXZ-57-p78" secondAttribute="bottom" id="nRT-yq-5dz"/>
                 <constraint firstItem="iXZ-57-p78" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="uci-nX-k0P"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <connections>
-                <outlet property="finishButton" destination="ACe-jp-80B" id="LWV-pa-TWq"/>
                 <outlet property="imageView" destination="jTV-eu-n8G" id="qvX-Tu-BdF"/>
                 <outlet property="textView" destination="rmM-vZ-ABn" id="b3L-Jv-LAX"/>
             </connections>

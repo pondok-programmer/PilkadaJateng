@@ -49,6 +49,9 @@ class TimelineService {
                 let userId = user["id"] as? String,
                 let userName = user["name"] as? String {
                 let likes = timelineData["likes"] as? [String: String] ?? [:]
+                
+                guard photoUrl != URL_NOT_SET else { return }
+                
                 let path = photoUrl.replacingOccurrences(of: STORAGE_URL, with: "", options: NSString.CompareOptions.literal, range:nil)
                 _storageRef.child(path).downloadURL(completion: { [unowned self](url, error) in
                     if let url = url?.absoluteString {
@@ -87,6 +90,11 @@ class TimelineService {
             self.parseSnapshot(key: snapshot.key, value: snapshot.value, completion: completion)
         }
     }
+    func endPostFetching() {
+        if let handle = postFetching {
+            _timelineRef.removeObserver(withHandle: handle)
+        }
+    }
     
     func beginListening(completion: @escaping (Error?) -> ()) {
         let timelineQuery = _timelineRef.queryLimited(toLast: 20)
@@ -97,9 +105,6 @@ class TimelineService {
     
     func endListening() {
         if let handle = updateHandle {
-            _timelineRef.removeObserver(withHandle: handle)
-        }
-        if let handle = postFetching {
             _timelineRef.removeObserver(withHandle: handle)
         }
     }
