@@ -14,8 +14,6 @@ class InformasiViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setTitle("Informasi")
-        
         _setupPilkadaButton()
         _setupCalonButton()
     }

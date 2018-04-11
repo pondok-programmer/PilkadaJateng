@@ -16,9 +16,8 @@ class ChannelListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setTitle("Channel")
-        
         _setupTableView()
+        _setupNewChannelButton()
     }
     
     private let _channelService = ChannelService()
@@ -28,12 +27,11 @@ class ChannelListViewController: UIViewController {
         _channelService.beginListening { [unowned self] in
             self.viewOutlets.tableView.reloadData()
         }
-        
-        setupTabBarControllerNavigationItem { [unowned self](navItem) in
-            navItem?.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add,
-                                                          target: self,
-                                                          action: #selector(self.createChannel))
-        }
+    }
+    
+    func _setupNewChannelButton() {
+        let btn = viewOutlets.newChannel!
+        btn.addTarget(self, action: #selector(createChannel), for: .touchUpInside)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -57,6 +55,7 @@ class ChannelListViewController: UIViewController {
 
 class ChannelListView: UIView {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var newChannel: UIButton!
 }
 
 extension ChannelListViewController: IndicatorInfoProvider {

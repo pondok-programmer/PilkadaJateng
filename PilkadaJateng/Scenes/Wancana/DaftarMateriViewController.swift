@@ -9,6 +9,7 @@
 import UIKit
 
 class DaftarMateriViewController: UIPageViewController {
+    
     private var daftarMateri: [DaftarMateri] {
         return materiWacana.daftarMateri
     }
@@ -37,15 +38,16 @@ class DaftarMateriViewController: UIPageViewController {
     }
     
     func setupBarButtonItem() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "open_link"),
+        navigationItem.rightBarButtonItems = [UIBarButtonItem(image: UIImage(named: "open_link"),
                                                             style: .plain,
                                                             target: self,
-                                                            action: #selector(openWebLink))
+                                                            action: #selector(openWebLink)),]
     }
     
     @objc func openWebLink() {
         if let _ = URL(string: materiWacana.sumberUrl) {
             let vc = WebViewController(nibName: "WebViewController", bundle: nil)
+            vc.title = materiWacana.judul
             vc.urlString = materiWacana.sumberUrl
             show(vc, sender: nil)
         } else {

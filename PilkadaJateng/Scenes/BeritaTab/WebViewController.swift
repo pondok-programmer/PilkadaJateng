@@ -36,16 +36,16 @@ class WebViewController: UIViewController {
 
 extension WebViewController: WKNavigationDelegate {
     func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
-        HUD.show(.labeledProgress(title: "Memuat halaman...", subtitle: nil))
+        HUD.show(.labeledProgress(title: nil, subtitle: nil))
     }
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         HUD.show(.labeledSuccess(title: "Sukses", subtitle: nil))
-        HUD.hide()
+        HUD.hide(afterDelay: 0.1)
     }
     
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
         HUD.show(.labeledError(title: "Error", subtitle: "\(error.localizedDescription)"))
-        HUD.hide()
+        HUD.hide(afterDelay: 0.5)
     }
 }

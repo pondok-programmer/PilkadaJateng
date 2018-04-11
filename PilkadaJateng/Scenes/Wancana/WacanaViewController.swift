@@ -14,8 +14,6 @@ class WacanaViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setTitle("Wacana")
-        
         _setupCollectionView()
         _fetchData()
     }

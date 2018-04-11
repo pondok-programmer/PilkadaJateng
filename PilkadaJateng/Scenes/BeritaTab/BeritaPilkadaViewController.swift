@@ -16,8 +16,6 @@ class BeritaPilkadaViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setTitle("Berita")
-        
         _setupTableView()
     }
     

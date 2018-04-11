@@ -342,19 +342,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pYj-IN-IjV">
-                                <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                                <rect key="frame" x="0.0" y="94" width="320" height="337"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6J7-eD-pdf">
+                                <rect key="frame" x="0.0" y="64" width="320" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="SQb-FJ-cRe"/>
+                                </constraints>
+                                <state key="normal" title="Grup Baru"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.33760152122478204" blue="0.38038508346900091" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="pYj-IN-IjV" firstAttribute="leading" secondItem="N4u-m2-sew" secondAttribute="leading" id="8ps-d1-yrw"/>
+                            <constraint firstItem="N4u-m2-sew" firstAttribute="trailing" secondItem="6J7-eD-pdf" secondAttribute="trailing" id="FhR-i3-gWk"/>
+                            <constraint firstItem="6J7-eD-pdf" firstAttribute="leading" secondItem="N4u-m2-sew" secondAttribute="leading" id="I0G-pE-FCg"/>
+                            <constraint firstItem="pYj-IN-IjV" firstAttribute="top" secondItem="6J7-eD-pdf" secondAttribute="bottom" id="P7R-3N-TlA"/>
                             <constraint firstItem="N4u-m2-sew" firstAttribute="trailing" secondItem="pYj-IN-IjV" secondAttribute="trailing" id="cfX-NE-MvM"/>
+                            <constraint firstItem="6J7-eD-pdf" firstAttribute="top" secondItem="N4u-m2-sew" secondAttribute="top" id="dJc-tf-wNT"/>
                             <constraint firstItem="N4u-m2-sew" firstAttribute="bottom" secondItem="pYj-IN-IjV" secondAttribute="bottom" id="f1R-2T-YLt"/>
-                            <constraint firstItem="pYj-IN-IjV" firstAttribute="top" secondItem="N4u-m2-sew" secondAttribute="top" id="tGq-41-VqY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="N4u-m2-sew"/>
                         <connections>
+                            <outlet property="newChannel" destination="6J7-eD-pdf" id="uDR-dN-4vq"/>
                             <outlet property="tableView" destination="pYj-IN-IjV" id="ygr-CN-kbV"/>
                         </connections>
                     </view>
@@ -370,16 +381,24 @@
             </objects>
             <point key="canvasLocation" x="2625" y="1575"/>
         </scene>
-        <!--TIMELINE-->
+        <!--POST-->
         <scene sceneID="4ga-qd-etW">
             <objects>
-                <viewController id="Afr-RR-LxX" userLabel="TIMELINE" customClass="TimelineViewController" customModule="PilkadaJateng" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Afr-RR-LxX" userLabel="POST" customClass="TimelineViewController" customModule="PilkadaJateng" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OYc-ZA-28G" customClass="TimelineView" customModule="PilkadaJateng" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9l-wt-eS7">
+                                <rect key="frame" x="0.0" y="64" width="320" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.45901656333609753" blue="0.40234888616958586" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="RI8-T2-gO0"/>
+                                </constraints>
+                                <state key="normal" title="Posting Baru"/>
+                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hGe-Hx-b18">
-                                <rect key="frame" x="0.0" y="64" width="320" height="323"/>
+                                <rect key="frame" x="0.0" y="94" width="320" height="293"/>
                                 <color key="backgroundColor" red="0.92405615482233505" green="0.92405615482233505" blue="0.92405615482233505" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uRe-k5-lkj">
                                     <size key="itemSize" width="50" height="50"/>
@@ -393,13 +412,18 @@
                         <color key="backgroundColor" red="0.57696160693237508" green="0.42715726251237307" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="hGe-Hx-b18" firstAttribute="leading" secondItem="y4I-sv-Efp" secondAttribute="leading" id="3Jn-cX-aQf"/>
-                            <constraint firstItem="hGe-Hx-b18" firstAttribute="top" secondItem="y4I-sv-Efp" secondAttribute="top" id="ZcT-pQ-AJQ"/>
+                            <constraint firstItem="y4I-sv-Efp" firstAttribute="trailing" secondItem="z9l-wt-eS7" secondAttribute="trailing" id="9wb-l7-F2x"/>
+                            <constraint firstItem="z9l-wt-eS7" firstAttribute="top" secondItem="y4I-sv-Efp" secondAttribute="top" id="Cg3-jF-tbr"/>
+                            <constraint firstItem="hGe-Hx-b18" firstAttribute="top" secondItem="z9l-wt-eS7" secondAttribute="bottom" id="NVC-V9-d3C"/>
+                            <constraint firstItem="z9l-wt-eS7" firstAttribute="leading" secondItem="y4I-sv-Efp" secondAttribute="leading" id="cjq-v2-DBA"/>
                             <constraint firstItem="y4I-sv-Efp" firstAttribute="trailing" secondItem="hGe-Hx-b18" secondAttribute="trailing" id="ga2-uT-J6c"/>
                             <constraint firstItem="y4I-sv-Efp" firstAttribute="bottom" secondItem="hGe-Hx-b18" secondAttribute="bottom" id="gaV-We-80Z"/>
+                            <constraint firstItem="hGe-Hx-b18" firstAttribute="top" secondItem="z9l-wt-eS7" secondAttribute="bottom" id="h9F-Go-Ev6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="y4I-sv-Efp"/>
                         <connections>
                             <outlet property="collectionView" destination="hGe-Hx-b18" id="6OI-RJ-Emb"/>
+                            <outlet property="newPost" destination="z9l-wt-eS7" id="CUf-6Y-kSu"/>
                         </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Post" image="timeline_50" selectedImage="timeline_filled_50" id="Ovr-VQ-XEy"/>
@@ -412,7 +436,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h2K-9w-Y0S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1599" y="1575"/>
+            <point key="canvasLocation" x="1597.5" y="1575"/>
         </scene>
     </scenes>
     <resources>

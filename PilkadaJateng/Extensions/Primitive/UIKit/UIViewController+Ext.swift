@@ -10,6 +10,7 @@ import UIKit
 
 extension UIViewController {
     /// Set title when current VC under TabBarController. TabBarController is under NavigationController
+    /// Call viewWillAppear
     func setTitle(_ title: String) {
         tabBarController?.title = title
     }

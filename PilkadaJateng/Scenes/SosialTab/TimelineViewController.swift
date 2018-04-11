@@ -16,10 +16,9 @@ class TimelineViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setTitle("Timeline")
-        
         _timelineService.delegate = self
         _setupCollectionView()
+        _setupNewPostButton()
     }
     
     private let _timelineService = TimelineService()
@@ -33,18 +32,16 @@ class TimelineViewController: UIViewController {
             
             self.viewOutlets.collectionView.reloadData()
         }
-        
-        setupTabBarControllerNavigationItem { [unowned self](navItem) in
-            navItem?.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "add_50"),
-                                                          style: .plain,
-                                                          target: self,
-                                                          action: #selector(self.pickImage))
-        }
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         _timelineService.endListening()
+    }
+    
+    func _setupNewPostButton() {
+        let btn = viewOutlets.newPost!
+        btn.addTarget(self, action: #selector(pickImage), for: .touchUpInside)
     }
     
     
@@ -114,6 +111,7 @@ fileprivate extension Selector {
 
 class TimelineView: UIView {
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var newPost: UIButton!
 }
 
 extension TimelineViewController: UICollectionViewDataSource {
