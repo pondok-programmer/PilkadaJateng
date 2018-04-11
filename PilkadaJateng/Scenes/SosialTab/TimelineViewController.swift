@@ -106,13 +106,6 @@ class TimelineViewController: UIViewController {
         let nav = UINavigationController(rootViewController: vc)
         present(nav, animated: true, completion: nil)
     }
-    
-    func showError(title: String?, message: String? = nil) {
-        let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let cancel = UIAlertAction(title: "Batal", style: .cancel, handler: nil)
-        alertVC.addAction(cancel)
-        present(alertVC, animated: true, completion: nil)
-    }
 }
 
 fileprivate extension Selector {

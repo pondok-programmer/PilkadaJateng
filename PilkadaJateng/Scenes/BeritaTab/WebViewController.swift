@@ -8,6 +8,7 @@
 
 import UIKit
 import WebKit
+import PKHUD
 
 class WebViewController: UIViewController {
     var webView: WKWebView!
@@ -16,7 +17,7 @@ class WebViewController: UIViewController {
     override func loadView() {
         let webConfiguration = WKWebViewConfiguration()
         webView = WKWebView(frame: .zero, configuration: webConfiguration)
-        webView.uiDelegate = self
+        webView.navigationDelegate = self
         view = webView
     }
     
@@ -33,6 +34,18 @@ class WebViewController: UIViewController {
     }
 }
 
-extension WebViewController: WKUIDelegate {
+extension WebViewController: WKNavigationDelegate {
+    func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
+        HUD.show(.labeledProgress(title: "Memuat halaman...", subtitle: nil))
+    }
     
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        HUD.show(.labeledSuccess(title: "Sukses", subtitle: nil))
+        HUD.hide()
+    }
+    
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        HUD.show(.labeledError(title: "Error", subtitle: "\(error.localizedDescription)"))
+        HUD.hide()
+    }
 }

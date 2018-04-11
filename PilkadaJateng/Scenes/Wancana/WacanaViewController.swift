@@ -81,9 +81,8 @@ extension WacanaViewController: UICollectionViewDataSource {
 
 extension WacanaViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let daftarMateri = _data[indexPath.row].daftarMateri
         let vc = DaftarMateriViewController(nibName: "DaftarMateriViewController", bundle: nil)
-        vc.daftarMateri = daftarMateri
+        vc.materiWacana = _data[indexPath.row]
         show(vc, sender: nil)
     }
 }

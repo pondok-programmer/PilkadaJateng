@@ -38,6 +38,7 @@
 		EF5CB6DB207DE19B00AA5D9D /* MateriViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5CB6DA207DE19B00AA5D9D /* MateriViewController.swift */; };
 		EF5CB6DD207DE4B700AA5D9D /* DaftarMateriViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF5CB6DC207DE4B700AA5D9D /* DaftarMateriViewController.xib */; };
 		EF5CB6DF207DE52B00AA5D9D /* MateriViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF5CB6DE207DE52B00AA5D9D /* MateriViewController.xib */; };
+		EF5CB6E1207DEE8400AA5D9D /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF5CB6E0207DEE8400AA5D9D /* WebViewController.xib */; };
 		EF5F8F7F207B6192009FDB7E /* PJAnggaran.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F8F7E207B6192009FDB7E /* PJAnggaran.swift */; };
 		EF5F8F81207B61A3009FDB7E /* PJProfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F8F80207B61A3009FDB7E /* PJProfil.swift */; };
 		EF65D5AD2074AFFF00C52D21 /* CommentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF65D5AC2074AFFF00C52D21 /* CommentService.swift */; };
@@ -192,6 +193,7 @@
 		EF5CB6DA207DE19B00AA5D9D /* MateriViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MateriViewController.swift; sourceTree = "<group>"; };
 		EF5CB6DC207DE4B700AA5D9D /* DaftarMateriViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DaftarMateriViewController.xib; sourceTree = "<group>"; };
 		EF5CB6DE207DE52B00AA5D9D /* MateriViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MateriViewController.xib; sourceTree = "<group>"; };
+		EF5CB6E0207DEE8400AA5D9D /* WebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
 		EF5F8F7E207B6192009FDB7E /* PJAnggaran.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PJAnggaran.swift; sourceTree = "<group>"; };
 		EF5F8F80207B61A3009FDB7E /* PJProfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PJProfil.swift; sourceTree = "<group>"; };
 		EF65D5AC2074AFFF00C52D21 /* CommentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentService.swift; sourceTree = "<group>"; };
@@ -523,6 +525,7 @@
 				EF65D5B22074CDC100C52D21 /* CommentViewController.xib */,
 				EF5CB6DC207DE4B700AA5D9D /* DaftarMateriViewController.xib */,
 				EF5CB6DE207DE52B00AA5D9D /* MateriViewController.xib */,
+				EF5CB6E0207DEE8400AA5D9D /* WebViewController.xib */,
 			);
 			path = XIBs;
 			sourceTree = "<group>";
@@ -897,6 +900,7 @@
 				EF957B3E2068D8EB000E2098 /* LHKPNCollectionViewCell.xib in Resources */,
 				EFEF12AA20672103000A94CE /* LaunchScreen.storyboard in Resources */,
 				EF5CB6DF207DE52B00AA5D9D /* MateriViewController.xib in Resources */,
+				EF5CB6E1207DEE8400AA5D9D /* WebViewController.xib in Resources */,
 				EF98999F206A4A07007E7DA9 /* ChatViewController.xib in Resources */,
 				EF98997B2069DA00007E7DA9 /* BeritaTableViewCell.xib in Resources */,
 				EFEF12D620672E53000A94CE /* InformasiCalon.storyboard in Resources */,

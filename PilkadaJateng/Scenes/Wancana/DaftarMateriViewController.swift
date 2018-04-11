@@ -9,7 +9,11 @@
 import UIKit
 
 class DaftarMateriViewController: UIPageViewController {
-    var daftarMateri: [DaftarMateri] = []
+    private var daftarMateri: [DaftarMateri] {
+        return materiWacana.daftarMateri
+    }
+    
+    var materiWacana: MateriWacana!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +25,31 @@ class DaftarMateriViewController: UIPageViewController {
                                direction: .forward,
                                animated: true,
                                completion: nil)
+        }
+        
+        setupBarButtonItem()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        title = materiWacana.judul
+    }
+    
+    func setupBarButtonItem() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "open_link"),
+                                                            style: .plain,
+                                                            target: self,
+                                                            action: #selector(openWebLink))
+    }
+    
+    @objc func openWebLink() {
+        if let _ = URL(string: materiWacana.sumberUrl) {
+            let vc = WebViewController(nibName: "WebViewController", bundle: nil)
+            vc.urlString = materiWacana.sumberUrl
+            show(vc, sender: nil)
+        } else {
+            showError(title: "URL Tidak Sah", message: "Tidak dapat membuka situs dengan alamat \(materiWacana.sumberUrl)")
         }
     }
     
