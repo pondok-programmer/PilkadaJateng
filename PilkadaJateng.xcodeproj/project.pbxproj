@@ -10,6 +10,8 @@
 		057C480F4E312CC69FE26442 /* Pods_PilkadaJatengTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86F697DB3F1842B0F328077F /* Pods_PilkadaJatengTests.framework */; };
 		073AF81C62B419A96CB26B3A /* Pods_PilkadaJatengUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D918A481CFB013ED5C3E121E /* Pods_PilkadaJatengUITests.framework */; };
 		8046A59205DFA8ADD6EEF7D9 /* Pods_PilkadaJateng.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF09DA17D0668593C8BDE728 /* Pods_PilkadaJateng.framework */; };
+		EF00C46F207F4708008EC26D /* ProfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF00C46D207F4708008EC26D /* ProfilViewController.swift */; };
+		EF00C470207F4708008EC26D /* ProfilViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF00C46E207F4708008EC26D /* ProfilViewController.xib */; };
 		EF508C9A207B164900726589 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508C99207B164900726589 /* MainTabBarController.swift */; };
 		EF508C9C207B32BB00726589 /* PJTahapanPilkada.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508C9B207B32BB00726589 /* PJTahapanPilkada.swift */; };
 		EF5803812071C85000C8E5E5 /* MateriWacana.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5803802071C85000C8E5E5 /* MateriWacana.swift */; };
@@ -165,6 +167,8 @@
 		DF09DA17D0668593C8BDE728 /* Pods_PilkadaJateng.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PilkadaJateng.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0AC20D403F1259AECA2D926 /* Pods-PilkadaJatengTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PilkadaJatengTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PilkadaJatengTests/Pods-PilkadaJatengTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EC74C13A84C352229226CACA /* Pods-PilkadaJatengTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PilkadaJatengTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PilkadaJatengTests/Pods-PilkadaJatengTests.release.xcconfig"; sourceTree = "<group>"; };
+		EF00C46D207F4708008EC26D /* ProfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilViewController.swift; sourceTree = "<group>"; };
+		EF00C46E207F4708008EC26D /* ProfilViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfilViewController.xib; sourceTree = "<group>"; };
 		EF508C99207B164900726589 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		EF508C9B207B32BB00726589 /* PJTahapanPilkada.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PJTahapanPilkada.swift; sourceTree = "<group>"; };
 		EF5803802071C85000C8E5E5 /* MateriWacana.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MateriWacana.swift; sourceTree = "<group>"; };
@@ -526,6 +530,8 @@
 				EF5CB6DC207DE4B700AA5D9D /* DaftarMateriViewController.xib */,
 				EF5CB6DE207DE52B00AA5D9D /* MateriViewController.xib */,
 				EF5CB6E0207DEE8400AA5D9D /* WebViewController.xib */,
+				EF00C46D207F4708008EC26D /* ProfilViewController.swift */,
+				EF00C46E207F4708008EC26D /* ProfilViewController.xib */,
 			);
 			path = XIBs;
 			sourceTree = "<group>";
@@ -936,6 +942,7 @@
 				EFB79AB4207B0C07001B143B /* dana_paslon_2018.json in Resources */,
 				EF9B677E2067CF460057215B /* PartisipasiPilkadaCollectionViewCell.xib in Resources */,
 				EF5CB6DD207DE4B700AA5D9D /* DaftarMateriViewController.xib in Resources */,
+				EF00C470207F4708008EC26D /* ProfilViewController.xib in Resources */,
 				EF7F6E80206F74C2002B2641 /* materi_wacana.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1133,6 +1140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF00C46F207F4708008EC26D /* ProfilViewController.swift in Sources */,
 				EF9B675420677F450057215B /* APIUtils.swift in Sources */,
 				EF9B679B206899BF0057215B /* ProfilCalon+Ext.swift in Sources */,
 				EF584445206B3C0600BDBB4C /* Chat+MessagesCellDelegate.swift in Sources */,
