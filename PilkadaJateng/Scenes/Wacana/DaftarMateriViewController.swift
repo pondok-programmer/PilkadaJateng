@@ -56,14 +56,15 @@ class DaftarMateriViewController: UIPageViewController {
     }
     
     private(set) lazy var orderedViewControllers: [UIViewController] = {
-        return daftarMateri.map({ [unowned self] (materi) -> UIViewController in
-            return self.newMateriViewController(materi)
+        return daftarMateri.enumerated().map({ (materi) -> UIViewController in
+            return self.newMateriViewController(materi.element, number: materi.offset)
         })
     }()
     
-    private func newMateriViewController(_ materi: DaftarMateri) -> UIViewController {
+    private func newMateriViewController(_ materi: DaftarMateri, number: Int) -> UIViewController {
         let vc = MateriViewController(nibName: "MateriViewController", bundle: nil)
         vc.materi = materi
+        vc.number = number
         return vc
     }
     

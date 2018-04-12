@@ -507,14 +507,14 @@
 			path = SosialTab;
 			sourceTree = "<group>";
 		};
-		EF98998F206A27E1007E7DA9 /* Wancana */ = {
+		EF98998F206A27E1007E7DA9 /* Wacana */ = {
 			isa = PBXGroup;
 			children = (
 				EF98998D206A27CE007E7DA9 /* WacanaViewController.swift */,
 				EF866426207DAA7C00886A61 /* DaftarMateriViewController.swift */,
 				EF5CB6DA207DE19B00AA5D9D /* MateriViewController.swift */,
 			);
-			path = Wancana;
+			path = Wacana;
 			sourceTree = "<group>";
 		};
 		EF9899A2206A4A5B007E7DA9 /* XIBs */ = {
@@ -736,7 +736,7 @@
 				EF9899752069D90C007E7DA9 /* InformasiTab */,
 				EF989989206A1A93007E7DA9 /* BeritaTab */,
 				EF98998C206A2561007E7DA9 /* SosialTab */,
-				EF98998F206A27E1007E7DA9 /* Wancana */,
+				EF98998F206A27E1007E7DA9 /* Wacana */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";

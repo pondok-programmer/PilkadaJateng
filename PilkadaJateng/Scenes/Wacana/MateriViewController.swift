@@ -14,13 +14,16 @@ class MateriViewController: UIViewController {
     }
     
     var materi: DaftarMateri!
+    var number: Int = 0
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
+    @IBOutlet weak var numberLabel: UILabel!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         titleLabel.text = materi.title
         contentLabel.text = materi.content
+        numberLabel.text = "- \(number) -"
     }
 }
