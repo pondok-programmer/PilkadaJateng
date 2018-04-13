@@ -154,7 +154,7 @@
                     <connections>
                         <outlet property="viewOutlets" destination="kqg-ij-lXR" id="Zbx-Ee-MoZ"/>
                         <segue destination="L0X-FA-B6e" kind="presentation" identifier="InformasiCalonViewController" id="3j9-Hi-0fk"/>
-                        <segue destination="hbl-a4-ksm" kind="presentation" identifier="InformasiPilkadaViewController" id="jnk-dQ-KYI"/>
+                        <segue destination="Zmq-1l-G1Q" kind="presentation" identifier="InformasiPilkadaViewController" id="jnk-dQ-KYI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EkL-y6-Yej" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -308,16 +308,16 @@
             </objects>
             <point key="canvasLocation" x="1436" y="285"/>
         </scene>
-        <!--Profil View Controller-->
+        <!--Profil Paslon-->
         <scene sceneID="2uA-NB-YJl">
             <objects>
                 <viewController id="hbl-a4-ksm" customClass="ProfilViewController" customModule="PilkadaJateng" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KFP-zd-vr2">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="1500"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="1436"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ElP-bT-dIc">
-                                <rect key="frame" x="0.0" y="20" width="320" height="1480"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="1436"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RWS-d7-D8i">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="1450"/>
@@ -397,11 +397,10 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <outlet property="genderLabel" destination="Yfi-Aa-BEm" id="05z-8N-ovD"/>
-                                                    <outlet property="pekerjaanLabel" destination="R9R-CL-eSi" id="7cQ-Zf-8yg"/>
-                                                    <outlet property="statusLabel" destination="FPB-ee-8K2" id="UAp-Y7-OK2"/>
-                                                    <outlet property="tanggalLahirLabel" destination="aoh-6j-aI4" id="IDj-e3-hOe"/>
-                                                    <outlet property="tempatLahirLabel" destination="YFs-ex-Ctq" id="mnL-nu-3LF"/>
+                                                    <outlet property="image" destination="ec7-uO-g8o" id="Nk1-gU-v3q"/>
+                                                    <outlet property="namaLabel" destination="R9R-CL-eSi" id="BA1-ua-QQ6"/>
+                                                    <outlet property="pekerjaanLabel" destination="Yfi-Aa-BEm" id="Jiz-fn-cUs"/>
+                                                    <outlet property="tempatTanggalLahirLabel" destination="aoh-6j-aI4" id="RWN-gZ-QPm"/>
                                                 </connections>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WAKIL KEPALA DAERAH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g95-4J-bfA">
@@ -480,12 +479,10 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <outlet property="genderLabel" destination="dcm-e1-NAs" id="YvI-dk-LXe"/>
-                                                    <outlet property="namaLabel" destination="Uu8-kF-x7D" id="jSL-4j-O6C"/>
-                                                    <outlet property="pekerjaanLabel" destination="Uu8-kF-x7D" id="FYw-5f-6wc"/>
-                                                    <outlet property="statusLabel" destination="b2A-KI-XFu" id="SaV-iU-POd"/>
-                                                    <outlet property="tanggalLahirLabel" destination="s2C-dy-b9C" id="iqx-to-hiX"/>
-                                                    <outlet property="tempatLahirLabel" destination="0c3-uN-q0s" id="aim-Ra-Zyy"/>
+                                                    <outlet property="image" destination="UdM-yO-1ur" id="6s4-xp-p5o"/>
+                                                    <outlet property="namaLabel" destination="Uu8-kF-x7D" id="OQx-ci-c7O"/>
+                                                    <outlet property="pekerjaanLabel" destination="dcm-e1-NAs" id="jPa-Hx-h4K"/>
+                                                    <outlet property="tempatTanggalLahirLabel" destination="s2C-dy-b9C" id="8kB-wb-9g1"/>
                                                 </connections>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MEDIA SOSIAL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLf-vU-zen">
@@ -503,16 +500,17 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Utu-dJ-tLc" customClass="CardView" customModule="PilkadaJateng" customModuleProvider="target">
                                                         <rect key="frame" x="8" y="8" width="90.5" height="84"/>
                                                         <subviews>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook_color" translatesAutoresizingMaskIntoConstraints="NO" id="YAF-03-znV">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yRD-mh-mMb">
                                                                 <rect key="frame" x="0.0" y="0.0" width="90.5" height="84"/>
-                                                            </imageView>
+                                                                <state key="normal" image="facebook_color"/>
+                                                            </button>
                                                         </subviews>
                                                         <color key="backgroundColor" red="1" green="0.87390227718897795" blue="0.55416603268942488" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="trailing" secondItem="YAF-03-znV" secondAttribute="trailing" id="TIr-yJ-y95"/>
-                                                            <constraint firstItem="YAF-03-znV" firstAttribute="top" secondItem="Utu-dJ-tLc" secondAttribute="top" id="YBb-5s-jNV"/>
-                                                            <constraint firstAttribute="bottom" secondItem="YAF-03-znV" secondAttribute="bottom" id="jRc-B5-cK5"/>
-                                                            <constraint firstItem="YAF-03-znV" firstAttribute="leading" secondItem="Utu-dJ-tLc" secondAttribute="leading" id="leW-Vq-8s6"/>
+                                                            <constraint firstItem="yRD-mh-mMb" firstAttribute="leading" secondItem="Utu-dJ-tLc" secondAttribute="leading" id="CR0-lK-DKJ"/>
+                                                            <constraint firstAttribute="trailing" secondItem="yRD-mh-mMb" secondAttribute="trailing" id="OkU-sN-qml"/>
+                                                            <constraint firstItem="yRD-mh-mMb" firstAttribute="top" secondItem="Utu-dJ-tLc" secondAttribute="top" id="f7x-4X-jzv"/>
+                                                            <constraint firstAttribute="bottom" secondItem="yRD-mh-mMb" secondAttribute="bottom" id="pd7-LJ-ZhC"/>
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -523,16 +521,17 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j10-7n-SUC" customClass="CardView" customModule="PilkadaJateng" customModuleProvider="target">
                                                         <rect key="frame" x="106.5" y="8" width="91" height="84"/>
                                                         <subviews>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="instagram_color" translatesAutoresizingMaskIntoConstraints="NO" id="XPy-Im-YJe">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MML-Dp-79M">
                                                                 <rect key="frame" x="0.0" y="0.0" width="91" height="84"/>
-                                                            </imageView>
+                                                                <state key="normal" image="instagram_color"/>
+                                                            </button>
                                                         </subviews>
                                                         <color key="backgroundColor" red="1" green="0.87390227718897795" blue="0.55416603268942488" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
-                                                            <constraint firstItem="XPy-Im-YJe" firstAttribute="leading" secondItem="j10-7n-SUC" secondAttribute="leading" id="6bd-g3-Zuj"/>
-                                                            <constraint firstAttribute="trailing" secondItem="XPy-Im-YJe" secondAttribute="trailing" id="8zF-jB-tfU"/>
-                                                            <constraint firstItem="XPy-Im-YJe" firstAttribute="top" secondItem="j10-7n-SUC" secondAttribute="top" id="Ry2-0A-p16"/>
-                                                            <constraint firstAttribute="bottom" secondItem="XPy-Im-YJe" secondAttribute="bottom" id="fqg-xh-M83"/>
+                                                            <constraint firstItem="MML-Dp-79M" firstAttribute="leading" secondItem="j10-7n-SUC" secondAttribute="leading" id="0pw-GK-VMJ"/>
+                                                            <constraint firstAttribute="trailing" secondItem="MML-Dp-79M" secondAttribute="trailing" id="Ufj-42-7tb"/>
+                                                            <constraint firstAttribute="bottom" secondItem="MML-Dp-79M" secondAttribute="bottom" id="m2b-zt-4SV"/>
+                                                            <constraint firstItem="MML-Dp-79M" firstAttribute="top" secondItem="j10-7n-SUC" secondAttribute="top" id="p5s-iQ-36L"/>
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -543,16 +542,17 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tGJ-Kk-RB7" customClass="CardView" customModule="PilkadaJateng" customModuleProvider="target">
                                                         <rect key="frame" x="205.5" y="8" width="90.5" height="84"/>
                                                         <subviews>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twitter_color" translatesAutoresizingMaskIntoConstraints="NO" id="8lg-8x-hPo">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5N-Cd-vbi">
                                                                 <rect key="frame" x="0.0" y="0.0" width="90.5" height="84"/>
-                                                            </imageView>
+                                                                <state key="normal" image="twitter_color"/>
+                                                            </button>
                                                         </subviews>
                                                         <color key="backgroundColor" red="1" green="0.87390227718897795" blue="0.55416603268942488" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="trailing" secondItem="8lg-8x-hPo" secondAttribute="trailing" id="6TP-0g-JGy"/>
-                                                            <constraint firstItem="8lg-8x-hPo" firstAttribute="leading" secondItem="tGJ-Kk-RB7" secondAttribute="leading" id="9Hk-4o-VPr"/>
-                                                            <constraint firstAttribute="bottom" secondItem="8lg-8x-hPo" secondAttribute="bottom" id="jKA-7x-krh"/>
-                                                            <constraint firstItem="8lg-8x-hPo" firstAttribute="top" secondItem="tGJ-Kk-RB7" secondAttribute="top" id="nUV-5L-bLY"/>
+                                                            <constraint firstAttribute="bottom" secondItem="R5N-Cd-vbi" secondAttribute="bottom" id="D4n-wt-l2e"/>
+                                                            <constraint firstItem="R5N-Cd-vbi" firstAttribute="leading" secondItem="tGJ-Kk-RB7" secondAttribute="leading" id="M3K-b9-cDV"/>
+                                                            <constraint firstItem="R5N-Cd-vbi" firstAttribute="top" secondItem="tGJ-Kk-RB7" secondAttribute="top" id="gQH-ph-N7Y"/>
+                                                            <constraint firstAttribute="trailing" secondItem="R5N-Cd-vbi" secondAttribute="trailing" id="x9J-Kc-9K5"/>
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -582,6 +582,11 @@
                                                         <real key="value" value="20"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outlet property="facebookButton" destination="yRD-mh-mMb" id="l6b-GA-NHi"/>
+                                                    <outlet property="instagramButton" destination="MML-Dp-79M" id="bhB-Oc-TuW"/>
+                                                    <outlet property="twitterButton" destination="R5N-Cd-vbi" id="6ij-ru-3Ol"/>
+                                                </connections>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PROGRAM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EaX-bt-t9Z">
                                                 <rect key="frame" x="8" y="698" width="304" height="30"/>
@@ -722,40 +727,70 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="suj-EO-onB" customClass="_PetaPolitikView" customModule="PilkadaJateng" customModuleProvider="target">
                                                 <rect key="frame" x="8" y="1082" width="304" height="348"/>
                                                 <subviews>
-                                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="LCZ-Sp-Z5W">
-                                                        <rect key="frame" x="8" y="124" width="288" height="216"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="LCZ-Sp-Z5W">
+                                                        <rect key="frame" x="8" y="122" width="288" height="218"/>
                                                     </mapView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8NN-Ck-Ygl">
-                                                        <rect key="frame" x="8" y="8" width="42" height="21"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Petahana : ✓" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8NN-Ck-Ygl">
+                                                        <rect key="frame" x="8" y="8" width="99.5" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9OF-aY-N5p">
-                                                        <rect key="frame" x="8" y="37" width="42" height="21"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jumlah Dukungan : 10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9OF-aY-N5p">
+                                                        <rect key="frame" x="8" y="36.5" width="169" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jjr-DX-T1G">
-                                                        <rect key="frame" x="8" y="66" width="42" height="21"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wilayah : Jawa Tengah" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jjr-DX-T1G">
+                                                        <rect key="frame" x="8" y="65" width="173" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e6A-YJ-Vuy">
-                                                        <rect key="frame" x="8" y="95" width="42" height="21"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Partai Pendukung : P3K, P@UD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e6A-YJ-Vuy">
+                                                        <rect key="frame" x="8" y="93.5" width="239" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ILG-s3-Ptn">
+                                                        <rect key="frame" x="271" y="8" width="25" height="25"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="25" id="LJ0-D9-3Ge"/>
+                                                            <constraint firstAttribute="height" constant="25" id="SiM-tD-Imr"/>
+                                                        </constraints>
+                                                        <state key="normal" image="refresh_50"/>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" red="1" green="0.93829417665231585" blue="0.44727846762076651" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="ILG-s3-Ptn" firstAttribute="trailing" secondItem="suj-EO-onB" secondAttribute="trailingMargin" id="5ic-sP-HK2"/>
+                                                    <constraint firstAttribute="trailing" secondItem="e6A-YJ-Vuy" secondAttribute="trailing" priority="250" constant="57" id="6m9-LG-GOP"/>
+                                                    <constraint firstItem="Jjr-DX-T1G" firstAttribute="height" secondItem="8NN-Ck-Ygl" secondAttribute="height" id="6ux-GT-zOx"/>
+                                                    <constraint firstItem="LCZ-Sp-Z5W" firstAttribute="leading" secondItem="e6A-YJ-Vuy" secondAttribute="leading" id="BcD-a7-mEx"/>
+                                                    <constraint firstItem="8NN-Ck-Ygl" firstAttribute="top" secondItem="suj-EO-onB" secondAttribute="top" constant="8" id="CMQ-Rb-Xid"/>
+                                                    <constraint firstItem="e6A-YJ-Vuy" firstAttribute="top" secondItem="Jjr-DX-T1G" secondAttribute="bottom" constant="8" id="DRi-Sx-fbE"/>
+                                                    <constraint firstAttribute="trailing" secondItem="9OF-aY-N5p" secondAttribute="trailing" priority="250" constant="127" id="Gfb-1R-0oP"/>
+                                                    <constraint firstItem="ILG-s3-Ptn" firstAttribute="leading" secondItem="8NN-Ck-Ygl" secondAttribute="trailing" priority="250" constant="163.5" id="IRn-db-WUq"/>
+                                                    <constraint firstItem="ILG-s3-Ptn" firstAttribute="top" secondItem="suj-EO-onB" secondAttribute="topMargin" id="JyB-Qe-omU"/>
+                                                    <constraint firstItem="LCZ-Sp-Z5W" firstAttribute="top" secondItem="e6A-YJ-Vuy" secondAttribute="bottom" constant="8" symbolic="YES" id="K1D-H0-gha"/>
+                                                    <constraint firstItem="LCZ-Sp-Z5W" firstAttribute="trailing" secondItem="ILG-s3-Ptn" secondAttribute="trailing" id="NRv-eF-V6S"/>
+                                                    <constraint firstItem="LCZ-Sp-Z5W" firstAttribute="leading" secondItem="8NN-Ck-Ygl" secondAttribute="leading" id="OoA-56-0Ax"/>
+                                                    <constraint firstItem="9OF-aY-N5p" firstAttribute="top" secondItem="8NN-Ck-Ygl" secondAttribute="bottom" constant="8" id="TYb-t1-9uu"/>
+                                                    <constraint firstItem="8NN-Ck-Ygl" firstAttribute="leading" secondItem="suj-EO-onB" secondAttribute="leading" constant="8" id="VWW-aY-NOf"/>
+                                                    <constraint firstItem="e6A-YJ-Vuy" firstAttribute="height" secondItem="8NN-Ck-Ygl" secondAttribute="height" id="a6g-T9-F78"/>
+                                                    <constraint firstItem="e6A-YJ-Vuy" firstAttribute="leading" secondItem="suj-EO-onB" secondAttribute="leading" constant="8" id="bbZ-Da-NcT"/>
+                                                    <constraint firstItem="LCZ-Sp-Z5W" firstAttribute="leading" secondItem="suj-EO-onB" secondAttribute="leadingMargin" id="cDO-OD-qTN"/>
+                                                    <constraint firstItem="LCZ-Sp-Z5W" firstAttribute="bottom" secondItem="suj-EO-onB" secondAttribute="bottomMargin" id="g9d-l6-FIv"/>
+                                                    <constraint firstItem="Jjr-DX-T1G" firstAttribute="leading" secondItem="suj-EO-onB" secondAttribute="leading" constant="8" id="hHM-XU-Ia0"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Jjr-DX-T1G" secondAttribute="trailing" priority="250" constant="123" id="hJe-3M-J9r"/>
+                                                    <constraint firstItem="9OF-aY-N5p" firstAttribute="height" secondItem="8NN-Ck-Ygl" secondAttribute="height" id="mCo-pu-tF6"/>
+                                                    <constraint firstItem="LCZ-Sp-Z5W" firstAttribute="leading" secondItem="Jjr-DX-T1G" secondAttribute="leading" id="mFN-5j-Egs"/>
+                                                    <constraint firstItem="9OF-aY-N5p" firstAttribute="leading" secondItem="suj-EO-onB" secondAttribute="leading" constant="8" id="nbs-IX-ZQp"/>
+                                                    <constraint firstItem="Jjr-DX-T1G" firstAttribute="top" secondItem="9OF-aY-N5p" secondAttribute="bottom" constant="8" id="wHO-5V-ipV"/>
+                                                    <constraint firstItem="LCZ-Sp-Z5W" firstAttribute="leading" secondItem="9OF-aY-N5p" secondAttribute="leading" id="x1J-I6-wQH"/>
+                                                </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                         <real key="value" value="20"/>
@@ -766,6 +801,7 @@
                                                     <outlet property="jumlahDukungan" destination="9OF-aY-N5p" id="dGd-kO-WLt"/>
                                                     <outlet property="mapView" destination="LCZ-Sp-Z5W" id="Xgm-Se-M24"/>
                                                     <outlet property="partaiPendukung" destination="e6A-YJ-Vuy" id="9ki-ER-5b1"/>
+                                                    <outlet property="resetMapButton" destination="ILG-s3-Ptn" id="F90-xD-dTF"/>
                                                     <outlet property="wilayah" destination="Jjr-DX-T1G" id="pKV-lR-8Bh"/>
                                                 </connections>
                                             </view>
@@ -825,14 +861,21 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="C1I-7U-3f0"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Profil Paslon" id="VK3-P7-hGu">
+                        <barButtonItem key="rightBarButtonItem" title="Selesai" id="owf-5i-kZy"/>
+                    </navigationItem>
                     <size key="freeformSize" width="320" height="1500"/>
                     <connections>
+                        <outlet property="infoKepalaDaerah" destination="nUN-sD-cRg" id="dVD-a8-iQR"/>
+                        <outlet property="infoWakilKepalaDaerah" destination="e08-Z1-f0V" id="4kh-xL-5B6"/>
+                        <outlet property="mediaSosial" destination="gTi-bf-MpR" id="apl-4n-mSF"/>
                         <outlet property="petaPolitik" destination="suj-EO-onB" id="UVl-SN-Jwt"/>
+                        <outlet property="program" destination="AMk-U9-qed" id="qer-0B-IuW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lya-rs-G6c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-530.625" y="2912.5"/>
+            <point key="canvasLocation" x="-698" y="4209"/>
         </scene>
         <!--INFORMASI CALON-->
         <scene sceneID="pOz-Wd-YRd">
@@ -840,7 +883,7 @@
                 <viewControllerPlaceholder storyboardName="InformasiCalon" id="L0X-FA-B6e" userLabel="INFORMASI CALON" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A6k-8a-Ezw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-13" y="2134"/>
+            <point key="canvasLocation" x="384.375" y="2133.75"/>
         </scene>
         <!--WEB VIEW-->
         <scene sceneID="cDI-7g-1u5">
@@ -856,7 +899,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iwa-AK-Bn1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="596" y="2281"/>
+            <point key="canvasLocation" x="991.875" y="2280"/>
         </scene>
         <!--CHANNEL-->
         <scene sceneID="XBh-VE-V6S">
@@ -963,6 +1006,24 @@
             </objects>
             <point key="canvasLocation" x="1597.5" y="1575"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="W8g-M4-7Fc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Zmq-1l-G1Q" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="pHN-fc-Fcc">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hbl-a4-ksm" kind="relationship" relationship="rootViewController" id="ugI-63-bP1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ahl-T2-g9H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-698" y="2769"/>
+        </scene>
     </scenes>
     <resources>
         <image name="calendar_color_50" width="50" height="50"/>
@@ -976,6 +1037,7 @@
         <image name="info_filled_50" width="25" height="25"/>
         <image name="innovation_color_50" width="50" height="50"/>
         <image name="instagram_color" width="480" height="480"/>
+        <image name="refresh_50" width="25" height="25"/>
         <image name="taj_yasin" width="283" height="388"/>
         <image name="timeline_50" width="25" height="25"/>
         <image name="timeline_filled_50" width="25" height="25"/>
