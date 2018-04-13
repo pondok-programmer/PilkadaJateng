@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 
 /*
 struct PJProfil {
@@ -45,18 +46,31 @@ class ProfilViewController: UIViewController {
     @IBOutlet weak var infoKepalaDaerah: _InfoOrangView!
     @IBOutlet weak var infoWakilKepalaDaerah: _InfoOrangView!
     @IBOutlet weak var mediaSosial: _MediaSosialView!
-    @IBOutlet weak var petaPolitik: _PetaPolitikView!
     @IBOutlet weak var program: _ProgramView!
+    @IBOutlet weak var petaPolitik: _PetaPolitikView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        _setupMapKit()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    let initialLocation = CLLocation(latitude: -7.150975, longitude: 110.1402594) // Jawa Tengah
+    let northEastLocation = CLLocation(latitude: -5.725698, longitude: 111.6914889)
+    let southWestLocation = CLLocation(latitude: -8.2116361, longitude: 108.555502)
+    private func _setupMapKit() {
+        centerMapOnLocation(location: initialLocation)
+        let northDistance = northEastLocation.distance(from: initialLocation)
+        let southDistance = southWestLocation.distance(from: initialLocation)
+        print("n: \(northDistance) s: \(southDistance)")
+    }
+    
+    let regionRadius: CLLocationDistance = 1000
+    private func centerMapOnLocation(location: CLLocation) {
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
+                                                                  233002.881153669,
+                                                                  210546.047670233)
+        petaPolitik.mapView.setRegion(coordinateRegion, animated: true)
     }
 }
 
@@ -78,16 +92,17 @@ class _MediaSosialView: CardView {
     @IBOutlet weak var twImage: UIImageView!
 }
 
-class _PetaPolitikView: CardView {
-    @IBOutlet weak var jumlahDukungan: UILabel!
-    @IBOutlet weak var partaiPendukung: UICollectionView!
-    @IBOutlet weak var wilayah: UILabel!
-    @IBOutlet weak var isPetahana: UILabel!
-}
-
 class _ProgramView: CardView {
     @IBOutlet weak var visi: UILabel!
     @IBOutlet weak var misi: UILabel!
     @IBOutlet weak var program: UILabel!
     @IBOutlet weak var detail: UILabel!
+}
+
+class _PetaPolitikView: CardView {
+    @IBOutlet weak var jumlahDukungan: UILabel!
+    @IBOutlet weak var partaiPendukung: UILabel!
+    @IBOutlet weak var wilayah: UILabel!
+    @IBOutlet weak var isPetahana: UILabel!
+    @IBOutlet weak var mapView: MKMapView!
 }
