@@ -65,6 +65,10 @@ class ProfilViewController: UIViewController {
         performSegue(withIdentifier: "ProgramVC", sender: ("Detail", _profil?.detail))
     }
     
+    @IBAction func selesaiButton(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         _fetchData()

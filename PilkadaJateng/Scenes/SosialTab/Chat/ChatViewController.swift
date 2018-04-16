@@ -14,6 +14,7 @@ class ChatViewController: MessagesViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupMessageViewControllerOnDidLoad()
+        messagesCollectionView.keyboardDismissMode = .interactive
     }
     
     var chatService: ChatService!
@@ -22,7 +23,7 @@ class ChatViewController: MessagesViewController {
         super.viewWillAppear(animated)
         
         chatService.beginListening { [unowned self] in
-            self.messagesCollectionView.reloadDataAndKeepOffset()
+            self.messagesCollectionView.reloadData()
             self.messagesCollectionView.scrollToBottom()
         }
     }
@@ -55,3 +56,9 @@ class ChatViewController: MessagesViewController {
     }
 }
 
+// UIScrollViewDelegate
+extension ChatViewController {
+    func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+        messageInputBar.resignFirstResponder()
+    }
+}

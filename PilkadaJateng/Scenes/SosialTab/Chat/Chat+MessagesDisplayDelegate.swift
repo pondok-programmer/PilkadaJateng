@@ -16,4 +16,8 @@ extension ChatViewController: MessagesDisplayDelegate {
         //        let configurationClosure = { (view: MessageContainerView) in}
         //        return .custom(configurationClosure)
     }
+    
+    func avatarSize(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> CGSize {
+        return CGSize.zero
+    }
 }

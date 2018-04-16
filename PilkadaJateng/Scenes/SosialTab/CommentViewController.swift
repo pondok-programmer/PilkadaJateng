@@ -64,6 +64,7 @@ class CommentViewController: UIViewController {
         if let content = viewOutlets.textField.text,
             !content.isEmpty {
             _commentService.sendComment(content: content, username: Application.shared.user!.name)
+            viewOutlets.textField.text = ""
         }
     }
     

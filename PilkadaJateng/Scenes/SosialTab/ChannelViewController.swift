@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import XLPagerTabStrip
+import PKHUD
 
 class ChannelListViewController: UIViewController {
     @IBOutlet weak var viewOutlets: ChannelListView!
@@ -49,7 +50,31 @@ class ChannelListViewController: UIViewController {
     }
     
     @objc func createChannel() {
-        _channelService.createNew(name: "Channel - \(arc4random() % 15)")
+        let alertVC = UIAlertController(title: "Grup Baru", message: nil, preferredStyle: .alert)
+        alertVC.addTextField { (textField) in
+            textField.placeholder = "Nama Grup"
+        }
+        let cancelAction = UIAlertAction(title: "Batal", style: .cancel, handler: nil)
+        let okAction = UIAlertAction(title: "OK", style: .default) { [unowned self](_) in
+            if let name = alertVC.textFields?[0].text, !name.isEmpty {
+                self._channelService.createNew(name: name)
+                self.hudSuccessAddGroup(withName: name)
+            } else {
+                self._channelService.createNew(name: "Grup Baru")
+                self.hudSuccessAddGroup(withName: "Grup Baru")
+            }
+        }
+        
+        alertVC.addAction(okAction)
+        alertVC.addAction(cancelAction)
+        present(alertVC, animated: true, completion: nil)
+    }
+    
+    func hudSuccessAddGroup(withName name: String) {
+        let pkhudView = PKHUDSuccessView(title: "\(name) Ditambahkan", subtitle: nil)
+        PKHUD.sharedHUD.contentView = pkhudView
+        PKHUD.sharedHUD.show()
+        PKHUD.sharedHUD.hide(afterDelay: 1)
     }
 }
 

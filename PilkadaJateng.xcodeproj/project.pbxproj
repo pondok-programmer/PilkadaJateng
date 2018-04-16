@@ -479,6 +479,7 @@
 				EF5F8F80207B61A3009FDB7E /* PJProfil.swift */,
 				EF6C46F92084425400A3E719 /* VisiViewController.swift */,
 				EF6C46FB2084426800A3E719 /* ProgramViewController.swift */,
+				EF00C46D207F4708008EC26D /* ProfilViewController.swift */,
 			);
 			path = InformasiTab;
 			sourceTree = "<group>";
@@ -536,7 +537,6 @@
 				EF5CB6DC207DE4B700AA5D9D /* DaftarMateriViewController.xib */,
 				EF5CB6DE207DE52B00AA5D9D /* MateriViewController.xib */,
 				EF5CB6E0207DEE8400AA5D9D /* WebViewController.xib */,
-				EF00C46D207F4708008EC26D /* ProfilViewController.swift */,
 				EF00C46E207F4708008EC26D /* ProfilViewController.xib */,
 			);
 			path = XIBs;

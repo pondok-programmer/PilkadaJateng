@@ -12,6 +12,10 @@ import TimelineTableViewCell
 class PJTahapanPilkadaViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
+    @IBAction func selesaiButton(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

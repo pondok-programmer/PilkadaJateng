@@ -317,8 +317,8 @@
                         <outlet property="jamLabel" destination="UrJ-RE-Phh" id="ktt-ep-aCh"/>
                         <outlet property="menitLabel" destination="uFJ-cl-4is" id="xvj-5v-ry0"/>
                         <outlet property="viewOutlets" destination="kqg-ij-lXR" id="Zbx-Ee-MoZ"/>
-                        <segue destination="L0X-FA-B6e" kind="presentation" identifier="InformasiCalonViewController" id="3j9-Hi-0fk"/>
-                        <segue destination="Zmq-1l-G1Q" kind="presentation" identifier="InformasiPilkadaViewController" id="jnk-dQ-KYI"/>
+                        <segue destination="Zmq-1l-G1Q" kind="presentation" identifier="InformasiCalonViewController" id="jnk-dQ-KYI"/>
+                        <segue destination="pD0-DU-zJ5" kind="presentation" identifier="InformasiPilkadaViewController" id="m2Y-Nt-FfH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EkL-y6-Yej" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -334,7 +334,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Dsk-ja-tzJ">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                                <rect key="frame" x="0.0" y="30" width="320" height="337"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="YJn-7s-zF9">
                                     <size key="itemSize" width="50" height="50"/>
@@ -344,20 +344,31 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hA-sg-2DU">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
+                                <color key="backgroundColor" red="0.8690760561276244" green="1" blue="0.49868623035189763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Zna-en-cJy"/>
+                                </constraints>
+                                <state key="normal" title="Tips Baru"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="UlQ-9v-09y" firstAttribute="trailing" secondItem="Dsk-ja-tzJ" secondAttribute="trailing" id="1AO-Wb-8AJ"/>
-                            <constraint firstItem="Dsk-ja-tzJ" firstAttribute="top" secondItem="UlQ-9v-09y" secondAttribute="top" id="9gt-RK-hBB"/>
+                            <constraint firstItem="UlQ-9v-09y" firstAttribute="trailing" secondItem="7hA-sg-2DU" secondAttribute="trailing" id="31z-8Y-pfl"/>
                             <constraint firstItem="UlQ-9v-09y" firstAttribute="bottom" secondItem="Dsk-ja-tzJ" secondAttribute="bottom" id="CSw-wV-ce1"/>
+                            <constraint firstItem="7hA-sg-2DU" firstAttribute="leading" secondItem="UlQ-9v-09y" secondAttribute="leading" id="GSX-vP-9Hr"/>
+                            <constraint firstItem="Dsk-ja-tzJ" firstAttribute="top" secondItem="7hA-sg-2DU" secondAttribute="bottom" id="XLt-ul-13e"/>
                             <constraint firstItem="Dsk-ja-tzJ" firstAttribute="leading" secondItem="UlQ-9v-09y" secondAttribute="leading" id="sUo-h1-VnI"/>
+                            <constraint firstItem="7hA-sg-2DU" firstAttribute="top" secondItem="UlQ-9v-09y" secondAttribute="top" id="x7w-Ou-HzE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UlQ-9v-09y"/>
                         <connections>
                             <outlet property="collectionView" destination="Dsk-ja-tzJ" id="fmT-Hb-JL9"/>
                         </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="wacana_50" selectedImage="wacana_filled_50" id="NDN-Bk-GuI"/>
+                    <tabBarItem key="tabBarItem" title="Tips" image="wacana_50" selectedImage="wacana_filled_50" id="NDN-Bk-GuI"/>
                     <navigationItem key="navigationItem" id="B1s-iK-8uR"/>
                     <connections>
                         <outlet property="viewOutlets" destination="i5R-IP-rfc" id="JAc-x5-pdA"/>
@@ -365,18 +376,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Mv-nE-poy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3356.25" y="1575"/>
+            <point key="canvasLocation" x="2988.75" y="1575"/>
         </scene>
-        <!--Tahapan-->
+        <!--Tahapan Pilkada-->
         <scene sceneID="5Ah-5G-fQw">
             <objects>
                 <viewController id="hiW-Ha-hgA" customClass="PJTahapanPilkadaViewController" customModule="PilkadaJateng" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dtb-W4-fuN">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AfK-du-WXX">
-                                <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
@@ -389,14 +400,21 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nS5-sm-tXd"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Tahapan" id="x2z-7l-XGn"/>
+                    <navigationItem key="navigationItem" title="Tahapan Pilkada" id="Kul-cm-bMR">
+                        <barButtonItem key="leftBarButtonItem" title="Selesai" id="b7i-iL-RiX">
+                            <connections>
+                                <action selector="selesaiButton:" destination="hiW-Ha-hgA" id="W1I-xE-Zd3"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="discussion_50" id="4Xy-GG-Jlf"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="AfK-du-WXX" id="Xag-NV-5Jb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Swf-FJ-eDQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4280.625" y="1591.25"/>
+            <point key="canvasLocation" x="546" y="3571"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HCI-Ri-z86">
@@ -1023,7 +1041,11 @@
                         <viewLayoutGuide key="safeArea" id="C1I-7U-3f0"/>
                     </view>
                     <navigationItem key="navigationItem" title="Profil Paslon" id="VK3-P7-hGu">
-                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="fhE-4e-d4K"/>
+                        <barButtonItem key="leftBarButtonItem" title="Selesai" id="fhE-4e-d4K">
+                            <connections>
+                                <action selector="selesaiButton:" destination="hbl-a4-ksm" id="4Np-p0-Sag"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="discussion_50" id="owf-5i-kZy"/>
                     </navigationItem>
                     <size key="freeformSize" width="320" height="1500"/>
@@ -1180,7 +1202,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sWy-w9-A45" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2625" y="1575"/>
+            <point key="canvasLocation" x="1920" y="1575"/>
         </scene>
         <!--POST-->
         <scene sceneID="4ga-qd-etW">
@@ -1192,11 +1214,13 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9l-wt-eS7">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.45901656333609753" blue="0.40234888616958586" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.85663364003498366" green="0.50980003059285772" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="RI8-T2-gO0"/>
                                 </constraints>
-                                <state key="normal" title="Posting Baru"/>
+                                <state key="normal" title="Posting Baru">
+                                    <color key="titleColor" red="0.019564308226108551" green="0.4810602068901062" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hGe-Hx-b18">
                                 <rect key="frame" x="0.0" y="30" width="320" height="293"/>
@@ -1237,7 +1261,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h2K-9w-Y0S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1597.5" y="1575"/>
+            <point key="canvasLocation" x="834" y="1575"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="W8g-M4-7Fc">
@@ -1292,6 +1316,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O0P-wH-njm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="260.625" y="4606.25"/>
+        </scene>
+        <!--Tahapan-->
+        <scene sceneID="r3R-lA-tA4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pD0-DU-zJ5" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Tahapan" id="x2z-7l-XGn"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="05h-Cz-9xs">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hiW-Ha-hgA" kind="relationship" relationship="rootViewController" id="cBF-Rc-jm7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9K6-Sh-bGw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="545.625" y="2768.75"/>
         </scene>
     </scenes>
     <resources>
