@@ -133,7 +133,7 @@
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hari" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gz5-mY-we6">
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jam" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gz5-mY-we6">
                                                                                 <rect key="frame" x="0.0" y="40" width="60" height="10"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                                 <nil key="textColor"/>
@@ -165,7 +165,7 @@
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hari" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ng-3Y-QNc">
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ng-3Y-QNc">
                                                                                 <rect key="frame" x="0.0" y="40" width="60.5" height="10"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                                 <nil key="textColor"/>
@@ -197,7 +197,7 @@
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hari" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TcZ-d4-lSX">
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detik" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TcZ-d4-lSX">
                                                                                 <rect key="frame" x="0.0" y="40" width="60" height="10"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                                 <nil key="textColor"/>
@@ -312,6 +312,10 @@
                     <tabBarItem key="tabBarItem" title="Informasi" image="info_50" selectedImage="info_filled_50" id="s9e-4f-H5g"/>
                     <navigationItem key="navigationItem" id="San-uK-1Lp"/>
                     <connections>
+                        <outlet property="detikLabel" destination="WeU-Xv-x12" id="RhV-Nz-kfF"/>
+                        <outlet property="hariLabel" destination="h2K-JL-9wk" id="Jqn-W6-xlD"/>
+                        <outlet property="jamLabel" destination="UrJ-RE-Phh" id="ktt-ep-aCh"/>
+                        <outlet property="menitLabel" destination="uFJ-cl-4is" id="xvj-5v-ry0"/>
                         <outlet property="viewOutlets" destination="kqg-ij-lXR" id="Zbx-Ee-MoZ"/>
                         <segue destination="L0X-FA-B6e" kind="presentation" identifier="InformasiCalonViewController" id="3j9-Hi-0fk"/>
                         <segue destination="Zmq-1l-G1Q" kind="presentation" identifier="InformasiPilkadaViewController" id="jnk-dQ-KYI"/>
