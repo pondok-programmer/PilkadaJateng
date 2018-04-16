@@ -738,7 +738,7 @@
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <state key="normal" title="VISI"/>
                                                                 <connections>
-                                                                    <segue destination="76I-g5-eeh" kind="presentation" id="th3-h0-zU0"/>
+                                                                    <action selector="toVisi:" destination="hbl-a4-ksm" eventType="touchUpInside" id="Mua-KQ-kX8"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -767,7 +767,7 @@
                                                                 <rect key="frame" x="129" y="17" width="30" height="30"/>
                                                                 <state key="normal" title="MISI"/>
                                                                 <connections>
-                                                                    <segue destination="2YE-xI-au7" kind="presentation" id="3nJ-rx-hPO"/>
+                                                                    <action selector="toMisi:" destination="hbl-a4-ksm" eventType="touchUpInside" id="W41-hi-KWb"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -799,7 +799,7 @@
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <state key="normal" title="DETAIL"/>
                                                                 <connections>
-                                                                    <segue destination="2YE-xI-au7" kind="presentation" id="MqQ-B7-QIr"/>
+                                                                    <action selector="toDetail:" destination="hbl-a4-ksm" eventType="touchUpInside" id="61g-ez-O6m"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -829,7 +829,7 @@
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <state key="normal" title="PROGRAM"/>
                                                                 <connections>
-                                                                    <segue destination="2YE-xI-au7" kind="presentation" id="gur-uw-CWN"/>
+                                                                    <action selector="toProgram:" destination="hbl-a4-ksm" eventType="touchUpInside" id="cyX-MS-pzZ"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -1029,6 +1029,8 @@
                         <outlet property="mediaSosial" destination="gTi-bf-MpR" id="apl-4n-mSF"/>
                         <outlet property="petaPolitik" destination="suj-EO-onB" id="UVl-SN-Jwt"/>
                         <outlet property="program" destination="AMk-U9-qed" id="qer-0B-IuW"/>
+                        <segue destination="76I-g5-eeh" kind="presentation" identifier="VisiVC" id="ZcO-qi-9tW"/>
+                        <segue destination="2YE-xI-au7" kind="presentation" identifier="ProgramVC" id="1oN-g7-e0g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lya-rs-G6c" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1038,7 +1040,7 @@
         <!--Visi-->
         <scene sceneID="pnP-id-iNP">
             <objects>
-                <viewController id="Ogd-S1-P0h" sceneMemberID="viewController">
+                <viewController id="Ogd-S1-P0h" customClass="VisiViewController" customModule="PilkadaJateng" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hqo-Pb-Xbs">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1060,18 +1062,25 @@
                         <viewLayoutGuide key="safeArea" id="c1q-dO-qol"/>
                     </view>
                     <navigationItem key="navigationItem" title="Visi" id="sc0-JK-I78">
-                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="idA-2d-Rgg"/>
+                        <barButtonItem key="leftBarButtonItem" title="Tutup" id="sxT-iK-4XP">
+                            <connections>
+                                <action selector="selesaiButton:" destination="Ogd-S1-P0h" id="ZqM-V9-dcE"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="discussion_50" id="tqv-eZ-4ld"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="visiLabel" destination="dxV-xc-yfZ" id="yMl-C0-XcZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dhD-MJ-iE8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="939.375" y="4605"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Misi-->
         <scene sceneID="gBV-5N-00r">
             <objects>
-                <tableViewController id="N2w-Bp-y9U" sceneMemberID="viewController">
+                <tableViewController id="N2w-Bp-y9U" customClass="ProgramTableViewController" customModule="PilkadaJateng" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="7zO-aM-ovD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1100,8 +1109,12 @@
                             <outlet property="delegate" destination="N2w-Bp-y9U" id="u4u-3j-j6E"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="RiO-iM-eos">
-                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="df0-C2-NoJ"/>
+                    <navigationItem key="navigationItem" title="Misi" id="RiO-iM-eos">
+                        <barButtonItem key="leftBarButtonItem" title="Tutup" id="df0-C2-NoJ">
+                            <connections>
+                                <action selector="selesaiButton:" destination="N2w-Bp-y9U" id="bon-L7-AmF"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="discussion_50" id="YWc-sa-hoY"/>
                     </navigationItem>
                 </tableViewController>
@@ -1298,7 +1311,4 @@
         <image name="wacana_50" width="25" height="25"/>
         <image name="wacana_filled_50" width="25" height="25"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="MqQ-B7-QIr"/>
-    </inferredMetricsTieBreakers>
 </document>

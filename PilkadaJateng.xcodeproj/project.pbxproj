@@ -47,6 +47,8 @@
 		EF65D5AF2074B1ED00C52D21 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF65D5AE2074B1ED00C52D21 /* Comment.swift */; };
 		EF65D5B12074B39E00C52D21 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF65D5B02074B39E00C52D21 /* CommentViewController.swift */; };
 		EF65D5B32074CDC100C52D21 /* CommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF65D5B22074CDC100C52D21 /* CommentViewController.xib */; };
+		EF6C46FA2084425400A3E719 /* VisiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6C46F92084425400A3E719 /* VisiViewController.swift */; };
+		EF6C46FC2084426800A3E719 /* ProgramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6C46FB2084426800A3E719 /* ProgramViewController.swift */; };
 		EF7F6E80206F74C2002B2641 /* materi_wacana.json in Resources */ = {isa = PBXBuildFile; fileRef = EF7F6E7F206F74C2002B2641 /* materi_wacana.json */; };
 		EF7F6E82206F74FE002B2641 /* WacanaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F6E81206F74FE002B2641 /* WacanaService.swift */; };
 		EF866427207DAA7C00886A61 /* DaftarMateriViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF866426207DAA7C00886A61 /* DaftarMateriViewController.swift */; };
@@ -204,6 +206,8 @@
 		EF65D5AE2074B1ED00C52D21 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		EF65D5B02074B39E00C52D21 /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 		EF65D5B22074CDC100C52D21 /* CommentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentViewController.xib; sourceTree = "<group>"; };
+		EF6C46F92084425400A3E719 /* VisiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisiViewController.swift; sourceTree = "<group>"; };
+		EF6C46FB2084426800A3E719 /* ProgramViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramViewController.swift; sourceTree = "<group>"; };
 		EF7F6E7F206F74C2002B2641 /* materi_wacana.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = materi_wacana.json; sourceTree = "<group>"; };
 		EF7F6E81206F74FE002B2641 /* WacanaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WacanaService.swift; sourceTree = "<group>"; };
 		EF866426207DAA7C00886A61 /* DaftarMateriViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaftarMateriViewController.swift; sourceTree = "<group>"; };
@@ -473,6 +477,8 @@
 				EF508C9D207B393900726589 /* PJTahapan */,
 				EF5F8F7E207B6192009FDB7E /* PJAnggaran.swift */,
 				EF5F8F80207B61A3009FDB7E /* PJProfil.swift */,
+				EF6C46F92084425400A3E719 /* VisiViewController.swift */,
+				EF6C46FB2084426800A3E719 /* ProgramViewController.swift */,
 			);
 			path = InformasiTab;
 			sourceTree = "<group>";
@@ -1153,6 +1159,7 @@
 				EF58444E206B645700BDBB4C /* ChannelTableViewCell.swift in Sources */,
 				EF9B677A2067BE9C0057215B /* PartisipasiPilkadaViewController.swift in Sources */,
 				EFEF12E1206734AD000A94CE /* MockProvider.swift in Sources */,
+				EF6C46FA2084425400A3E719 /* VisiViewController.swift in Sources */,
 				EF9B677D2067CF460057215B /* PartisipasiPilkadaCollectionViewCell.swift in Sources */,
 				EF584451206B6C6E00BDBB4C /* Set+Ext.swift in Sources */,
 				EF9B67992068985A0057215B /* ProfilCalon.swift in Sources */,
@@ -1224,6 +1231,7 @@
 				EF957B232068C18D000E2098 /* InformasiCalonCollectionViewCell.swift in Sources */,
 				EFEF12E4206739CA000A94CE /* InformasiViewController.swift in Sources */,
 				EF5803842071C8FA00C8E5E5 /* DaftarMateri.swift in Sources */,
+				EF6C46FC2084426800A3E719 /* ProgramViewController.swift in Sources */,
 				EFA7CFEC206C82B20090DCF5 /* TimelineCollectionViewCell.swift in Sources */,
 				EFEF12E8206742E5000A94CE /* InformasiService.swift in Sources */,
 			);

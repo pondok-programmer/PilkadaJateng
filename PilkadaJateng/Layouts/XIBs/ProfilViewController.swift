@@ -49,6 +49,22 @@ class ProfilViewController: UIViewController {
     @IBOutlet weak var program: _ProgramView!
     @IBOutlet weak var petaPolitik: _PetaPolitikView!
     
+    @IBAction func toVisi(_ sender: UIButton) {
+        performSegue(withIdentifier: "VisiVC", sender: _profil?.visi)
+    }
+    
+    @IBAction func toMisi(_ sender: UIButton) {
+        performSegue(withIdentifier: "ProgramVC", sender: ("Misi" ,_profil?.misi))
+    }
+    
+    @IBAction func toProgram(_ sender: UIButton) {
+        performSegue(withIdentifier: "ProgramVC", sender: ("Program", _profil?.program))
+    }
+    
+    @IBAction func toDetail(_ sender: UIButton) {
+        performSegue(withIdentifier: "ProgramVC", sender: ("Detail", _profil?.detail))
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         _fetchData()
@@ -68,9 +84,16 @@ class ProfilViewController: UIViewController {
         }
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let navVC = segue.destination as? UINavigationController else { return }
+        
+        if let vc = navVC.viewControllers.first as? VisiViewController, let visi = sender as? String {
+            vc.visi = visi
+        } else if let vc = navVC.viewControllers.first as? ProgramTableViewController, let data = sender as? (String, [String]) {
+            vc.title = data.0
+            vc.data = data.1
+        }
+    }
     
     private func _fetchData() {
         _service.getData { (profils, error) in
