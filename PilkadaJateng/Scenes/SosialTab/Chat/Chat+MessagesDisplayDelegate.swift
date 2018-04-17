@@ -17,7 +17,9 @@ extension ChatViewController: MessagesDisplayDelegate {
         //        return .custom(configurationClosure)
     }
     
-    func avatarSize(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> CGSize {
-        return CGSize.zero
+    func configureAvatarView(_ avatarView: AvatarView, for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) {
+        let senderName = messageList[indexPath.row].sender.displayName
+        let avatar = Avatar(initials: String(senderName.first.or("?")))
+        avatarView.set(avatar: avatar)
     }
 }

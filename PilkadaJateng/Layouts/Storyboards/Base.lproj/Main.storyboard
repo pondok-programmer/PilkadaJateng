@@ -1046,7 +1046,11 @@
                                 <action selector="selesaiButton:" destination="hbl-a4-ksm" id="4Np-p0-Sag"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="discussion_50" id="owf-5i-kZy"/>
+                        <barButtonItem key="rightBarButtonItem" image="discussion_50" id="owf-5i-kZy">
+                            <connections>
+                                <action selector="toChatDiscussion" destination="hbl-a4-ksm" id="l1F-B5-Yw4"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <size key="freeformSize" width="320" height="1500"/>
                     <connections>
@@ -1093,7 +1097,11 @@
                                 <action selector="selesaiButton:" destination="Ogd-S1-P0h" id="ZqM-V9-dcE"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="discussion_50" id="tqv-eZ-4ld"/>
+                        <barButtonItem key="rightBarButtonItem" image="discussion_50" id="tqv-eZ-4ld">
+                            <connections>
+                                <action selector="toChatDiscussion" destination="Ogd-S1-P0h" id="dY2-E5-P9z"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="visiLabel" destination="dxV-xc-yfZ" id="yMl-C0-XcZ"/>
@@ -1141,7 +1149,11 @@
                                 <action selector="selesaiButton:" destination="N2w-Bp-y9U" id="bon-L7-AmF"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="discussion_50" id="YWc-sa-hoY"/>
+                        <barButtonItem key="rightBarButtonItem" image="discussion_50" id="YWc-sa-hoY">
+                            <connections>
+                                <action selector="toChatDiscussion" destination="N2w-Bp-y9U" id="pji-gJ-18e"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Pf-hr-sAP" userLabel="First Responder" sceneMemberID="firstResponder"/>

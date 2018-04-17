@@ -47,6 +47,7 @@
 		EF65D5AF2074B1ED00C52D21 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF65D5AE2074B1ED00C52D21 /* Comment.swift */; };
 		EF65D5B12074B39E00C52D21 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF65D5B02074B39E00C52D21 /* CommentViewController.swift */; };
 		EF65D5B32074CDC100C52D21 /* CommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF65D5B22074CDC100C52D21 /* CommentViewController.xib */; };
+		EF678DB620852DC700838CB8 /* CustomFirebaseRef.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF678DB520852DC700838CB8 /* CustomFirebaseRef.swift */; };
 		EF6C46FA2084425400A3E719 /* VisiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6C46F92084425400A3E719 /* VisiViewController.swift */; };
 		EF6C46FC2084426800A3E719 /* ProgramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6C46FB2084426800A3E719 /* ProgramViewController.swift */; };
 		EF7F6E80206F74C2002B2641 /* materi_wacana.json in Resources */ = {isa = PBXBuildFile; fileRef = EF7F6E7F206F74C2002B2641 /* materi_wacana.json */; };
@@ -206,6 +207,7 @@
 		EF65D5AE2074B1ED00C52D21 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		EF65D5B02074B39E00C52D21 /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 		EF65D5B22074CDC100C52D21 /* CommentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentViewController.xib; sourceTree = "<group>"; };
+		EF678DB520852DC700838CB8 /* CustomFirebaseRef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFirebaseRef.swift; sourceTree = "<group>"; };
 		EF6C46F92084425400A3E719 /* VisiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisiViewController.swift; sourceTree = "<group>"; };
 		EF6C46FB2084426800A3E719 /* ProgramViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramViewController.swift; sourceTree = "<group>"; };
 		EF7F6E7F206F74C2002B2641 /* materi_wacana.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = materi_wacana.json; sourceTree = "<group>"; };
@@ -514,6 +516,7 @@
 				EF989998206A488F007E7DA9 /* TimelineViewController.swift */,
 				EFA7CFEE206C8CC00090DCF5 /* PostEditorViewController.swift */,
 				EF65D5B02074B39E00C52D21 /* CommentViewController.swift */,
+				EF678DB520852DC700838CB8 /* CustomFirebaseRef.swift */,
 			);
 			path = SosialTab;
 			sourceTree = "<group>";
@@ -1166,6 +1169,7 @@
 				EF957B262068CEFB000E2098 /* DetailCalonViewController.swift in Sources */,
 				EF9B679D20689DF80057215B /* String+Ext.swift in Sources */,
 				EF989999206A488F007E7DA9 /* TimelineViewController.swift in Sources */,
+				EF678DB620852DC700838CB8 /* CustomFirebaseRef.swift in Sources */,
 				EF9B678120686F470057215B /* AnggaranPilkadaViewController.swift in Sources */,
 				EF5803812071C85000C8E5E5 /* MateriWacana.swift in Sources */,
 				EF9B67752067A3860057215B /* Optional+Ext.swift in Sources */,

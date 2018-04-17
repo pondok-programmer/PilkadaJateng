@@ -24,5 +24,20 @@ extension Optional {
     }
 }
 
+extension Optional where Wrapped: Equatable {
+    func orFatalError(alsoIf fatalValue: Wrapped) -> Wrapped {
+        switch self {
+        case let .some(value):
+            if value == fatalValue {
+                fatalError("Couldn't value of \(fatalValue)")
+            } else {
+                return value
+            }
+        case .none:
+            fatalError("Must not be nil")
+        }
+    }
+}
+
 
 

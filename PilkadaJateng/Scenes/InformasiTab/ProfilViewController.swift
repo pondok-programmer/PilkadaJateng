@@ -72,6 +72,8 @@ class ProfilViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         _fetchData()
+        title = "Profil Paslon"
+        plainNavigationBackButton()
     }
     
     private let _service = InformasiProfilService(networkManager: MOCKProfil())

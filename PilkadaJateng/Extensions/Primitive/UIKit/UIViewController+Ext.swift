@@ -32,4 +32,18 @@ extension UIViewController {
         alertVC.addAction(cancel)
         present(alertVC, animated: true, completion: nil)
     }
+    
+    
+    /// To Discussion with path title
+    @IBAction func toChatDiscussion() {
+        let refPath = title.orFatalError(alsoIf: "").removeChar([".", "#", "$", "[", "]"])
+        let cVC = ChatViewController(nibName: "ChatViewController", bundle: nil)
+        cVC.chatService = ChatService(channelRef: FirebaseRefMake(withPath: refPath))
+        cVC.title = "Diskusi \"\(refPath)\""
+        show(cVC, sender: nil)
+    }
+    
+    func plainNavigationBackButton() {
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    }
 }

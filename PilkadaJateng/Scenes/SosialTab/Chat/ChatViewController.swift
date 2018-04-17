@@ -8,13 +8,13 @@
 
 import UIKit
 import MessageKit
+import IQKeyboardManagerSwift
 
 class ChatViewController: MessagesViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupMessageViewControllerOnDidLoad()
-        messagesCollectionView.keyboardDismissMode = .interactive
     }
     
     var chatService: ChatService!
@@ -26,6 +26,7 @@ class ChatViewController: MessagesViewController {
             self.messagesCollectionView.reloadData()
             self.messagesCollectionView.scrollToBottom()
         }
+        IQKeyboardManager.sharedManager().enable = false
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -35,11 +36,12 @@ class ChatViewController: MessagesViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         chatService.endListening()
+        IQKeyboardManager.sharedManager().enable = true
     }
     
-    var channel: Channel! {
+    var channel: Channel? {
         didSet {
-            title = channel.name
+            title = channel!.name
         }
     }
     
@@ -53,12 +55,5 @@ class ChatViewController: MessagesViewController {
     
     func newMessage(_ message: DiskusiMessage) {
         chatService.newMessage(message)
-    }
-}
-
-// UIScrollViewDelegate
-extension ChatViewController {
-    func scrollViewWillBeginDragging(scrollView: UIScrollView) {
-        messageInputBar.resignFirstResponder()
     }
 }
