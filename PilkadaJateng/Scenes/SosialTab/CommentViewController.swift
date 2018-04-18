@@ -65,6 +65,7 @@ class CommentViewController: UIViewController {
             !content.isEmpty {
             _commentService.sendComment(content: content, username: Application.shared.user!.name)
             viewOutlets.textField.text = ""
+            viewOutlets.textField.resignFirstResponder()
         }
     }
     

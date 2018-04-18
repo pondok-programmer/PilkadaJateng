@@ -29,5 +29,6 @@ class MainTabBarController: UITabBarController {
         imageView.contentMode = .scaleAspectFit
         
         self.navigationItem.titleView = imageView
+        tabBar.tintColor = UIColor(red: 255/255, green: 86/255, blue: 97/255, alpha: 1)
     }
 }
