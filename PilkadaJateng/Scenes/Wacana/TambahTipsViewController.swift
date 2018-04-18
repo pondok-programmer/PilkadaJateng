@@ -23,8 +23,13 @@ class TambahTipsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     @IBAction func tambahMateri(_ sender: UIButton) {
-        _daftarMateri.append(("abc", "tds"))
-        tableView.reloadData()
+        print("Open TambahVC")
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? TambahMateriViewController {
+            vc.delegate = self
+        }
     }
     
     @IBAction func simpanButton() {
@@ -63,4 +68,32 @@ extension TambahTipsViewController: UITableViewDataSource {
         cell.contentLabel.text = d.content
         return cell
     }
+}
+
+extension TambahTipsViewController: _TambahMateriDelegateViewController {
+    func finish(_ materi: (title: String, content: String)) {
+        _daftarMateri.append((materi.title, materi.content))
+        tableView.reloadData()
+    }
+}
+
+protocol _TambahMateriDelegateViewController: class {
+    func finish(_ materi: (title: String, content: String))
+}
+
+class TambahMateriViewController: UIViewController {
+    
+    var delegate: _TambahMateriDelegateViewController?
+    
+    @IBAction func selesaiButton(_ sender: UIButton) {
+        if let title = subjudulTextField.text,
+            let content = isiTextView.text {
+           delegate?.finish((title, content))
+        }
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBOutlet weak var nomorLabel: UILabel!
+    @IBOutlet weak var subjudulTextField: UITextField!
+    @IBOutlet weak var isiTextView: UITextView!
 }
