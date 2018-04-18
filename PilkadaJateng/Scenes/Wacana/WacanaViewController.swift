@@ -56,6 +56,13 @@ class WacanaViewController: UIViewController {
             }
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let nav = segue.destination as? UINavigationController,
+            let vc = nav.viewControllers.first as? TambahTipsViewController {
+            vc.delegate = self
+        }
+    }
 }
 
 class WacanaView: UIView {
@@ -82,5 +89,12 @@ extension WacanaViewController: UICollectionViewDelegate {
         let vc = DaftarMateriViewController(nibName: "DaftarMateriViewController", bundle: nil)
         vc.materiWacana = _data[indexPath.row]
         show(vc, sender: nil)
+    }
+}
+
+extension WacanaViewController: _TambahTipsDelegateViewController {
+    func finish(_ materiWacana: MateriWacana) {
+        _data.append(materiWacana)
+        viewOutlets.collectionView.reloadData()
     }
 }

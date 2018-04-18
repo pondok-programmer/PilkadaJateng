@@ -16,7 +16,7 @@ class MainTabBarController: UITabBarController {
         
         let nav = navigationController!
         
-        let image = UIImage(named: "instagram")!
+        let image = UIImage(named: "pilwara")!
         let imageView = UIImageView(image:image)
         
         let bannerWidth = nav.navigationBar.frame.size.width

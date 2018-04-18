@@ -539,7 +539,7 @@
         <!--Tambah Materi View Controller-->
         <scene sceneID="Xzg-xr-t4D">
             <objects>
-                <viewController id="EX1-4R-Ihm" customClass="TambahMateriViewController" customModule="PilkadaJateng" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="overCurrentContext" id="EX1-4R-Ihm" customClass="TambahMateriViewController" customModule="PilkadaJateng" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3B0-CM-jRp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -7,6 +7,11 @@
 //
 
 import UIKit
+import SwiftyJSON
+
+protocol _TambahTipsDelegateViewController: class {
+    func finish(_ materiWacana: MateriWacana)
+}
 
 class TambahTipsViewController: UIViewController {
     override func viewDidLoad() {
@@ -32,21 +37,24 @@ class TambahTipsViewController: UIViewController {
         }
     }
     
+    weak var delegate: _TambahTipsDelegateViewController?
+    
     @IBAction func simpanButton() {
         let dict: [String: Any] = [
             "judul": judulTextField.text.or(""),
             "alasan": deskripsiTextField.text.or(""),
             "ringkasan": ringkasanTextField.text.or(""),
             "sumber": sumberTextField.text.or(""),
-            "daftar_Materi": _daftarMateri.map({ (o) -> [String: String] in
+            "daftar_materi": _daftarMateri.map({ (o) -> [String: String] in
                 return ["title":o.title,
                         "content": o.content]
             })
         ]
         
-        if let jsonData = try? JSONSerialization.data(withJSONObject: dict, options: []) {
-            
-        }
+        let json = JSON(dict)
+        let materiWacana = MateriWacana.init(json)
+        delegate?.finish(materiWacana)
+        dismiss(animated: true, completion: nil)
     }
     
     private var _daftarMateri: [(title:String, content: String)] = []
@@ -83,7 +91,7 @@ protocol _TambahMateriDelegateViewController: class {
 
 class TambahMateriViewController: UIViewController {
     
-    var delegate: _TambahMateriDelegateViewController?
+    weak var delegate: _TambahMateriDelegateViewController?
     
     @IBAction func selesaiButton(_ sender: UIButton) {
         if let title = subjudulTextField.text,
