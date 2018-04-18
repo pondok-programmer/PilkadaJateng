@@ -53,6 +53,9 @@
 		EF7F6E80206F74C2002B2641 /* materi_wacana.json in Resources */ = {isa = PBXBuildFile; fileRef = EF7F6E7F206F74C2002B2641 /* materi_wacana.json */; };
 		EF7F6E82206F74FE002B2641 /* WacanaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F6E81206F74FE002B2641 /* WacanaService.swift */; };
 		EF866427207DAA7C00886A61 /* DaftarMateriViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF866426207DAA7C00886A61 /* DaftarMateriViewController.swift */; };
+		EF9138002086D57B00527DA4 /* DaftarMateriTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9137FE2086D57B00527DA4 /* DaftarMateriTableViewCell.swift */; };
+		EF9138012086D57B00527DA4 /* DaftarMateriTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF9137FF2086D57B00527DA4 /* DaftarMateriTableViewCell.xib */; };
+		EF9138042086D6FC00527DA4 /* APIACCESS.m in Sources */ = {isa = PBXBuildFile; fileRef = EF9138032086D6FC00527DA4 /* APIACCESS.m */; };
 		EF957B232068C18D000E2098 /* InformasiCalonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF957B212068C18D000E2098 /* InformasiCalonCollectionViewCell.swift */; };
 		EF957B242068C18D000E2098 /* InformasiCalonCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF957B222068C18D000E2098 /* InformasiCalonCollectionViewCell.xib */; };
 		EF957B262068CEFB000E2098 /* DetailCalonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF957B252068CEFB000E2098 /* DetailCalonViewController.swift */; };
@@ -68,6 +71,7 @@
 		EF957B3A2068D8D3000E2098 /* PrioritasProgramCalonCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF957B382068D8D3000E2098 /* PrioritasProgramCalonCollectionViewCell.xib */; };
 		EF957B3D2068D8EB000E2098 /* LHKPNCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF957B3B2068D8EB000E2098 /* LHKPNCollectionViewCell.swift */; };
 		EF957B3E2068D8EB000E2098 /* LHKPNCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF957B3C2068D8EB000E2098 /* LHKPNCollectionViewCell.xib */; };
+		EF9657C0208635D900EC8F91 /* TambahTipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9657BF208635D900EC8F91 /* TambahTipsViewController.swift */; };
 		EF9899772069D93C007E7DA9 /* BeritaPilkadaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9899762069D93C007E7DA9 /* BeritaPilkadaViewController.swift */; };
 		EF98997A2069DA00007E7DA9 /* BeritaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9899782069DA00007E7DA9 /* BeritaTableViewCell.swift */; };
 		EF98997B2069DA00007E7DA9 /* BeritaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF9899792069DA00007E7DA9 /* BeritaTableViewCell.xib */; };
@@ -213,6 +217,10 @@
 		EF7F6E7F206F74C2002B2641 /* materi_wacana.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = materi_wacana.json; sourceTree = "<group>"; };
 		EF7F6E81206F74FE002B2641 /* WacanaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WacanaService.swift; sourceTree = "<group>"; };
 		EF866426207DAA7C00886A61 /* DaftarMateriViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaftarMateriViewController.swift; sourceTree = "<group>"; };
+		EF9137FE2086D57B00527DA4 /* DaftarMateriTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaftarMateriTableViewCell.swift; sourceTree = "<group>"; };
+		EF9137FF2086D57B00527DA4 /* DaftarMateriTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DaftarMateriTableViewCell.xib; sourceTree = "<group>"; };
+		EF9138022086D6FB00527DA4 /* PilkadaJateng-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PilkadaJateng-Bridging-Header.h"; sourceTree = "<group>"; };
+		EF9138032086D6FC00527DA4 /* APIACCESS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = APIACCESS.m; path = OBJC/APIACCESS.m; sourceTree = "<group>"; };
 		EF957B212068C18D000E2098 /* InformasiCalonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformasiCalonCollectionViewCell.swift; sourceTree = "<group>"; };
 		EF957B222068C18D000E2098 /* InformasiCalonCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformasiCalonCollectionViewCell.xib; sourceTree = "<group>"; };
 		EF957B252068CEFB000E2098 /* DetailCalonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCalonViewController.swift; sourceTree = "<group>"; };
@@ -228,6 +236,7 @@
 		EF957B382068D8D3000E2098 /* PrioritasProgramCalonCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrioritasProgramCalonCollectionViewCell.xib; sourceTree = "<group>"; };
 		EF957B3B2068D8EB000E2098 /* LHKPNCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LHKPNCollectionViewCell.swift; sourceTree = "<group>"; };
 		EF957B3C2068D8EB000E2098 /* LHKPNCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LHKPNCollectionViewCell.xib; sourceTree = "<group>"; };
+		EF9657BF208635D900EC8F91 /* TambahTipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TambahTipsViewController.swift; sourceTree = "<group>"; };
 		EF9899762069D93C007E7DA9 /* BeritaPilkadaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeritaPilkadaViewController.swift; sourceTree = "<group>"; };
 		EF9899782069DA00007E7DA9 /* BeritaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeritaTableViewCell.swift; sourceTree = "<group>"; };
 		EF9899792069DA00007E7DA9 /* BeritaTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeritaTableViewCell.xib; sourceTree = "<group>"; };
@@ -495,6 +504,8 @@
 				EF58444D206B645700BDBB4C /* ChannelTableViewCell.xib */,
 				EF5C92242075C0C200DE876C /* CommentTableViewCell.swift */,
 				EF5C92252075C0C200DE876C /* CommentTableViewCell.xib */,
+				EF9137FE2086D57B00527DA4 /* DaftarMateriTableViewCell.swift */,
+				EF9137FF2086D57B00527DA4 /* DaftarMateriTableViewCell.xib */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -527,6 +538,7 @@
 				EF98998D206A27CE007E7DA9 /* WacanaViewController.swift */,
 				EF866426207DAA7C00886A61 /* DaftarMateriViewController.swift */,
 				EF5CB6DA207DE19B00AA5D9D /* MateriViewController.swift */,
+				EF9657BF208635D900EC8F91 /* TambahTipsViewController.swift */,
 			);
 			path = Wacana;
 			sourceTree = "<group>";
@@ -698,6 +710,8 @@
 				EFEF12A620672103000A94CE /* Assets.xcassets */,
 				EFEF12E2206734B3000A94CE /* Mocks */,
 				EF9B67732067A34F0057215B /* Extensions */,
+				EF9138032086D6FC00527DA4 /* APIACCESS.m */,
+				EF9138022086D6FB00527DA4 /* PilkadaJateng-Bridging-Header.h */,
 			);
 			path = PilkadaJateng;
 			sourceTree = "<group>";
@@ -873,6 +887,7 @@
 				TargetAttributes = {
 					EFEF129B20672103000A94CE = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					EFEF12AF20672104000A94CE = {
@@ -925,6 +940,7 @@
 				EF5C92272075C0C300DE876C /* CommentTableViewCell.xib in Resources */,
 				EF9B675D206785710057215B /* visi_misi_rano_embay.json in Resources */,
 				EF957B3A2068D8D3000E2098 /* PrioritasProgramCalonCollectionViewCell.xib in Resources */,
+				EF9138012086D57B00527DA4 /* DaftarMateriTableViewCell.xib in Resources */,
 				EFEF12D320672DD2000A94CE /* InformasiPilkada.storyboard in Resources */,
 				EFEF12CE206725D8000A94CE /* GoogleService-Info.plist in Resources */,
 				EF989993206A28C2007E7DA9 /* WacanaCollectionViewCell.xib in Resources */,
@@ -1171,6 +1187,7 @@
 				EF989999206A488F007E7DA9 /* TimelineViewController.swift in Sources */,
 				EF678DB620852DC700838CB8 /* CustomFirebaseRef.swift in Sources */,
 				EF9B678120686F470057215B /* AnggaranPilkadaViewController.swift in Sources */,
+				EF9138042086D6FC00527DA4 /* APIACCESS.m in Sources */,
 				EF5803812071C85000C8E5E5 /* MateriWacana.swift in Sources */,
 				EF9B67752067A3860057215B /* Optional+Ext.swift in Sources */,
 				EF5803882071CA4200C8E5E5 /* MateriWacana+Ext.swift in Sources */,
@@ -1196,6 +1213,7 @@
 				EF957B2A2068D63E000E2098 /* ProgramUnggulanCalon.swift in Sources */,
 				EF9B679120688DF20057215B /* TahapanPilkada.swift in Sources */,
 				EF98997A2069DA00007E7DA9 /* BeritaTableViewCell.swift in Sources */,
+				EF9138002086D57B00527DA4 /* DaftarMateriTableViewCell.swift in Sources */,
 				EF508C9A207B164900726589 /* MainTabBarController.swift in Sources */,
 				EFEF12A020672103000A94CE /* AppDelegate.swift in Sources */,
 				EF9B678E20688DCA0057215B /* TahapanPilkadaCollectionViewCell.swift in Sources */,
@@ -1226,6 +1244,7 @@
 				EF866427207DAA7C00886A61 /* DaftarMateriViewController.swift in Sources */,
 				EF584441206B3B6B00BDBB4C /* Chat+MessagesLayoutDelegate.swift in Sources */,
 				EF7F6E82206F74FE002B2641 /* WacanaService.swift in Sources */,
+				EF9657C0208635D900EC8F91 /* TambahTipsViewController.swift in Sources */,
 				EF58038A2071E15F00C8E5E5 /* CardView.swift in Sources */,
 				EF584449206B5D8200BDBB4C /* ChatService.swift in Sources */,
 				EF9B6785206870500057215B /* AnggaranPilkada+Ext.swift in Sources */,
@@ -1412,12 +1431,15 @@
 			baseConfigurationReference = 1D110D5CB03261809736D827 /* Pods-PilkadaJateng.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SDSLU2QT5X;
 				INFOPLIST_FILE = "PilkadaJateng/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pondokios.pilkadajateng;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PilkadaJateng/PilkadaJateng-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1428,12 +1450,14 @@
 			baseConfigurationReference = 6597A4F7890A7B640E8857EB /* Pods-PilkadaJateng.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SDSLU2QT5X;
 				INFOPLIST_FILE = "PilkadaJateng/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pondokios.pilkadajateng;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PilkadaJateng/PilkadaJateng-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

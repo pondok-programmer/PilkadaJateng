@@ -351,6 +351,9 @@
                                     <constraint firstAttribute="height" constant="30" id="Zna-en-cJy"/>
                                 </constraints>
                                 <state key="normal" title="Tips Baru"/>
+                                <connections>
+                                    <segue destination="hD6-2b-mmy" kind="presentation" id="lxQ-d4-ZlU"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -377,6 +380,160 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Mv-nE-poy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2988.75" y="1575"/>
+        </scene>
+        <!--Tambah Tips View Controller-->
+        <scene sceneID="lvA-9t-Xju">
+            <objects>
+                <viewController id="sgN-Gk-2NJ" customClass="TambahTipsViewController" customModule="PilkadaJateng" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nc0-Nf-Z2X">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="636"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="00I-dj-UfV">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="636"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Peg-Lu-dwG">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="600"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="SVa-3A-0AC">
+                                                <rect key="frame" x="8" y="8" width="304" height="584"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="46H-1O-BTi">
+                                                        <rect key="frame" x="0.0" y="0.0" width="304" height="63.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Judul" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nmk-k6-UNt">
+                                                                <rect key="frame" x="0.0" y="0.0" width="304" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6cV-nI-wPf">
+                                                                <rect key="frame" x="0.0" y="30.5" width="304" height="33"/>
+                                                                <nil key="textColor"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pHR-nT-CqL">
+                                                        <rect key="frame" x="0.0" y="78.5" width="304" height="63.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deskripsi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4XK-8q-2nq">
+                                                                <rect key="frame" x="0.0" y="0.0" width="304" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Iz-al-Q8u">
+                                                                <rect key="frame" x="0.0" y="30.5" width="304" height="33"/>
+                                                                <nil key="textColor"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="iYz-5s-a9I">
+                                                        <rect key="frame" x="0.0" y="157" width="304" height="63"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ringkasan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kAm-wz-ORp">
+                                                                <rect key="frame" x="0.0" y="0.0" width="304" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s5W-Np-WAc">
+                                                                <rect key="frame" x="0.0" y="30.5" width="304" height="32.5"/>
+                                                                <nil key="textColor"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7bt-SX-kKh">
+                                                        <rect key="frame" x="0.0" y="235" width="304" height="63"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sumber" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zjH-eb-1RQ">
+                                                                <rect key="frame" x="0.0" y="0.0" width="304" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="icc-9U-vvu">
+                                                                <rect key="frame" x="0.0" y="30.5" width="304" height="32.5"/>
+                                                                <nil key="textColor"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tI2-xA-aAT">
+                                                        <rect key="frame" x="0.0" y="313" width="304" height="30"/>
+                                                        <color key="backgroundColor" red="1" green="0.47359682377194789" blue="0.38667911430836166" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="Tambah Materi"/>
+                                                        <connections>
+                                                            <action selector="tambahMateri:" destination="sgN-Gk-2NJ" eventType="touchUpInside" id="boL-E7-JZI"/>
+                                                        </connections>
+                                                    </button>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iBH-Ql-qIf">
+                                                        <rect key="frame" x="0.0" y="358" width="304" height="226"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </tableView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="7bt-SX-kKh" firstAttribute="height" secondItem="46H-1O-BTi" secondAttribute="height" id="11y-Cl-Xbq"/>
+                                                    <constraint firstItem="iYz-5s-a9I" firstAttribute="height" secondItem="46H-1O-BTi" secondAttribute="height" id="X1E-fw-5OT"/>
+                                                    <constraint firstItem="pHR-nT-CqL" firstAttribute="height" secondItem="46H-1O-BTi" secondAttribute="height" id="qti-5Q-bHh"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="SVa-3A-0AC" firstAttribute="leading" secondItem="Peg-Lu-dwG" secondAttribute="leading" constant="8" id="CPW-Nz-r7M"/>
+                                            <constraint firstItem="SVa-3A-0AC" firstAttribute="top" secondItem="Peg-Lu-dwG" secondAttribute="top" constant="8" id="DDe-Ry-301"/>
+                                            <constraint firstAttribute="height" constant="600" id="HtD-sw-Bve"/>
+                                            <constraint firstItem="SVa-3A-0AC" firstAttribute="top" secondItem="Peg-Lu-dwG" secondAttribute="top" constant="8" id="J83-T6-dhS"/>
+                                            <constraint firstAttribute="bottom" secondItem="SVa-3A-0AC" secondAttribute="bottom" constant="8" id="aPF-bW-rB3"/>
+                                            <constraint firstAttribute="trailing" secondItem="SVa-3A-0AC" secondAttribute="trailing" constant="8" id="bNP-fu-ED3"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Peg-Lu-dwG" firstAttribute="top" secondItem="00I-dj-UfV" secondAttribute="top" id="3Dp-kk-GQD"/>
+                                    <constraint firstAttribute="trailing" secondItem="Peg-Lu-dwG" secondAttribute="trailing" id="Fqz-hc-5vJ"/>
+                                    <constraint firstItem="Peg-Lu-dwG" firstAttribute="leading" secondItem="00I-dj-UfV" secondAttribute="leading" id="bf7-7q-TRF"/>
+                                    <constraint firstAttribute="bottom" secondItem="Peg-Lu-dwG" secondAttribute="bottom" id="t72-kg-6JM"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4uU-mt-6cb" firstAttribute="bottom" secondItem="00I-dj-UfV" secondAttribute="bottom" id="34k-9N-Y3x"/>
+                            <constraint firstItem="00I-dj-UfV" firstAttribute="leading" secondItem="4uU-mt-6cb" secondAttribute="leading" id="61X-Sz-ycn"/>
+                            <constraint firstItem="4uU-mt-6cb" firstAttribute="trailing" secondItem="00I-dj-UfV" secondAttribute="trailing" id="6CP-Ao-vC4"/>
+                            <constraint firstItem="Peg-Lu-dwG" firstAttribute="width" secondItem="Nc0-Nf-Z2X" secondAttribute="width" id="PLL-KW-m5e"/>
+                            <constraint firstItem="00I-dj-UfV" firstAttribute="top" secondItem="4uU-mt-6cb" secondAttribute="top" id="dhZ-FM-fUJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4uU-mt-6cb"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="M3k-yi-tDc">
+                        <barButtonItem key="rightBarButtonItem" title="Simpan" id="Kuh-cR-2fL">
+                            <connections>
+                                <action selector="simpanButton" destination="sgN-Gk-2NJ" id="iAh-GU-cvp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <size key="freeformSize" width="320" height="700"/>
+                    <connections>
+                        <outlet property="deskripsiTextField" destination="6Iz-al-Q8u" id="17a-bz-tCu"/>
+                        <outlet property="judulTextField" destination="6cV-nI-wPf" id="tL5-2X-rpE"/>
+                        <outlet property="ringkasanTextField" destination="s5W-Np-WAc" id="4yP-zi-Elp"/>
+                        <outlet property="sumberTextField" destination="icc-9U-vvu" id="YPH-n5-IRu"/>
+                        <outlet property="tableView" destination="iBH-Ql-qIf" id="B6X-3a-X6u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oc0-14-AAL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3936" y="2436"/>
         </scene>
         <!--Tahapan Pilkada-->
         <scene sceneID="5Ah-5G-fQw">
@@ -1347,6 +1504,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9K6-Sh-bGw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="545.625" y="2768.75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="SsD-Qu-vBX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hD6-2b-mmy" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="dcv-M5-LEM">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sgN-Gk-2NJ" kind="relationship" relationship="rootViewController" id="fFE-8y-swh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CMD-24-T05" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3935.625" y="1575"/>
         </scene>
     </scenes>
     <resources>
