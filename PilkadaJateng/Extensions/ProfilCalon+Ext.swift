@@ -164,7 +164,7 @@ extension PJProfil: JSONInitializable {
         
         provinsi = json["provinsi"].string.or("")
         partaiPendukung = json["partai_pendukung"].string.or("")
-        wilayah = json[""].string.or("wilayah")
+        wilayah = json["wilayah"].string.or("")
         isPetahana = json["status_petahana"].string.or("")
             .toBool(String.BoolRepresentation(true: "YA", false: "TIDAK"))
         

@@ -481,11 +481,13 @@
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hA-sg-2DU">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
-                                <color key="backgroundColor" red="0.8690760561276244" green="1" blue="0.49868623035189763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="0.33725490196078434" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Zna-en-cJy"/>
                                 </constraints>
-                                <state key="normal" title="Tips Baru"/>
+                                <state key="normal" title="Tips Baru">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="hD6-2b-mmy" kind="presentation" id="lxQ-d4-ZlU"/>
                                 </connections>
@@ -736,7 +738,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.5165569479695431" green="0.5165569479695431" blue="0.5165569479695431" alpha="0.17321275684931506" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="huO-ui-JBB" firstAttribute="top" secondItem="1LD-Y1-zg8" secondAttribute="top" constant="70" id="OsX-4I-tjR"/>
                             <constraint firstItem="1LD-Y1-zg8" firstAttribute="trailing" secondItem="huO-ui-JBB" secondAttribute="trailing" constant="16" id="XbD-Cu-ryu"/>
@@ -1562,7 +1564,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="SQb-FJ-cRe"/>
                                 </constraints>
-                                <state key="normal" title="Grup Baru"/>
+                                <state key="normal" title="Grup Baru">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.33760152122478204" blue="0.38038508346900091" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1603,12 +1607,12 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9l-wt-eS7">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
-                                <color key="backgroundColor" red="0.85663364003498366" green="0.50980003059285772" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="0.33725490196078434" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="RI8-T2-gO0"/>
                                 </constraints>
                                 <state key="normal" title="Posting Baru">
-                                    <color key="titleColor" red="0.019564308226108551" green="0.4810602068901062" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hGe-Hx-b18">
@@ -1623,7 +1627,7 @@
                                 <cells/>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" red="0.57696160693237508" green="0.42715726251237307" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="hGe-Hx-b18" firstAttribute="leading" secondItem="y4I-sv-Efp" secondAttribute="leading" id="3Jn-cX-aQf"/>
                             <constraint firstItem="y4I-sv-Efp" firstAttribute="trailing" secondItem="z9l-wt-eS7" secondAttribute="trailing" id="9wb-l7-F2x"/>
