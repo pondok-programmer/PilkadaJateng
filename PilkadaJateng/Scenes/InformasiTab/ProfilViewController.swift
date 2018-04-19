@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import SafariServices
 
 /*
  struct PJProfil {
@@ -166,9 +167,14 @@ class ProfilViewController: UIViewController {
         }
     }
     
+    func openSafari(url: URL) {
+        let vc = SFSafariViewController(url: url)
+        present(vc, animated: true, completion: nil)
+    }
+    
     @objc func toFacebook() {
-        if let _ = URL(string: _profil!.facebook ) {
-            
+        if let url = URL(string: _profil!.facebook ) {
+            openSafari(url: url)
         } else {
             let message = _profil!.facebook.isEmpty ? "Paslon belum memiliki akun Facebook" : "Tidak bisa membuka URL : \(_profil!.facebook)"
             showAlert(title: message)
@@ -176,8 +182,8 @@ class ProfilViewController: UIViewController {
     }
     
     @objc func toInstagram() {
-        if let _ = URL(string: _profil!.instagram ) {
-            
+        if let url = URL(string: _profil!.instagram ) {
+            openSafari(url: url)
         } else {
             let message = _profil!.instagram.isEmpty ? "Paslon belum memiliki akun Instagram" : "Tidak bisa membuka URL : \(_profil!.instagram)"
             showAlert(title: message)
@@ -185,8 +191,8 @@ class ProfilViewController: UIViewController {
     }
     
     @objc func toTwitter() {
-        if let _ = URL(string: _profil!.twitter ) {
-            
+        if let url = URL(string: _profil!.twitter ) {
+            openSafari(url: url)
         } else {
             let message = _profil!.twitter.isEmpty ? "Paslon belum memiliki akun Twitter" : "Tidak bisa membuka URL : \(_profil!.twitter)"
             showAlert(title: message)
