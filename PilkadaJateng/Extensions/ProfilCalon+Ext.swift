@@ -150,8 +150,8 @@ extension PJProfil: JSONInitializable {
         genderKepalaDaerah = json["gender_kepala_daerah"].string.or("")
         
         namaWakilKepalaDaerah = json["nama_wakil_kepala_daerah"].string.or("")
-        tempatLahirWakilKepalaDaerah = json["tempat_lahir_wakil_kepala_daerah"].string.or("")
-        tanggalLahirWakilKepalaDaerah = json["tanggal_lahir_wakil_kepala_daerah"].string.or("")
+        tempatLahirWakilKepalaDaerah = json["tempat_lahir_wakil"].string.or("")
+        tanggalLahirWakilKepalaDaerah = json["tanggal_lahir_wakil"].string.or("")
             .toDate(format: "dd/MM/yyyy")
             .or(Date())
         
