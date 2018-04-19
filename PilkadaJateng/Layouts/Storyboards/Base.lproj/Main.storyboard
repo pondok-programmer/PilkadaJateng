@@ -317,44 +317,84 @@
                                         <rect key="frame" x="0.0" y="234.5" width="288" height="112.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pasangan Calon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5cD-zx-wQA">
-                                                <rect key="frame" x="82.5" y="8" width="123" height="20.5"/>
+                                                <rect key="frame" x="82.5" y="8" width="123" height="19"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="nxW-ev-uW0">
-                                                <rect key="frame" x="8" y="36" width="272" height="68.5"/>
+                                                <rect key="frame" x="8" y="34.5" width="272" height="70"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="oro-SN-n1a">
-                                                        <rect key="frame" x="0.0" y="0.0" width="126" height="68.5"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DSY-u8-KT2" customClass="CardView" customModule="PilkadaJateng" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="126" height="70"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paslon 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9O3-Nc-Pmb">
-                                                                <rect key="frame" x="0.0" y="0.0" width="126" height="29.5"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bhS-eK-DEY">
-                                                                <rect key="frame" x="0.0" y="39.5" width="126" height="29"/>
-                                                                <state key="normal" title="Buka"/>
-                                                            </button>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="oro-SN-n1a">
+                                                                <rect key="frame" x="8" y="8" width="110" height="54"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paslon 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9O3-Nc-Pmb">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="110" height="22"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bhS-eK-DEY">
+                                                                        <rect key="frame" x="0.0" y="32" width="110" height="22"/>
+                                                                        <state key="normal" title="Buka"/>
+                                                                        <connections>
+                                                                            <action selector="goToInformasiPaslon:" destination="xZw-HS-fm8" eventType="touchUpInside" id="dtR-qe-RcG"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
                                                         </subviews>
-                                                    </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7Rp-Jf-025">
-                                                        <rect key="frame" x="146" y="0.0" width="126" height="68.5"/>
+                                                        <color key="backgroundColor" red="0.87825816869735718" green="0.30079004168510437" blue="0.34282830357551575" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstItem="oro-SN-n1a" firstAttribute="leading" secondItem="DSY-u8-KT2" secondAttribute="leading" constant="8" id="88U-IG-sUM"/>
+                                                            <constraint firstItem="oro-SN-n1a" firstAttribute="top" secondItem="DSY-u8-KT2" secondAttribute="top" constant="8" id="fC2-nt-byc"/>
+                                                            <constraint firstAttribute="trailing" secondItem="oro-SN-n1a" secondAttribute="trailing" constant="8" id="fHj-TH-rNf"/>
+                                                            <constraint firstAttribute="bottom" secondItem="oro-SN-n1a" secondAttribute="bottom" constant="8" id="nFe-Pu-7OK"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="15"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k7o-cE-XYF" customClass="CardView" customModule="PilkadaJateng" customModuleProvider="target">
+                                                        <rect key="frame" x="146" y="0.0" width="126" height="70"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paslon 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7XW-uW-M9X">
-                                                                <rect key="frame" x="0.0" y="0.0" width="126" height="29.5"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sb4-QU-Fpb">
-                                                                <rect key="frame" x="0.0" y="39.5" width="126" height="29"/>
-                                                                <state key="normal" title="Buka"/>
-                                                            </button>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qE4-IA-q4O">
+                                                                <rect key="frame" x="8" y="8" width="110" height="54"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paslon 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kBd-Ye-SmC">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="110" height="22"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jqj-yM-j2v">
+                                                                        <rect key="frame" x="0.0" y="32" width="110" height="22"/>
+                                                                        <state key="normal" title="Buka"/>
+                                                                        <connections>
+                                                                            <action selector="goToInformasiPaslon:" destination="xZw-HS-fm8" eventType="touchUpInside" id="Cvb-Vv-eEC"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
                                                         </subviews>
-                                                    </stackView>
+                                                        <color key="backgroundColor" red="0.87825816869735718" green="0.30079004168510437" blue="0.34282830357551575" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="trailing" secondItem="qE4-IA-q4O" secondAttribute="trailing" constant="8" id="CfZ-wC-k6g"/>
+                                                            <constraint firstItem="qE4-IA-q4O" firstAttribute="leading" secondItem="k7o-cE-XYF" secondAttribute="leading" constant="8" id="Y4v-MM-uQx"/>
+                                                            <constraint firstItem="qE4-IA-q4O" firstAttribute="top" secondItem="k7o-cE-XYF" secondAttribute="top" constant="8" id="e7b-YQ-B5e"/>
+                                                            <constraint firstAttribute="bottom" secondItem="qE4-IA-q4O" secondAttribute="bottom" constant="8" id="yty-tG-HB3"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="15"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
@@ -401,7 +441,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Znh-yk-KU7"/>
                         <connections>
-                            <outlet property="calonButton" destination="sb4-QU-Fpb" id="w7p-DG-UPg"/>
                             <outlet property="pilkadaButton" destination="uvn-aw-tS5" id="z4l-vo-qje"/>
                         </connections>
                     </view>

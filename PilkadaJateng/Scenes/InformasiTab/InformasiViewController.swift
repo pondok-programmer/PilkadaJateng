@@ -18,7 +18,6 @@ class InformasiViewController: UIViewController {
         super.viewDidLoad()
         
         _setupPilkadaButton()
-        _setupCalonButton()
         _setupTimer()
     }
     
@@ -58,17 +57,18 @@ class InformasiViewController: UIViewController {
         pilkadaButton?.addTarget(self, action: .informasiPilkadaAction, for: .touchUpInside)
     }
     
-    private func _setupCalonButton() {
-        let calonButton = viewOutlets.calonButton
-        calonButton?.addTarget(self, action: .informasiCalonAction, for: .touchUpInside)
-    }
-    
     @objc func _goToInformasiPilkada() {
         performSegue(withIdentifier: "InformasiPilkadaViewController", sender: nil)
     }
     
-    @objc func _goToInformasiCalon() {
-        performSegue(withIdentifier: "InformasiCalonViewController", sender: nil)
+    @IBAction func goToInformasiPaslon(_ sender: UIButton) {
+        performSegue(withIdentifier: "InformasiCalonViewController", sender: sender.tag)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let nav = segue.destination as? UINavigationController, let vc = nav.viewControllers.first as? ProfilViewController, let number = sender as? Int {
+            vc.profilNumber = number
+        }
     }
     
     @IBAction func unwindInformasiViewController(_ segue: UIStoryboardSegue) {
@@ -77,10 +77,8 @@ class InformasiViewController: UIViewController {
 
 fileprivate extension Selector {
     static let informasiPilkadaAction = #selector(InformasiViewController._goToInformasiPilkada)
-    static let informasiCalonAction = #selector(InformasiViewController._goToInformasiCalon)
 }
 
 class InformasiView: UIView {
     @IBOutlet weak var pilkadaButton: UIButton!
-    @IBOutlet weak var calonButton: UIButton!
 }

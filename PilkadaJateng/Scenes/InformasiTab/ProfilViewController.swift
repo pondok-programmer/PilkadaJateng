@@ -101,14 +101,24 @@ class ProfilViewController: UIViewController {
         }
     }
     
+    
+    /// Array index in Queue, index is 0 for profil 1
+    var profilNumber: Int = 0
+    
     private func _fetchData() {
-        _service.getData { (profils, error) in
-            self._profil = profils?[0]
+        _service.getData { [unowned self](profils, error) in
+            self._profil = profils?[self.profilNumber]
         }
     }
     
+    private let paslonImages = [
+        [UIImage(named: "ganjar_pranowo"), UIImage(named:"taj_yasin")],
+        [UIImage(named: "sudirman_said"), UIImage(named: "ida_fauziyah")]
+    ]
+    
     private func _setupInfoKepalaDaerah() {
         let v = infoKepalaDaerah
+        v?.image.image = paslonImages[profilNumber][0]
         v?.namaLabel.text = _profil?.namaKepalaDaerah
         v?.tempatTanggalLahirLabel.text = "\((_profil?.tempatLahirKepalaDaerah).or("")), \((_profil?.tanggalLahirKepalaDaerah.toString(format: "dd MMM yyyy")).or(""))"
         v?.pekerjaanLabel.text = _profil?.pekerjaanKepalaDaerah
@@ -116,6 +126,7 @@ class ProfilViewController: UIViewController {
     
     private func _setupInfoWakilKepalaDaerah() {
         let v = infoWakilKepalaDaerah
+        v?.image.image = paslonImages[profilNumber][1]
         v?.namaLabel.text = _profil?.namaWakilKepalaDaerah
         v?.tempatTanggalLahirLabel.text = "\((_profil?.tempatLahirWakilKepalaDaerah).or("")), \((_profil?.tanggalLahirWakilKepalaDaerah.toString(format: "dd MMM yyyy")).or(""))"
         v?.pekerjaanLabel.text = _profil?.pekerjaanWakilKepalaDaerah
