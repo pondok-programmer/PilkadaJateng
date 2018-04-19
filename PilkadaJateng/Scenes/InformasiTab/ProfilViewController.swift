@@ -125,7 +125,7 @@ class ProfilViewController: UIViewController {
         let v = mediaSosial
         
         let fbImage = UIImage(named: "facebook_color")
-        if _profil?.facebook != nil {
+        if let fb = _profil?.facebook {
             v?.facebookButton.setImage(fbImage, for: .normal)
             v?.facebookButton.addTarget(self,
                                         action: #selector(toFacebook),
@@ -135,7 +135,7 @@ class ProfilViewController: UIViewController {
         }
         
         let igImage = UIImage(named: "instagram_color")
-        if _profil?.instagram != nil {
+        if let ig = _profil?.instagram {
             v?.instagramButton.setImage(igImage, for: .normal)
             v?.instagramButton.addTarget(self,
                                          action: #selector(toInstagram),
@@ -145,7 +145,7 @@ class ProfilViewController: UIViewController {
         }
         
         let twImage = UIImage(named: "twitter_color")
-        if _profil?.twitter != nil {
+        if let tw = _profil?.twitter {
             v?.twitterButton.setImage(twImage, for: .normal)
             v?.twitterButton.addTarget(self,
                                        action: #selector(toTwitter),
@@ -159,7 +159,8 @@ class ProfilViewController: UIViewController {
         if let _ = URL(string: _profil!.facebook ) {
             
         } else {
-            showAlert(title: "Couldn't open Facebook URL")
+            let message = _profil!.facebook.isEmpty ? "Paslon belum memiliki akun Facebook" : "Tidak bisa membuka URL : \(_profil!.facebook)"
+            showAlert(title: message)
         }
     }
     
@@ -167,7 +168,8 @@ class ProfilViewController: UIViewController {
         if let _ = URL(string: _profil!.instagram ) {
             
         } else {
-            showAlert(title: "Couldn't open Instagram URL")
+            let message = _profil!.instagram.isEmpty ? "Paslon belum memiliki akun Instagram" : "Tidak bisa membuka URL : \(_profil!.instagram)"
+            showAlert(title: message)
         }
     }
     
@@ -175,7 +177,8 @@ class ProfilViewController: UIViewController {
         if let _ = URL(string: _profil!.twitter ) {
             
         } else {
-            showAlert(title: "Couldn't open Twitter URL")
+            let message = _profil!.twitter.isEmpty ? "Paslon belum memiliki akun Twitter" : "Tidak bisa membuka URL : \(_profil!.twitter)"
+            showAlert(title: message)
         }
     }
     
