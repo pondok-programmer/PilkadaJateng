@@ -9,12 +9,12 @@
 import UIKit
 
 class WacanaViewController: UIViewController {
-    @IBOutlet weak var viewOutlets: WacanaView!
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        _setupCollectionView()
+        _setupTableView()
         _fetchData()
     }
     
@@ -25,16 +25,11 @@ class WacanaViewController: UIViewController {
         }
     }
     
-    private func _setupCollectionView() {
-        let cv = viewOutlets.collectionView
-        let nib = UINib(nibName: "WacanaCollectionViewCell", bundle: nil)
-        cv?.register(nib, forCellWithReuseIdentifier: "WacanaCell")
-        cv?.dataSource = self
-        cv?.delegate = self
+    func _setupTableView() {
+        tableView.dataSource = self
+        tableView.delegate = self
         
-        let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: view.frame.width, height: 50)
-        cv?.collectionViewLayout = layout
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "TipsCell")
     }
     
     private var _data: [MateriWacana] = []
@@ -51,50 +46,48 @@ class WacanaViewController: UIViewController {
             if let data = data {
                 DispatchQueue.main.async {
                     self._data = data
-                    self.viewOutlets.collectionView.reloadData()
+                    self.tableView.reloadData()
                 }
             }
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let nav = segue.destination as? UINavigationController,
-            let vc = nav.viewControllers.first as? TambahTipsViewController {
-            vc.delegate = self
+        if let nav = segue.destination as? UINavigationController {
+            if let vc = nav.viewControllers.first as? TambahTipsViewController {
+                vc.delegate = self
+            } else if let vc = nav.viewControllers.first as? RingkasanWacanaViewController {
+                vc.materiWacana = sender as! MateriWacana
+            }
         }
     }
 }
 
-class WacanaView: UIView {
-    @IBOutlet weak var collectionView: UICollectionView!
-}
-
-extension WacanaViewController: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+extension WacanaViewController: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return _data.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let data = _data[indexPath.row]
-        
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "WacanaCell", for: indexPath) as? WacanaCollectionViewCell
-        cell?.titleLabel.text = data.judul
-        cell?.contentLabel.text = data.alasan
-        return cell!
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TipsCell", for: indexPath)
+        cell.textLabel?.text = _data[indexPath.row].judul
+        return cell
     }
 }
 
-extension WacanaViewController: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc = DaftarMateriViewController(nibName: "DaftarMateriViewController", bundle: nil)
-        vc.materiWacana = _data[indexPath.row]
-        show(vc, sender: nil)
+extension WacanaViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "RingkasanWacanaViewController", sender: _data[indexPath.row])
     }
 }
 
 extension WacanaViewController: _TambahTipsDelegateViewController {
     func finish(_ materiWacana: MateriWacana) {
         _data.append(materiWacana)
-        viewOutlets.collectionView.reloadData()
+        tableView.reloadData()
     }
 }

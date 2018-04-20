@@ -53,6 +53,7 @@
 		EF7F6E80206F74C2002B2641 /* materi_wacana.json in Resources */ = {isa = PBXBuildFile; fileRef = EF7F6E7F206F74C2002B2641 /* materi_wacana.json */; };
 		EF7F6E82206F74FE002B2641 /* WacanaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F6E81206F74FE002B2641 /* WacanaService.swift */; };
 		EF866427207DAA7C00886A61 /* DaftarMateriViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF866426207DAA7C00886A61 /* DaftarMateriViewController.swift */; };
+		EF8FF27220899169009090D1 /* RingkasanWacanaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8FF27120899169009090D1 /* RingkasanWacanaViewController.swift */; };
 		EF9138002086D57B00527DA4 /* DaftarMateriTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9137FE2086D57B00527DA4 /* DaftarMateriTableViewCell.swift */; };
 		EF9138012086D57B00527DA4 /* DaftarMateriTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF9137FF2086D57B00527DA4 /* DaftarMateriTableViewCell.xib */; };
 		EF9138042086D6FC00527DA4 /* APIACCESS.m in Sources */ = {isa = PBXBuildFile; fileRef = EF9138032086D6FC00527DA4 /* APIACCESS.m */; };
@@ -217,6 +218,7 @@
 		EF7F6E7F206F74C2002B2641 /* materi_wacana.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = materi_wacana.json; sourceTree = "<group>"; };
 		EF7F6E81206F74FE002B2641 /* WacanaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WacanaService.swift; sourceTree = "<group>"; };
 		EF866426207DAA7C00886A61 /* DaftarMateriViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaftarMateriViewController.swift; sourceTree = "<group>"; };
+		EF8FF27120899169009090D1 /* RingkasanWacanaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingkasanWacanaViewController.swift; sourceTree = "<group>"; };
 		EF9137FE2086D57B00527DA4 /* DaftarMateriTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaftarMateriTableViewCell.swift; sourceTree = "<group>"; };
 		EF9137FF2086D57B00527DA4 /* DaftarMateriTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DaftarMateriTableViewCell.xib; sourceTree = "<group>"; };
 		EF9138022086D6FB00527DA4 /* PilkadaJateng-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PilkadaJateng-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -539,6 +541,7 @@
 				EF866426207DAA7C00886A61 /* DaftarMateriViewController.swift */,
 				EF5CB6DA207DE19B00AA5D9D /* MateriViewController.swift */,
 				EF9657BF208635D900EC8F91 /* TambahTipsViewController.swift */,
+				EF8FF27120899169009090D1 /* RingkasanWacanaViewController.swift */,
 			);
 			path = Wacana;
 			sourceTree = "<group>";
@@ -1187,6 +1190,7 @@
 				EF989999206A488F007E7DA9 /* TimelineViewController.swift in Sources */,
 				EF678DB620852DC700838CB8 /* CustomFirebaseRef.swift in Sources */,
 				EF9B678120686F470057215B /* AnggaranPilkadaViewController.swift in Sources */,
+				EF8FF27220899169009090D1 /* RingkasanWacanaViewController.swift in Sources */,
 				EF9138042086D6FC00527DA4 /* APIACCESS.m in Sources */,
 				EF5803812071C85000C8E5E5 /* MateriWacana.swift in Sources */,
 				EF9B67752067A3860057215B /* Optional+Ext.swift in Sources */,
