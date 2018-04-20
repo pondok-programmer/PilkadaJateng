@@ -75,6 +75,7 @@ extension WacanaViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TipsCell", for: indexPath)
         cell.textLabel?.text = _data[indexPath.row].judul
+        cell.accessoryType = .detailButton
         return cell
     }
 }
@@ -82,6 +83,7 @@ extension WacanaViewController: UITableViewDataSource {
 extension WacanaViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "RingkasanWacanaViewController", sender: _data[indexPath.row])
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 

@@ -111,6 +111,7 @@ extension ChannelListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ChannelCell",for: indexPath) as! ChannelTableViewCell
         cell.channelNameLabel.text = _channelService.channels[indexPath.row].name
+        cell.accessoryType = .disclosureIndicator
         return cell
     }
 }

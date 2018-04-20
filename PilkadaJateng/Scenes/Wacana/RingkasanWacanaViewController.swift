@@ -13,8 +13,8 @@ class RingkasanWacanaViewController: UIViewController {
     var materiWacana: MateriWacana!
     
     @IBOutlet weak var judulLabel: UILabel!
-    @IBOutlet weak var deskripsiLabel: UILabel!
-    @IBOutlet weak var ringkasanLabel: UILabel!
+    @IBOutlet weak var deskripsiTextView: UITextView!
+    @IBOutlet weak var ringkasanTextView: UITextView!
     @IBOutlet weak var sumberButton: UIButton!
     
     @IBAction func bukaSumber() {
@@ -32,11 +32,15 @@ class RingkasanWacanaViewController: UIViewController {
         show(vc, sender: nil)
     }
     
+    @IBAction func selesai() {
+        dismiss(animated: true, completion: nil)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         judulLabel.text = materiWacana.judul
-        deskripsiLabel.text = materiWacana.alasan
-        ringkasanLabel.text = materiWacana.ringkasan
+        deskripsiTextView.text = materiWacana.alasan
+        ringkasanTextView.text = materiWacana.ringkasan
         sumberButton.setTitle(materiWacana.sumberUrl, for: .normal)
     }
 }
