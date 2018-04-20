@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import XLPagerTabStrip
 import Photos
 
 class TimelineViewController: UIViewController {

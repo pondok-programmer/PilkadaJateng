@@ -35,17 +35,24 @@ class LoginViewController: UIViewController {
         
         authService.login(username: username, password: password) { [unowned self] (user, error) in
             if let error = error {
-                fatalError(error.localizedDescription)
+                self.showAlert(title: error.localizedDescription)
             }
             
             if let user = user {
+                Application.shared.user = user
                 self._goToMainViewController(with: user)
             }
         }
     }
     
+    func showAlert(title: String?, message: String? = nil) {
+        let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let cancel = UIAlertAction(title: "Batal", style: .cancel, handler: nil)
+        alertVC.addAction(cancel)
+        present(alertVC, animated: true, completion: nil)
+    }
+    
     private func _goToMainViewController(with user: User) {
-        Application.shared.user = user
         performSegue(withIdentifier: "MainViewController", sender: self)
     }
 }

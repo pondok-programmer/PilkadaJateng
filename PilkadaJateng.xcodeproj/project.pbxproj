@@ -54,6 +54,7 @@
 		EF7F6E82206F74FE002B2641 /* WacanaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F6E81206F74FE002B2641 /* WacanaService.swift */; };
 		EF866427207DAA7C00886A61 /* DaftarMateriViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF866426207DAA7C00886A61 /* DaftarMateriViewController.swift */; };
 		EF8FF27220899169009090D1 /* RingkasanWacanaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8FF27120899169009090D1 /* RingkasanWacanaViewController.swift */; };
+		EF8FF2742089D2F3009090D1 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8FF2732089D2F3009090D1 /* SignUpViewController.swift */; };
 		EF9138002086D57B00527DA4 /* DaftarMateriTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9137FE2086D57B00527DA4 /* DaftarMateriTableViewCell.swift */; };
 		EF9138012086D57B00527DA4 /* DaftarMateriTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF9137FF2086D57B00527DA4 /* DaftarMateriTableViewCell.xib */; };
 		EF9138042086D6FC00527DA4 /* APIACCESS.m in Sources */ = {isa = PBXBuildFile; fileRef = EF9138032086D6FC00527DA4 /* APIACCESS.m */; };
@@ -219,6 +220,7 @@
 		EF7F6E81206F74FE002B2641 /* WacanaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WacanaService.swift; sourceTree = "<group>"; };
 		EF866426207DAA7C00886A61 /* DaftarMateriViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaftarMateriViewController.swift; sourceTree = "<group>"; };
 		EF8FF27120899169009090D1 /* RingkasanWacanaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingkasanWacanaViewController.swift; sourceTree = "<group>"; };
+		EF8FF2732089D2F3009090D1 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		EF9137FE2086D57B00527DA4 /* DaftarMateriTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaftarMateriTableViewCell.swift; sourceTree = "<group>"; };
 		EF9137FF2086D57B00527DA4 /* DaftarMateriTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DaftarMateriTableViewCell.xib; sourceTree = "<group>"; };
 		EF9138022086D6FB00527DA4 /* PilkadaJateng-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PilkadaJateng-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -764,6 +766,7 @@
 			isa = PBXGroup;
 			children = (
 				EFEF12A120672103000A94CE /* LoginViewController.swift */,
+				EF8FF2732089D2F3009090D1 /* SignUpViewController.swift */,
 				EF508C99207B164900726589 /* MainTabBarController.swift */,
 				EF9899752069D90C007E7DA9 /* InformasiTab */,
 				EF989989206A1A93007E7DA9 /* BeritaTab */,
@@ -1121,9 +1124,7 @@
 				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/TimelineTableViewCell/TimelineTableViewCell.framework",
-				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -1136,9 +1137,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TimelineTableViewCell.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1168,6 +1167,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF8FF2742089D2F3009090D1 /* SignUpViewController.swift in Sources */,
 				EF00C46F207F4708008EC26D /* ProfilViewController.swift in Sources */,
 				EF9B675420677F450057215B /* APIUtils.swift in Sources */,
 				EF9B679B206899BF0057215B /* ProfilCalon+Ext.swift in Sources */,

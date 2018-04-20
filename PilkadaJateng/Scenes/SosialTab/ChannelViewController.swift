@@ -8,7 +8,6 @@
 
 import UIKit
 import Firebase
-import XLPagerTabStrip
 import PKHUD
 
 class ChannelListViewController: UIViewController {
@@ -81,12 +80,6 @@ class ChannelListViewController: UIViewController {
 class ChannelListView: UIView {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var newChannel: UIButton!
-}
-
-extension ChannelListViewController: IndicatorInfoProvider {
-    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return IndicatorInfo(title: "Channel Diskusi")
-    }
 }
 
 extension ChannelListViewController: UITableViewDelegate {
