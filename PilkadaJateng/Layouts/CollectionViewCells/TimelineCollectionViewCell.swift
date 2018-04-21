@@ -35,17 +35,13 @@ class TimelineCollectionViewCell: UICollectionViewCell {
     
     func setPost(_ post: TimelinePost) {
         usernameLabel.text = post.userName
-        if let url = URL(string: post.imageUrl) {
-            ImageDownloader.default.downloadImage(with: url, options: [], progressBlock: nil) {
-                [unowned self] (image, error, url, data) in
-                if let image = image {
-                    self.thumbnailImageView.image = image
-                    ImageCache.default.store(image, forKey: post.id)
-                }
-            }
-        } else if let image = post.getImage() {
-            thumbnailImageView.image = image
-        }
+        
+        let p = Bundle.main.path(forResource: "loader", ofType: "gif")!
+        let data = try! Data(contentsOf: URL(fileURLWithPath: p))
+        
+        thumbnailImageView.kf.indicatorType = .image(imageData: data)
+        
+        thumbnailImageView.kf.setImage(with: URL(string: post.imageUrl))
         captionLabel.text = post.caption
         let likeImage = post.isLikedByCurrentUser ? #imageLiteral(resourceName: "like_filled_50") : #imageLiteral(resourceName: "like_50") // #imageLiteral
         likeButton.setImage(likeImage, for: .normal)

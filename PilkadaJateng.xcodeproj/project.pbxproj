@@ -89,6 +89,7 @@
 		EF989997206A4853007E7DA9 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF989996206A4853007E7DA9 /* ChatViewController.swift */; };
 		EF989999206A488F007E7DA9 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF989998206A488F007E7DA9 /* TimelineViewController.swift */; };
 		EF98999F206A4A07007E7DA9 /* ChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF98999D206A4A07007E7DA9 /* ChatViewController.xib */; };
+		EF9A117E208BF16D00377D88 /* loader.gif in Resources */ = {isa = PBXBuildFile; fileRef = EF9A117D208BF16C00377D88 /* loader.gif */; };
 		EF9B674E20677BAA0057215B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9B674D20677BAA0057215B /* NetworkManager.swift */; };
 		EF9B675020677DC90057215B /* InformasiPilkadaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9B674F20677DC90057215B /* InformasiPilkadaViewController.swift */; };
 		EF9B675220677F290057215B /* profile_calon.json in Resources */ = {isa = PBXBuildFile; fileRef = EF9B675120677F290057215B /* profile_calon.json */; };
@@ -256,6 +257,7 @@
 		EF989996206A4853007E7DA9 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		EF989998206A488F007E7DA9 /* TimelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
 		EF98999D206A4A07007E7DA9 /* ChatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatViewController.xib; sourceTree = "<group>"; };
+		EF9A117D208BF16C00377D88 /* loader.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loader.gif; sourceTree = "<group>"; };
 		EF9B674D20677BAA0057215B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		EF9B674F20677DC90057215B /* InformasiPilkadaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformasiPilkadaViewController.swift; sourceTree = "<group>"; };
 		EF9B675120677F290057215B /* profile_calon.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = profile_calon.json; sourceTree = "<group>"; };
@@ -715,6 +717,7 @@
 				EFEF12A620672103000A94CE /* Assets.xcassets */,
 				EFEF12E2206734B3000A94CE /* Mocks */,
 				EF9B67732067A34F0057215B /* Extensions */,
+				EF9A117D208BF16C00377D88 /* loader.gif */,
 				EF9138032086D6FC00527DA4 /* APIACCESS.m */,
 				EF9138022086D6FB00527DA4 /* PilkadaJateng-Bridging-Header.h */,
 			);
@@ -969,6 +972,7 @@
 				EF9B675B206785160057215B /* visi_misi_wahidin_andika.json in Resources */,
 				EF957B322068D87D000E2098 /* VisiMisiCalonCollectionViewCell.xib in Resources */,
 				EF957B362068D8AD000E2098 /* ProgramUnggulanCalonCollectionViewCell.xib in Resources */,
+				EF9A117E208BF16D00377D88 /* loader.gif in Resources */,
 				EF9B6765206786AA0057215B /* prioritas_program_wahidin_andika.json in Resources */,
 				EFB79AB4207B0C07001B143B /* dana_paslon_2018.json in Resources */,
 				EF9B677E2067CF460057215B /* PartisipasiPilkadaCollectionViewCell.xib in Resources */,

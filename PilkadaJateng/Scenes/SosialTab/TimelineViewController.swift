@@ -227,8 +227,8 @@ extension TimelineViewController: UIImagePickerControllerDelegate, UINavigationC
 extension TimelineViewController: PostEditorDelegateViewController {
     func finishEditing(_ timelinePost: (image: UIImage, caption: String)) {
         if let key = _sendPost(with: timelinePost.caption) {
+            
             self._timelineService.updateTimelinePost(id: key,
-                                                     image: timelinePost.image,
                                                      caption: timelinePost.caption,
                                                      userId: Application.shared.user!.id,
                                                      userName: Application.shared.user!.name)

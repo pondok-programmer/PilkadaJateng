@@ -34,7 +34,7 @@ class TimelineService {
     
     private var _timelinePosts: [TimelinePost] = [
         TimelinePost(id: "abc",
-                     image: #imageLiteral(resourceName: "downloading"),
+                     imageUrl: "https://s18.postimg.cc/msd34tvp5/icloud-data-download-iphonex-ios11-ui-3d002aec09293ad5-512x512.png",
                      caption: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed lectus a nulla bibendum viverra a in mauris. Nam porta placerat maximus. Sed porttitor tortor in consequat pellentesque. Nam ultricies sodales pharetra. Ut vestibulum massa lorem, vitae rutrum nulla venenatis ut. Donec sed aliquam quam. Aenean accumsan, neque sed finibus gravida, purus tortor pharetra mauris, at varius orci arcu eget leo. Sed ornare, nunc sed ultrices rutrum, mi neque mollis mi, faucibus eleifend lacus ligula eu risus. Fusce consequat elementum eros eu tempor. Quisque porttitor, dolor ac egestas posuere, nulla purus consectetur lorem, a sodales nisl nisi ac lorem. Cras ac feugiat eros, hendrerit interdum dui. Sed vitae libero ac felis consequat aliquam.",
                      userId: "userId",
                      userName: "userName")
@@ -60,7 +60,6 @@ class TimelineService {
                             if let image = image {
                                 self.updateTimelinePost(id: id,
                                                         imageUrl: url,
-                                                        image: image,
                                                         caption: caption,
                                                         userId: userId,
                                                         userName: userName,
@@ -111,14 +110,12 @@ class TimelineService {
     
     func updateTimelinePost(id: String,
                             imageUrl: String = "",
-                            image: UIImage? = nil,
                             caption: String,
                             userId: String,
                             userName: String,
                             likes: [String: String] = [:]) {
         let post = TimelinePost(id: id,
                                 imageUrl: imageUrl,
-                                image: image,
                                 caption: caption,
                                 userId: userId,
                                 userName: userName,
