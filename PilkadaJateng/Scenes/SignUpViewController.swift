@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PKHUD
 
 class SignUpViewController: UIViewController {
     @IBOutlet weak var displayNameTextField: UITextField!
@@ -17,7 +18,10 @@ class SignUpViewController: UIViewController {
         let displayName = displayNameTextField.text ?? ""
         let username = usernameTextField.text ?? ""
         let password = passwordTextField.text ?? ""
+        HUD.show(.labeledProgress(title: nil, subtitle: nil))
+        
         authService.createUser(displayName: displayName, username: username, password: password) { [unowned self](user, error) in
+            HUD.hide()
             if let user = user {
                 self.showAlert(title: "Akun \(user.name) berhasil dibuat", message: "Tekan OK untuk Masuk")
             }

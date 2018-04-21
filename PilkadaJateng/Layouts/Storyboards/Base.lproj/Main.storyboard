@@ -970,7 +970,13 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="EuK-Je-RjP" customClass="MainTabBarController" customModule="PilkadaJateng" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="HzS-jn-rVm"/>
+                    <navigationItem key="navigationItem" id="HzS-jn-rVm">
+                        <barButtonItem key="rightBarButtonItem" image="log_out_50" id="jem-VW-Zrj">
+                            <connections>
+                                <action selector="signOut" destination="EuK-Je-RjP" id="477-6T-2Zl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="ofv-vF-Ukb">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1951,6 +1957,7 @@
         <image name="info_filled_50" width="25" height="25"/>
         <image name="innovation_color_50" width="50" height="50"/>
         <image name="instagram_color" width="480" height="480"/>
+        <image name="log_out_50" width="25" height="25"/>
         <image name="refresh_50" width="25" height="25"/>
         <image name="taj_yasin" width="283" height="388"/>
         <image name="timeline_50" width="25" height="25"/>

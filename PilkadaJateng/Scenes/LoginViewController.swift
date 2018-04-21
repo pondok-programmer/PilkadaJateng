@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PKHUD
 
 class LoginViewController: UIViewController {
     
@@ -30,10 +31,15 @@ class LoginViewController: UIViewController {
     }
     
     @objc func loginAction() {
-        let username = viewOutlets.usernameTextField.text ?? ""
-        let password = viewOutlets.passwordTextField.text ?? ""
+        HUD.show(.labeledProgress(title: nil, subtitle: nil))
+//        let username = viewOutlets.usernameTextField.text ?? ""
+//        let password = viewOutlets.passwordTextField.text ?? ""
+        
+        let username = "m@k.com"
+        let password = "halohalo@"
         
         authService.login(username: username, password: password) { [unowned self] (user, error) in
+            HUD.hide()
             if let error = error {
                 self.showAlert(title: error.localizedDescription)
             }

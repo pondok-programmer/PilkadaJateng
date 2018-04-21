@@ -18,6 +18,7 @@ class TimelineViewController: UIViewController {
         _timelineService.delegate = self
         _setupCollectionView()
         _setupNewPostButton()
+        fetchPosts()
     }
     
     private let _timelineService = TimelineService()
@@ -80,9 +81,20 @@ class TimelineViewController: UIViewController {
             if let error = error {
                 self.showError(title: error.localizedDescription)
             }
-            self._timelineService.endPostFetching()
-            self.refreshControl.endRefreshing()
+            self.endFetch()
         }
+        
+        let timer = Timer.scheduledTimer(timeInterval: 5,
+                                         target: self,
+                                         selector: #selector(endFetch),
+                                         userInfo: nil,
+                                         repeats: false)
+        timer.fire()
+    }
+    
+    @objc func endFetch() {
+        _timelineService.endPostFetching()
+        refreshControl.endRefreshing()
     }
     
     private func _sendPost(with caption: String) -> String? {

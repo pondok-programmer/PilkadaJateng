@@ -24,7 +24,11 @@ class ChannelListViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        if _channelService.channels.isEmpty {
+            HUD.show(.labeledProgress(title: nil, subtitle: nil))
+        }
         _channelService.beginListening { [unowned self] in
+            HUD.hide()
             self.viewOutlets.tableView.reloadData()
         }
     }

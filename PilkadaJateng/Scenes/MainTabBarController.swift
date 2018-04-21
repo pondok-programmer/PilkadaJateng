@@ -31,4 +31,33 @@ class MainTabBarController: UITabBarController {
         self.navigationItem.titleView = imageView
         tabBar.tintColor = UIColor(red: 255/255, green: 86/255, blue: 97/255, alpha: 1)
     }
+    
+    let authService = AuthService()
+    
+    @IBAction func signOut() {
+        signOutAlert()
+    }
+    
+    func signOutAlert() {
+        let alertVC = UIAlertController(title: "Keluar", message: nil, preferredStyle: .alert)
+        let cancel = UIAlertAction(title: "Batal", style: .cancel, handler: nil)
+        let ok = UIAlertAction(title: "Ya", style: .default, handler: {[unowned self](_)->() in
+            do {
+                try self.authService.signOut()
+                self.dismiss(animated: true, completion: nil)
+            } catch let e {
+                self.showAlert(title: e.localizedDescription)
+            }
+        })
+        alertVC.addAction(cancel)
+        alertVC.addAction(ok)
+        present(alertVC, animated: true, completion: nil)
+    }
+    
+    func showAlert(title: String?, message: String? = nil) {
+        let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let cancel = UIAlertAction(title: "Batal", style: .cancel, handler: nil)
+        alertVC.addAction(cancel)
+        present(alertVC, animated: true, completion: nil)
+    }
 }
