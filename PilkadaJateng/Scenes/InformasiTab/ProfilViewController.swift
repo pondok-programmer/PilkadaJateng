@@ -113,8 +113,10 @@ class ProfilViewController: UIViewController {
     }
     
     private let paslonImages = [
-        [UIImage(named: "ganjar_pranowo"), UIImage(named:"taj_yasin")],
-        [UIImage(named: "sudirman_said"), UIImage(named: "ida_fauziyah")]
+//        [UIImage(named: "ganjar_pranowo"), UIImage(named:"taj_yasin")],
+//        [UIImage(named: "sudirman_said"), UIImage(named: "ida_fauziyah")]
+        [UIImage(named: "H. Ganjar Pranowo"), UIImage(named: "H. Taj Yasin")],
+        [UIImage(named:"Sudirman Said"), UIImage(named: "Dra. Ida Fauziah")]
     ]
     
     private func _setupInfoKepalaDaerah() {

@@ -19,6 +19,7 @@ class ChannelListViewController: UIViewController {
         _setupTableView()
         setupDZNDataSet()
         _setupNewChannelButton()
+        setupSearchBar()
     }
     
     private let _channelService = ChannelService()
@@ -80,11 +81,16 @@ class ChannelListViewController: UIViewController {
         PKHUD.sharedHUD.show()
         PKHUD.sharedHUD.hide(afterDelay: 1)
     }
+    
+    // MARK: Search Bar
+    var searchActive = false
+    var searchResult: [Channel] = []
 }
 
 class ChannelListView: UIView {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var newChannel: UIButton!
+    @IBOutlet weak var searchBar: UISearchBar!
 }
 
 extension ChannelListViewController: UITableViewDelegate {
@@ -103,14 +109,66 @@ extension ChannelListViewController: UITableViewDataSource {
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if searchActive {
+            return searchResult.count
+        }
         return _channelService.channels.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ChannelCell",for: indexPath) as! ChannelTableViewCell
-        cell.channelNameLabel.text = _channelService.channels[indexPath.row].name
+        
+        var data: [Channel] {
+            if searchActive {
+                return searchResult
+            } else {
+                return _channelService.channels
+            }
+        }
+        
+        cell.channelNameLabel.text = data[indexPath.row].name
         cell.accessoryType = .disclosureIndicator
         return cell
+    }
+}
+
+extension ChannelListViewController: UISearchBarDelegate {
+    func setupSearchBar() {
+        viewOutlets.searchBar.delegate = self
+    }
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchActive = true;
+        searchBar.showsCancelButton = true
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        searchActive = false;
+        searchBar.showsCancelButton = false
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchActive = false;
+        searchBar.text = nil
+        searchBar.resignFirstResponder()
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchActive = false;
+        searchBar.resignFirstResponder()
+    }
+
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        searchResult = _channelService.channels
+            .filter({ $0.name.lowercased().contains(searchText.lowercased()) })
+        
+        if searchResult.count == 0 {
+            searchActive = false
+        } else {
+            searchActive = true
+        }
+        viewOutlets.tableView.reloadData()
     }
 }
 
