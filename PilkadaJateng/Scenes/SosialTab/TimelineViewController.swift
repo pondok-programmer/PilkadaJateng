@@ -8,6 +8,8 @@
 
 import UIKit
 import Photos
+import DZNEmptyDataSet
+import PKHUD
 
 class TimelineViewController: UIViewController {
     @IBOutlet weak var viewOutlets: TimelineView!
@@ -17,8 +19,8 @@ class TimelineViewController: UIViewController {
         
         _timelineService.delegate = self
         _setupCollectionView()
+        setupDZNDataSet()
         _setupNewPostButton()
-        fetchPosts()
     }
     
     private let _timelineService = TimelineService()
@@ -76,7 +78,9 @@ class TimelineViewController: UIViewController {
         present(imagePicker, animated: true, completion: nil)
     }
     
+    
     @objc func fetchPosts() {
+        print("Fetch")
         _timelineService.fetchPosts { [unowned self](error) in
             if let error = error {
                 self.showError(title: error.localizedDescription)
@@ -93,6 +97,7 @@ class TimelineViewController: UIViewController {
     }
     
     @objc func endFetch() {
+        HUD.hide()
         _timelineService.endPostFetching()
         refreshControl.endRefreshing()
     }
@@ -254,3 +259,39 @@ extension TimelineViewController: TimelinePostDelegateViewController {
         viewOutlets.collectionView.reloadData()
     }
 }
+
+extension TimelineViewController: DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
+    func setupDZNDataSet() {
+        viewOutlets.collectionView.emptyDataSetSource = self
+        viewOutlets.collectionView.emptyDataSetDelegate = self
+    }
+    
+    func title(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
+        let str = "Selamat Datang"
+        let attrs = [NSAttributedStringKey.font: UIFont.preferredFont(forTextStyle: UIFontTextStyle.headline)]
+        return NSAttributedString(string: str, attributes: attrs)
+    }
+    
+    func description(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
+        let str = "Bagikan aktifitas Pilkada di TPS-mu sekarang."
+        let attrs = [NSAttributedStringKey.font: UIFont.preferredFont(forTextStyle: UIFontTextStyle.body)]
+        return NSAttributedString(string: str, attributes: attrs)
+    }
+    
+    func image(forEmptyDataSet scrollView: UIScrollView?) -> UIImage? {
+        return UIImage(named: "camera_red_100")
+    }
+    
+    func buttonTitle(forEmptyDataSet scrollView: UIScrollView, for state: UIControlState) -> NSAttributedString? {
+        let str = "Lihat Aktifitas Terbaru"
+        let attrs = [NSAttributedStringKey.font: UIFont.preferredFont(forTextStyle: UIFontTextStyle.callout)]
+        return NSAttributedString(string: str, attributes: attrs)
+    }
+    
+    func emptyDataSet(_ scrollView: UIScrollView, didTap button: UIButton) {
+        print("Tap")
+        HUD.show(.labeledProgress(title: nil, subtitle: nil))
+        fetchPosts()
+    }
+}
+

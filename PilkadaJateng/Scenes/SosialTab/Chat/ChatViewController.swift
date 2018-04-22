@@ -9,12 +9,14 @@
 import UIKit
 import MessageKit
 import IQKeyboardManagerSwift
+import DZNEmptyDataSet
 
 class ChatViewController: MessagesViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupMessageViewControllerOnDidLoad()
+        setupDZNDataSet()
     }
     
     var chatService: ChatService!
@@ -57,3 +59,27 @@ class ChatViewController: MessagesViewController {
         chatService.newMessage(message)
     }
 }
+
+extension ChatViewController: DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
+    func setupDZNDataSet() {
+        self.messagesCollectionView.emptyDataSetSource = self
+        self.messagesCollectionView.emptyDataSetDelegate = self
+    }
+    
+    func title(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
+        let str = "Belum Ada Percakapan"
+        let attrs = [NSAttributedStringKey.font: UIFont.preferredFont(forTextStyle: UIFontTextStyle.headline)]
+        return NSAttributedString(string: str, attributes: attrs)
+    }
+    
+    func description(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
+        let str = "Ketika ada pesan, kamu akan melihatnya di sini."
+        let attrs = [NSAttributedStringKey.font: UIFont.preferredFont(forTextStyle: UIFontTextStyle.body)]
+        return NSAttributedString(string: str, attributes: attrs)
+    }
+    
+    func image(forEmptyDataSet scrollView: UIScrollView) -> UIImage? {
+        return UIImage(named: "message_green_100")
+    }
+}
+

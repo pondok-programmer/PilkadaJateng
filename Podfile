@@ -18,6 +18,10 @@ target 'PilkadaJateng' do
     pod 'TimelineTableViewCell'
     pod 'Kingfisher', '~> 4.0'
     
+  # Objc
+    
+    pod 'DZNEmptyDataSet'
+    
 
   target 'PilkadaJatengTests' do
     inherit! :search_paths

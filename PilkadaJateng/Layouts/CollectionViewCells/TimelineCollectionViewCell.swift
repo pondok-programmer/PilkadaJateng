@@ -29,7 +29,7 @@ class TimelineCollectionViewCell: UICollectionViewCell {
         if index % 2 == 0 {
             backgroundColor = .white
         } else {
-            backgroundColor = UIColor(red: 222, green: 222, blue: 222, alpha: 1) // Almost gray -> white
+            backgroundColor = UIColor(red: 222/255, green: 222/255, blue: 222/255, alpha: 1) // Almost gray -> white
         }
     }
     
@@ -43,7 +43,7 @@ class TimelineCollectionViewCell: UICollectionViewCell {
         
         thumbnailImageView.kf.setImage(with: URL(string: post.imageUrl))
         captionLabel.text = post.caption
-        let likeImage = post.isLikedByCurrentUser ? #imageLiteral(resourceName: "like_filled_50") : #imageLiteral(resourceName: "like_50") // #imageLiteral
+        let likeImage = post.isLikedByCurrentUser ? #imageLiteral(resourceName: "like_red_50") : #imageLiteral(resourceName: "like_50") // #imageLiteral
         likeButton.setImage(likeImage, for: .normal)
     }
 }

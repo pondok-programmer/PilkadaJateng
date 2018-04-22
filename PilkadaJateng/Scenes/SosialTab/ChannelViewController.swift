@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import Firebase
 import PKHUD
+import DZNEmptyDataSet
 
 class ChannelListViewController: UIViewController {
     @IBOutlet weak var viewOutlets: ChannelListView!
@@ -17,6 +17,7 @@ class ChannelListViewController: UIViewController {
         super.viewDidLoad()
         
         _setupTableView()
+        setupDZNDataSet()
         _setupNewChannelButton()
     }
     
@@ -112,3 +113,29 @@ extension ChannelListViewController: UITableViewDataSource {
         return cell
     }
 }
+
+extension ChannelListViewController: DZNEmptyDataSetDelegate, DZNEmptyDataSetSource {
+    func setupDZNDataSet() {
+        viewOutlets.tableView.emptyDataSetSource = self
+        viewOutlets.tableView.emptyDataSetDelegate = self
+        viewOutlets.tableView.tableFooterView = UIView()
+    }
+    
+    func title(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
+        let str = "Halo"
+        let attrs = [NSAttributedStringKey.font: UIFont.preferredFont(forTextStyle: UIFontTextStyle.headline)]
+        return NSAttributedString(string: str, attributes: attrs)
+    }
+    
+    func description(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
+        let str = "Ayo buat grup baru untuk berdiskusi tentang Pilkada Jateng 2018."
+        let attrs = [NSAttributedStringKey.font: UIFont.preferredFont(forTextStyle: UIFontTextStyle.body)]
+        return NSAttributedString(string: str, attributes: attrs)
+    }
+    
+    func image(forEmptyDataSet scrollView: UIScrollView?) -> UIImage? {
+        return UIImage(named: "discussion_red_100")
+    }
+}
+
+

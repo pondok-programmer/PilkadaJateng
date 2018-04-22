@@ -1,4 +1,5 @@
 PODS:
+  - DZNEmptyDataSet (1.8.1)
   - Firebase (4.11.0):
     - Firebase/Core (= 4.11.0)
   - Firebase/Auth (4.11.0):
@@ -59,6 +60,7 @@ PODS:
   - TimelineTableViewCell (1.2)
 
 DEPENDENCIES:
+  - DZNEmptyDataSet
   - Firebase
   - Firebase/Auth
   - Firebase/Core
@@ -72,6 +74,7 @@ DEPENDENCIES:
   - TimelineTableViewCell
 
 SPEC CHECKSUMS:
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   Firebase: cc13dfab1038c8b45d7903e01fc690451d6d0b24
   FirebaseAnalytics: 3dfae28d4a5e06f86c4fae830efc2ad3fadb19bc
   FirebaseAuth: 147bf340a0706b44ca1753d6b41ebafd9687cfe6
@@ -90,6 +93,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
   TimelineTableViewCell: 71a4bc787bfeb5a85083171d18b113a5f5db2be8
 
-PODFILE CHECKSUM: a6af6d74198ec5014a41b7eaa88b46cb814dde42
+PODFILE CHECKSUM: 7bba1da6121533a1acea8f231c643b487fe042b9
 
 COCOAPODS: 1.4.0

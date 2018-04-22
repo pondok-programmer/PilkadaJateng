@@ -225,7 +225,7 @@
 		EF9137FE2086D57B00527DA4 /* DaftarMateriTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaftarMateriTableViewCell.swift; sourceTree = "<group>"; };
 		EF9137FF2086D57B00527DA4 /* DaftarMateriTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DaftarMateriTableViewCell.xib; sourceTree = "<group>"; };
 		EF9138022086D6FB00527DA4 /* PilkadaJateng-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PilkadaJateng-Bridging-Header.h"; sourceTree = "<group>"; };
-		EF9138032086D6FC00527DA4 /* APIACCESS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = APIACCESS.m; path = OBJC/APIACCESS.m; sourceTree = "<group>"; };
+		EF9138032086D6FC00527DA4 /* APIACCESS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APIACCESS.m; sourceTree = "<group>"; };
 		EF957B212068C18D000E2098 /* InformasiCalonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformasiCalonCollectionViewCell.swift; sourceTree = "<group>"; };
 		EF957B222068C18D000E2098 /* InformasiCalonCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformasiCalonCollectionViewCell.xib; sourceTree = "<group>"; };
 		EF957B252068CEFB000E2098 /* DetailCalonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCalonViewController.swift; sourceTree = "<group>"; };
@@ -575,6 +575,15 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		EF9A117F208C167000377D88 /* Objective - C */ = {
+			isa = PBXGroup;
+			children = (
+				EF9138032086D6FC00527DA4 /* APIACCESS.m */,
+				EF9138022086D6FB00527DA4 /* PilkadaJateng-Bridging-Header.h */,
+			);
+			path = "Objective - C";
+			sourceTree = "<group>";
+		};
 		EF9B675520677F9A0057215B /* JSON */ = {
 			isa = PBXGroup;
 			children = (
@@ -718,8 +727,7 @@
 				EFEF12E2206734B3000A94CE /* Mocks */,
 				EF9B67732067A34F0057215B /* Extensions */,
 				EF9A117D208BF16C00377D88 /* loader.gif */,
-				EF9138032086D6FC00527DA4 /* APIACCESS.m */,
-				EF9138022086D6FB00527DA4 /* PilkadaJateng-Bridging-Header.h */,
+				EF9A117F208C167000377D88 /* Objective - C */,
 			);
 			path = PilkadaJateng;
 			sourceTree = "<group>";
@@ -1120,6 +1128,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-PilkadaJateng/Pods-PilkadaJateng-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
@@ -1133,6 +1142,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
@@ -1380,6 +1390,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -1429,6 +1440,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1446,7 +1458,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pondokios.pilkadajateng;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "PilkadaJateng/PilkadaJateng-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "PilkadaJateng/Objective - C/PilkadaJateng-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1465,7 +1477,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pondokios.pilkadajateng;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "PilkadaJateng/PilkadaJateng-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "PilkadaJateng/Objective - C/PilkadaJateng-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

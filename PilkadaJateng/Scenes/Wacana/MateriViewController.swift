@@ -24,6 +24,6 @@ class MateriViewController: UIViewController {
         super.viewWillAppear(animated)
         titleLabel.text = materi.title
         contentLabel.text = materi.content
-        numberLabel.text = "- \(number) -"
+        numberLabel.text = "- \(number + 1) -"
     }
 }

@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyJSON
+import DZNEmptyDataSet
 
 protocol _TambahTipsDelegateViewController: class {
     func finish(_ materiWacana: MateriWacana)
@@ -19,6 +20,7 @@ class TambahTipsViewController: UIViewController {
         tableView.dataSource = self
         let nib = UINib(nibName: "DaftarMateriTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "DaftarMateriCell")
+        setupDZNDataSet()
     }
     
     @IBOutlet weak var judulTextField: UITextField!
@@ -91,6 +93,30 @@ extension TambahTipsViewController: _TambahMateriDelegateViewController {
 
 protocol _TambahMateriDelegateViewController: class {
     func finish(_ materi: (title: String, content: String))
+}
+
+extension TambahTipsViewController: DZNEmptyDataSetDelegate, DZNEmptyDataSetSource {
+    func setupDZNDataSet() {
+        tableView.emptyDataSetSource = self
+        tableView.emptyDataSetDelegate = self
+        tableView.tableFooterView = UIView()
+    }
+    
+    func title(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
+        let str = "Belum Ada Materi"
+        let attrs = [NSAttributedStringKey.font: UIFont.preferredFont(forTextStyle: UIFontTextStyle.headline)]
+        return NSAttributedString(string: str, attributes: attrs)
+    }
+    
+    func description(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
+        let str = "Tambahkan mininal satu materi agar lebih bermanfaat."
+        let attrs = [NSAttributedStringKey.font: UIFont.preferredFont(forTextStyle: UIFontTextStyle.body)]
+        return NSAttributedString(string: str, attributes: attrs)
+    }
+    
+    func image(forEmptyDataSet scrollView: UIScrollView?) -> UIImage? {
+        return UIImage(named: "light_100")
+    }
 }
 
 class TambahMateriViewController: UIViewController {

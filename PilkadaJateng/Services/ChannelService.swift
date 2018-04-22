@@ -25,12 +25,13 @@ class ChannelService {
                 let id = snapshot.key
                 if let name = channelData["name"] as? String {
                     self.channels.update(Channel(id: id, name: name))
-                    completion()
                 }
             } else {
                 fatalError("Cannot decode \(snapshot)")
             }
+            completion()
         })
+        completion()
     }
     
     /// End listening should be called in viewDidDisappear
