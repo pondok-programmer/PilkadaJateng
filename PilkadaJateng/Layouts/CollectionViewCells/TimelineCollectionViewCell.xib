@@ -22,33 +22,27 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" translatesAutoresizingMaskIntoConstraints="NO" id="ADD-Tl-8YO">
-                        <rect key="frame" x="10" y="84" width="361" height="361"/>
+                        <rect key="frame" x="10" y="50" width="361" height="361"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="ADD-Tl-8YO" secondAttribute="height" multiplier="1:1" id="MVM-Yy-1uj"/>
                         </constraints>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="M35-22-UrU">
-                        <rect key="frame" x="16" y="20" width="349" height="50"/>
+                        <rect key="frame" x="16" y="20" width="349" height="25"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Urm-Mo-HfL">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Urm-Mo-HfL" secondAttribute="height" multiplier="1:1" id="ace-Ab-4JO"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DLi-8v-lP7">
-                                <rect key="frame" x="60" y="0.0" width="289" height="50"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="0.0" y="0.0" width="349" height="25"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="height" constant="50" id="O6v-sV-ltm"/>
+                            <constraint firstAttribute="height" constant="25" id="O6v-sV-ltm"/>
                         </constraints>
                     </stackView>
                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dZn-K0-gcb">
-                        <rect key="frame" x="16" y="460" width="70" height="30"/>
+                        <rect key="frame" x="16" y="411" width="70" height="30"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccV-vi-RQW">
                                 <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -74,8 +68,8 @@
                         </constraints>
                     </stackView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="752" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HhG-81-55d">
-                        <rect key="frame" x="16" y="505" width="349" height="25"/>
-                        <mutableString key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed lectus a nulla bibendum viverra a in mauris. Nam porta placerat maximus. Sed porttitor tortor in consequat pellentesque. Nam ultricies sodales pharetra. Ut vestibulum massa lorem, vitae rutrum nulla venenatis ut. Donec sed aliquam quam. Aenean accumsan, neque sed finibus gravida, purus tortor pharetra mauris, at varius orci arcu eget leo. Sed ornare, nunc sed ultrices rutrum, mi neque mollis mi, faucibus eleifend lacus ligula eu risus. Fusce consequat elementum eros eu tempor. Quisque porttitor, dolor ac egestas posuere, nulla purus consectetur lorem, a sodales nisl nisi ac lorem. Cras ac feugiat eros, hendrerit interdum dui. Sed vitae libero ac felis consequat aliquam.</mutableString>
+                        <rect key="frame" x="16" y="441" width="349" height="104"/>
+                        <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed lectus a nulla bibendum viverra a in mauris. Nam porta placerat maximus. Sed porttitor tortor in consequat pellentesque. Nam ultricies sodales pharetra. Ut vestibulum massa lorem, vitae rutrum nulla venenatis ut. Donec sed aliquam quam. Aenean accumsan, neque sed finibus gravida, purus tortor pharetra mauris, at varius orci arcu eget leo. Sed ornare, nunc sed ultrices rutrum, mi neque mollis mi, faucibus eleifend lacus ligula eu risus. Fusce consequat elementum eros eu tempor. Quisque porttitor, dolor ac egestas posuere, nulla purus consectetur lorem, a sodales nisl nisi ac lorem. Cras ac feugiat eros, hendrerit interdum dui. Sed vitae libero ac felis consequat aliquam.</string>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -84,16 +78,16 @@
             </view>
             <color key="backgroundColor" red="0.87058823529411766" green="0.87058823529411766" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="dZn-K0-gcb" firstAttribute="top" secondItem="ADD-Tl-8YO" secondAttribute="bottom" constant="15" id="6y8-yc-58N"/>
+                <constraint firstItem="dZn-K0-gcb" firstAttribute="top" secondItem="ADD-Tl-8YO" secondAttribute="bottom" id="6y8-yc-58N"/>
                 <constraint firstItem="M35-22-UrU" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="topMargin" id="CPf-v7-Afb"/>
                 <constraint firstAttribute="trailingMargin" secondItem="M35-22-UrU" secondAttribute="trailing" id="GQC-bf-RNA"/>
-                <constraint firstAttribute="bottomMargin" secondItem="HhG-81-55d" secondAttribute="bottom" constant="20" id="KPb-ZJ-NHf"/>
+                <constraint firstAttribute="bottomMargin" secondItem="HhG-81-55d" secondAttribute="bottom" constant="5" id="KPb-ZJ-NHf"/>
                 <constraint firstAttribute="trailing" secondItem="ADD-Tl-8YO" secondAttribute="trailing" constant="10" id="SJB-KU-o8q"/>
-                <constraint firstItem="ADD-Tl-8YO" firstAttribute="top" secondItem="M35-22-UrU" secondAttribute="bottom" constant="14" id="V6l-2n-C9k"/>
+                <constraint firstItem="ADD-Tl-8YO" firstAttribute="top" secondItem="M35-22-UrU" secondAttribute="bottom" constant="5" id="V6l-2n-C9k"/>
                 <constraint firstItem="ADD-Tl-8YO" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="bYd-HZ-FdM"/>
                 <constraint firstItem="HhG-81-55d" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leadingMargin" id="cYJ-hq-AsI"/>
                 <constraint firstItem="dZn-K0-gcb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leadingMargin" id="fFs-WG-SNY"/>
-                <constraint firstItem="HhG-81-55d" firstAttribute="top" secondItem="dZn-K0-gcb" secondAttribute="bottom" constant="15" id="v3m-mE-6UA"/>
+                <constraint firstItem="HhG-81-55d" firstAttribute="top" secondItem="dZn-K0-gcb" secondAttribute="bottom" id="v3m-mE-6UA"/>
                 <constraint firstItem="M35-22-UrU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leadingMargin" id="vW0-30-a5K"/>
                 <constraint firstAttribute="trailingMargin" secondItem="HhG-81-55d" secondAttribute="trailing" id="xbJ-im-G05"/>
             </constraints>

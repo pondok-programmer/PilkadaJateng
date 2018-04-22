@@ -22,30 +22,28 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="iXZ-57-p78">
-                    <rect key="frame" x="20" y="40" width="280" height="420"/>
-                    <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jTV-eu-n8G">
-                            <rect key="frame" x="0.0" y="0.0" width="280" height="280"/>
-                            <constraints>
-                                <constraint firstAttribute="width" secondItem="jTV-eu-n8G" secondAttribute="height" multiplier="1:1" id="TkQ-1h-Nwe"/>
-                            </constraints>
-                        </imageView>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rmM-vZ-ABn">
-                            <rect key="frame" x="0.0" y="305" width="280" height="115"/>
-                            <color key="backgroundColor" red="0.949238578680203" green="0.949238578680203" blue="0.949238578680203" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                        </textView>
-                    </subviews>
-                </stackView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jTV-eu-n8G">
+                    <rect key="frame" x="10" y="30" width="300" height="300"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="jTV-eu-n8G" secondAttribute="height" multiplier="1:1" id="TkQ-1h-Nwe"/>
+                    </constraints>
+                </imageView>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rmM-vZ-ABn">
+                    <rect key="frame" x="10" y="350" width="300" height="120"/>
+                    <color key="backgroundColor" red="0.949238578680203" green="0.949238578680203" blue="0.949238578680203" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="iXZ-57-p78" secondAttribute="trailing" constant="20" id="HEB-eH-dCm"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="iXZ-57-p78" secondAttribute="bottom" constant="20" id="OFF-wR-RIR"/>
-                <constraint firstItem="iXZ-57-p78" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="fPy-i4-MhP"/>
-                <constraint firstItem="iXZ-57-p78" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="uci-nX-k0P"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rmM-vZ-ABn" secondAttribute="trailing" constant="10" id="0ic-rI-qEX"/>
+                <constraint firstItem="jTV-eu-n8G" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="LvC-1W-nei"/>
+                <constraint firstItem="rmM-vZ-ABn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="Qtq-47-QDO"/>
+                <constraint firstItem="rmM-vZ-ABn" firstAttribute="top" secondItem="jTV-eu-n8G" secondAttribute="bottom" constant="20" id="Vnw-VO-Sia"/>
+                <constraint firstItem="jTV-eu-n8G" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="Z0K-Rx-EWl"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jTV-eu-n8G" secondAttribute="trailing" constant="10" id="sU2-lK-EwM"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="rmM-vZ-ABn" secondAttribute="bottom" constant="10" id="vv8-1O-Qjj"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <connections>

@@ -26,6 +26,7 @@ class PostEditorViewController: UIViewController {
         super.viewDidLoad()
         setupBarButtonItem()
         setupTextView()
+        title = "Edit Post"
     }
     
     override func viewWillAppear(_ animated: Bool) {

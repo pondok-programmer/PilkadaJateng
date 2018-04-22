@@ -26,11 +26,7 @@ class TimelineCollectionViewCell: UICollectionViewCell {
     /// else index is even : White
     /// - Parameter index: Index of tableviewcell
     func setColor(for index: Int) {
-        if index % 2 == 0 {
-            backgroundColor = .white
-        } else {
-            backgroundColor = UIColor(red: 222/255, green: 222/255, blue: 222/255, alpha: 1) // Almost gray -> white
-        }
+        backgroundColor = .white
     }
     
     func setPost(_ post: TimelinePost) {
