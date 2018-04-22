@@ -37,6 +37,10 @@ class TambahTipsViewController: UIViewController {
         }
     }
     
+    @IBAction func batal() {
+        dismiss(animated: true, completion: nil)
+    }
+    
     weak var delegate: _TambahTipsDelegateViewController?
     
     @IBAction func simpanButton() {
@@ -101,7 +105,30 @@ class TambahMateriViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func batalButton() {
+        UIView.animate(withDuration: 0.1, animations: {
+            self.view.backgroundColor = .clear
+        }) { (isCompleted) in
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
     @IBOutlet weak var nomorLabel: UILabel!
     @IBOutlet weak var subjudulTextField: UITextField!
     @IBOutlet weak var isiTextView: UITextView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        isiTextView.layer.borderWidth = 0.5
+        isiTextView.layer.borderColor = UIColor.gray.cgColor
+        subjudulTextField.layer.borderWidth = 0.5
+        subjudulTextField.layer.borderColor = UIColor.gray.cgColor
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIView.animate(withDuration: 0.5, delay: 0.5, animations: {
+            self.view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3)
+        })
+    }
 }

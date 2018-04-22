@@ -807,7 +807,11 @@
                         <viewLayoutGuide key="safeArea" id="4uU-mt-6cb"/>
                     </view>
                     <navigationItem key="navigationItem" title="Tambah Tips" id="M3k-yi-tDc">
-                        <barButtonItem key="leftBarButtonItem" title="Batal" id="Lau-Kb-hrr"/>
+                        <barButtonItem key="leftBarButtonItem" title="Batal" id="Lau-Kb-hrr">
+                            <connections>
+                                <action selector="batal" destination="sgN-Gk-2NJ" id="lQa-ee-vyb"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Simpan" id="Kuh-cR-2fL">
                             <connections>
                                 <action selector="simpanButton" destination="sgN-Gk-2NJ" id="iAh-GU-cvp"/>
@@ -860,13 +864,13 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Isi" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yqX-qg-0C8">
-                                                <rect key="frame" x="0.0" y="80" width="272" height="184"/>
+                                                <rect key="frame" x="0.0" y="80" width="272" height="144"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0bJ-6T-oru">
-                                                <rect key="frame" x="0.0" y="274" width="272" height="30"/>
+                                                <rect key="frame" x="0.0" y="234" width="272" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="Dhd-TE-VFr"/>
                                                 </constraints>
@@ -875,10 +879,20 @@
                                                     <action selector="selesaiButton:" destination="EX1-4R-Ihm" eventType="touchUpInside" id="9i5-6i-kVB"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6z-Or-yqc">
+                                                <rect key="frame" x="0.0" y="274" width="272" height="30"/>
+                                                <state key="normal" title="Batal"/>
+                                                <connections>
+                                                    <action selector="batalButton" destination="EX1-4R-Ihm" eventType="touchUpInside" id="My8-yj-sxU"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="j6z-Or-yqc" firstAttribute="height" secondItem="0bJ-6T-oru" secondAttribute="height" id="ZkJ-Hg-G5I"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.64990981748363574" blue="0.73368937846272742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="NJw-Ys-7EC" secondAttribute="trailing" constant="8" id="4Wz-DT-4qE"/>
                                     <constraint firstItem="NJw-Ys-7EC" firstAttribute="leading" secondItem="huO-ui-JBB" secondAttribute="leading" constant="8" id="VDC-V8-haE"/>
