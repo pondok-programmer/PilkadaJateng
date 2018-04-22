@@ -40,6 +40,7 @@ class TimelineCollectionViewCell: UICollectionViewCell {
         let data = try! Data(contentsOf: URL(fileURLWithPath: p))
         
         thumbnailImageView.kf.indicatorType = .image(imageData: data)
+        thumbnailImageView.kf.indicator?.startAnimatingView()
         
         thumbnailImageView.kf.setImage(with: URL(string: post.imageUrl))
         captionLabel.text = post.caption

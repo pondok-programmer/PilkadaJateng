@@ -14,6 +14,7 @@
 		EF00C470207F4708008EC26D /* ProfilViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF00C46E207F4708008EC26D /* ProfilViewController.xib */; };
 		EF508C9A207B164900726589 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508C99207B164900726589 /* MainTabBarController.swift */; };
 		EF508C9C207B32BB00726589 /* PJTahapanPilkada.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508C9B207B32BB00726589 /* PJTahapanPilkada.swift */; };
+		EF51502D208C72610098ABF2 /* loader.gif in Resources */ = {isa = PBXBuildFile; fileRef = EF51502C208C72600098ABF2 /* loader.gif */; };
 		EF5803812071C85000C8E5E5 /* MateriWacana.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5803802071C85000C8E5E5 /* MateriWacana.swift */; };
 		EF5803842071C8FA00C8E5E5 /* DaftarMateri.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5803832071C8FA00C8E5E5 /* DaftarMateri.swift */; };
 		EF5803882071CA4200C8E5E5 /* MateriWacana+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5803872071CA4200C8E5E5 /* MateriWacana+Ext.swift */; };
@@ -89,7 +90,6 @@
 		EF989997206A4853007E7DA9 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF989996206A4853007E7DA9 /* ChatViewController.swift */; };
 		EF989999206A488F007E7DA9 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF989998206A488F007E7DA9 /* TimelineViewController.swift */; };
 		EF98999F206A4A07007E7DA9 /* ChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF98999D206A4A07007E7DA9 /* ChatViewController.xib */; };
-		EF9A117E208BF16D00377D88 /* loader.gif in Resources */ = {isa = PBXBuildFile; fileRef = EF9A117D208BF16C00377D88 /* loader.gif */; };
 		EF9B674E20677BAA0057215B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9B674D20677BAA0057215B /* NetworkManager.swift */; };
 		EF9B675020677DC90057215B /* InformasiPilkadaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9B674F20677DC90057215B /* InformasiPilkadaViewController.swift */; };
 		EF9B675220677F290057215B /* profile_calon.json in Resources */ = {isa = PBXBuildFile; fileRef = EF9B675120677F290057215B /* profile_calon.json */; };
@@ -181,6 +181,7 @@
 		EF00C46E207F4708008EC26D /* ProfilViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfilViewController.xib; sourceTree = "<group>"; };
 		EF508C99207B164900726589 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		EF508C9B207B32BB00726589 /* PJTahapanPilkada.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PJTahapanPilkada.swift; sourceTree = "<group>"; };
+		EF51502C208C72600098ABF2 /* loader.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loader.gif; sourceTree = "<group>"; };
 		EF5803802071C85000C8E5E5 /* MateriWacana.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MateriWacana.swift; sourceTree = "<group>"; };
 		EF5803832071C8FA00C8E5E5 /* DaftarMateri.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaftarMateri.swift; sourceTree = "<group>"; };
 		EF5803872071CA4200C8E5E5 /* MateriWacana+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MateriWacana+Ext.swift"; sourceTree = "<group>"; };
@@ -257,7 +258,6 @@
 		EF989996206A4853007E7DA9 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		EF989998206A488F007E7DA9 /* TimelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
 		EF98999D206A4A07007E7DA9 /* ChatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatViewController.xib; sourceTree = "<group>"; };
-		EF9A117D208BF16C00377D88 /* loader.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loader.gif; sourceTree = "<group>"; };
 		EF9B674D20677BAA0057215B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		EF9B674F20677DC90057215B /* InformasiPilkadaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformasiPilkadaViewController.swift; sourceTree = "<group>"; };
 		EF9B675120677F290057215B /* profile_calon.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = profile_calon.json; sourceTree = "<group>"; };
@@ -383,6 +383,14 @@
 				EF508C9B207B32BB00726589 /* PJTahapanPilkada.swift */,
 			);
 			path = PJTahapan;
+			sourceTree = "<group>";
+		};
+		EF51502E208C72730098ABF2 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				EF51502C208C72600098ABF2 /* loader.gif */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		EF5803822071C85700C8E5E5 /* Wacana */ = {
@@ -725,8 +733,8 @@
 				EFEF12DF2067328A000A94CE /* Models */,
 				EFEF12A620672103000A94CE /* Assets.xcassets */,
 				EFEF12E2206734B3000A94CE /* Mocks */,
+				EF51502E208C72730098ABF2 /* Assets */,
 				EF9B67732067A34F0057215B /* Extensions */,
-				EF9A117D208BF16C00377D88 /* loader.gif */,
 				EF9A117F208C167000377D88 /* Objective - C */,
 			);
 			path = PilkadaJateng;
@@ -970,6 +978,7 @@
 				EFEF12A520672103000A94CE /* Main.storyboard in Resources */,
 				EFA7CFF1206C8CC00090DCF5 /* PostEditorViewController.xib in Resources */,
 				EF9899822069E7B7007E7DA9 /* berita_pilkada.json in Resources */,
+				EF51502D208C72610098ABF2 /* loader.gif in Resources */,
 				EF9B6789206871BC0057215B /* AnggaranPilkadaCollectionViewCell.xib in Resources */,
 				EF9B6757206784B90057215B /* partisipasi_pilkada.json in Resources */,
 				EF9B675220677F290057215B /* profile_calon.json in Resources */,
@@ -980,7 +989,6 @@
 				EF9B675B206785160057215B /* visi_misi_wahidin_andika.json in Resources */,
 				EF957B322068D87D000E2098 /* VisiMisiCalonCollectionViewCell.xib in Resources */,
 				EF957B362068D8AD000E2098 /* ProgramUnggulanCalonCollectionViewCell.xib in Resources */,
-				EF9A117E208BF16D00377D88 /* loader.gif in Resources */,
 				EF9B6765206786AA0057215B /* prioritas_program_wahidin_andika.json in Resources */,
 				EFB79AB4207B0C07001B143B /* dana_paslon_2018.json in Resources */,
 				EF9B677E2067CF460057215B /* PartisipasiPilkadaCollectionViewCell.xib in Resources */,
