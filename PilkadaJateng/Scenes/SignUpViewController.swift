@@ -14,6 +14,10 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    @IBAction func batal() {
+        dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func signUp() {
         let displayName = displayNameTextField.text ?? ""
         let username = usernameTextField.text ?? ""

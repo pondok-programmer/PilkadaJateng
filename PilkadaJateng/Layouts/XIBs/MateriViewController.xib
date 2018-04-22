@@ -10,11 +10,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="GeorgiaBold.ttf">
-            <string>Georgia-Bold</string>
+        <array key="TimesNewRoman.ttf">
+            <string>TimesNewRomanPSMT</string>
         </array>
-        <array key="VerdanaBold.ttf">
-            <string>Verdana-Bold</string>
+        <array key="TimesNewRomanBold.ttf">
+            <string>TimesNewRomanPS-BoldMT</string>
         </array>
     </customFonts>
     <objects>
@@ -32,28 +32,28 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nmv-q6-Yhb">
-                    <rect key="frame" x="20" y="82.5" width="335" height="62"/>
-                    <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="17"/>
+                    <rect key="frame" x="20" y="81" width="335" height="38"/>
+                    <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cA1-GF-CbB">
-                    <rect key="frame" x="20" y="164.5" width="335" height="467"/>
+                    <rect key="frame" x="20" y="139" width="335" height="395.5"/>
                     <string key="text">Maecenas non mauris non lectus bibendum volutpat non ut eros. Vivamus vehicula erat volutpat facilisis varius. Curabitur sagittis sodales est, et euismod tortor ultricies vel. Nullam in massa erat. Maecenas diam massa, sollicitudin ut finibus in, suscipit sed urna. Proin nunc ligula, tempor vel magna vel, tincidunt porttitor quam. Curabitur euismod consectetur facilisis. Donec at maximus urna. Donec lacinia bibendum lobortis. Praesent non sapien porttitor, semper urna in, faucibus erat. Phasellus justo dolor, bibendum eget mollis vel, scelerisque sed velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus ac tortor efficitur ex gravida malesuada sit amet nec sapien. Cras tincidunt eleifend nunc, id faucibus velit volutpat non. Donec eu sem eros. Maecenas dictum et sem ac auctor.
 
 </string>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- 6 -" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJF-ib-x7t" userLabel="Number">
-                    <rect key="frame" x="159" y="40" width="57.5" height="35"/>
-                    <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="30"/>
+                    <rect key="frame" x="163" y="40" width="50" height="33.5"/>
+                    <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="30"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" red="1" green="0.46677984219719415" blue="0.55064907469444169" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="zJF-ib-x7t" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="2Fy-Pe-ZMl"/>
                 <constraint firstItem="nmv-q6-Yhb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="4E5-3p-Num"/>

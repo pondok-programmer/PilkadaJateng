@@ -15,6 +15,8 @@
 		EF508C9A207B164900726589 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508C99207B164900726589 /* MainTabBarController.swift */; };
 		EF508C9C207B32BB00726589 /* PJTahapanPilkada.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508C9B207B32BB00726589 /* PJTahapanPilkada.swift */; };
 		EF51502D208C72610098ABF2 /* loader.gif in Resources */ = {isa = PBXBuildFile; fileRef = EF51502C208C72600098ABF2 /* loader.gif */; };
+		EF515031208CC3340098ABF2 /* ProgramTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF51502F208CC3340098ABF2 /* ProgramTableViewCell.swift */; };
+		EF515032208CC3340098ABF2 /* ProgramTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF515030208CC3340098ABF2 /* ProgramTableViewCell.xib */; };
 		EF5803812071C85000C8E5E5 /* MateriWacana.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5803802071C85000C8E5E5 /* MateriWacana.swift */; };
 		EF5803842071C8FA00C8E5E5 /* DaftarMateri.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5803832071C8FA00C8E5E5 /* DaftarMateri.swift */; };
 		EF5803882071CA4200C8E5E5 /* MateriWacana+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5803872071CA4200C8E5E5 /* MateriWacana+Ext.swift */; };
@@ -182,6 +184,8 @@
 		EF508C99207B164900726589 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		EF508C9B207B32BB00726589 /* PJTahapanPilkada.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PJTahapanPilkada.swift; sourceTree = "<group>"; };
 		EF51502C208C72600098ABF2 /* loader.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loader.gif; sourceTree = "<group>"; };
+		EF51502F208CC3340098ABF2 /* ProgramTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramTableViewCell.swift; sourceTree = "<group>"; };
+		EF515030208CC3340098ABF2 /* ProgramTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgramTableViewCell.xib; sourceTree = "<group>"; };
 		EF5803802071C85000C8E5E5 /* MateriWacana.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MateriWacana.swift; sourceTree = "<group>"; };
 		EF5803832071C8FA00C8E5E5 /* DaftarMateri.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaftarMateri.swift; sourceTree = "<group>"; };
 		EF5803872071CA4200C8E5E5 /* MateriWacana+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MateriWacana+Ext.swift"; sourceTree = "<group>"; };
@@ -520,6 +524,8 @@
 				EF5C92252075C0C200DE876C /* CommentTableViewCell.xib */,
 				EF9137FE2086D57B00527DA4 /* DaftarMateriTableViewCell.swift */,
 				EF9137FF2086D57B00527DA4 /* DaftarMateriTableViewCell.xib */,
+				EF51502F208CC3340098ABF2 /* ProgramTableViewCell.swift */,
+				EF515030208CC3340098ABF2 /* ProgramTableViewCell.xib */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -984,6 +990,7 @@
 				EF9B675220677F290057215B /* profile_calon.json in Resources */,
 				EF58444F206B645700BDBB4C /* ChannelTableViewCell.xib in Resources */,
 				EF9B6767206786E70057215B /* lhkpn.json in Resources */,
+				EF515032208CC3340098ABF2 /* ProgramTableViewCell.xib in Resources */,
 				EF98997E2069DF01007E7DA9 /* PEMILU_KEY.json in Resources */,
 				EF65D5B32074CDC100C52D21 /* CommentViewController.xib in Resources */,
 				EF9B675B206785160057215B /* visi_misi_wahidin_andika.json in Resources */,
@@ -1222,6 +1229,7 @@
 				EFEF12E6206739EA000A94CE /* Application.swift in Sources */,
 				EF9B679320688E5E0057215B /* TahapanPilkada+Ext.swift in Sources */,
 				EF9B674E20677BAA0057215B /* NetworkManager.swift in Sources */,
+				EF515031208CC3340098ABF2 /* ProgramTableViewCell.swift in Sources */,
 				EF957B392068D8D3000E2098 /* PrioritasProgramCalonCollectionViewCell.swift in Sources */,
 				EF65D5B12074B39E00C52D21 /* CommentViewController.swift in Sources */,
 				EF989997206A4853007E7DA9 /* ChatViewController.swift in Sources */,

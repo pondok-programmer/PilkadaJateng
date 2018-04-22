@@ -149,8 +149,9 @@ extension ChannelListViewController: UISearchBarDelegate {
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchActive = false;
-        searchBar.text = nil
+        searchBar.text = ""
         searchBar.resignFirstResponder()
+        viewOutlets.tableView.reloadData()
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {

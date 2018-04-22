@@ -14,8 +14,11 @@ class ProgramTableViewController: UITableViewController {
     }
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+        let nib = UINib(nibName: "ProgramTableViewCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "ProgramCell")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,8 +37,11 @@ class ProgramTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ProgramCell", for: indexPath)
-        cell.textLabel?.text = data[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ProgramCell", for: indexPath) as! ProgramTableViewCell
+        cell.numberLabel.text = "\(indexPath.row + 1)"
+        cell.contentLabel.text = "\(data[indexPath.row])"
         return cell
     }
 }
+
+
