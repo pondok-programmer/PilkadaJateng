@@ -6,6 +6,17 @@ Aplikasi ini adalah aplikasi native yang berarti hanya bisa di-_build_ untuk pla
 
 **Screenshoot**
 
+<table>
+  <tr>
+    <td>
+      <img src="1.jpeg" width="150px">
+    </td>
+    <td>
+      <img src="2.jpeg" width="150px">
+    </td>
+  </tr>
+</table>
+
 <img src="1.jpeg" width="150px">
 
 <img src="2.jpeg" width="150px">
