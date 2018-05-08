@@ -20,11 +20,11 @@ Aplikasi ini adalah aplikasi native yang berarti hanya bisa di-_build_ untuk pla
     <td>
       <img src="Screenshoot/4.jpeg" width: 150px>
     </td>
+  </tr>
+  <tr>
     <td>
       <img src="Screenshoot/5.jpeg" width: 150px>
     </td>
-  </tr>
-  <tr>
     <td>
       <img src="Screenshoot/6.jpeg" width: 150px>
     </td>
@@ -34,20 +34,22 @@ Aplikasi ini adalah aplikasi native yang berarti hanya bisa di-_build_ untuk pla
     <td>
       <img src="Screenshoot/8.jpeg" width: 150px>
     </td>
+  </tr>
+  <tr>
     <td>
       <img src="Screenshoot/9.jpeg" width: 150px>
     </td>
     <td>
       <img src="Screenshoot/10.jpeg" width: 150px>
     </td>
-  </tr>
-  <tr>
     <td>
       <img src="Screenshoot/11.jpeg" width: 150px>
     </td>
     <td>
       <img src="Screenshoot/12.jpeg" width: 150px>
     </td>
+  </tr>
+  <tr>
     <td>
       <img src="Screenshoot/13.jpeg" width: 150px>
     </td>
@@ -57,11 +59,11 @@ Aplikasi ini adalah aplikasi native yang berarti hanya bisa di-_build_ untuk pla
     <td>
       <img src="Screenshoot/15.jpeg" width: 150px>
     </td>
-  </tr>
-  <tr>
     <td>
       <img src="Screenshoot/16.jpeg" width: 150px>
     </td>
+  </tr>
+  <tr>
     <td>
       <img src="Screenshoot/17.jpeg" width: 150px>
     </td>
@@ -87,9 +89,6 @@ Aplikasi ini adalah aplikasi native yang berarti hanya bisa di-_build_ untuk pla
     </td>
     <td>
       <img src="Screenshoot/24.jpeg" width: 150px>
-    </td>
-    <td>
-      <img src="Screenshoot/25.jpeg" width: 150px>
     </td>
   </tr>
 </table>
