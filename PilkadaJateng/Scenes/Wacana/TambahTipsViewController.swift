@@ -36,6 +36,7 @@ class TambahTipsViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? TambahMateriViewController {
             vc.delegate = self
+            vc.nomorMateri = _daftarMateri.count + 1
         }
     }
     
@@ -119,6 +120,9 @@ extension TambahTipsViewController: DZNEmptyDataSetDelegate, DZNEmptyDataSetSour
     }
 }
 
+
+fileprivate let textViewPlaceholder = "Isi materi..."
+
 class TambahMateriViewController: UIViewController {
     
     weak var delegate: _TambahMateriDelegateViewController?
@@ -128,10 +132,14 @@ class TambahMateriViewController: UIViewController {
             let content = isiTextView.text {
            delegate?.finish((title, content))
         }
-        dismiss(animated: true, completion: nil)
+        mydismiss()
     }
     
     @IBAction func batalButton() {
+        mydismiss()
+    }
+    
+    func mydismiss() {
         UIView.animate(withDuration: 0.1, animations: {
             self.view.backgroundColor = .clear
         }) { (isCompleted) in
@@ -139,12 +147,16 @@ class TambahMateriViewController: UIViewController {
         }
     }
     
+    var nomorMateri: Int = 0
+    
     @IBOutlet weak var nomorLabel: UILabel!
     @IBOutlet weak var subjudulTextField: UITextField!
     @IBOutlet weak var isiTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupTextView()
+        nomorLabel.text = "Nomor \(nomorMateri)"
         isiTextView.layer.borderWidth = 0.5
         isiTextView.layer.borderColor = UIColor.gray.cgColor
         subjudulTextField.layer.borderWidth = 0.5
@@ -156,5 +168,34 @@ class TambahMateriViewController: UIViewController {
         UIView.animate(withDuration: 0.5, delay: 0.5, animations: {
             self.view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3)
         })
+    }
+    
+    func setupTextView() {
+        let textView = isiTextView
+        textView?.delegate = self
+        textView?.text = textViewPlaceholder
+        textView?.textColor = .lightGray
+    }
+}
+
+extension TambahMateriViewController: UITextViewDelegate {
+    func textViewDidBeginEditing(_ textView: UITextView)
+    {
+        if (textView.text == textViewPlaceholder)
+        {
+            textView.text = ""
+            textView.textColor = .black
+        }
+        textView.becomeFirstResponder() //Optional
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView)
+    {
+        if (textView.text == "")
+        {
+            textView.text = textViewPlaceholder
+            textView.textColor = .lightGray
+        }
+        textView.resignFirstResponder()
     }
 }

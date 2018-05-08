@@ -8,7 +8,7 @@
 
 import UIKit
 
-let textViewPlaceholder = "Deskripsikan foto kamu..."
+fileprivate let textViewPlaceholder = "Deskripsikan foto kamu..."
 
 protocol PostEditorDelegateViewController: class {
     func finishEditing(_ timelinePost: (image: UIImage, caption: String) )

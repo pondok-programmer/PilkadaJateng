@@ -32,11 +32,13 @@ class LoginViewController: UIViewController {
     
     @objc func loginAction() {
         HUD.show(.labeledProgress(title: nil, subtitle: nil))
-//        let username = viewOutlets.usernameTextField.text ?? ""
-//        let password = viewOutlets.passwordTextField.text ?? ""
+        let username = viewOutlets.usernameTextField.text ?? ""
+        let password = viewOutlets.passwordTextField.text ?? ""
         
-        let username = "m@k.com"
-        let password = "halohalo@"
+//        let username = "m@k.com"
+//        let password = "halohalo@"
+//        let username = "a@a.com"
+//        let password = "qwerty123"
         
         authService.login(username: username, password: password) { [unowned self] (user, error) in
             HUD.hide()

@@ -23,40 +23,48 @@
             <objects>
                 <viewController id="BpK-e4-5QT" customClass="SignUpViewController" customModule="PilkadaJateng" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="m3l-Yk-yuE">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXA-Ae-DfF">
-                                <rect key="frame" x="125" y="281" width="71" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Buat Akun"/>
-                                <connections>
-                                    <action selector="signUp" destination="BpK-e4-5QT" eventType="touchUpInside" id="8rJ-p3-u2e"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qds-Xc-HhJ">
-                                <rect key="frame" x="45" y="243" width="236" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kDY-XW-O7n">
-                                <rect key="frame" x="45" y="205" width="236" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nama" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wZp-Kp-4Tc">
-                                <rect key="frame" x="45" y="167" width="236" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zW3-Jm-svF">
+                                <rect key="frame" x="20" y="150" width="280" height="166"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nama" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wZp-Kp-4Tc">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="34"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kDY-XW-O7n">
+                                        <rect key="frame" x="0.0" y="44" width="280" height="34"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qds-Xc-HhJ">
+                                        <rect key="frame" x="0.0" y="88" width="280" height="34"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXA-Ae-DfF">
+                                        <rect key="frame" x="0.0" y="132" width="280" height="34"/>
+                                        <state key="normal" title="Buat Akun"/>
+                                        <connections>
+                                            <action selector="signUp" destination="BpK-e4-5QT" eventType="touchUpInside" id="8rJ-p3-u2e"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.33725490196078434" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="HqP-zN-VHl" firstAttribute="bottom" secondItem="zW3-Jm-svF" secondAttribute="bottom" constant="100" id="Ayq-5Y-bcq"/>
+                            <constraint firstItem="zW3-Jm-svF" firstAttribute="leading" secondItem="HqP-zN-VHl" secondAttribute="leading" constant="20" id="HAH-9R-4aH"/>
+                            <constraint firstItem="zW3-Jm-svF" firstAttribute="top" secondItem="HqP-zN-VHl" secondAttribute="top" constant="150" id="J4U-Kz-Wpl"/>
+                            <constraint firstItem="HqP-zN-VHl" firstAttribute="trailing" secondItem="zW3-Jm-svF" secondAttribute="trailing" constant="20" id="ZU6-Y8-lQi"/>
+                            <constraint firstItem="HqP-zN-VHl" firstAttribute="bottom" secondItem="zW3-Jm-svF" secondAttribute="bottom" priority="250" constant="100" id="mvd-bF-aBT"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="HqP-zN-VHl"/>
                     </view>
                     <navigationItem key="navigationItem" title="Buat Akun" id="7Jr-OM-wju">
@@ -67,9 +75,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="displayNameTextField" destination="wZp-Kp-4Tc" id="Cst-xC-mx0"/>
-                        <outlet property="passwordTextField" destination="qds-Xc-HhJ" id="1co-Dw-cij"/>
-                        <outlet property="usernameTextField" destination="kDY-XW-O7n" id="3Ha-hk-lGv"/>
+                        <outlet property="displayNameTextField" destination="wZp-Kp-4Tc" id="LbK-It-a4k"/>
+                        <outlet property="passwordTextField" destination="qds-Xc-HhJ" id="eCu-Lp-WSr"/>
+                        <outlet property="usernameTextField" destination="kDY-XW-O7n" id="Cjl-is-jeT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d81-gL-x4w" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -84,56 +92,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOGIN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8q4-be-fqN">
-                                <rect key="frame" x="40" y="200" width="240" height="36"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gza-z1-7II">
-                                <rect key="frame" x="50" y="251" width="220" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KLd-oq-duD">
-                                <rect key="frame" x="50" y="289" width="220" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Yr-sM-xPr">
-                                <rect key="frame" x="137" y="365" width="46" height="30"/>
-                                <state key="normal" title="Daftar"/>
-                                <connections>
-                                    <segue destination="nlr-cY-cwy" kind="presentation" id="AG7-nd-upF"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wiP-fd-ywN">
-                                <rect key="frame" x="137" y="327" width="46" height="30"/>
-                                <state key="normal" title="Masuk"/>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gw8-sJ-dWw">
+                                <rect key="frame" x="20" y="120" width="280" height="220"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOGIN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8q4-be-fqN">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gza-z1-7II">
+                                        <rect key="frame" x="0.0" y="46" width="280" height="36"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KLd-oq-duD">
+                                        <rect key="frame" x="0.0" y="92" width="280" height="36"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wiP-fd-ywN">
+                                        <rect key="frame" x="0.0" y="138" width="280" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Masuk">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Yr-sM-xPr">
+                                        <rect key="frame" x="0.0" y="184" width="280" height="36"/>
+                                        <state key="normal" title="Daftar"/>
+                                        <connections>
+                                            <segue destination="nlr-cY-cwy" kind="presentation" id="AG7-nd-upF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.33725490196078434" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gza-z1-7II" secondAttribute="trailing" constant="50" id="0xM-HI-N08"/>
-                            <constraint firstItem="7Yr-sM-xPr" firstAttribute="top" secondItem="wiP-fd-ywN" secondAttribute="bottom" constant="8" id="2no-X2-gWf"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wiP-fd-ywN" secondAttribute="trailing" constant="137" id="3Dn-e4-o9q"/>
-                            <constraint firstItem="wiP-fd-ywN" firstAttribute="top" secondItem="KLd-oq-duD" secondAttribute="bottom" constant="8" id="6S3-PQ-N1k"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KLd-oq-duD" secondAttribute="trailing" constant="50" id="K0R-IY-TpA"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7Yr-sM-xPr" secondAttribute="bottom" priority="250" constant="99" id="Mvw-WQ-uVC"/>
-                            <constraint firstItem="wiP-fd-ywN" firstAttribute="top" secondItem="KLd-oq-duD" secondAttribute="bottom" constant="8" id="P9h-jP-Vfx"/>
-                            <constraint firstItem="KLd-oq-duD" firstAttribute="top" secondItem="gza-z1-7II" secondAttribute="bottom" constant="8" id="U7s-8m-B9a"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8q4-be-fqN" secondAttribute="trailing" constant="40" id="Wdu-KF-HEL"/>
-                            <constraint firstItem="7Yr-sM-xPr" firstAttribute="top" secondItem="wiP-fd-ywN" secondAttribute="bottom" constant="8" id="XCa-4g-YSy"/>
-                            <constraint firstItem="8q4-be-fqN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="YUF-lq-TvU"/>
-                            <constraint firstItem="8q4-be-fqN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="180" id="c0M-TU-qAK"/>
-                            <constraint firstItem="KLd-oq-duD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="k5m-l5-9eH"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7Yr-sM-xPr" secondAttribute="trailing" constant="137" id="kYd-i6-BgN"/>
-                            <constraint firstItem="7Yr-sM-xPr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="137" id="oWq-Xk-9Mv"/>
-                            <constraint firstItem="gza-z1-7II" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="u9V-Cv-eDg"/>
-                            <constraint firstItem="gza-z1-7II" firstAttribute="top" secondItem="8q4-be-fqN" secondAttribute="bottom" constant="15" id="ueJ-mO-Bs0"/>
-                            <constraint firstItem="wiP-fd-ywN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="137" id="ypU-N6-X0l"/>
+                            <constraint firstItem="gw8-sJ-dWw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="FhH-iC-ygE"/>
+                            <constraint firstItem="gw8-sJ-dWw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="PWo-4O-gnf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gw8-sJ-dWw" secondAttribute="trailing" constant="20" id="ud8-hV-9nH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gw8-sJ-dWw" secondAttribute="bottom" priority="250" constant="100" id="zAv-7u-foS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <connections>
@@ -716,7 +718,7 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6cV-nI-wPf">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Awas Isu SARA" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6cV-nI-wPf">
                                                                 <rect key="frame" x="0.0" y="30.5" width="304" height="33"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -733,7 +735,7 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Iz-al-Q8u">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="SARA adalah ..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Iz-al-Q8u">
                                                                 <rect key="frame" x="0.0" y="30.5" width="304" height="33"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -750,7 +752,7 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s5W-Np-WAc">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Isu SARA sangat berbahaya" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s5W-Np-WAc">
                                                                 <rect key="frame" x="0.0" y="30.5" width="304" height="32.5"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -767,7 +769,7 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="icc-9U-vvu">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="https://www.google.co.id/" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="icc-9U-vvu">
                                                                 <rect key="frame" x="0.0" y="30.5" width="304" height="32.5"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -777,7 +779,7 @@
                                                     </stackView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tI2-xA-aAT">
                                                         <rect key="frame" x="0.0" y="313" width="304" height="30"/>
-                                                        <color key="backgroundColor" red="1" green="0.47359682377194789" blue="0.38667911430836166" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="backgroundColor" red="1" green="0.33725490196078434" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <state key="normal" title="Tambah Materi"/>
                                                         <connections>
                                                             <action selector="tambahMateri:" destination="sgN-Gk-2NJ" eventType="touchUpInside" id="boL-E7-JZI"/>
@@ -972,7 +974,6 @@
                                 <action selector="selesaiButton:" destination="hiW-Ha-hgA" id="W1I-xE-Zd3"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="discussion_50" id="4Xy-GG-Jlf"/>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="AfK-du-WXX" id="Xag-NV-5Jb"/>
@@ -1938,7 +1939,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nlr-cY-cwy" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="f9m-gK-az7">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="f9m-gK-az7">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1959,7 +1960,6 @@
         <image name="chat_50" width="25" height="25"/>
         <image name="chat_filled_50" width="25" height="25"/>
         <image name="detail_color_50" width="50" height="50"/>
-        <image name="discussion_50" width="25" height="25"/>
         <image name="facebook_color" width="480" height="480"/>
         <image name="ganjar_pranowo" width="263" height="352"/>
         <image name="idea_color_50" width="50" height="50"/>
