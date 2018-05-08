@@ -67,7 +67,8 @@ class MockProvider {
     ///
     /// - Returns: API Key
     func getAPIKey() -> String {
-        return APIKEY()
+//        return APIKEY()
+        return ""
     }
 }
 
